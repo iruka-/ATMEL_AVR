@@ -10,7 +10,7 @@ maple IDEは、[leaflabs](http://leaflabs.com/) 発売ARM基板用の[Arduino風
 
 <!-- dummy comment line for breaking list -->
 
-    - ---> [https://github.com/iruka-/ATMEL_AVR/blob/master/web/cgi-bin/note/index.cgi?%b7%c7%bc%a8%c8%c4](https://github.com/iruka-/ATMEL_AVR/blob/master/web/cgi-bin/note/index.cgi?%b7%c7%bc%a8%c8%c4) 
+    - ---> [http://psp.dip.jp/web/cgi-bin/note/index.cgi?%b7%c7%bc%a8%c8%c4](http://psp.dip.jp/web/cgi-bin/note/index.cgi?%b7%c7%bc%a8%c8%c4) 
 
 <!-- dummy comment line for breaking list -->
 

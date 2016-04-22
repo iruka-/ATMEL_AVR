@@ -118,7 +118,7 @@ PIC18F
 ・[リンク](AVRlink.md) 
 
 フリースペース
-- [ゲストブック](https://github.com/iruka-/ATMEL_AVR/blob/master/web/cgi-bin/note/index.cgi) 
+- [ゲストブック](http://psp.dip.jp/web/cgi-bin/note/index.cgi) 
 - - - -
 [旧コンテンツ](ＷｉｄｅＴｅｘｔ.md) ~
 [ＷｉｎＶｉｓｔａ](ＷｉｎＶｉｓｔａ.md) ~
