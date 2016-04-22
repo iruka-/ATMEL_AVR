@@ -1,0 +1,843 @@
+<?xml version="1.0" encoding="EUC-JP" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja">
+
+<head>
+ <meta http-equiv="content-type" content="application/xhtml+xml; charset=EUC-JP" />
+ <title>2009-08 - AVR etc</title>
+
+<!-- ヒント:六四天安門事件 -->
+<!-- Free Tibet!  -->
+<!-- About Tiananmen Massacre -->
+<!-- Free Tibet!  -->
+<!-- ヒント:六四天安門事件 -->
+<!-- About Tiananmen Massacre -->
+
+ <link rel="stylesheet" type="text/css" media="screen" href="../skin/monobook/monobook.css" />
+ <link rel="stylesheet" type="text/css" media="print" href="../skin/monobook/monobook.print.css" />
+ <link rel="alternate" type="application/rss+xml" title="RSS" href="FrontPage.html?cmd=rss" />
+</head>
+<body>
+<div id="globalWrapper">
+ <div id="menubar"><ul><li><a href="FrontPage.html" title="FrontPage (10m)">Ｔｏｐ</a></li></ul>
+<hr class="full_hr" />
+<p><a href="A3C8A3C9A3C4A3E1A3F3A3F0A3F8.html" title="ＨＩＤａｓｐｘ (10m)">ＨＩＤａｓｐｘ</a></p>
+<ul><li><a href="A3C4A3EFA3F7A3EEA3CCA3EFA3E1A3E4.html" title="ＤｏｗｎＬｏａｄ (48d)">ＤｏｗｎＬｏａｄ</a></li>
+<li><a href="A3C8A3C9A3C4A3E1A3F3A3F0B9E2C2AEB2BD.html" title="ＨＩＤａｓｐ高速化 (730d)">ＨＩＤａｓｐ高速化</a></li></ul>
+<p><a href="C0A9BAEE.html" title="制作 (10m)">制作</a></p>
+<p><a href="AVRetc.html" title="AVRetc (22d)">ＡＶＲ関係</a></p>
+<ul><li><a href="AVR_Monit.html" title="AVR_Monit (268d)">AVR_Monit</a></li>
+<li><a href="AVR_term.html" title="AVR_term (276d)">AVR_term</a></li>
+<li><a href="W32_term.html" title="W32_term (783d)">W32_term</a></li>
+<li><a href="HIDmon88.html" title="HIDmon88 (668d)">HIDmon88</a></li>
+<li><a href="HIDtester.html" title="HIDtester (564d)">HIDtester</a></li>
+<li><a href="usbRS232.html" title="usbRS232 (380d)">usbRS232</a></li>
+<li><a href="Arduino2313.html" title="Arduino2313 (358d)">Arduino2313</a></li>
+<li><a href="A5C7A5B8A5BFA5EBA5C6A5B9A5BFA1BC.html" title="デジタルテスター (573d)">デジタルテスター</a></li>
+<li><a href="ATmega88C0B8B3E8.html" title="ATmega88生活 (169d)">ATmega88生活</a></li>
+<li><a href="KeyBoardA5DEA5CBA5A2.html" title="KeyBoardマニア (611d)">KeyBoardマニア</a></li>
+<li><a href="KeyBoardA5DEA5CBA5A2II.html" title="KeyBoardマニアII (487d)">KeyBoardマニアII</a></li>
+<li><a href="Arduino400.html" title="Arduino400 (165d)">Arduino400</a></li>
+<li><a href="PICspx.html" title="PICspx (197d)">PICライター</a></li>
+<li><a href="hid_blaster.html" title="hid_blaster (9m)">ARMライター</a></li></ul>
+<p><a href="ARM.html" title="ARM (16d)">ARM</a></p>
+<ul><li><a href="armon.html" title="armon (8d)">STM32ブートローダー</a></li>
+<li><a href="stm32f103.html" title="stm32f103 (26d)">STM8S-Discovery改造</a></li>
+<li><a href="LPCXpresso.html" title="LPCXpresso (32d)">LPCXpresso</a></li>
+<li><a href="lpc-armon.html" title="lpc-armon (8d)">LPC用ブートローダー</a></li>
+<li><a href="LPCUSB.html" title="LPCUSB (32d)">NXP用LPCUSB</a></li>
+<li><a href="ARM7mon.html" title="ARM7mon (8d)">NXP用ブートローダー</a></li></ul>
+<p>PIC18F</p>
+<ul><li><a href="pic18boot.html" title="pic18boot (185d)">HIDブートローダー</a></li>
+<li><a href="pic18spx.html" title="pic18spx (6d)">AVR/PIC両用ライター</a></li>
+<li><a href="pic18blaster.html" title="pic18blaster (3m)">ARMライター</a></li>
+<li><a href="usbserial.html" title="usbserial (52d)">usbシリアル変換</a></li>
+<li><a href="pic18hidkey.html" title="pic18hidkey (219d)">usbキーボード変換</a></li>
+<li><a href="sdcc.html" title="sdcc (380d)">sdccを使いこなす</a></li>
+<li><a href="mcc18.html" title="mcc18 (370d)">mcc18を使いこなす</a></li>
+<li><a href="HIDmon-2550.html" title="HIDmon-2550 (185d)">HIDmon-2550</a></li>
+<li><a href="HIDmon-14K50.html" title="HIDmon-14K50 (185d)">HIDmon-14K50</a></li>
+<li><a href="PICmonitor.html" title="PICmonitor (176d)">PICmonitor</a></li></ul>
+<p>試行錯誤の記録</p>
+<ul><li><a href="UBW.html" title="UBW (541d)">UBWを試す</a></li>
+<li><a href="HIDboot.html" title="HIDboot (521d)">旧HIDboot</a></li>
+<li><a href="PIC18F2550.html" title="PIC18F2550 (235d)">PIC18F2550試用記</a></li>
+<li><a href="PIC18F4550.html" title="PIC18F4550 (522d)">PIC18F4550試用記</a></li></ul>
+<p>その他マイコン</p>
+<ul><li><a href="NEC78K.html" title="NEC78K (265d)">NEC78K</a></li>
+<li><a href="A3C8A3B8.html" title="Ｈ８ (165d)">Ｈ８</a></li>
+<li><a href="Android.html" title="Android (9d)">Android</a></li></ul>
+<p>開発日記</p>
+<ul><li><a href="2010-10.html" title="2010-10 (24m)">2010-10</a></li></ul>
+<hr class="full_hr" />
+<p>ノウハウ</p>
+<ul><li><a href="AVRUSB_Tips.html" title="AVRUSB_Tips (775d)">AVRUSB_Tips</a></li>
+<li><a href="A3C8A3C9A3C4A3E1A3F3A3F0BEF0CAF3.html" title="ＨＩＤａｓｐ情報 (395d)">ＨＩＤａｓｐ情報</a></li>
+<li><a href="C8C6CDD1A3D5A3D3A3C2-A3C9A3CF.html" title="汎用ＵＳＢ-ＩＯ (727d)">汎用ＵＳＢ-ＩＯ</a></li></ul>
+<hr class="full_hr" />
+<p>・<a href="AVRlink.html" title="AVRlink (726d)">リンク</a></p>
+<p>フリースペース</p>
+<ul><li><a href="http://psp.dip.jp/web/cgi-bin/note/index.cgi" rel="nofollow">ゲストブック</a></li></ul>
+<hr class="full_hr" />
+<p><a href="A3D7A3E9A3E4A3E5A3D4A3E5A3F8A3F4.html" title="ＷｉｄｅＴｅｘｔ (170d)">旧コンテンツ</a><br />
+<a href="A3D7A3E9A3EEA3D6A3E9A3F3A3F4A3E1.html" title="ＷｉｎＶｉｓｔａ (876d)">ＷｉｎＶｉｓｔａ</a><br />
+<a href="A5A4A5F3A5BFA1BCA5D5A5A7A1BCA5B9B9CD.html" title="インターフェース考 (1138d)">インターフェース考</a></p>
+<hr class="full_hr" />
+<h5>最新の20件</h5>
+<div><strong>2010-10-10</strong>
+<ul>
+ <li><a href="pic18blaster.html" title="pic18blaster (3m)">pic18blaster</a></li>
+ <li><a href="hid_blaster.html" title="hid_blaster (9m)">hid_blaster</a></li>
+ <li><a href="A3C8A3C9A3C4A3E1A3F3A3F0A3F8.html" title="ＨＩＤａｓｐｘ (10m)">ＨＩＤａｓｐｘ</a></li>
+ <li><a href="FrontPage.html" title="FrontPage (10m)">FrontPage</a></li>
+ <li><a href="C0A9BAEE.html" title="制作 (10m)">制作</a></li>
+ <li><a href="MenuBar.html" title="MenuBar (12m)">MenuBar</a></li>
+ <li><a href="2010-10.html" title="2010-10 (24m)">2010-10</a></li>
+</ul>
+<strong>2010-10-08</strong>
+<ul>
+ <li><a href="RecentDeleted.html" title="RecentDeleted (1d)">RecentDeleted</a></li>
+</ul>
+<strong>2010-10-04</strong>
+<ul>
+ <li><a href="pic18spx.html" title="pic18spx (6d)">pic18spx</a></li>
+</ul>
+<strong>2010-10-01</strong>
+<ul>
+ <li><a href="armon.html" title="armon (8d)">armon</a></li>
+ <li><a href="lpc-armon.html" title="lpc-armon (8d)">lpc-armon</a></li>
+ <li><a href="ARM7mon.html" title="ARM7mon (8d)">ARM7mon</a></li>
+ <li><a href="Android.html" title="Android (9d)">Android</a></li>
+</ul>
+<strong>2010-09-29</strong>
+<ul>
+ <li><a href="2010-09.html" title="2010-09 (11d)">2010-09</a></li>
+</ul>
+<strong>2010-09-23</strong>
+<ul>
+ <li><a href="ARM.html" title="ARM (16d)">ARM</a></li>
+</ul>
+<strong>2010-09-18</strong>
+<ul>
+ <li><a href="AVRetc.html" title="AVRetc (22d)">AVRetc</a></li>
+</ul>
+<strong>2010-09-14</strong>
+<ul>
+ <li><a href="stm32f103.html" title="stm32f103 (26d)">stm32f103</a></li>
+</ul>
+<strong>2010-09-08</strong>
+<ul>
+ <li><a href="LPCUSB.html" title="LPCUSB (32d)">LPCUSB</a></li>
+ <li><a href="LPCXpresso.html" title="LPCXpresso (32d)">LPCXpresso</a></li>
+</ul>
+<strong>2010-09-05</strong>
+<ul>
+ <li><a href="SiteMap.html" title="SiteMap (35d)">SiteMap</a></li>
+</ul>
+</div>
+</div>
+ <div id="mainColumnWrapper">
+  <div id="main-column">
+   <div id="navigator"><ul><li id="wn_main" class="selected"><a href="" title="2009-08 (402d)">本文</a></li><li id="wn_note"><span class="noexists">ノート<a href="FrontPage.html?cmd=edit&amp;page=note%2F2009-08">?</a></span></li><li><a href="FrontPage.html?cmd=edit&amp;page=2009-08">編集</a></li><li><a href="FrontPage.html?cmd=diff&amp;page=2009-08">差分</a></li></ul></div>
+   <div id="content">
+    <h1 class="firstHeading">2009-08</h1><div id="contentSub"></div>
+    <p><a href="2009-07.html" title="2009-07 (433d)">2009-07</a>←　→ <a href="2009-05PIC.html" title="2009-05PIC (507d)">PIC日記</a> → <a href="2009-05ARM.html" title="2009-05ARM (496d)">ARM日記</a>　<a href="Arduino400.html" title="Arduino400 (165d)">Arduino400</a></p>
+<hr class="full_hr" />
+<h2 id="content_1_0">８月夏休み  <a class="anchor_super" id="r2fc0d85" href="#r2fc0d85" title="r2fc0d85"> </a></h2>
+<p>夏休みが欲しいなぁという願望を表した季語。</p>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>今月の問題点</li>
+<li>PIC 18F14K50というLow Pin CountなChipがやっかいものです。</li></ul>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li><del>いまだにローダーが動いていません。</del> -- 動きました。</li></ul>
+<p>今月の問題点その２</p>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li><a href="ArduinoA4CBC4A9C0EF.html" title="Arduinoに挑戦 (420d)">Arduinoに挑戦</a>中です。</li>
+<li>さいしょはPIC 18F14K50のUSBシリアルファームの動作チェック用にと、気軽な気持ちで始めたところ、</li>
+<li>実はMCHIPのUSB-CDC_SerialEmulatorがダメダメであることが発覚。</li>
+<li>しかたなくPIC 18F14K50を切り離し、AVR-USB仕立てのUSB-Serial変換シールドでArduinoをテスト運用しようと試みる。</li>
+<li>ところが、Arduinoのブートローダーもダメダメであることが発覚。</li></ul>
+<p>どうしてくれようかと、<strong>思案中</strong> &lt;--- 今ここ。</p>
+<p><br />
+<br />
+<br /></p>
+<hr class="full_hr" />
+
+<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h2 id="content_1_1">18F14K50が激しくバグっている件。  <a class="anchor_super" id="k1da1a6b" href="#k1da1a6b" title="k1da1a6b"> </a></h2>
+<p>今日の18F14K50の病状</p>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>MicroChipのHIDbootloaderがまともに動かない。
+<ul class="list2" style="padding-left:16px;margin-left:16px"><li>HEXファイルは「MicrochipApplicationLibrariesv2009-07-10.zip」のものをそのまま焼いている。</li></ul></li>
+<li>現象
+<ul class="list2" style="padding-left:16px;margin-left:16px"><li>RC2ポートを見てくれない。--ゆえにブートローダ認識はするけれども、アプリケーションが実行できない。</li>
+<li>RC2ポートをテスターで見るとGNDレベルである。</li>
+<li>+5Vから計ってもしっかりGNDレベルを維持している。１０ｋΩでプルアップしているというのに！</li>
+<li>ちなみにチップをＩＣソケットから抜くと、ちゃんと5Vになるし、ブートジャンパーをクローズすると0Vになる。</li>
+<li>MicroChipのHIDbootloader.exeからReset起動をしてもアプリケーションが実行できない。（すぐローダーに戻ってくる）</li>
+<li>アプリはこんな奴
+<pre>org $1000
+goto $1000</pre></li>
+<li>もちろん最初はHIDmonで試していた。</li></ul></li></ul>
+<p><br /></p>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>ところが、MicroChipのUSB CDC-SimpleDemoを焼くと
+<ul class="list2" style="padding-left:16px;margin-left:16px"><li>こんどはアプリしか起動しない。</li>
+<li>二度とブートローダーに戻らない。</li></ul></li></ul>
+<p><br />
+<br /></p>
+<hr class="full_hr" />
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>次に、動作不安定なHIDmon(PICmon)を焼いて、ポートを見る。
+<ul class="list2" style="padding-left:16px;margin-left:16px"><li>RC2をinputモードにしてもPORTCがオールゼロ。(RC2はプルアップしている。)</li>
+<li>RC0はLED点滅しているので、0,1,0,1となるはずだが、これもオールゼロ。</li>
+<li>ポートアドレスは間違っていない。(0xf82) ダンプコマンドで試しても同じ。</li></ul></li></ul>
+<p>つまり、PORTCが読めないし、RC2をinputにしているにも関わらずLOW LEVEL OUTPUTになる。</p>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>試しにもう１つのチップで試しても同じ結果。</li></ul>
+<p>自分が間違っているかもしれないので、18F2550で同じことをすると、全て意図したとおりに動作する。</p>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>18F2550ではHIDmonは安定して動いている。接続が切れることは無い。</li></ul>
+<p><br />
+<br />
+つまり、</p>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>MicroChipのHID Bootloaerは、ブートジャンパーをうまく認識しないので使用できない。</li>
+<li>もしかすると基本的なポートアクセスがバグッテイル。
+<ul class="list2" style="padding-left:16px;margin-left:16px"><li>このチップだけ特別な初期化が必要なのか？？？</li></ul></li></ul>
+<p><br />
+<br /></p>
+<hr class="full_hr" />
+
+<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h2 id="content_1_2">少し解決？  <a class="anchor_super" id="gd1d41e3" href="#gd1d41e3" title="gd1d41e3"> </a></h2>
+<p>ググッてみたところ、やっぱデータシートに<strong>落とし穴</strong>が掘られていた。</p>
+<p>17.1.1PORT CONFIGURATION</p>
+<pre>The ANSEL, ANSELH, TRISA, TRISB and TRISE registers 
+all configure the A/D port pins. Any port pin
+needed as an analog input should have its corresponding 
+ANSx bit set to disable the digital input buffer and
+TRISx bit set to disable the digital output driver. If the
+VOH or TRISx bit is cleared, the digital output level
+(VOL) will be converted.
+The A/D operation is independent of the state of the
+ANSx bits and the TRIS bits.       </pre>
+<p>Note1:</p>
+<pre>When reading the PORT register, all pins
+with their corresponding ANSx bit set
+read as cleared (a low level). However,
+analog conversion of pins configured as
+digital inputs (ANSx bit cleared and
+TRISx bit set) will be accurately converted.</pre>
+<p>ANSELとANSELHは有効ビットが全部1になっていることまではHIDmonで確認したが、
+まさかデフォルトがdigital disableだったなんて・・・・</p>
+<p>で、MicroChipのbootloaderがなんでRC2をLOWに固定しているかというのは、単なるバグなのではないか疑惑
+を掛けているところ。</p>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>---&gt; io.cfgにその答えがあった。</li>
+<li>sw2は LOW_PINCOUNTでは RA3 に割り当てられていて、RC2 は常時OUTになっていた。</li></ul>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>kuga様、ご指摘ありがとうございました。</li></ul>
+<p><br />
+<br />
+<br /></p>
+<hr class="full_hr" />
+
+<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h2 id="content_1_3">（夏の）怪奇現象  <a class="anchor_super" id="d2b14d33" href="#d2b14d33" title="d2b14d33"> </a></h2>
+<p>今日の18F14K50の病状</p>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>現在、「MicrochipApplicationLibrariesv2009-07-10.zip」のソースと、asmソースを見比べながら、</li>
+<li>asmソースの挙動をＣソースの挙動に近づけるべく努力中。</li></ul>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>usbdrv.c の肝心のstate machineの部分がだいぶ書き換えられていて、現状と合っていないようだった。</li></ul>
+<p>問題の部分に近づいた。</p>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>usbdrv.c : 278行あたり
+<pre>   /*
+    * Task D: Servicing USB Transaction Complete Interrupt
+    */
+   for(bTRNIFCount = 0; bTRNIFCount &lt; 4; bTRNIFCount++)
+   {
+//        if(UIRbits.TRNIF &amp;&amp; UIEbits.TRNIE)
+       if(UIRbits.TRNIF)</pre>
+え？
+<pre>   byte bTRNIFCount;               // Bug fix - Work around.</pre></li>
+<li>なんかだいぶ昔とは話が違うようだ。</li></ul>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>それはそれ、</li></ul>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>上記部分をasmソースに加筆して動作させると、</li>
+<li>なんと<strong>ＵＳＢデバイス認識しなくなって</strong>しまった。</li>
+<li>で、あとは差分攻撃。</li></ul>
+<p>boot.asm</p>
+<pre>blink_cnt   res 1
+blink_cnth  res 1
+;bTRNIFCount    res 1</pre>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>このコメントアウトを外しただけで<strong>ＵＳＢデバイス認識しなくなって</strong>しまう。</li></ul>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>さらに、「このコメントアウトを外」す代わりに、リンカスクリプトでワークエリアを１バイトずらしただけでも<strong>ＵＳＢデバイス認識しなくなって</strong>しまった。</li></ul>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>もちろん、ワークエリアはあと１０バイトくらいは余っているので、１バイトずらしても問題はない。</li></ul>
+<p>つまり、どっかにアドレス依存しているワークがあるってことだが。</p>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>そもそも18F2550と18F14K50はアドレスそのものが違うので、それもありえない話だ。</li></ul>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>てことは、あとはワークを２分割して、どのワークをずらしたときに認識しなくなるのか調べるしかないのか・・・（面倒だ）</li></ul>
+<p><br />
+<br />
+<br /></p>
+<hr class="full_hr" />
+
+<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h2 id="content_1_4">（夏の）怪奇現象：その２  <a class="anchor_super" id="ha426164" href="#ha426164" title="ha426164"> </a></h2>
+<p>今日の18F14K50の病状</p>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>ワークエリアの並びをいろいろ調整していたら、何故かたまたま動作するようになった。</li>
+<li>理由は全く持って分からない。</li></ul>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>とりあえず、動いているうちに公開。</li></ul>
+<p>read more : <a href="HIDmon-14K50.html" title="HIDmon-14K50 (185d)">HIDmon-14K50</a></p>
+<p><br />
+<br />
+<br /></p>
+<hr class="full_hr" />
+
+<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h2 id="content_1_5">Tegra や Snapdragon搭載ノート Smartbook、年内に各社から登場へ  <a class="anchor_super" id="f6802f41" href="#f6802f41" title="f6802f41"> </a></h2>
+<p><a href="http://japanese.engadget.com/2009/08/05/tegra-snapdragon-smartbook/" rel="nofollow">http://japanese.engadget.com/2009/08/05/tegra-snapdragon-smartbook/</a></p>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>SmartBookはQualcomm語らしい。</li>
+<li>非Wintelなノートに需要はあるのか？
+<ul class="list2" style="padding-left:16px;margin-left:16px"><li>一部マニアだけってことにならないように。</li>
+<li>そういえば、AtomなNetBookには<a href="http://www.gizmodo.jp/2009/08/post_5913.html" rel="nofollow">ハッキントッシュ</a>という用途もあるらしい。</li>
+<li>発禁とっしゅ？面白い語呂だ。</li></ul></li></ul>
+<p><br /></p>
+<p>そうかと思うと、NetBookよりすこしだけ高機能な<strong>CULVノートPC</strong>というのも出るらしい。</p>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li><a href="http://pc.watch.impress.co.jp/docs/column/mobile/20090805_307142.html" rel="nofollow">http://pc.watch.impress.co.jp/docs/column/mobile/20090805_307142.html</a></li>
+<li>価格帯は７万〜９万。</li>
+<li>ＣＰＵはDualCoreのCeleronをクロックダウンして1200MHz程度で使うとか、</li>
+<li>あるいは未発表のGPU統合型のCore i7(i5?)のceleronなのかもしれない。</li></ul>
+<p><br />
+<br />
+<br /></p>
+<hr class="full_hr" />
+
+<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h2 id="content_1_6">（夏の）怪奇現象：その３  <a class="anchor_super" id="ha426164" href="#ha426164" title="ha426164"> </a></h2>
+<p>今日の18F14K50の病状</p>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>sdccで作成したテストルーチンが動かなかったのでいろいろごにょごにょ。</li>
+<li>ワークエリアの並びをさらに調整していたら、何故かたまたま動作するようになった。
+<ul class="list2" style="padding-left:16px;margin-left:16px"><li>DUAL PORT RAMの後ろの0x30バイトくらいが妙に不安定。SIEのスタックポインタなのか？？？</li></ul></li>
+<li>とりあえず公開。</li></ul>
+<p>read more : <a href="HIDmon-14K50.html" title="HIDmon-14K50 (185d)">HIDmon-14K50</a>
+<br />
+<br />
+<br /></p>
+<hr class="full_hr" />
+
+<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h2 id="content_1_7">（夏の）怪奇現象：その４  <a class="anchor_super" id="j15c1d66" href="#j15c1d66" title="j15c1d66"> </a></h2>
+<p>実は怪奇現象じゃなくて、うすうす気づいていた事実。</p>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>同一VID,PIDで、なおかつシリアル番号が同じUSBデバイスを２つ、WindowsXPマシンに刺すと</li>
+<li>WindowsXPは問答無用でリセットが掛かる。</li>
+<li><strong>一種のリセットボタン</strong></li>
+<li>最初は、電源をショートさせたと錯覚する。</li>
+<li>テスターで調べて問題なし。もういちど挿すとまた問答無用のリセットを繰り返す。</li></ul>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>最近またやられた。
+<ul class="list2" style="padding-left:16px;margin-left:16px"><li>VID,PIDは（基本的には）変更できないので、シリアル番号をずらして対策した。</li></ul></li></ul>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>USB自作ッカー（自称）の人で、自分が使うＰＣだけのローカルデバイスであれば、</li>
+<li>オレオレベンダーを勝手に定義して使うというのも不可能ではないが、</li>
+<li>まるでSSLのオレオレ認証局みたいなので、格好はよくない。</li></ul>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>それに、そのデバイス、どっかに持って行って挿すことだってあるし。</li></ul>
+<p><br />
+<br />
+<br /></p>
+<hr class="full_hr" />
+
+<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h2 id="content_1_8">地球滅亡のシナリオ決定  <a class="anchor_super" id="c4e093e4" href="#c4e093e4" title="c4e093e4"> </a></h2>
+<p>Technobahnニュース</p>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li><a href="http://www.technobahn.com/news/200908070600" rel="nofollow">http://www.technobahn.com/news/200908070600</a></li></ul>
+<p>ExtraDimension blog</p>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li><a href="http://oskatlas.blog71.fc2.com/blog-entry-360.html" rel="nofollow">http://oskatlas.blog71.fc2.com/blog-entry-360.html</a></li></ul>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>当初予定よりかなり低い衝突エネルギーでも（大人の事情により）とりあえず運転再開するそうです。</li>
+<li>しかし、ＬＨＣ事故の原因のハンダ付け不良というのは抵抗値が、<a href="http://oskatlas.blog71.fc2.com/?mode=m&amp;no=239" rel="nofollow">0.35ナノオームの１００倍程度になったのが原因ということなので</a></li></ul>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>うちらの芋ハンダのレベルとは全然違いますね。</li></ul>
+<p><br />
+<br />
+<br /></p>
+<hr class="full_hr" />
+
+<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h2 id="content_1_9">STM32 Primer in 秋月  <a class="anchor_super" id="h6aab586" href="#h6aab586" title="h6aab586"> </a></h2>
+<p>こいつのコンセプトは何なんだろう？</p>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li><a href="http://akizukidenshi.com/catalog/g/gM-03053/" rel="nofollow">http://akizukidenshi.com/catalog/g/gM-03053/</a></li>
+<li>携帯電話風のゲームウォッチツクール？？？？</li>
+<li>CPUはＳＴＭ３２Ｆ１０３ＶＥＴ６</li></ul>
+<p>だめだ。使い道が全く思い浮かばない。</p>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>ゲーム機じゃない。ゲーム機じゃない・・・。じゃあ、何に使うのこれ？Linux動かないよ。</li></ul>
+<p><a href="http://www.stm32circle.com/" rel="nofollow">http://www.stm32circle.com/</a></p>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>ここのサイトにいろいろ遊び方が載っているようだ。</li>
+<li>mp3プレイヤー？え？悪い予感は的中。整数デコーダーだった。サウンド出力は当然16bitステレオ48kHzなんだろうな？</li></ul>
+<p>使えるリソースは、</p>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>USB２個。１個はデバッグ用</li>
+<li>ＣＰＵ：STM32F103V　内蔵フラッシュ512kバイトの大容量品。クロック72MHz</li>
+<li>電池：３．７Ｖ　４００ｍＡｈリチウムイオン電池内蔵,USBから充電。</li>
+<li>128x160カラー液晶タッチスクリーンつき（タッチの精度は不明）</li>
+<li>joystic , mems , IrDA（送受信） , MicroSDカードコネクタ</li></ul>
+<p>あー、分かったよ。<strong>タッチスクリーン式の赤外線学習リモコン</strong>だ。</p>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>どんなに長いリモコン符号でもMicroSDに覚えさせることが出来るぞ。</li>
+<li>学習リモコンで６８００円は格安だよ。クロッサム２とかより安い？
+<ul class="list2" style="padding-left:16px;margin-left:16px"><li>おまけに、この学習リモコンは、赤外線リモコンの仕組みやアルゴリズムを学習することまでをも（強制的に）可能にするから一石二鳥だ。</li></ul></li></ul>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>あとは・・・えーと内蔵液晶で見れるロジアナもどきとオシロもどきが作れそう。</li></ul>
+<p>とてつもなく悪い冗談のような開発キットだ。</p>
+<p><br />
+<br />
+<br /></p>
+<hr class="full_hr" />
+
+<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h2 id="content_1_10">PIC 14K50 + Arduino mega8計画  <a class="anchor_super" id="cbf44972" href="#cbf44972" title="cbf44972"> </a></h2>
+<p>実施中</p>
+<p>read more: <a href="ArduinoA4CBC4A9C0EF.html" title="Arduinoに挑戦 (420d)">Arduinoに挑戦</a></p>
+<p><br />
+<br />
+<br /></p>
+<hr class="full_hr" />
+
+<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h2 id="content_1_11">２ＴＢの壁  <a class="anchor_super" id="s2f5aee0" href="#s2f5aee0" title="s2f5aee0"> </a></h2>
+<p>壁はもう無いものと思っていた。</p>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li><a href="http://slashdot.jp/hardware/09/08/11/0442207.shtml" rel="nofollow">http://slashdot.jp/hardware/09/08/11/0442207.shtml</a></li>
+<li><a href="http://wiki.nothing.sh/page/Over2TB" rel="nofollow">http://wiki.nothing.sh/page/Over2TB</a></li></ul>
+<p>[32bitで表せる最大のセクタ番号(0xffffffff)]×512byte(1セクタのバイト数)=2TB</p>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>いい加減１論理セクタ＝１ｋとか４ｋにすればいいのに。</li></ul>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>２.５ＴのＨＤＤが売られようとしているが、WindowsXP(32bit Edition)では使えない。</li>
+<li>WindowsXP(64bit Edition)では、（2T以上のパーティションは）起動ドライブに出来ない。</li>
+<li>そもそもＭＢＲでは２ＴＢ以上を管理できない（らしい）。---EFIに移行するしかない。</li></ul>
+<p>いよいよ来たか。</p>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>MBRが捨てられる日。</li></ul>
+<p>Appleは先見の明があるなぁ。</p>
+<p><br />
+<br />
+<br /></p>
+<hr class="full_hr" />
+
+<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h2 id="content_1_12">mcc18  <a class="anchor_super" id="raab504c" href="#raab504c" title="raab504c"> </a></h2>
+<p>read more : <a href="mcc18.html" title="mcc18 (370d)">mcc18</a></p>
+<p><strong>本日の愚痴</strong></p>
+
+<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h3 id="content_1_13">MicrochipApplicationLibrariesv2009-07-10.zipが酷すぎる件  <a class="anchor_super" id="r154a315" href="#r154a315" title="r154a315"> </a></h3>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>mcc18をもってしてもビルドできないサンプル多数。</li>
+<li><strong>なんだこれ</strong></li></ul>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>まともにソースが揃っているのって、bootloaderだけだった。</li></ul>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li><del>他は、ソースの大部分が欠落している。</del></li></ul>
+<p><del>皆はどうやってビルドしているのだろう・・・。</del></p>
+<p>すいません。良く見てませんでした。 別のディレクトリ microchip/usb/とmicrochip/include にあります。</p>
+<p>＞というか、ちゃんとMakefileくらい用意しとけや＞<a href="http://psp.dip.jp/web/jpg/PIC/burger.png" rel="nofollow"><img src="http://psp.dip.jp/web/jpg/PIC/burger.png" alt="http://psp.dip.jp/web/jpg/PIC/burger.png" /></a> モスバーガー屋め！</p>
+<p><br />
+<br />
+<br /></p>
+<hr class="full_hr" />
+
+<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h2 id="content_1_14">アナログ信号は不滅です：AMP作ったぉ。  <a class="anchor_super" id="w8c3b02d" href="#w8c3b02d" title="w8c3b02d"> </a></h2>
+<p><a href="http://akizukidenshi.com/catalog/g/gI-02796/" rel="nofollow">秋月：低電圧１．２ＷオーディオアンプＩＣ　ＨＴ８２Ｖ７３９　２．２〜５．５Ｖ動作　２個入</a>　１００円。</p>
+<p>参考データシート</p>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li><a href="http://akizukidenshi.com/download/HT82V739.pdf" rel="nofollow">http://akizukidenshi.com/download/HT82V739.pdf</a></li></ul>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>部品数は1uF×４個と470uF×１個だけ。</li>
+<li>BTL出力。</li>
+<li>BTL出力なんで、ヘッドフォンアンプには使えません。</li>
+<li>電源は５Ｖで良いのでいろいろ流用できます。</li>
+<li>（PCのUSBから取るのはノイズの点でお勧めできませんが、5Vを出すアダプターや機器は多いのでそのジャンクとかを使えます。）</li></ul>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>たぶん１００円以上の良い音がします。（音源にもよりますが）</li>
+<li>音源がもうmp3ばっかりなのが、がっかりだ。</li>
+<li>ＣＤ音源は、古いアルバムばっかり。</li>
+<li>というかＣＤプレイヤーも埃かぶってるし。</li></ul>
+<p><br />
+そういえば、最近MP3プレイヤーが売ってないんですけど何ででしょうかね。</p>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>全部iPodに客を取られた。</li>
+<li>携帯で聞けるのでMP3プレイヤーは流行らない。</li>
+<li>ＰＣで聞けるのでMP3プレイヤーは流行らない。</li></ul>
+<p><br />
+かくゆう私ももっぱらWebラジオ(ShoutCast)ばっかりですが、Webラジオから録音したmp3を
+聞くためのプレイヤーが欲しい今日この頃。</p>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>mp3ラジカセ（AM/FMとmp3/wmaでデバイスがSD/USBメモリー程度）があるといいんですが・・・。これまた、なかなか無いんです。</li>
+<li>携帯mp3プレイヤーはスピーカーが付いていない。</li>
+<li>携帯mp3プレイヤー用のスピーカーとしてはあんまり良いのが売っていなくて、それこそコンポに繋ぐとかiPod専用の変なスピーカーしか無いのが現状。</li></ul>
+<p><br />
+<strong>AMP Tips:</strong></p>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>mp3プレイヤーなどヘッドフォン出力の機器を入力に使う場合は、負荷抵抗を入れたほうが良いです。</li>
+<li>ヘッドフォン出力をそのまま高インピーダンスのアンプ入力に繋ぐと、mp3プレイヤーのボリューム設定によってはジッターのようなノイズが乗ったり歪んだりすることがあるようです。</li>
+<li>ヘッドフォンの身代わりとして330Ωを繋いだら解決しました。</li></ul>
+
+<p><br />
+<br />
+<br /></p>
+<hr class="full_hr" />
+
+<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h2 id="content_1_15">続：PIC 18F14K50 + Arduino mega8計画  <a class="anchor_super" id="cbf44972" href="#cbf44972" title="cbf44972"> </a></h2>
+<p>現在のステータス</p>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>PIC仕立てのUSB-シリアル変換機はDTRコントロール機能が追加された。</li>
+<li>野蛮人の真似をして、PIC 18F14K50のDTRとATmega168のRESETを0.1uFで直結してしまった。</li>
+<li>普通な感覚ならせめて<strong>100Ωとか470Ωを0.1uFと直列に入れるべき</strong>で、あとAVR側にレベルクランプダイオード(GND-VCCの範囲外に信号が振れないようにする）とかも入れるべきだろう。</li>
+<li>Arduino IDEからAVRへのRESETが効く様になった。</li></ul>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>まあ動けばいいや。＜投槍的</li></ul>
+<p>但し、スケッチをボードにuploadした後、すぐに開始せず６秒待ちなのは変わっていない。</p>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li><strong>何故？</strong></li></ul>
+<p>read more: <a href="Arduino400.html" title="Arduino400 (165d)">Arduino400</a></p>
+<p><br />
+<br />
+<br /></p>
+<hr class="full_hr" />
+
+<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h3 id="content_1_16">つまんない独り言  <a class="anchor_super" id="d6bf4313" href="#d6bf4313" title="d6bf4313"> </a></h3>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>時々PICのUSB-Serialが何のエコーバックも返さず無反応になる。</li>
+<li>その原因がわかった。</li>
+<li>例のComEmulDrv ( <a href="http://mixw.net/" rel="nofollow">http://mixw.net/</a> ) がCOM5:を乗っ取っていたらしい。</li>
+<li>デバイスマネージャーでDisableしていたはずなのに、VMWarePlayerを再インストールしたときにVMWareが勝手にEnableにしたっぽい。</li></ul>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>こんども、そんなことがおきないように、ComEmulDrvのペアポート番号を大きな値に変えておいた。
+<br />
+<br />
+<br /></li></ul>
+<hr class="full_hr" />
+
+<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h2 id="content_1_17">PICspx 始めました。  <a class="anchor_super" id="x523b955" href="#x523b955" title="x523b955"> </a></h2>
+<p>read more : <a href="PICspx.html" title="PICspx (197d)">PICspx</a></p>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>実は、BulkEraseとWriteのテストルーチンまで入っています。</li>
+<li>18F2550は書き込み成功！</li>
+<li>18F14K50はfuseを１ワードでも書いたとたん、まったく読めない状態になります。</li></ul>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>W509ソースに付属のPIC18Test.exe では、fuseの更新はちゃんと出来ます。</li></ul>
+<p>すべてLVP書き込みでの話・・・・。</p>
+<p><br />
+<br />
+<br /></p>
+<hr class="full_hr" />
+
+<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h2 id="content_1_18">PICspx : 18F14K50のfuse書き込みに成功！  <a class="anchor_super" id="u58e734e" href="#u58e734e" title="u58e734e"> </a></h2>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>書き込めなかった原因は、P9Aと呼ばれる書き込み待ち時間(5mS)の不足でした。</li></ul>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>Flash Memory Programming Specification 41342C.pdf を P9Aで検索すると該当箇所が見つかります。</li></ul>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>config書き込み後のNOPコマンドの４ビットコマンドの最後の１ビットのPGC=Hの時間が5mS必要です。</li></ul>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>これを守っていなくても、18F2550では書き込めるので不思議です。</li></ul>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>書き込みツールを公開します。</li></ul>
+<p>read more : <a href="PICspx.html" title="PICspx (197d)">PICspx</a></p>
+<p><br /></p>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>一応、 <a href="PIC18F2550.html" title="PIC18F2550 (235d)">PIC18F2550</a>/<a href="PIC18F4550.html" title="PIC18F4550 (522d)">18F4550</a>/<a href="HIDmon-14K50.html" title="HIDmon-14K50 (185d)">18F14K50</a> の３種類のチップに書き込みテストを行って、正常に動くことを
+確認しました。</li>
+<li>18F4550は PGM端子が全く配線されていなかったため急遽ISP端子に接続して、PULLDOWN(10kΩ)も配線しました。</li></ul>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>手持ちのPIC18F石は全てLVPモードになってしまいました。</li></ul>
+<p><br />
+<br />
+<br /></p>
+<hr class="full_hr" />
+
+<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h2 id="content_1_19">PICspx : 18F14K50のfuse書き込みを修正  <a class="anchor_super" id="hee75cd1" href="#hee75cd1" title="hee75cd1"> </a></h2>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>またまた<del>回帰</del>怪奇現象か？<strong>不思議ちゃん</strong>なバグを発見。</li></ul>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>たまに、Fuseがゼロ化けします。</li>
+<li>確率は２０％くらいです。</li>
+<li>ゼロ化けすると、eraseしない限り使えません。</li>
+<li>LVPは幸いONのままなので、eraseは効きます。</li></ul>
+<p><br /></p>
+<p><a href="PICspx.html" title="PICspx (197d)">PICspx</a>をいろいろ調整。</p>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>fuseだけのアップデートコマンドを追加。</li>
+<li>fuseだけを書いてみると、３回目〜５回目に、必ずゼロ化けするようです。</li>
+<li><strong>P9A</strong>という遅延時間を調整しても直りません。</li>
+<li>ところが<strong>不思議</strong>。PIC18Test.exeに入っていたある<strong>おまじない</strong>を入れると直りました。</li></ul>
+<p>PIC 18F14K50は<strong>不思議ちゃん</strong>です。</p>
+<p><br />
+<br />
+<br /></p>
+<hr class="full_hr" />
+
+<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h2 id="content_1_20">ＡＫＩ−ＰＩＣ２プログラマボード（ＰＩＣｋｉｔ２互換）  <a class="anchor_super" id="u160b4b7" href="#u160b4b7" title="u160b4b7"> </a></h2>
+<p>今頃発見。</p>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li><a href="http://akizukidenshi.com/catalog/g/gM-02495" rel="nofollow">http://akizukidenshi.com/catalog/g/gM-02495</a></li>
+<li>6800円</li></ul>
+<p><br /></p>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>MCHIP純正PICKit2のほうが安いんですけど。（ちっちゃくて持ち運びに便利）</li>
+<li><a href="http://akizukidenshi.com/catalog/g/gM-02508/" rel="nofollow">http://akizukidenshi.com/catalog/g/gM-02508/</a></li>
+<li>3500円</li></ul>
+<p>ところで、コンパチ品を堂々と売っちゃっていいのかな。それともMCHIPの許諾をもらったのかな？</p>
+<p>コンパチ品を堂々と作ってもいいのなら、私も作っちゃうよ。</p>
+<p>ちなみに、古〜いAKI-PICプログラマボードを持っていたのですが、こないだ半田吸い取り器で
+実装部品を全部取り去ってゼロプレッシャーソケットのみ残したあとで、ＡＶＲライターの
+書き込みアタッチメントにしてしまいました。</p>
+<p><br />
+今思いついたアイディアは、ハードウェアだけPICKit2互換で作って、<a href="PICspx.html" title="PICspx (197d)">PICspx</a>の機能の一部を
+18F2550側に委譲して高速化したPICライター。</p>
+<p>飽きたらPICKit2としても使えます。ってゆーか飽きなくてもブートローダー経由ですぐにファーム
+を入れ替え出来ます。（なんだったら空き領域にPICspxファームを焼いてジャンパーで瞬時に切り替えてもいい）</p>
+<p><strong>またそうやって、ライターばかり作ってるから・・・</strong></p>
+<p><br />
+<br />
+<br /></p>
+<hr class="full_hr" />
+
+<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h2 id="content_1_21">パクリーノ：ＦＭｍｅｌｏｄｙ  <a class="anchor_super" id="w4887f76" href="#w4887f76" title="w4887f76"> </a></h2>
+<p>シンセアンプラグドさんのArduinoスケッチによるＦＭ音源</p>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li><a href="http://www.geocities.jp/pcm1723/html/fmmelody.htm" rel="nofollow">http://www.geocities.jp/pcm1723/html/fmmelody.htm</a></li>
+<li>ATmega88でも動くらしいです。</li></ul>
+<p><br />
+<br />
+<br /></p>
+<hr class="full_hr" />
+
+<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h2 id="content_1_22">物欲ついでに  <a class="anchor_super" id="i813256f" href="#i813256f" title="i813256f"> </a></h2>
+<p><a href="http://strawberry-linux.com/catalog/items?code=50028" rel="nofollow">http://strawberry-linux.com/catalog/items?code=50028</a></p>
+<p><a href="http://strawberry-linux.com/catalog/items?code=50029" rel="nofollow">http://strawberry-linux.com/catalog/items?code=50029</a></p>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>FT2232H,FT4232H</li></ul>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>これはもう、<strong>全速力でポチる</strong>しか。</li>
+<li>PICの時代は終了しました。（２日間くらいしか、なかったね）
+<br />
+<br />
+<br /></li></ul>
+<hr class="full_hr" />
+
+<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h2 id="content_1_23">久々にクロスコンパイラに挑戦。  <a class="anchor_super" id="tafdd79d" href="#tafdd79d" title="tafdd79d"> </a></h2>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>PICでgccという話題があったので、つい。</li>
+<li>気まぐれにgcc-4.4.1-coreをＤＬしてきて、Vine4.2の仮想マシン(VMWare)上でビルドしようとしました。が、</li>
+<li>最近のgccは GMP+とMPFRモジュールがないとビルド出来ません。</li></ul>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>GMP+はapt-get出来たのですが、MPFRはwww.mpfr.orgからＤＬして野良ビルド。</li>
+<li>それでも入らなかったので、しかたなく、昔gcc-4.3-1をビルドしたマシンで
+<pre>../gcc-4.3.1/configure --target=m68hc11</pre>
+を掛けている途中です。</li>
+<li>あ、出来ました。５分くらいで./xgccと ./cc1 がビルドされました。</li>
+<li>一応コード吐きますね。</li></ul>
+<p>68HC11とPICならいい勝負なのではないでしょうか。</p>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li><a href="http://psp.dip.jp/web/cgi-bin/note/index.cgi?MC68HC11" rel="nofollow">http://psp.dip.jp/web/cgi-bin/note/index.cgi?MC68HC11</a></li></ul>
+<pre>   .file   &quot;a.c&quot;
+   .mode mlong
+   .globl  __mulsi3
+   .sect   .text
+   .globl  main
+   .type   main,@function
+main:
+   ldx *_.frame
+   pshx
+   sts *_.frame
+   ldx *_.d1
+   pshx
+   ldx *_.d2
+   pshx
+   bsr sub
+   std *_.d2
+   stx *_.d1
+   bsr sub2
+   ldy *_.d2
+   pshy
+   ldy *_.d1
+   pshy
+   bsr __mulsi3
+   puly
+   puly
+   bsr puts
+   puly
+   sty *_.d2
+   puly
+   sty *_.d1
+   puly
+   sty *_.frame
+   rts
+   .size   main, .-main
+   ; extern    puts
+   ; extern    sub2
+   ; extern    sub
+   .ident  &quot;GCC: (GNU) 4.3.1&quot;</pre>
+<p>もう飽きました。<a href="PICgcc.html" title="PICgcc (414d)">PIC</a>？やりません。
+<br />
+<br />
+<br /></p>
+<hr class="full_hr" />
+
+<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h2 id="content_1_24">PineTrail １２月  <a class="anchor_super" id="w899a309" href="#w899a309" title="w899a309"> </a></h2>
+<p>MSIが発売する予定の新型ネットブックはOSに「Windows 7」を採用するほか、液晶ディスプレイにタッチパネルを搭載すると予測されており、発売時期は2009年12月を予定。</p>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li><a href="http://gigazine.net/index.php?/news/comments/20090820_atom/" rel="nofollow">http://gigazine.net/index.php?/news/comments/20090820_atom/</a></li>
+<li>つまりMSIを優遇したのか、それともAtom値崩れ防止策なのか。</li>
+<li>はたまた、供給量が足りなかったのか・・・。</li></ul>
+<p>まあ、性能は殆ど変わらないので、（前の945GMEと比べて）発熱量の減少だけに期待している。</p>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>WinXP→Win7になった分だけデグレードしちゃいますけどね。</li></ul>
+<p><br />
+<br />
+<br /></p>
+<hr class="full_hr" />
+
+<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h2 id="content_1_25">Cell B.E.  <a class="anchor_super" id="v0afefb1" href="#v0afefb1" title="v0afefb1"> </a></h2>
+<p>■後藤弘茂のWeekly海外ニュース■
+スリムPS3の低価格を支える45nm版Cell B.E.の低コスト化</p>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li><a href="http://pc.watch.impress.co.jp/docs/column/kaigai/20090824_310373.html" rel="nofollow">http://pc.watch.impress.co.jp/docs/column/kaigai/20090824_310373.html</a></li>
+<li>チップ写真見ながら、Cellの部分も削ればもっと低コストになるのにと思った。
+<pre>消費電力も初期モデルの約3分の2、HDD80GBのCECHL00シリーズの約280Wから約250Wに削減。</pre></li>
+<li>30Wしか減ってないの？</li>
+<li>250Wって、時代に逆行しているよね。</li>
+<li>どうせ３年くらい経ったところで後継機種が１つ前世代のエミュレーションをさせられるのが
+目に見えているので（SCEIがゲームから撤退するなら別だけど）</li>
+<li>エミュレーション可能なアーキテクチャーを最初から考えるとかしないのかね。</li></ul>
+<p>intelのLarrabeeも駄目そうだしね。</p>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li><a href="http://northwood.blog60.fc2.com/blog-entry-3071.html" rel="nofollow">http://northwood.blog60.fc2.com/blog-entry-3071.html</a></li></ul>
+<p><strong>この先生きのこれるアーキテクチャーは？</strong></p>
+<p><br />
+<br />
+<br /></p>
+<hr class="full_hr" />
+
+<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h2 id="content_1_26">今月のいろいろ失敗談  <a class="anchor_super" id="z3d21deb" href="#z3d21deb" title="z3d21deb"> </a></h2>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>地アナテレビが壊れる寸前になってしまったので、地デジテレビに手を出した。</li>
+<li>AQuosの倍速液晶を買ってしまったこと。＜あほ</li>
+<li>あとでいろいろ聞いたら、倍速でないやつのほうが省電力（１２０Ｗ-&gt;６０Ｗ（実際４５Ｗくらいだった））</li>
+<li>普通の人間の目は３０ＦＰＳで十分。映画やアニメも素材はそんな感じ。不幸な人間の目の人（動体視力バツグンとか）専用らしい。</li></ul>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>AquosのBluRayHDDレコーダを買ってしまった。</li>
+<li>クレーム続出。</li>
+<li>Ｗ録画の片方がＴＳモード（つまり地デジストリーム垂れ流しの高画質）でしか録画できないので録画時間が６０時間しかないやんけ＞５００ＧＢモデル。</li></ul>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>再圧縮しながら録画するエンジンは１個しか積んでいないとのこと。</li></ul>
+<p>でも、高かったんだよ（デッキだけで１０万オーバー）。</p>
+<p>ああ、出費が痛い。</p>
+<p>地アナのままで全然困ってなかったのに・・・。</p>
+<p>「絵は確かにキレイ（そりゃ前のテレビが壊れる寸前で色が出てなかったから）」</p>
+<p>そういえば、「地デジにするにはＵＨＦアンテナが必要です」は詐欺文言らしいね。</p>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>正確には、アナログと同時視聴したい人で、かつ、アナログ局とデジタル局の方向が異なる地域に限定の「必要条件」だったらしい。</li></ul>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>そんなやついるか？</li></ul>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>あと、ＵＨＦの４６ｃｈ〜６３ｃｈは、これからどう先生きのこるつもりなんだろうねぇ・・・。</li></ul>
+<p><br />
+<br />
+<br /></p>
+<hr class="full_hr" />
+
+<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h2 id="content_1_27">VineLinux5.0  <a class="anchor_super" id="t10455d0" href="#t10455d0" title="t10455d0"> </a></h2>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li><a href="http://www.vinelinux.org/" rel="nofollow">http://www.vinelinux.org/</a></li>
+<li>CD版とDVD版(1GB)があるようだ。</li>
+<li>jedが新しくなった。</li>
+<li>EUCが使えなくなっていた。</li>
+<li>SJISも使えなくなっていた。</li></ul>
+<p><strong>悲すい・・・</strong></p>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>そう、新しめのjedはUTF-8しかサポートされないのだ。</li>
+<li>jed-ja（とslang-ja）にしか、EUCとSJISの処理が含まれていない。</li></ul>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>しかし、編集したいソースコードやドキュメントの９９％以上は未だにEUCかSJISなのだから。</li></ul>
+<p><strong>対処方法は知っている</strong></p>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>Vine4.2のjed-jaの実行ファイル(/usr/bin/jed)とlibslangをコピーしてくるだけで良い。</li>
+<li>libslang(-ja)はバージョンが違うのでバッティングはしない。</li>
+<li>この方法でubuntu-9やdebian-4上でjed-jaを使っている。</li></ul>
+<ul class="list2" style="padding-left:32px;margin-left:32px"><li>ただし、この方法は敵から逃げ回っているようなもので、いつまでたってもUTF-8には対応出来ない。</li></ul>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>EUC,SJIS,UTF-8の全部に対応できるjedは存在しない。</li>
+<li>ソースやドキュメントを全部UTF-8に統一するというのは嫌だ。１文字が３バイトになる。（むしろSJISに統一して欲しいくらいだから）</li></ul>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>まあ、しかたないので、jedの実行ファイル名を二つ用意しよう。（<strong>え゛</strong>）</li></ul>
+<p><br />
+<br />
+<br /></p>
+<hr class="full_hr" />
+
+<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h2 id="content_1_28">シャープ、Linux搭載のモバイルインターネットツール「NetWalker」  <a class="anchor_super" id="q8d2a7a9" href="#q8d2a7a9" title="q8d2a7a9"> </a></h2>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li><a href="http://pc.watch.impress.co.jp/docs/news/20090827_311046.html" rel="nofollow">http://pc.watch.impress.co.jp/docs/news/20090827_311046.html</a></li></ul>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li><a href="http://pc.watch.impress.co.jp/docs/column/nishikawa/20090827_310875.html" rel="nofollow">http://pc.watch.impress.co.jp/docs/column/nishikawa/20090827_310875.html</a></li></ul>
+<p><strong>驚いた！</strong></p>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>まさかシャープがubuntu搭載のARM Cortex-A8マシンを出すとは！</li></ul>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>つまり、りなざう(Linux搭載のZaurus)の後継なのかー？</li></ul>
+<pre>CPU Freescale i.MX515(ARM Cortex-A8アーキテクチャ、800MHz)
+RAM 512MB
+ストレージは4GBフラッシュメモリ(ユーザーエリア約2GB)。 
+microSDスロット(microSDHC対応)
+USB 2.0×1、mini USB 2.0×1  ヘッドフォン端子、
+IEEE 802.11b/g  無線LAN
+重量は約400g。バッテリー駆動時間約10時間</pre>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>これで、もうZiiとかAndroidとか作りかけくそでばいすとはおさらばだ。</li></ul>
+<p><br />
+<br />
+<br /></p>
+<hr class="full_hr" />
+
+<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h2 id="content_1_29">NECと日立、カシオが携帯電話事業を統合か、首位のシャープに対抗  <a class="anchor_super" id="l30deef4" href="#l30deef4" title="l30deef4"> </a></h2>
+<p>GIGAZINEより</p>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li><a href="http://gigazine.net/index.php?/news/comments/20090828_nec_casio_hitachi/" rel="nofollow">http://gigazine.net/index.php?/news/comments/20090828_nec_casio_hitachi/</a></li>
+<li>つまり、携帯電話Android化計画で、３社やることの中身はおんなじなんだから一緒にやろうなんてことに・・・。</li>
+<li>x86版LiveAndroidは今のところだめだめだけど、ケータイに載せるなら悪いＯＳではないと思う（思いたい）</li></ul>
+<p><br />
+<br />
+<br /></p>
+<hr class="full_hr" />
+
+<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h2 id="content_1_30">予想：<del>遠い</del>将来(近いかも)にはパソコンはＵＳＢハブのような形になるだろう。  <a class="anchor_super" id="ka1f8c68" href="#ka1f8c68" title="ka1f8c68"> </a></h2>
+<p>こんな感じなのか？（ＥＰＳＯＮの小型ＰＣ）まだ少し大きいけれど。</p>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li><a href="http://shop.epson.jp/np11-v/detail/" rel="nofollow">http://shop.epson.jp/np11-v/detail/</a></li></ul>
+<p>あと、実売6,800円からのUSBディスプレイアダプタ</p>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li><a href="http://pc.watch.impress.co.jp/docs/news/20090828_311456.html" rel="nofollow">http://pc.watch.impress.co.jp/docs/news/20090828_311456.html</a></li>
+<li>これを使うと、パソコンがほんとにＵＳＢハブになってしまってもいいわけで。</li>
+<li>キーボード、マウス、ＬＡＮはＵＳＢだけで接続できる。</li>
+<li>ビデオだけがＵＳＢ接続出来ないと思っていたが、もう出来る時代になってしまった。</li>
+<li>しかし、４ポートＨＵＢ形状ではちょっと足りない。（ぎりぎり？）KB,mouse,LAN,Videoで一杯だ。</li>
+<li>無線ＬＡＮとかＵＳＢ over ＷＬＡＮになってしまうと、それこそＵＳＢハブですらない、<strong>ダルマさん！</strong></li></ul>
+<ul class="list2" style="padding-left:32px;margin-left:32px"><li>給電だけあればいいので、さしずめ携帯の充電アダプタみたいな形状なのか。</li></ul>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>液晶の裏に張り付いてしまうという案もある（実際にAtomのITXケースではそうなっている）</li></ul>
+<p><br />
+<br />
+<br /></p>
+<hr class="full_hr" />
+
+<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h2 id="content_1_31">赤外線リモコン研究  <a class="anchor_super" id="f42e4919" href="#f42e4919" title="f42e4919"> </a></h2>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>なんか地アナテレビがリサイクルで持ってかれたので、</li>
+<li>リモコンが余ってしまったらしい。</li></ul>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>おまけにメーカー違うし。</li></ul>
+<p>しかたない。作るか。</p>
+<p>read more : <a href="C0D6B3B0C0FEA5EAA5E2A5B3A5F3B8A6B5E6.html" title="赤外線リモコン研究 (394d)">赤外線リモコン研究</a></p>
+<p><br />
+<br />
+<br /></p>
+<hr class="full_hr" />
+
+<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h2 id="content_1_32">シルヴィアの量子力学  <a class="anchor_super" id="d3d1f7d5" href="#d3d1f7d5" title="d3d1f7d5"> </a></h2>
+<p>シルヴィア・アローヨ・カメホ／〔著〕　小谷正博／訳　岩波書店</p>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li><a href="http://www.e-hon.ne.jp/bec/SA/Detail?refShinCode=0100000000000032205459&amp;Action_id=121&amp;Sza_id=B0&amp;Rec_id=1004&amp;Rec_lg=100401" rel="nofollow">http://www.e-hon.ne.jp/bec/SA/Detail?refShinCode=0100000000000032205459&amp;Action_id=121&amp;Sza_id=B0&amp;Rec_id=1004&amp;Rec_lg=100401</a></li>
+<li>立ち読みしただけの本を紹介するのは少し気が引けますが、</li>
+<li>この本、ドイツの女子高生が書いたんですけど</li>
+<li>信じられますか？</li></ul>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>物理学の、特に量子力学の分野は難しい話を難しく書いた本が多いのですが</li>
+<li>この本、高校生が読んでも分かりやすいほど平易に書かれていて読みやすいです。</li></ul>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>もちろん、そんなに深い内容の本ではないですが、プランクの発見の話から始まってひも理論までさらっと書いてあって</li>
+<li>高校生向けのテキストとしてもいいんじゃないかと思ってしまいしました。</li></ul>
+<p>なつやすみのどくしょ感想文おわり。</p>
+<p><br />
+<br />
+<br />
+<br /></p>
+<hr class="full_hr" />
+
+<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h2 id="content_1_33">NetWalkerは素のUbuntuすぎて、普通の人には到底無理だろうね。  <a class="anchor_super" id="w551f0b6" href="#w551f0b6" title="w551f0b6"> </a></h2>
+<p>kinnekoさんの日記</p>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li><a href="http://d.hatena.ne.jp/kinneko/20090828" rel="nofollow">http://d.hatena.ne.jp/kinneko/20090828</a></li></ul>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>私は逆に考えている。</li>
+<li>電子辞書の上位機種（カラー液晶でｍｐ３とか動画プレイヤーにも使える奴）は同じくらいの大きさで、同じくらいの値段だ。</li>
+<li>その電子辞書ハードでLinuxが動けばいいのになぁ・・・と思ったことはある。（実際には動くわけ無い）</li>
+<li>変にカスタマイズされているより素のubuntuのほうがいじりやすい。</li></ul>
+<p><br /></p>
+<p>SmartQと比べたら？</p>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li><a href="http://pc.watch.impress.co.jp/docs/news/20090831_312059.html" rel="nofollow">http://pc.watch.impress.co.jp/docs/news/20090831_312059.html</a></li>
+<li>キーボードがあるぶん、断然<del>Zaurus</del>NetWalkerのほうがいい。</li></ul>
+<p><br />
+NetBookと比べたら？</p>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>実はDellのMini10vのubuntuモデル（英語キーボード）のほうが安いのだ（29,980Yen/SSD8GBmodel)</li>
+<li>しかも英語キーなのだ。</li>
+<li>Atom1.6GHzのほうが断然速いのだ。</li>
+<li>メモリーも2Gまではおk</li>
+<li>そしてubuntuにVMWarePlayerを入れればWinXPとかのvmイメージも使える。</li></ul>
+<p>ARMでは出来ない。（NetBookでかいけどね）</p>
+<p>その論法でいくと、今回も購入見送りだ。(mini10vのPineTrail版が出たら考える。発熱が減って、おそらくそのころのSSDはかな
+り改良されているし容量も大きくなっている。<strong>間違いない</strong>)</p>
+<p><br />
+<br />
+<br />
+<br /></p>
+<hr class="full_hr" />
+
+<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h2 id="content_1_34">Make: ARMベースのArduino互換ボード、Mapleのプロトタイプ  <a class="anchor_super" id="vf50c4ee" href="#vf50c4ee" title="vf50c4ee"> </a></h2>
+<p><a href="http://jp.makezine.com/blog/2009/09/maple_prototype.html" rel="nofollow">http://jp.makezine.com/blog/2009/09/maple_prototype.html</a></p>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>どこまでいっても拡張pinはあの配置なのね。</li>
+<li>開発環境的にはgcc(AVR)-&gt;gcc(ARM)なので差異は感じないだろう。</li>
+<li>ATmegaの16MHz対Cortex-M3の72MHzだと軽く４倍速いかな。</li>
+<li>32bit演算とかポインタ使いまくり処理だともっと性能差はある。</li>
+<li>逆にUSBまわりがfirmware側で面倒見ないといけないので、いろいろ面倒なところもあるけれど、そうなってくるとＲＴＯＳの出番？。</li>
+<li>USBシリアルの速度は19200とかじゃなくて1Mbps程度（仮想COM:なので実ボーレートは無視）になる。</li>
+<li>Arduinoはシンプル（裸のＭＣＵ）なところがＨＷ/ＳＷ学習にＧＯＯＤだと思っていた。</li>
+<li>ARM-Cortexになると、少なくともUSBドライバー層とRTOS層(?)が増えるので、あまりシンプルとは呼べないコンピュータだ。</li>
+<li>逆に、mallocとかsleepとかprintfとかの実装がまともになれる。</li>
+<li>BIOSに纏めてくれれば78K的に使いやすいかも。</li>
+<li>(ARM)組み込みマイコン学習キットになってしまう。</li>
+<li>で、ＲＴＯＳで武装してＬＥＤチカチカ？？？だよねきっと。(μC-Linuxとかが走るわけではない)</li></ul>
+<p><br />
+<br />
+<br />
+<br /></p>
+<hr class="full_hr" />
+
+<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h2 id="content_1_35">MINTIA HIDaspx  <a class="anchor_super" id="z4e7516c" href="#z4e7516c" title="z4e7516c"> </a></h2>
+<p>HIDaspxハードウェアが足りなくなったので、勢いで作ってしまいました。</p>
+<p><a href="http://psp.dip.jp/web/jpg/AVR/min0116.jpg" rel="nofollow"><img src="http://psp.dip.jp/web/jpg/AVR/min0116.jpg" alt="http://psp.dip.jp/web/jpg/AVR/min0116.jpg" /></a></p>
+<p>read more : <a href="MINTIAspx.html" title="MINTIAspx (178d)">MINTIAspx</a></p>
+   </div>
+  </div>
+ </div>
+ <div style="clear:both;height:1em;"></div>
+ <div id="logo"><a href="FrontPage.html"><img src="http://psp.dip.jp/web/title.jpg"></a></div>
+
+ <div id="personal"><ul><li class="login"><a href="#">ログインまたはアカウント作成</a></li></ul></div>
+ <div id="footer">
+  <div id="f-officialico">
+   <a href="http://pukiwiki.sourceforge.jp/"><img src="image/b_pukiwiki.official.png" alt="PukiWiki-official" /></a>
+  </div>
+  <div id="f-officialdevico">
+   <a href="http://pukiwiki.sourceforge.jp/dev/"><img src="image/b_pukiwiki.dev.png" alt="PukiWiki-dev" /></a>
+  </div>
+  <div id="f-list">
+   <ul><li>Site admin: <a href="http://pukiwiki.example.com/">anonymous</a></li>    <li>convert time: 0.332 sec</li>
+    <li>Powered by PukiWiki</li>
+    <li><a href="http://www.luntf.com/">Monobook for PukiWiki</a></li>
+   </ul>
+  </div>
+  <div style="clear:both;"></div>
+ </div>
+</div>
+</body>
+</html>

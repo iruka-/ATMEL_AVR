@@ -1,0 +1,44 @@
+
+
+
+
+		GND	K	20 19 A  4.2V
+			RES	18 17 D7
+				16 15
+				14 13
+				12 11
+			D0	10 9 RW
+			E	 8 7 CLK
+			CS2	 6 5 CS1
+REGSEL(1=data)A0 4 3 Vo
+			5V	 2 1 Vss
+
+D0-1=PB0-PB1
+D2-7=PD2-PD7
+RW	=PC1
+E	=PC2
+CLK	=PC3
+CS2	=PC4
+CS1	=PC5
+A0	=PB2
+
+http://www.saturn.dti.ne.jp/jun2747/lcd/lcd.html
+
+                        ATmega88/168
+                         ___    ___
+    (PCINT14/_RESET)PC6*[1  |__| 28]-PC5(ADC5/SCL/PCINT13)
+       (PCINT16/RxD)PD0 [2       27]-PC4(ADC4/SDA/PCINT12)
+       (PCINT17/TxD)PD1 [3       26]-PC3(ADC3/PCINT11)
+      (PCINT18/INT0)PD2*[4       25]-PC2(ADC2/PCINT10)
+ (PCINT19/OC2B/INT1)PD3*[5       24]-PC1(ADC1/PCINT9)
+    (PCINT20/XCK/T0)PD4 [6       23] PC0(ADC0/PCINT8)
+                    Vcc [7       22] GND
+                    GND [8       21] AREF (5V)
+(PCINT6/XTAL1/TOSC1)PB6*[9       20] AVcc (5V)
+(PCINT7/XTAL2/TOSC2)PB7*[10      19]+PB5(SCK/PCINT5)      -------> SCK
+   (PCINT21/OC0B/T1)PD5+[11      18]+PB4(MISO/PCINT3)     -------> MISO
+ (PCINT22/OC0A/AIN0)PD6 [12      17]+PB3(MOSI/OC2A/PCINT3)-------> MOSI
+      (PCINT23/AIN1)PD7 [13      16]-PB2(_SS/OC1B/PCINT2)
+  (PCINT0/CLKO/ICP1)PB0-[14      15]-PB1(OC1A/PCINT1)
+                         ~~~~~~~~~~
+

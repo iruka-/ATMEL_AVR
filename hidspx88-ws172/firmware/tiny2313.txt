@@ -1,0 +1,47 @@
+/*
+         ATtiny2313
+         ___    ___
+RESET    [1  |__| 20] Vcc
+PD0(NC)  [2       19] PB7(SCK)
+PD1(NC)  [3       18] PB6(MISO)
+XTAL2    [4       17] PB5(MOSI)
+XTAL1    [5       16] PB4(RST)
+PD2(12M) [6       15] PB3(BUSY LED)
+PD3      [7       14] PB2(READY LED)
+PD4      [8       13] PB1(NC)
+PD5(PUP) [9       12] PB0(NC)
+GND      [10      11] PD6(NC)
+         ~~~~~~~~~~~
+
+   ---------------------------------------
+   SPI:     PB7-4 ===> [Target AVR Device](MISOとMOSIは交差)
+   USB:     PD4   ===> USB D-
+            PD3   ===> USB D+
+            PD5   ===> USB D- PULL UP
+   XTAL:    XTAL1,2 => Crystal 12MHz
+   PD2:     Clock Output(12MHz)
+   ---------------------------------------
+
+■ FUSE設定
+ヒューズの設定は，外付けの 12MHz のクリスタルに合わせ、以下のように設定します。
+
+Low: 11111111 (0xFF)
+     ||||++++-- CKSEL[3:0] システムクロック選択
+     ||++-- SUT[1:0] 起動時間
+     |+-- CKOUT (0:PD2にシステムクロックを出力)
+     +-- CKDIV8 クロック分周初期値 (1:1/1, 0:1/8)
+
+High:11-11011 (0xDB)
+     |||||||+-- RSTDISBL (RESETピン 1:有効, 0:無効(PA2))
+     ||||+++-- BODLEVEL[2:0] (111:Off, 110:1.8, 101:2.7, 100:4.3)
+     |||+-- WDTON (WDT 0:常時ON, 1:通常)
+     ||+-- SPIEN (1:ISP禁止, 0:ISP許可) ※Parallel時のみ
+     |+-- EESAVE (消去でEEPROMを 1:消去, 0:保持)
+     +-- DWEN (On-Chipデバッグ 1:無効, 0:有効)
+
+Ext: -------1 (0xFF)
+            +-- SPMEN (SPM命令 1:無効, 0:有効)
+
+
+*/
+

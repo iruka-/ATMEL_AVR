@@ -1,0 +1,580 @@
+<?xml version="1.0" encoding="EUC-JP" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja">
+
+<head>
+ <meta http-equiv="content-type" content="application/xhtml+xml; charset=EUC-JP" />
+ <title>2009-03 - AVR etc</title>
+
+<!-- ヒント:六四天安門事件 -->
+<!-- Free Tibet!  -->
+<!-- About Tiananmen Massacre -->
+<!-- Free Tibet!  -->
+<!-- ヒント:六四天安門事件 -->
+<!-- About Tiananmen Massacre -->
+
+ <link rel="stylesheet" type="text/css" media="screen" href="../skin/monobook/monobook.css" />
+ <link rel="stylesheet" type="text/css" media="print" href="../skin/monobook/monobook.print.css" />
+ <link rel="alternate" type="application/rss+xml" title="RSS" href="FrontPage.html?cmd=rss" />
+</head>
+<body>
+<div id="globalWrapper">
+ <div id="menubar"><ul><li><a href="FrontPage.html" title="FrontPage (10m)">Ｔｏｐ</a></li></ul>
+<hr class="full_hr" />
+<p><a href="A3C8A3C9A3C4A3E1A3F3A3F0A3F8.html" title="ＨＩＤａｓｐｘ (10m)">ＨＩＤａｓｐｘ</a></p>
+<ul><li><a href="A3C4A3EFA3F7A3EEA3CCA3EFA3E1A3E4.html" title="ＤｏｗｎＬｏａｄ (48d)">ＤｏｗｎＬｏａｄ</a></li>
+<li><a href="A3C8A3C9A3C4A3E1A3F3A3F0B9E2C2AEB2BD.html" title="ＨＩＤａｓｐ高速化 (730d)">ＨＩＤａｓｐ高速化</a></li></ul>
+<p><a href="C0A9BAEE.html" title="制作 (10m)">制作</a></p>
+<p><a href="AVRetc.html" title="AVRetc (22d)">ＡＶＲ関係</a></p>
+<ul><li><a href="AVR_Monit.html" title="AVR_Monit (268d)">AVR_Monit</a></li>
+<li><a href="AVR_term.html" title="AVR_term (276d)">AVR_term</a></li>
+<li><a href="W32_term.html" title="W32_term (783d)">W32_term</a></li>
+<li><a href="HIDmon88.html" title="HIDmon88 (668d)">HIDmon88</a></li>
+<li><a href="HIDtester.html" title="HIDtester (564d)">HIDtester</a></li>
+<li><a href="usbRS232.html" title="usbRS232 (380d)">usbRS232</a></li>
+<li><a href="Arduino2313.html" title="Arduino2313 (358d)">Arduino2313</a></li>
+<li><a href="A5C7A5B8A5BFA5EBA5C6A5B9A5BFA1BC.html" title="デジタルテスター (573d)">デジタルテスター</a></li>
+<li><a href="ATmega88C0B8B3E8.html" title="ATmega88生活 (169d)">ATmega88生活</a></li>
+<li><a href="KeyBoardA5DEA5CBA5A2.html" title="KeyBoardマニア (611d)">KeyBoardマニア</a></li>
+<li><a href="KeyBoardA5DEA5CBA5A2II.html" title="KeyBoardマニアII (487d)">KeyBoardマニアII</a></li>
+<li><a href="Arduino400.html" title="Arduino400 (165d)">Arduino400</a></li>
+<li><a href="PICspx.html" title="PICspx (197d)">PICライター</a></li>
+<li><a href="hid_blaster.html" title="hid_blaster (9m)">ARMライター</a></li></ul>
+<p><a href="ARM.html" title="ARM (16d)">ARM</a></p>
+<ul><li><a href="armon.html" title="armon (8d)">STM32ブートローダー</a></li>
+<li><a href="stm32f103.html" title="stm32f103 (26d)">STM8S-Discovery改造</a></li>
+<li><a href="LPCXpresso.html" title="LPCXpresso (32d)">LPCXpresso</a></li>
+<li><a href="lpc-armon.html" title="lpc-armon (8d)">LPC用ブートローダー</a></li>
+<li><a href="LPCUSB.html" title="LPCUSB (32d)">NXP用LPCUSB</a></li>
+<li><a href="ARM7mon.html" title="ARM7mon (8d)">NXP用ブートローダー</a></li></ul>
+<p>PIC18F</p>
+<ul><li><a href="pic18boot.html" title="pic18boot (185d)">HIDブートローダー</a></li>
+<li><a href="pic18spx.html" title="pic18spx (6d)">AVR/PIC両用ライター</a></li>
+<li><a href="pic18blaster.html" title="pic18blaster (3m)">ARMライター</a></li>
+<li><a href="usbserial.html" title="usbserial (52d)">usbシリアル変換</a></li>
+<li><a href="pic18hidkey.html" title="pic18hidkey (219d)">usbキーボード変換</a></li>
+<li><a href="sdcc.html" title="sdcc (380d)">sdccを使いこなす</a></li>
+<li><a href="mcc18.html" title="mcc18 (370d)">mcc18を使いこなす</a></li>
+<li><a href="HIDmon-2550.html" title="HIDmon-2550 (185d)">HIDmon-2550</a></li>
+<li><a href="HIDmon-14K50.html" title="HIDmon-14K50 (185d)">HIDmon-14K50</a></li>
+<li><a href="PICmonitor.html" title="PICmonitor (176d)">PICmonitor</a></li></ul>
+<p>試行錯誤の記録</p>
+<ul><li><a href="UBW.html" title="UBW (541d)">UBWを試す</a></li>
+<li><a href="HIDboot.html" title="HIDboot (521d)">旧HIDboot</a></li>
+<li><a href="PIC18F2550.html" title="PIC18F2550 (235d)">PIC18F2550試用記</a></li>
+<li><a href="PIC18F4550.html" title="PIC18F4550 (522d)">PIC18F4550試用記</a></li></ul>
+<p>その他マイコン</p>
+<ul><li><a href="NEC78K.html" title="NEC78K (265d)">NEC78K</a></li>
+<li><a href="A3C8A3B8.html" title="Ｈ８ (165d)">Ｈ８</a></li>
+<li><a href="Android.html" title="Android (9d)">Android</a></li></ul>
+<p>開発日記</p>
+<ul><li><a href="2010-10.html" title="2010-10 (24m)">2010-10</a></li></ul>
+<hr class="full_hr" />
+<p>ノウハウ</p>
+<ul><li><a href="AVRUSB_Tips.html" title="AVRUSB_Tips (775d)">AVRUSB_Tips</a></li>
+<li><a href="A3C8A3C9A3C4A3E1A3F3A3F0BEF0CAF3.html" title="ＨＩＤａｓｐ情報 (395d)">ＨＩＤａｓｐ情報</a></li>
+<li><a href="C8C6CDD1A3D5A3D3A3C2-A3C9A3CF.html" title="汎用ＵＳＢ-ＩＯ (727d)">汎用ＵＳＢ-ＩＯ</a></li></ul>
+<hr class="full_hr" />
+<p>・<a href="AVRlink.html" title="AVRlink (726d)">リンク</a></p>
+<p>フリースペース</p>
+<ul><li><a href="http://psp.dip.jp/web/cgi-bin/note/index.cgi" rel="nofollow">ゲストブック</a></li></ul>
+<hr class="full_hr" />
+<p><a href="A3D7A3E9A3E4A3E5A3D4A3E5A3F8A3F4.html" title="ＷｉｄｅＴｅｘｔ (170d)">旧コンテンツ</a><br />
+<a href="A3D7A3E9A3EEA3D6A3E9A3F3A3F4A3E1.html" title="ＷｉｎＶｉｓｔａ (876d)">ＷｉｎＶｉｓｔａ</a><br />
+<a href="A5A4A5F3A5BFA1BCA5D5A5A7A1BCA5B9B9CD.html" title="インターフェース考 (1138d)">インターフェース考</a></p>
+<hr class="full_hr" />
+<h5>最新の20件</h5>
+<div><strong>2010-10-10</strong>
+<ul>
+ <li><a href="pic18blaster.html" title="pic18blaster (3m)">pic18blaster</a></li>
+ <li><a href="hid_blaster.html" title="hid_blaster (9m)">hid_blaster</a></li>
+ <li><a href="A3C8A3C9A3C4A3E1A3F3A3F0A3F8.html" title="ＨＩＤａｓｐｘ (10m)">ＨＩＤａｓｐｘ</a></li>
+ <li><a href="FrontPage.html" title="FrontPage (10m)">FrontPage</a></li>
+ <li><a href="C0A9BAEE.html" title="制作 (10m)">制作</a></li>
+ <li><a href="MenuBar.html" title="MenuBar (11m)">MenuBar</a></li>
+ <li><a href="2010-10.html" title="2010-10 (24m)">2010-10</a></li>
+</ul>
+<strong>2010-10-08</strong>
+<ul>
+ <li><a href="RecentDeleted.html" title="RecentDeleted (1d)">RecentDeleted</a></li>
+</ul>
+<strong>2010-10-04</strong>
+<ul>
+ <li><a href="pic18spx.html" title="pic18spx (6d)">pic18spx</a></li>
+</ul>
+<strong>2010-10-01</strong>
+<ul>
+ <li><a href="armon.html" title="armon (8d)">armon</a></li>
+ <li><a href="lpc-armon.html" title="lpc-armon (8d)">lpc-armon</a></li>
+ <li><a href="ARM7mon.html" title="ARM7mon (8d)">ARM7mon</a></li>
+ <li><a href="Android.html" title="Android (9d)">Android</a></li>
+</ul>
+<strong>2010-09-29</strong>
+<ul>
+ <li><a href="2010-09.html" title="2010-09 (11d)">2010-09</a></li>
+</ul>
+<strong>2010-09-23</strong>
+<ul>
+ <li><a href="ARM.html" title="ARM (16d)">ARM</a></li>
+</ul>
+<strong>2010-09-18</strong>
+<ul>
+ <li><a href="AVRetc.html" title="AVRetc (22d)">AVRetc</a></li>
+</ul>
+<strong>2010-09-14</strong>
+<ul>
+ <li><a href="stm32f103.html" title="stm32f103 (26d)">stm32f103</a></li>
+</ul>
+<strong>2010-09-08</strong>
+<ul>
+ <li><a href="LPCUSB.html" title="LPCUSB (32d)">LPCUSB</a></li>
+ <li><a href="LPCXpresso.html" title="LPCXpresso (32d)">LPCXpresso</a></li>
+</ul>
+<strong>2010-09-05</strong>
+<ul>
+ <li><a href="SiteMap.html" title="SiteMap (35d)">SiteMap</a></li>
+</ul>
+</div>
+</div>
+ <div id="mainColumnWrapper">
+  <div id="main-column">
+   <div id="navigator"><ul><li id="wn_main" class="selected"><a href="" title="2009-03 (567d)">本文</a></li><li id="wn_note"><span class="noexists">ノート<a href="FrontPage.html?cmd=edit&amp;page=note%2F2009-03">?</a></span></li><li><a href="FrontPage.html?cmd=edit&amp;page=2009-03">編集</a></li><li><a href="FrontPage.html?cmd=diff&amp;page=2009-03">差分</a></li></ul></div>
+   <div id="content">
+    <h1 class="firstHeading">2009-03</h1><div id="contentSub"></div>
+    <p><a href="2009-02.html" title="2009-02 (583d)">2009-02</a></p>
+<hr class="full_hr" />
+<p><a href="KeyBoardA5DEA5CBA5A2.html" title="KeyBoardマニア (611d)">キーボードまにあ!!!（スリー）はこちら</a></p>
+<hr class="full_hr" />
+<h2 id="content_1_0">３月兎  <a class="anchor_super" id="x7e89a51" href="#x7e89a51" title="x7e89a51"> </a></h2>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>３月にするのを忘れていた。</li></ul>
+<p>今月の目標</p>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>PIC18F2550を使ってみたい。（けれど、コンパイラがグダグダなので、やらないかも）</li>
+<li>USBバスアナライザが欲しいです。（これって目標ちゃうけど）
+<ul class="list2" style="padding-left:16px;margin-left:16px"><li>BeagleはFPGAかCPLDがあれば作れそうな予感。
+（でも作れるほどの技量はないんだよね。）</li></ul></li>
+<li>新しいARM基板に手を出すよりも先に、過去の積み石ARMとかFRマイコンをなんとかせねばなるまいそ。</li></ul>
+<p>今月の挫折の記録</p>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>簡易抵抗計を作ろうとして、とりあえずＬＥＤのダイナミック点灯までこぎつけた。
+<ul class="list2" style="padding-left:16px;margin-left:16px"><li>そこで力尽きているけれど・・・。</li>
+<li>Atmega88って、I/Oピン数がtn2313より多いはずなんだけど、実は少ないことに気づいた。AVccとvrefのせい？</li>
+<li>それに、8bitまとまったポートが出てない。</li></ul></li></ul>
+<p><br />
+<br />
+<br />
+<br /></p>
+<hr class="full_hr" />
+
+<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h2 id="content_1_1">簡易抵抗計  <a class="anchor_super" id="kcf4d512" href="#kcf4d512" title="kcf4d512"> </a></h2>
+<p><a href="http://psp.dip.jp/web/jpg/rcmeter1.jpg" rel="nofollow"><img src="http://psp.dip.jp/web/jpg/rcmeter1.jpg" alt="http://psp.dip.jp/web/jpg/rcmeter1.jpg" /></a></p>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>AIN0はATmega88の内部基準電圧（1.1V)を与える。</li>
+<li>AIN1はコンデンサにチャージされた電位を測る。</li>
+<li>PC0,PD1はHi-Zにする。</li></ul>
+<p>測定方法</p>
+<p>（１）</p>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>AIN1をデジタル出力(L)に設定し、コンデンサを放電させる。</li>
+<li>AIN1をアナログ入力に設定する。</li>
+<li>同時にPC0をHレベルにすると、コンデンサへのチャージが始まる。内部カウンタをスタートさせる。</li>
+<li>AIN1の電位が1.1Vを越えるとアナログ比較器が反転するので、チャージが行われた時間を内部カウンタで計測する。</li></ul>
+<p>（２）</p>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>同様にして、こんどはPD1を操作し、リファレンス抵抗(2.2kΩ)に対する1.1Vチャージタイムを計測する。</li></ul>
+<p><br /></p>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>２者のチャージ時間の比率で抵抗値を計算する。</li></ul>
+<p>とりあえず回路を組んでみた。</p>
+<p><a href="http://psp.dip.jp/web/jpg/rc-meter.jpg" rel="nofollow"><img src="http://psp.dip.jp/web/jpg/rc-meter.jpg" alt="http://psp.dip.jp/web/jpg/rc-meter.jpg" /></a></p>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>０Ω近辺の抵抗が繋がれると少しまずいので、実際は被測定Ｒと直列に47Ω程度を入れておく。</li>
+<li>計測後、その抵抗値を引き算する。</li>
+<li>コンデンサを外付けにして測定対象にすれば、簡易Ｃメーターになる。</li>
+<li>測定可能レンジは狭い。（100Ω〜100kΩくらい。）</li>
+<li>抵抗値の低いほうにレンジを伸ばすのは難しい。AVRのポートの外に低抵抗のスイッチFETを用意するとか？</li></ul>
+<p>ファームウェア公開</p>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li><a href="http://psp.dip.jp/web/upload/rcmeter.zip" rel="nofollow">http://psp.dip.jp/web/upload/rcmeter.zip</a></li>
+<li>.</li>
+<li>精度は甘いし、有効桁は２桁程度だけれど、意外といけてるので公開します。</li></ul>
+<p>計測中</p>
+<p><a href="http://psp.dip.jp/web/jpg/rc-meter2.jpg" rel="nofollow"><img src="http://psp.dip.jp/web/jpg/rc-meter2.jpg" alt="http://psp.dip.jp/web/jpg/rc-meter2.jpg" /></a></p>
+<p><br />
+<br />
+問題点</p>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>ＬＥＤのダイナミック点灯はATmega88のポートを直付けで行っている。</li>
+<li>このため、ポート数が８＋４＝１２ポート消費され、余りポートは少ない。
+<ul class="list2" style="padding-left:16px;margin-left:16px"><li>USB接続回路と、bootモード切り替えジャンパーにもポートを使用している（3bit）</li>
+<li>ATmega88は28pinだが、電源系5pin、RESET 1pin、水晶2pin、USB 3pinが常に使用されるため、</li>
+<li>残りは17pin。</li>
+<li>LED点灯に12pin使用するので、計測用には5pinしか使用できない。</li>
+<li>計測には3pin使用したので、残っているのは　RxDとAIN0 の２本のみ。</li></ul></li></ul>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>外付けドライバーなしで点灯しているので、やや暗い。
+<ul class="list2" style="padding-left:16px;margin-left:16px"><li>これはpnpトランジスタなどでLED COMMONをドライブする回路を用意して、</li>
+<li>ファーム側はCOMMONのドライブを反転させるとか、</li>
+<li>高輝度７セグＬＥＤを使えばＯＫかも。</li></ul></li></ul>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>ATtiny2313に実装するには、ＬＥＤ点灯をやめてべつの表示方法を考えなければならない。
+<ul class="list2" style="padding-left:16px;margin-left:16px"><li>AVR-USBでＰＣ側に取得するのが楽かもしれないが、スタンドアロンで動かせない。</li>
+<li>液晶モジュールを繋いでみる？
+<ul class="list3" style="padding-left:16px;margin-left:16px"><li>接続に7pinくらい必要なので、計測用3pinを足すと10pin</li>
+<li>元々リザーブされるのが電源2pin,RESET 1pin,水晶2pin,合計5pin</li>
+<li>USBを繋いでいる場合3pin(pull up含む)</li>
+<li>足りるかも。</li></ul></li>
+<li>USBを繋がない場合、20pinのうち必ず必要なpinは電源2pin,RESET 1pin,水晶2pinを除いた15pinが使用可能。
+<ul class="list3" style="padding-left:16px;margin-left:16px"><li>仮に７セグ４桁を直接駆動するなら12pin,計測用に3pinなので、ぎりぎり入るかも。</li>
+<li>ファームサイズは2k未満に収まっている(1500byteくらい)</li></ul></li></ul></li></ul>
+<p>問題は、もう７セグの配線はしたくない、ということと、bootloaderに慣れたのでAVRライタの繋ぎ変えが面倒
+だということくらい。</p>
+<p><br />
+<br />
+<br />
+<br /></p>
+<hr class="full_hr" />
+
+<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h2 id="content_1_2">PICのＣコンパイラはグダグダ？  <a class="anchor_super" id="ja190a34" href="#ja190a34" title="ja190a34"> </a></h2>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>AVRには、使い慣れたgccがあるけれど、PIC18にはgccが移植されていない。</li>
+<li>MicroChipが提供しているMPLAB C18は有償。（MAL扱いで税別75,000-）</li>
+<li>サードパーティのコンパイラとしてはHITECH-C,CCS,IAR-SystemがＣもしくはＣ＋＋コンパイラを有償提供している。</li>
+<li>フリーのＣコンパイラでは、<a href="http://sdcc.sourceforge.net/" rel="nofollow">sdcc</a>がある。</li>
+<li>基本有償だが、事実上無償版を利用できるコンパイラ(<a href="http://www.sfcompiler.co.uk/swordfish/" rel="nofollow">SwordFish</a>)もある。
+<ul class="list2" style="padding-left:16px;margin-left:16px"><li><a href="http://www.picgames.org/modules/tinyd1/index.php?id=32" rel="nofollow">http://www.picgames.org/modules/tinyd1/index.php?id=32</a></li>
+<li>制限の弱く、実用的に使える評価版を無料ダウンロード可能</li>
+<li>(コードサイズ無制限、データサイズ256バイトまで)</li>
+<li>プログラム開始番地、割り込みベクタを指定可能なのでUBWと相性が良い</li>
+<li>プロジェクトの概念がないため、ソース1本=プロジェクトになる。C18のようにリンカ、インクルードファイルの場所など複雑な設定項目がない</li>
+<li>VisualBasicに似た構造化指向を取り入れた言語仕様なので、VisualBasic感覚でプログラム可能。</li>
+<li>(BASICの皮をかぶったC言語のようなイメージ)</li></ul></li></ul>
+<p>ただし、SwordFishは、<strong>Ｃコンパイラではない</strong></p>
+<hr class="full_hr" />
+<p>グダグダというのは<strong>言いすぎ</strong>だが、たとえば、</p>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>MPLABのアプリケーションノートやサンプルソースは、おそらくMPLAB C18で書かれているだろう（と予想している）</li>
+<li>アマチュアが趣味で使用するのに75,000-も払うつもりはないので、普通は無料のsdccを選択するだろう。</li>
+<li>スクラッチから自分で起こすなら迷わずsdccだが、</li>
+<li>逆に、プロの人たちやMPLABの環境に慣れている人はむしろC18でないと困るだろうし・・・。</li>
+<li>同じＣ言語と言っても、ライブラリの違いやコンパイル方法の違いを吸収するのは骨が折れる</li>
+<li>なので、お互い行き来出来るようなソースを書くのも大変な労力の無駄。</li>
+<li>そもそも有償版を入手するところからすでに障壁。</li>
+<li>つまるところ、同じPICで同じＣ言語なのに、コンパイル環境ごとにユーザーが分断されてしまうのはなんとも馬鹿馬鹿しい話。</li></ul>
+<p><br />
+<br />
+<br />
+<br /></p>
+<hr class="full_hr" />
+
+<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h2 id="content_1_3">簡易抵抗計の改良  <a class="anchor_super" id="jaa94604" href="#jaa94604" title="jaa94604"> </a></h2>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>最上位桁表示がゼロサプレスされた場合はダイナミック点灯を３灯切り替えにして、ＬＥＤの輝度を上げた。</li>
+<li>精度を少し向上した。</li>
+<li>抵抗オープン時の表示を 「- - - -」 に変更した。</li>
+<li>たぶんATtiny2313に移植可能。クロックを12MHzにする場合はコンデンサの容量を0.047uFから0.1uFに変えたほうが
+精度が出せそう？</li></ul>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>コンデンサの精度は超いい加減だし、</li>
+<li>電源もパソコンのUSBか、適当なＡＣアダプタつきUSBハブからの給電で、安定化は考慮していないけれど、</li></ul>
+<p>意外と使える。</p>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>応答速度の速いＤＭＭがあるなら、わざわざ作らなかったと思う。</li>
+<li>手持ちのＳＡＮＷＡのポケットＤＭＭだと、抵抗を当ててから正しい値を示すまで最低３秒掛かる。</li>
+<li>今回制作したものは、ほぼ一瞬で計れる。</li>
+<li>表示が読みづらいので表示間隔（＝測定間隔）を０.１６秒くらいにしているけれど、</li>
+<li>実際０.０１秒くらいで計れるので、平均を取ればもうすこしましな表示になるかもしれない。</li>
+<li>これくらいの応答速度ならアナログテスターより速いし、読み取り精度的にもややgoodかもしれない。</li>
+<li>ただ、難点があって、100Ω以下と100kΩ以上が実用にならない。なんとかしたいけれど。</li>
+<li>デジタルテスターなのにレンジ切り替えスイッチを設けるという手はあるか。</li>
+<li>あとは学校で習ったブリッジ回路と反照型検流計（いつの時代や！<a id="notetext_1" href="#notefoot_1" class="note_super" title="製造会社：株式會社横河電機製作所...">*1</a>）で計るやりかたなら精度が出せるけど。</li>
+<li>AVRにどうやってあの大きな分圧ボリュームを回せるのかは不明。独立電源じゃｙないからそもそも平衡回路に出来ないし。</li></ul>
+<p>ファームウェア公開</p>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li><a href="http://psp.dip.jp/web/upload/rcmeter.zip" rel="nofollow">http://psp.dip.jp/web/upload/rcmeter.zip</a></li></ul>
+<p><br /></p>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>でも、よく考えてみたら、普通に５Ｖを２個の抵抗（１つはリファレンス）で分圧させてＡＤ変換に読ませれば
+良かったのか。あほみたいだな俺。</li>
+<li>その方法だとtn2313に実装出来ないけど。</li></ul>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>16bitタイマーカウンターの捕獲方法が解ったので、これで良しとしよう。</li></ul>
+<p><br />
+<br />
+<br />
+<br /></p>
+<hr class="full_hr" />
+
+<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h2 id="content_1_4">あんどろいどＯｎＴＰ２４０  <a class="anchor_super" id="q585d7b0" href="#q585d7b0" title="q585d7b0"> </a></h2>
+<p><a href="http://bird.dip.jp/mt/archives/cat_computer_and_networking.html" rel="nofollow">http://bird.dip.jp/mt/archives/cat_computer_and_networking.html</a></p>
+<p><a href="http://bird.dip.jp/mt/archives/2009/03/04/Android-x86-x240.jpg" rel="nofollow"><img src="http://bird.dip.jp/mt/archives/2009/03/04/Android-x86-x240.jpg" alt="http://bird.dip.jp/mt/archives/2009/03/04/Android-x86-x240.jpg" /></a></p>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>自分は何を隠そうＩＢＭのＴＰ２３０ｃｓ（486SX-33、RAM8MB）ユーザーだったので</li>
+<li>このスクリーンショットにはもの凄いデジャブを感じる。</li>
+<li>ＴＰ２３０ｃｓはWindows95がぎりぎり入るけれどとても重くて使えないので、デフォルトは
+Windows3.1だ。</li>
+<li>あとはIBM-DOS（生DOS）にWeb-BoyというシングルタスクのWebブラウザーを入れて動かすか</li>
+<li>SlackWare Linuxを入れてごにゅごにょするという感じだった。</li>
+<li>SlackWareでPCMCIAのNE2000っぽい10BASE-TのEtherLANカードを飼いならすのは大変だったぜぃ。</li>
+<li>暫くの間はTP230csにwebサーバーやらせてたこともあった。</li></ul>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>NetBookの時代になったけれど、やってることは基本全然変わってねえ。</li></ul>
+<p><br />
+<br />
+<br />
+<br /></p>
+<hr class="full_hr" />
+
+<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h2 id="content_1_5">デジタルテスター：新しい回路考案  <a class="anchor_super" id="u0b391ba" href="#u0b391ba" title="u0b391ba"> </a></h2>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li><a href="http://psp.dip.jp/web/jpg/rcmeter2.jpg" rel="nofollow"><img src="http://psp.dip.jp/web/jpg/rcmeter2.jpg" alt="http://psp.dip.jp/web/jpg/rcmeter2.jpg" /></a></li></ul>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>抵抗測定は、Ｒ１：Ｒ２で５Ｖを分圧して、それをＡＤＣで計る。</li>
+<li>コンデンサの充電時間の計測より高速。</li>
+<li>Ｒ１をリファレンス抵抗と仮定して、それを１０ｋ、１ｋ、２２０Ωのどれかから選択するようにしてみた。</li>
+<li>Ｒ２に最も近い値を自動的に選ぶようにすれば、２０Ω、１００ｋΩ近辺で約２％誤差、２００Ω〜１０ｋΩでは約０.２％誤差
+で計れると良いなというレベルになるので、コンデンサの充電時間の計測より高精度。</li>
+<li>但しAVRのPORT-Hレベル出力時の内部抵抗を考慮する必要がありそう。
+<ul class="list2" style="padding-left:16px;margin-left:16px"><li>自動計測でなくて、ロータリーＳＷ切り替えならその必要は無くなる。</li></ul></li></ul>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>電圧計測時はPD0,PD1,PD2のどれか１つをLレベルにして、電圧を分圧計測する。
+<ul class="list2" style="padding-left:16px;margin-left:16px"><li>５Ｖレンジは全てHi-Zでそのまま計る。</li></ul></li></ul>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>電流計測は+1.2Vまでの電圧ドロップを計る。
+<ul class="list2" style="padding-left:16px;margin-left:16px"><li>1Ω負荷なので、1A流れると1Vの電圧降下になる。つまり1Aレンジ。</li>
+<li>1digitはおよそ0.005Vなので、5mA/digitくらい。</li>
+<li>もっと緩くしたい場合はスイッチで1Ωを10Ωに切り替えるかプローブを取り替える。（100mAレンジになる)</li>
+<li>60Hz交流は、頑張ってＡＤ変換する。</li>
+<li>1.2Vに達していたら、オーバーレンジにする。</li></ul></li></ul>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>おまけ的な機能で、ダイオード、発光ダイオードの順方向電圧を測る。あるいはついでに発光テストをすることが可能。</li></ul>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>抵抗プローブの先にコンデンサを繋いで、PD0,PD1,PD2のどれかをL,H,L,Hと切り替えながら、２つのスレッショルドレベル
+(2Vと3Vとか)を行き来するように計れば、その周期から容量を計算できるかもしれない。その場合には、最適なレファレンス抵抗を自動で選べば尚良し。</li></ul>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>回路案だけ考えたが、配線はまだ、無い。プログラムも無い。</li></ul>
+<p><br />
+<br />
+<br />
+<br /></p>
+<hr class="full_hr" />
+
+<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h3 id="content_1_6">Charlieplexing - Reduced Pin-Count LED Display Multiplexing  <a class="anchor_super" id="a8debde8" href="#a8debde8" title="a8debde8"> </a></h3>
+<p>MAXIMだ。</p>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li><a href="http://www.maxim-ic.com/appnotes.cfm/an_pk/1880" rel="nofollow">http://www.maxim-ic.com/appnotes.cfm/an_pk/1880</a></li></ul>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>７セグ８桁のＬＥＤダイナミック点灯にはPullDOWNビット線８本と、PullUpコモン線８本
+のドライブ信号が必要（つまり、８ｘ８マトリクスＬＥＤを１/８Dutyで点灯させるのとＬＥＤ個数的に等価）</li>
+<li>だが、上記リンク先の回路はRAWとCOLUMNを共有させて、９本でドライブしている。</li>
+<li>LEDがダイオードであることを利用している感じ。ドライブされないほうの全ＬＥＤには逆方向の電圧が掛かるようだが・・・</li>
+<li>ドライブ回路との接続本数は節約できるが、ＬＥＤ側の配線はやや不規則になる。</li>
+<li>たとえば、数字だけしか表示しないつもりなら、4bit-&gt;7bitの変換専用のTTLが昔あったし、８桁のCOMMON側に対しては3bit-&gt;8SELのデコーダーTTLをかませば、マイコン側の出力PINを8bit(raw(4+1)bit+column3bit)に節約する方法もある。ICチップは逆に増えるが・・・</li></ul>
+<p><br />
+<br />
+<br />
+<br /></p>
+<hr class="full_hr" />
+
+<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h2 id="content_1_7">簡易抵抗計・完成  <a class="anchor_super" id="u65ee485" href="#u65ee485" title="u65ee485"> </a></h2>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>ほぼこの回路で制作し、ファームウェアも完成した。</li>
+<li>精度は、コンデンサの充電時間を計るよりも向上した。</li>
+<li>１００Ω以下もそれなりの精度で計測できる。（誤差３％程度？安定しているので較正による精度向上は可能）
+<ul class="list2" style="padding-left:16px;margin-left:16px"><li>コンデンサ充電の場合は１００Ω以下の精度が極端に悪くなっていた。</li></ul></li>
+<li>但し１００ｋ以上については数値がパラパラ動き、精度はあまりよくないようだ。（AVccとかArefを安定させる努力が必要？）</li></ul>
+<p><a href="A5C7A5B8A5BFA5EBA5C6A5B9A5BFA1BC.html" title="デジタルテスター (573d)">ファームウェア公開</a></p>
+<p><br />
+<br />
+<br />
+<br /></p>
+<hr class="full_hr" />
+
+<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h2 id="content_1_8">オープンソースプロジェクト HIDaspx  <a class="anchor_super" id="s655d090" href="#s655d090" title="s655d090"> </a></h2>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li><a href="http://jp.makezine.com/blog/2009/03/hidaspx.html" rel="nofollow">Make：Japanにて紹介されています</a></li></ul>
+<p>HIDaspxは千秋広幸さんが中心となって開発が進められているAVRマイコン用のプログラム書き込みツール。おもな特徴は3つ。
+ひとつめは、パソコンとの接続にUSBのHIDクラスを用いている点。HIDはキーボードやマウスの接続に使われる仕様で、どのパソコンも標準で対応している。つまり、HID準拠のデバイスは、ドライバをインストールしなくても使用可能。敷居が一段下がるわけだ。
+ふたつめの特徴は、そのHIDクラスをATtiny2313というマイコンひとつで実装している点。この部分はObjective Development社のオープンソースプロジェクトAVR-USBをベースにしている。tiny2313は、秋葉原でも100円で買えてしまう超廉価マイコンだ。それに12MHzの水晶やツェナダイオードなどの部品を加えるとできあがり。とても安上がり。
+特徴その3は、IOモジュールとしても使える点。ジャンパを一カ所変更するだけで、ライタからIOモジュールへと早変わり。hidmonというパソコン側のツールを使って、tiny2313のIOをコントロールすることができる。機能はシンプルで、仕組みを理解しやすい。(写真は <a href="HIDmon88.html" title="HIDmon88 (668d)">HIDmon</a> のgraph 機能でポートBを視覚化したところ)</p>
+<p><br />
+<br />
+<br />
+<br /></p>
+<hr class="full_hr" />
+
+<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h2 id="content_1_9">ATtiny2313でＡ/Ｄ変換  <a class="anchor_super" id="ad04123d" href="#ad04123d" title="ad04123d"> </a></h2>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>とりあえず、やり方だけ研究。</li></ul>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>参考資料：Atmelのアプリケーションノートの４００番と４０１番</li></ul>
+<p>AVR400: Low Cost A/D Converter</p>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li><a href="http://www.atmel.com/dyn/resources/prod_documents/doc0942.pdf" rel="nofollow">http://www.atmel.com/dyn/resources/prod_documents/doc0942.pdf</a></li>
+<li><a href="http://www.atmel.com/dyn/resources/prod_documents/avr400.zip" rel="nofollow">http://www.atmel.com/dyn/resources/prod_documents/avr400.zip</a></li></ul>
+<p>AVR401: 8-bit Precision A/D Converter</p>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li><a href="http://www.atmel.com/dyn/resources/prod_documents/doc0953.pdf" rel="nofollow">http://www.atmel.com/dyn/resources/prod_documents/doc0953.pdf</a></li>
+<li><a href="http://www.atmel.com/dyn/resources/prod_documents/avr401.zip" rel="nofollow">http://www.atmel.com/dyn/resources/prod_documents/avr401.zip</a></li></ul>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>両方とも、AT90S1200用に書かれたもの。(アセンブラ)</li>
+<li>何故AVR401のほうが精度が高いかというと、コンデンサに充電する負荷抵抗の代わりに、PNPトランジスタで
+定電流を流しているから、らしい。</li>
+<li>負荷抵抗だと<del>Logみたいな曲線</del>（嘘。Logは無限大に発散するが、チャージ電圧はVccが漸近線になる）で充電されていく。</li>
+<li>でもどのみち、容量誤差の影響をもろに受けるような気がする。もしかして内部基準電圧でのコンパレータ時間
+を計って比を取るようなことをしているなら無問題。</li></ul>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>どっちみち、抵抗測定には応用できるわけではない。</li></ul>
+<p><a href="http://psp.dip.jp/web/jpg/tester-sc.jpg" rel="nofollow"><img src="http://psp.dip.jp/web/jpg/tester-sc.jpg" alt="http://psp.dip.jp/web/jpg/tester-sc.jpg" /></a></p>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>ATmega88の5V分圧による抵抗測定では、被測定抵抗がリファレンス抵抗より大きいときに、分圧された電圧が
+5V近辺を指すため、不正確になっているような気がする。</li>
+<li>これは、たとえば分圧された電圧の反対側(Vcc - Vin)を直接計るようなことが出来れば改善すると思う。</li>
+<li>あるいは、リファレンス抵抗をさらに大きな値に切り替えるもありかも。</li>
+<li>5Vを分圧しないで、安定化された3.3Vを用意して、分圧抵抗の中点の電位と、全部の電位を測れば解決する問題かもしれない。</li>
+<li>但し、現在、抵抗切り替えがメカニカルＳＷではなく、PORT出力直結なので、<strong>絵に描いたもち。</strong></li></ul>
+<p><br />
+<br />
+<br /></p>
+<hr class="full_hr" />
+
+<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h2 id="content_1_10">Intel、AMDに対しクロスライセンス違反を主張  <a class="anchor_super" id="f55d80df" href="#f55d80df" title="f55d80df"> </a></h2>
+<p>〜「Global FoundriesはAMDの子会社ではない」</p>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li><a href="http://pc.watch.impress.co.jp/docs/2009/0317/intel.htm" rel="nofollow">http://pc.watch.impress.co.jp/docs/2009/0317/intel.htm</a></li>
+<li>intelにとっては軽いジャブのつもりだろう。AMDを本気で潰す気ではないと思うけど、結構痛いんじゃないかな。</li>
+<li>AMDって、昔はi8086の互換チップをライセンス製造してたんだよねー。</li>
+<li>今や設計専門会社か。</li>
+<li>いっそ、ビデオチップ専業になったらいいんじゃないかな（冗談。）</li>
+<li>というか、AMDごとアラブ石油資本が買い取っとけば良かったんじゃあ？</li></ul>
+<p><br />
+<br />
+<br />
+<br /></p>
+<hr class="full_hr" />
+
+<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h2 id="content_1_11">次世代通信網の「奸計」　プロバイダーが怒号の嵐  <a class="anchor_super" id="sd472301" href="#sd472301" title="sd472301"> </a></h2>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li><a href="http://facta.co.jp/article/200903021.html" rel="nofollow">http://facta.co.jp/article/200903021.html</a></li></ul>
+<p>マルチプレフィックス問題は，ISPとNGNの両方が端末にIPv6アドレスを配布することで，正常に通信できなくなる現象である。</p>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li><a href="http://itpro.nikkeibp.co.jp/article/COLUMN/20081106/318593/?ST=ngn" rel="nofollow">http://itpro.nikkeibp.co.jp/article/COLUMN/20081106/318593/?ST=ngn</a></li></ul>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>ひでー話だ。</li>
+<li>ipv6って、まだやってたんだ。とっくに廃れたのかと思っていた。
+<ul class="list2" style="padding-left:16px;margin-left:16px"><li>というか、NTTフレッツのipv6は、まるで10.0.0.0/8だな。</li>
+<li>だったら最初からipv6にもローカルipを用意しておけばよかったのに・・・。</li></ul></li></ul>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>一時給付金を配るくらいなら、日本人とか、全人類に一人づつ/64を生涯無料で割り当てればよいのだ。
+<ul class="list2" style="padding-left:16px;margin-left:16px"><li>それならNTTのNGNだって、全部グローバルipでいけたろうに・・・</li>
+<li>というかプロバイダーに無尽蔵にv6アドレスを供給しといて、そっから無料配布するような仕組みにしておけば、いずれ有料割り当てのipv4なんて廃れるに決まっとる。</li></ul></li></ul>
+<p><br />
+<br />
+<br />
+<br /></p>
+<hr class="full_hr" />
+
+<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h2 id="content_1_12">HIDmonを改造してＡ/Ｄにする。  <a class="anchor_super" id="ic6de952" href="#ic6de952" title="ic6de952"> </a></h2>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>とりあえず、ファームだけ書いた。</li>
+<li>まだホスト側を書いていない。</li>
+<li>配線等もまだ。</li>
+<li>割り込みは使わずに、TIMER1の捕獲だけでやる。</li>
+<li>Pollコマンドの発行タイミングが早くて、まだ捕獲されていないときは次回のPollで取得できると思う。
+<ul class="list2" style="padding-left:16px;margin-left:16px"><li>（あるいは、ホスト側でSET_PAGEしたあとPollするまでに待ちを入れる）</li></ul></li>
+<li>キャパシタ充電時間は<del>1mS以下〜長くても数mS</del>だと思われる。その場合TIMER1のカウント値は<del>12000〜64000程度</del>。
+<ul class="list2" style="padding-left:16px;margin-left:16px"><li>嘘。t=RCでR=1k,C=0.047uFを仮定すると t=47uSecになり12MHzではTIMER1は564を指す。</li>
+<li>そのときのVは0.63*5V=3V程度。</li>
+<li>10倍の時間が過ぎ、t=10*RCとすると、t=470uSecでTIMER1は5640。電圧は5*(1-exp(-10))=4.9997V。それでもUSBの１フレーム以下なので無問題。
+</li></ul></li>
+<li>精度は8bitも取れると思っていないので、もっと時定数を切り詰めてもいいのかもしれない。</li>
+<li>充電電圧曲線は、
+<pre>V=V0*(1-exp(-t/RC))  </pre>
+<span style="font-size:10px">... 自分では導出出来ず、Google先生に聞きました。ちなみに充電エネルギーの５０％は抵抗が熱に変換してしまうそうです。</span></li>
+<li>なので、あとはホストＰＣ側で&lt;math.h&gt;をインクルードしてごにょごにょ。</li></ul>
+<p>アイディアメモ</p>
+<pre>**********************************************************************
+*	アナログ比較器と キャパシタ充電時間計測による A/D 変換の実装.
+**********************************************************************</pre>
+<pre>*	変換回路について
+(alt.Vref)                          プローブは２択.
+AIN0&gt;----------===&gt;-  Rmeter Vmeter &lt;-+-- &lt;--+-
+                                     Rin     |
+PD6&gt;--R2.2K--*-===&gt;-  Rmeter        &lt;-+-     Vin
+             |                               |
+AIN1&gt;--------*       +===&gt;-  Vmeter       &lt;--+-
+             |       |
+    0.047uF ===      |
+             |       |
+            GND     GND</pre>
+<pre>*	  AIN1 にキャパシタとプルアップ抵抗を繋いで掃引します。
+*	  変換動作後は AIN1 を L にして キャパシタ放電します。
+*	  アナログ電圧入力 は AIN0 に接続してください。
+*
+*	A/D 変換動作について
+*  ★page_mode == 0xa0 のとき.
+*    AIN0 を 内部基準電圧入力(1.23V)に設定したのち、AIN1をアナログ入力にします。
+*    同時に、TIMER1をスタートさせます。
+*
+*  ★Pollコマンドに対する応答
+*    TIMER1捕獲カウンタ(捕獲条件：AIN1 &gt; AIN0)の値を返します。
+*	  捕獲されていなかった場合は 0xffff を返します。
+*
+*  ★page_mode == 0xa1 のとき.
+*    AIN0 を 比較器入力に設定したのち、AIN1をアナログ入力にします。
+*    同時に、TIMER1をスタートさせます。
+*
+*  ★Pollコマンドに対する応答は page_mode == 0xa0のときと同じです。
+*</pre>
+<pre>* 抵抗測定動作について
+*	  AIN0 を出力ポートとして使い、被測定抵抗をPULLUPして掃引します。
+*	  PD6  は参照抵抗(2.2KΩ)です。
+*  ★page_mode == 0xa2 のとき.
+*    AIN0 を 内部基準電圧入力(1.23V)に設定したのち、AIN1をアナログ入力にします。
+*    同時に、TIMER1をスタートさせます。
+*    PD6はオープンにして、AIN0をHiレベルにします。
+*  抵抗測定の参照計測は ★page_mode == 0xa0 と同一です。</pre>
+<pre>*  Pollコマンドの戻りパケット構造.
+*  （ 5 bytes ）
+*  [Report ID] [ page_mode ] [ Timer1_L ] [ Timer1_H ] [ reserved ]
+*
+*/</pre>
+<p>電圧測定方法</p>
+<pre>Vref(1.23V)のときのTrefと、
+Vin(xxx V)のときのTin をUSB経由で取得して、
+1.23V=5.0V * (1-exp(-Tref/RC)) にて、RCの積の値を得て
+Vin  =5.0V * (1-exp(-Tin/RC)) を計算すればＯＫ。  </pre>
+<p>ただし5Vの精度も影響してくると思われる。</p>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>RCの逆算式は
+<pre>exp(-Tref/RC))=1-(1.23/5.0)=0.754
+RC = Tref/0.28236</pre></li>
+<li>Tref=159カウント程度を予定。</li></ul>
+<p>もっとキャパシタをでかくするか、Rを4.7kとかにしたほうがよいかな。</p>
+<p><br />
+<br />
+<br />
+<br /></p>
+<hr class="full_hr" />
+
+<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h2 id="content_1_13">googleは神。  <a class="anchor_super" id="cf071c79" href="#cf071c79" title="cf071c79"> </a></h2>
+<p>「Google Earth」に火星のほぼ生中継の画像</p>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li><a href="http://internet.watch.impress.co.jp/cda/news/2009/03/16/22785.html" rel="nofollow">http://internet.watch.impress.co.jp/cda/news/2009/03/16/22785.html</a></li></ul>
+<p>「Google Earth」に過去画像を大量追加、各地で歴史的比較可能に</p>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li><a href="http://internet.watch.impress.co.jp/cda/news/2009/03/17/22805.html" rel="nofollow">http://internet.watch.impress.co.jp/cda/news/2009/03/17/22805.html</a></li></ul>
+<p>Google はいったいどこに行こうとしているのだろうか...</p>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>Googleは神になろうとしているのではないだろうか。</li>
+<li>神というと宗教的に考えてしまいそうだが、</li>
+<li>そうではなくて、「全人類の知識」を集約し、<span style="font-size:9px">（なんでも知っておられる）</span></li>
+<li>いつでも（誰でも）アクセス出来る。<span style="font-size:9px">（どこにでもあらせられる）</span></li></ul>
+<p><strong>まさに神。</strong>（あれっ？）</p>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>SFで言うところの、「マザーコンピュータ」 --- こいつが機能停止したときに人類は皆石器時代に戻る。
+<ul class="list2" style="padding-left:16px;margin-left:16px"><li>既にgoogleがないと<del>カンニングが出来なくて</del>知識が得られなくて困る人たちがいっぱい（自分含む）</li></ul></li></ul>
+<p><br /></p>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>J.P.ホーガンだったら、ZoracとかVisorクラスのコンピューター（ネットワーク）のような・・・。</li></ul>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>願わくば「知識の神」であるところのgoogle様には、ずっと皆に平等で、いてほしい。<span style="font-size:9px">（貧しい者の味方で居て欲しい）</span></li></ul>
+<p>（有料化しないでね）</p>
+<p><br />
+<br />
+<br />
+<br /></p>
+<hr class="full_hr" />
+
+<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h3 id="content_1_14">続：HIDmonを改造してＡ/Ｄにする。  <a class="anchor_super" id="a7a5016c" href="#a7a5016c" title="a7a5016c"> </a></h3>
+<p>仮ファームウェアとhidmon.exe公開</p>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li><a href="http://psp.dip.jp/web/upload/hidtester.zip" rel="nofollow">http://psp.dip.jp/web/upload/hidtester.zip</a></li></ul>
+<p>配線したPinが１ピンづつずれていて、全然動かなくてあせった・・・。</p>
+<p>スクリーンショットはこんな感じ。</p>
+<p><a href="http://psp.dip.jp/web/jpg/testerbmp.jpg" rel="nofollow"><img src="http://psp.dip.jp/web/jpg/testerbmp.jpg" alt="http://psp.dip.jp/web/jpg/testerbmp.jpg" /></a></p>
+
+<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h3 id="content_1_15">Ａ/Ｄの精度を上げるには  <a class="anchor_super" id="uf3ae5e4" href="#uf3ae5e4" title="uf3ae5e4"> </a></h3>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>どうやら、内部基準電圧はあまりあてにならないようだ（理由は不明。USBホストによってはジッタが目立つ）</li>
+<li>むしろVref(Tref)を計測せずに、だいたいわかっている固定値を使ったほうが、はるかにジッタが減る傾向にある。</li>
+<li>但し、Vccを3.3Vに安定化させておくと、ジッタはそれほどでもない。（あるいはUSBホストによるのかも）</li></ul>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>USB1.1ハブなどを通した場合、あからさまにVccが落ちる(4.75V程度になる）ので、計算式を変えないと駄目。</li></ul>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>手持ちＤＭＭの精度は一応１％未満なので、これを利用してなんらかの較正が出来ると良いな。</li></ul>
+<p>較正方法は検討中・・・</p>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>ファーム側で、TIMER1捕獲イベント(AIN0&lt;AIN1)が発生しないことがある（２とおり）
+<ul class="list2" style="padding-left:16px;margin-left:16px"><li>ＶＲが０Ｖになっていると常に（最初から）AIN0&lt;AIN1であることがあり、Tin=0xffff（捕獲発生せず）になる。</li>
+<li>ＶＲが５Ｖフルになっていると、AIN1よりAIN0の電圧がわずかに高くて、トリガーに到達しない。このときにTin=0xffff</li></ul></li></ul>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>区別するにはACOのビットを見ればいいはずだ。いまは区別していないので５Ｖ天井で０Ｖと勘違いする。</li></ul>
+<hr class="note_hr" /><a id="notefoot_1" href="#notetext_1" class="note_super">*1</a>
+<span class="small">製造会社：株式會社横河電機製作所。実習当時すでにとうのむかしに製造完了のため技官の方が修理しながら現役で使っていた。</span><br />   </div>
+  </div>
+ </div>
+ <div style="clear:both;height:1em;"></div>
+ <div id="logo"><a href="FrontPage.html"><img src="http://psp.dip.jp/web/title.jpg"></a></div>
+
+ <div id="personal"><ul><li class="login"><a href="#">ログインまたはアカウント作成</a></li></ul></div>
+ <div id="footer">
+  <div id="f-officialico">
+   <a href="http://pukiwiki.sourceforge.jp/"><img src="image/b_pukiwiki.official.png" alt="PukiWiki-official" /></a>
+  </div>
+  <div id="f-officialdevico">
+   <a href="http://pukiwiki.sourceforge.jp/dev/"><img src="image/b_pukiwiki.dev.png" alt="PukiWiki-dev" /></a>
+  </div>
+  <div id="f-list">
+   <ul><li>Site admin: <a href="http://pukiwiki.example.com/">anonymous</a></li>    <li>convert time: 0.214 sec</li>
+    <li>Powered by PukiWiki</li>
+    <li><a href="http://www.luntf.com/">Monobook for PukiWiki</a></li>
+   </ul>
+  </div>
+  <div style="clear:both;"></div>
+ </div>
+</div>
+</body>
+</html>

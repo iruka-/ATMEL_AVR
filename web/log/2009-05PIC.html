@@ -1,0 +1,612 @@
+<?xml version="1.0" encoding="EUC-JP" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja">
+
+<head>
+ <meta http-equiv="content-type" content="application/xhtml+xml; charset=EUC-JP" />
+ <title>2009-05PIC - AVR etc</title>
+
+<!-- ヒント:六四天安門事件 -->
+<!-- Free Tibet!  -->
+<!-- About Tiananmen Massacre -->
+<!-- Free Tibet!  -->
+<!-- ヒント:六四天安門事件 -->
+<!-- About Tiananmen Massacre -->
+
+ <link rel="stylesheet" type="text/css" media="screen" href="../skin/monobook/monobook.css" />
+ <link rel="stylesheet" type="text/css" media="print" href="../skin/monobook/monobook.print.css" />
+ <link rel="alternate" type="application/rss+xml" title="RSS" href="FrontPage.html?cmd=rss" />
+</head>
+<body>
+<div id="globalWrapper">
+ <div id="menubar"><ul><li><a href="FrontPage.html" title="FrontPage (10m)">Ｔｏｐ</a></li></ul>
+<hr class="full_hr" />
+<p><a href="A3C8A3C9A3C4A3E1A3F3A3F0A3F8.html" title="ＨＩＤａｓｐｘ (10m)">ＨＩＤａｓｐｘ</a></p>
+<ul><li><a href="A3C4A3EFA3F7A3EEA3CCA3EFA3E1A3E4.html" title="ＤｏｗｎＬｏａｄ (48d)">ＤｏｗｎＬｏａｄ</a></li>
+<li><a href="A3C8A3C9A3C4A3E1A3F3A3F0B9E2C2AEB2BD.html" title="ＨＩＤａｓｐ高速化 (730d)">ＨＩＤａｓｐ高速化</a></li></ul>
+<p><a href="C0A9BAEE.html" title="制作 (10m)">制作</a></p>
+<p><a href="AVRetc.html" title="AVRetc (22d)">ＡＶＲ関係</a></p>
+<ul><li><a href="AVR_Monit.html" title="AVR_Monit (268d)">AVR_Monit</a></li>
+<li><a href="AVR_term.html" title="AVR_term (276d)">AVR_term</a></li>
+<li><a href="W32_term.html" title="W32_term (783d)">W32_term</a></li>
+<li><a href="HIDmon88.html" title="HIDmon88 (668d)">HIDmon88</a></li>
+<li><a href="HIDtester.html" title="HIDtester (564d)">HIDtester</a></li>
+<li><a href="usbRS232.html" title="usbRS232 (380d)">usbRS232</a></li>
+<li><a href="Arduino2313.html" title="Arduino2313 (358d)">Arduino2313</a></li>
+<li><a href="A5C7A5B8A5BFA5EBA5C6A5B9A5BFA1BC.html" title="デジタルテスター (573d)">デジタルテスター</a></li>
+<li><a href="ATmega88C0B8B3E8.html" title="ATmega88生活 (169d)">ATmega88生活</a></li>
+<li><a href="KeyBoardA5DEA5CBA5A2.html" title="KeyBoardマニア (611d)">KeyBoardマニア</a></li>
+<li><a href="KeyBoardA5DEA5CBA5A2II.html" title="KeyBoardマニアII (487d)">KeyBoardマニアII</a></li>
+<li><a href="Arduino400.html" title="Arduino400 (165d)">Arduino400</a></li>
+<li><a href="PICspx.html" title="PICspx (197d)">PICライター</a></li>
+<li><a href="hid_blaster.html" title="hid_blaster (9m)">ARMライター</a></li></ul>
+<p><a href="ARM.html" title="ARM (16d)">ARM</a></p>
+<ul><li><a href="armon.html" title="armon (8d)">STM32ブートローダー</a></li>
+<li><a href="stm32f103.html" title="stm32f103 (26d)">STM8S-Discovery改造</a></li>
+<li><a href="LPCXpresso.html" title="LPCXpresso (32d)">LPCXpresso</a></li>
+<li><a href="lpc-armon.html" title="lpc-armon (8d)">LPC用ブートローダー</a></li>
+<li><a href="LPCUSB.html" title="LPCUSB (32d)">NXP用LPCUSB</a></li>
+<li><a href="ARM7mon.html" title="ARM7mon (8d)">NXP用ブートローダー</a></li></ul>
+<p>PIC18F</p>
+<ul><li><a href="pic18boot.html" title="pic18boot (185d)">HIDブートローダー</a></li>
+<li><a href="pic18spx.html" title="pic18spx (6d)">AVR/PIC両用ライター</a></li>
+<li><a href="pic18blaster.html" title="pic18blaster (3m)">ARMライター</a></li>
+<li><a href="usbserial.html" title="usbserial (52d)">usbシリアル変換</a></li>
+<li><a href="pic18hidkey.html" title="pic18hidkey (219d)">usbキーボード変換</a></li>
+<li><a href="sdcc.html" title="sdcc (380d)">sdccを使いこなす</a></li>
+<li><a href="mcc18.html" title="mcc18 (370d)">mcc18を使いこなす</a></li>
+<li><a href="HIDmon-2550.html" title="HIDmon-2550 (185d)">HIDmon-2550</a></li>
+<li><a href="HIDmon-14K50.html" title="HIDmon-14K50 (185d)">HIDmon-14K50</a></li>
+<li><a href="PICmonitor.html" title="PICmonitor (176d)">PICmonitor</a></li></ul>
+<p>試行錯誤の記録</p>
+<ul><li><a href="UBW.html" title="UBW (541d)">UBWを試す</a></li>
+<li><a href="HIDboot.html" title="HIDboot (521d)">旧HIDboot</a></li>
+<li><a href="PIC18F2550.html" title="PIC18F2550 (235d)">PIC18F2550試用記</a></li>
+<li><a href="PIC18F4550.html" title="PIC18F4550 (522d)">PIC18F4550試用記</a></li></ul>
+<p>その他マイコン</p>
+<ul><li><a href="NEC78K.html" title="NEC78K (265d)">NEC78K</a></li>
+<li><a href="A3C8A3B8.html" title="Ｈ８ (165d)">Ｈ８</a></li>
+<li><a href="Android.html" title="Android (9d)">Android</a></li></ul>
+<p>開発日記</p>
+<ul><li><a href="2010-10.html" title="2010-10 (24m)">2010-10</a></li></ul>
+<hr class="full_hr" />
+<p>ノウハウ</p>
+<ul><li><a href="AVRUSB_Tips.html" title="AVRUSB_Tips (775d)">AVRUSB_Tips</a></li>
+<li><a href="A3C8A3C9A3C4A3E1A3F3A3F0BEF0CAF3.html" title="ＨＩＤａｓｐ情報 (395d)">ＨＩＤａｓｐ情報</a></li>
+<li><a href="C8C6CDD1A3D5A3D3A3C2-A3C9A3CF.html" title="汎用ＵＳＢ-ＩＯ (727d)">汎用ＵＳＢ-ＩＯ</a></li></ul>
+<hr class="full_hr" />
+<p>・<a href="AVRlink.html" title="AVRlink (726d)">リンク</a></p>
+<p>フリースペース</p>
+<ul><li><a href="http://psp.dip.jp/web/cgi-bin/note/index.cgi" rel="nofollow">ゲストブック</a></li></ul>
+<hr class="full_hr" />
+<p><a href="A3D7A3E9A3E4A3E5A3D4A3E5A3F8A3F4.html" title="ＷｉｄｅＴｅｘｔ (170d)">旧コンテンツ</a><br />
+<a href="A3D7A3E9A3EEA3D6A3E9A3F3A3F4A3E1.html" title="ＷｉｎＶｉｓｔａ (876d)">ＷｉｎＶｉｓｔａ</a><br />
+<a href="A5A4A5F3A5BFA1BCA5D5A5A7A1BCA5B9B9CD.html" title="インターフェース考 (1138d)">インターフェース考</a></p>
+<hr class="full_hr" />
+<h5>最新の20件</h5>
+<div><strong>2010-10-10</strong>
+<ul>
+ <li><a href="pic18blaster.html" title="pic18blaster (3m)">pic18blaster</a></li>
+ <li><a href="hid_blaster.html" title="hid_blaster (9m)">hid_blaster</a></li>
+ <li><a href="A3C8A3C9A3C4A3E1A3F3A3F0A3F8.html" title="ＨＩＤａｓｐｘ (10m)">ＨＩＤａｓｐｘ</a></li>
+ <li><a href="FrontPage.html" title="FrontPage (10m)">FrontPage</a></li>
+ <li><a href="C0A9BAEE.html" title="制作 (10m)">制作</a></li>
+ <li><a href="MenuBar.html" title="MenuBar (12m)">MenuBar</a></li>
+ <li><a href="2010-10.html" title="2010-10 (24m)">2010-10</a></li>
+</ul>
+<strong>2010-10-08</strong>
+<ul>
+ <li><a href="RecentDeleted.html" title="RecentDeleted (1d)">RecentDeleted</a></li>
+</ul>
+<strong>2010-10-04</strong>
+<ul>
+ <li><a href="pic18spx.html" title="pic18spx (6d)">pic18spx</a></li>
+</ul>
+<strong>2010-10-01</strong>
+<ul>
+ <li><a href="armon.html" title="armon (8d)">armon</a></li>
+ <li><a href="lpc-armon.html" title="lpc-armon (8d)">lpc-armon</a></li>
+ <li><a href="ARM7mon.html" title="ARM7mon (8d)">ARM7mon</a></li>
+ <li><a href="Android.html" title="Android (9d)">Android</a></li>
+</ul>
+<strong>2010-09-29</strong>
+<ul>
+ <li><a href="2010-09.html" title="2010-09 (11d)">2010-09</a></li>
+</ul>
+<strong>2010-09-23</strong>
+<ul>
+ <li><a href="ARM.html" title="ARM (16d)">ARM</a></li>
+</ul>
+<strong>2010-09-18</strong>
+<ul>
+ <li><a href="AVRetc.html" title="AVRetc (22d)">AVRetc</a></li>
+</ul>
+<strong>2010-09-14</strong>
+<ul>
+ <li><a href="stm32f103.html" title="stm32f103 (26d)">stm32f103</a></li>
+</ul>
+<strong>2010-09-08</strong>
+<ul>
+ <li><a href="LPCUSB.html" title="LPCUSB (32d)">LPCUSB</a></li>
+ <li><a href="LPCXpresso.html" title="LPCXpresso (32d)">LPCXpresso</a></li>
+</ul>
+<strong>2010-09-05</strong>
+<ul>
+ <li><a href="SiteMap.html" title="SiteMap (35d)">SiteMap</a></li>
+</ul>
+</div>
+</div>
+ <div id="mainColumnWrapper">
+  <div id="main-column">
+   <div id="navigator"><ul><li id="wn_main" class="selected"><a href="" title="2009-05PIC (507d)">本文</a></li><li id="wn_note"><span class="noexists">ノート<a href="FrontPage.html?cmd=edit&amp;page=note%2F2009-05PIC">?</a></span></li><li><a href="FrontPage.html?cmd=edit&amp;page=2009-05PIC">編集</a></li><li><a href="FrontPage.html?cmd=diff&amp;page=2009-05PIC">差分</a></li></ul></div>
+   <div id="content">
+    <h1 class="firstHeading">2009-05PIC</h1><div id="contentSub"></div>
+    <p><a href="2009-05.html" title="2009-05 (526d)">2009-05</a>←　→ <a href="2009-05ARM.html" title="2009-05ARM (496d)">2009-05ARM</a></p>
+<h2 id="content_1_0">PIC日記  <a class="anchor_super" id="d46e40c4" href="#d46e40c4" title="d46e40c4"> </a></h2>
+<p><a href="http://psp.dip.jp/web/jpg/ae18f2550.jpg" rel="nofollow"><img src="http://psp.dip.jp/web/jpg/ae18f2550.jpg" alt="http://psp.dip.jp/web/jpg/ae18f2550.jpg" /></a></p>
+<p>あらすじ</p>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li><a href="http://akizukidenshi.com/catalog/g/gI-02161/" rel="nofollow">秋月AE-18F2550基板</a>が<strong>１０００円</strong>で売られているので、これを<strong>飼いならそう</strong>という企画。</li>
+<li>ちなみに、18F2550のピン数だけ増設した40pin DIP IC<a href="http://akizukidenshi.com/catalog/g/gI-02853/" rel="nofollow">（18F4550）は単体で400円</a>、同じくDIP品の18F2550も400円で売られている。</li></ul>
+<p><a href="http://psp.dip.jp/web/jpg/PIC/pic18f2550.jpg" rel="nofollow"><img src="http://psp.dip.jp/web/jpg/PIC/pic18f2550.jpg" alt="http://psp.dip.jp/web/jpg/PIC/pic18f2550.jpg" /></a></p>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>これをＵＳＢマイコンとして使うのに必要最小限の配線はＵＳＢ(Bもしくはmini-B)コネクタと抵抗２個、20MHz水晶１個程度であり非常に廉価だ。（ＵＳＢのプルアップ抵抗も内蔵されている）
+<ul class="list2" style="padding-left:16px;margin-left:16px"><li>参考：<a href="A3D5A3C2A3D7A5B5A5A4A5C8A4CBA4A2A4EBB2F3CFA9BFDE.html" title="ＵＢＷサイトにある回路図 (510d)">ＵＢＷサイトにある回路図</a> --&gt; 水晶は20MHzに。(秋月のと同じファームが使えるので)。</li></ul></li></ul>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>どちらのICとも内蔵Flash32K,RAM2K(うち1KはUSB-FIFOと共用)で、開発にはＣコンパイラを使用することも出来る。</li></ul>
+<p>現在のステータス</p>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>PICライターは作った --- <a href="PIC18F2550.html" title="PIC18F2550 (235d)">PIC入門</a></li>
+<li>開発環境は整えた  ----- <a href="UBW.html" title="UBW (541d)">UBWを試す</a></li>
+<li>MCHIP製(C18用) bootloaderをsdcc+gpasm環境でビルドできるようにした。--- <a href="PIC18F2550.html" title="PIC18F2550 (235d)">PIC入門</a></li></ul>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>diolan製(MPASM) bootloaderをAE-18F2550に移植した ------------- 下記参照のこと。</li>
+<li>diolan製(MPASM) bootloaderを改造してHIDmon( + bootloadHID)にしてみよう。 ----完成。</li></ul>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>bootloaderとしては充分高速です。
+<ul class="list2" style="padding-left:16px;margin-left:16px"><li>コマンドライン上で書き込めるので、Makefileやバッチに記述すると開発サイクルが短縮できます。</li>
+<li>HIDデバイスなのでデバイスドライバーのインストールが不要です。</li></ul></li></ul>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>HIDmonの機能がわりと充実しています。
+<ul class="list2" style="padding-left:16px;margin-left:16px"><li>ユーザーメモリーエリア(0〜0x3ff)を一切壊さないので、ユーザープログラムの挙動観察に適します。</li>
+<li>ユーザープログラムからputcなどを実行するとＰＣのコンソールに高速に表示されます。</li>
+<li>コードサイズは2kB以下です。ユーザー領域は30kB使用できます。</li></ul></li></ul>
+<hr class="full_hr" />
+
+<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h2 id="content_1_1">成果物  <a class="anchor_super" id="g529395f" href="#g529395f" title="g529395f"> </a></h2>
+
+<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h3 id="content_1_2">HIDboot for AE-18F2550  <a class="anchor_super" id="l72193e6" href="#l72193e6" title="l72193e6"> </a></h3>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>とりあえず、MCHIP版ブートローダーから起動するバージョンを作成</li></ul>
+<p>read more:<a href="HIDboot.html" title="HIDboot (521d)">HIDboot</a></p>
+<hr class="full_hr" />
+
+<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h3 id="content_1_3">HIDmon for AE-18F2550  <a class="anchor_super" id="x0025a79" href="#x0025a79" title="x0025a79"> </a></h3>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li><strong>HID Bootloader 兼 HID monitor . お勧めです。</strong></li></ul>
+<p>read more:<a href="HIDmon-2550.html" title="HIDmon-2550 (185d)">HIDmon-2550</a></p>
+<hr class="full_hr" />
+
+<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h3 id="content_1_4">ここから意外な展開  <a class="anchor_super" id="r2579c41" href="#r2579c41" title="r2579c41"> </a></h3>
+<p>私はPICのライター環境やMCHIP純正開発環境のことをほとんど何も知りません。</p>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>が、意外な純正ツールを発見致しました。</li></ul>
+<p>read more: <a href="PICkit2.html" title="PICkit2 (514d)">PICkit2</a></p>
+<p><br /></p>
+<hr class="full_hr" />
+
+<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h2 id="content_1_5">戯言  <a class="anchor_super" id="q12f3467" href="#q12f3467" title="q12f3467"> </a></h2>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li><a href="PIC18F4550.html" title="PIC18F4550 (522d)">PIC18F4550</a>も作ってみた。</li></ul>
+<hr class="full_hr" />
+<p>read more: <a href="PIC18F4550.html" title="PIC18F4550 (522d)">PIC18F4550</a></p>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li><a href="HIDmon-2550.html" title="HIDmon-2550 (185d)">HIDmon-2550</a>がほぼ完成し、目的を達した。</li>
+<li>AVRにも2550相当のチップが欲しいところだ。</li>
+<li><a href="http://strawberry-linux.com/catalog/items?code=50027" rel="nofollow">AT90USB162</a>はあるが、<a href="http://www.microfan.jp/shop/53.html" rel="nofollow">DIP品がない</a>。</li></ul>
+<p><br /></p>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>ファームウェアをpollコマンドに対応させた。これによりgraphの描画が速くなる。</li>
+<li>FSR2を使用しているところが気に入らなかったので、全部FSR0に書き換えた。</li>
+<li>一部動作しなくなる場面があったが変更差分攻撃（累積変更を加えていって動かなくなる修正点を見つける）で撃破。--- sm_ctrl_rx みたいな関数を呼んで戻ってきたところでFSR2の値がBDT_STATを指していることを利用している奴がいた。</li>
+<li>コード量が増えたので、ダイエット。</li></ul>
+<p>現在、<strong>余白は４０８バイト。</strong></p>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>全ファンクション実装済みでこれだ。</li>
+<li>つまり１６４０バイトで実装できたということ。</li>
+<li>同じ処理をAVR gccで書いたらコードサイズはたぶん２/３くらい？になるのではないかと思う。</li></ul>
+<p><br />
+<br />
+<br /></p>
+<hr class="full_hr" />
+
+<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h2 id="content_1_6">メモリーマッピング変更（案）  <a class="anchor_super" id="sa98a1f6" href="#sa98a1f6" title="sa98a1f6"> </a></h2>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>現状のHIDmon (bootloader)
+<pre>000+---------------+
+   | WORK AREA     | 0xa6 bytes
+0a6+---------------+
+   | 未使用        |
+100+---------------+
+   |               |
+   | 未使用        |
+   |               |
+400+---------------+
+   | USB BDT       | 16byte
+410+---------------+
+   | EP0 OUT BUFFER| 64byte
+450+---------------+
+   | EP0 IN  BUFFER| 64byte
+   | 未使用        |
+500+---------------+
+   | EP1 OUT BUFFER| 64byte
+540+---------------+
+   | EP1 IN  BUFFER| 64byte
+   | 未使用        |
+600+---------------+
+   |               |
+   | 未使用        |
+   |               |
+7ff+---------------+</pre></li>
+<li>EP1は実際には使われていない。</li></ul>
+
+<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h2 id="content_1_7">これを以下のように変更してみる。  <a class="anchor_super" id="rd92621b" href="#rd92621b" title="rd92621b"> </a></h2>
+<pre>000+---------------+
+   |               |
+   |               |
+   |               |
+   | 未使用        |
+   |               |
+   |               |
+   |               |
+400+---------------+
+   | USB BDT       | 32byte
+420+---------------+
+   |               |
+   | WORK AREA     | 0xa6 bytes
+500+---------------+
+   | EP0 OUT BUFFER| 64byte
+540+---------------+
+   | EP0 IN  BUFFER| 64byte
+600+---------------+
+   |               |
+   | 未使用        |
+   |               |
+7ff+---------------+</pre>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>BDTは余裕を見て8個確保(そんなにいらないと思う)</li>
+<li>こうすると、どのようなメリットがあるのか？
+<ul class="list2" style="padding-left:16px;margin-left:16px"><li>HIDmonとして使用した場合に、アプリ側の使用メモリー(0〜0x400)をほぼそのままダンプすることが可能になる。</li>
+<li>BSRの値を0x04に固定することで、WORKエリアの参照以外に、BDT書き換えも同一バンクで実行できるので、FSR0を使用する必要がなくなる。</li>
+<li>WORK AREA内の boot_cmd[64] boot_rep[64] というパケットバッファをそのまま送受信に使ってもよいことになる（と思う）そうすると(EP0 IN BUFFERへの)メモリー転送が不要になり、速度を稼げるかもしれない。</li></ul></li></ul>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>ためしにリンカースクリプトをちょっと書き換えて上図のような配置にしてみたが、一応動作しているようだ。</li>
+<li>０番地を書き変えている奴がいる。不可能なはずだが・・・。</li></ul>
+<p><br />
+<br />
+<br /></p>
+<hr class="full_hr" />
+
+<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h2 id="content_1_8">PIC BIOSを作ろうと思う。  <a class="anchor_super" id="d5e60f73" href="#d5e60f73" title="d5e60f73"> </a></h2>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>もうPICに飽きたつもりだったが、もうすこしだけ追求してみる。</li>
+<li>上記メモリーマップの変更は実施した。</li>
+<li>BIOSエントリーを用意した。</li>
+<li>エントリーの先頭に movlb 0x04 を入れた。</li>
+<li>puts / gets 関連のバッファとエントリーを設定した。</li></ul>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>sdccで&quot;Hello World&quot;のフレームワークを作成した。</li></ul>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>面白いのは、ユーザーアプリ動作中でもメモリーダンプが出来ることだ。</li></ul>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>putcが全然動かない。・・・何故？・・・</li></ul>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>その後、いろいろいじっていたら、ついに動かなくなった。</li>
+<li>原因は分からない。</li></ul>
+<p>小休止。</p>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>原因が分からないので諦めた。</li>
+<li>ソース丸ごと公開。もう煮るなり焼くなりしてください。</li></ul>
+<p>　　　　　　　　↓↓↓↓</p>
+<p>read more:<a href="HIDmon-2550.html" title="HIDmon-2550 (185d)">HIDmon-2550</a></p>
+<p><br />
+<br />
+<br /></p>
+
+<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h2 id="content_1_9">ところでsdccって、バグってない？  <a class="anchor_super" id="xcdc4d09" href="#xcdc4d09" title="xcdc4d09"> </a></h2>
+<p>バグってはいないけど動きません。何故？</p>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>farなポインタは３バイトであり、ROMの場合　TBLPTRL,TBLPTRH,TBLPTRU（通常は０）が指し示す。</li>
+<li>RAMの場合は bit[23:16]は 0x80 になる。（判別のためわざとそうしている）</li>
+<li>EEPROMのgptrは未実装である。</li>
+<li>ポインタの値の受け渡しは、下位より、FSR0L,PRODL,WREG の計２４ビット。</li>
+<li>ポインタで参照したメモリー値は WREGで返却する。
+<pre>void _gptrget1(void) __naked
+{
+ __asm
+   /* decode generic pointer MSB (in WREG) bits 6 and 7:
+    * 00 -&gt; code
+    * 01 -&gt; EEPROM
+    * 10 -&gt; data
+    * 11 -&gt; unimplemented
+    */
+   btfss	_WREG, 7
+   bra		_lab_01_
+   
+   ; data pointer
+   ; data are already in FSR0
+   movff	_PRODL, _FSR0H    
+   movf	_POSTINC0, w
+   return
+  
+_lab_01_:
+   ; code or eeprom
+   btfsc	_WREG, 6
+   bra		_lab_02_
+   
+   ; code pointer
+   movff	_FSR0L, _TBLPTRL
+   movff	_PRODL, _TBLPTRH
+   movwf	_TBLPTRU
+   
+   tblrd*+
+   
+   ; result in WREG
+   movf	_TABLAT, w
+   
+   return 
+  
+_lab_02_:
+   ; EEPROM pointer
+   ; unimplemented yet
+_end_:
+ return
+ __endasm;
+}</pre></li></ul>
+
+<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h2 id="content_1_10">_gptrput1 はこの逆の動作を行う。  <a class="anchor_super" id="j329b176" href="#j329b176" title="j329b176"> </a></h2>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>_gptrput1はもうすこしあっさりしている。</li>
+<li>書き込むデータ値は FSR1(stackptr) からPOP(PREINC1)して取得している。</li>
+<li>FSR1が+1される（ユーザースタックレベルが変化する）</li>
+<li>RAM以外は実装されていない。</li></ul>
+<pre>void _gptrput1(void) __naked
+{
+ __asm
+   /* decode generic pointer MSB (in WREG) bits 6 and 7:
+    * 00 -&gt; code (unimplemented)
+    * 01 -&gt; EEPROM (unimplemented)
+    * 10 -&gt; data
+    * 11 -&gt; unimplemented
+    */
+   btfss	_WREG, 7
+   bra		_lab_01_
+   
+   /* data pointer  */
+   /* data are already in FSR0 */
+   movff	_PRODL, _FSR0H
+   
+   movff	_PREINC1, _POSTINC0
+   
+   return
+   
+_lab_01_:
+   /* code or eeprom */
+   btfss	_WREG, 6
+   return
+   
+   /* code pointer, cannot write code pointers */
+   
+_lab_02_:
+   /* EEPROM pointer */
+   /* unimplemented yet */
+ return
+ __endasm;
+}</pre>
+<p><br />
+<br /></p>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>いっそのこと [FSR0L,PRODL,WREG]渡しを止めて、[FSR0L,FSR0H]を引数にして</li>
+<li>直接 movff	_PREINC1, _POSTINC0 とか movwf _POSTINC0すればよいのに。</li>
+<li>と、思っていたら、 near という（１６ビットの）ポインタがあって、そっちだと
+_gptrput1が呼ばれずに、以下のコードが落ちる。</li></ul>
+<pre>003A 00459 _00105_DS_:
+003A C000 FFE9 00460         MOVFF   r0x00, FSR0L
+003E C000 FFF3 00461         MOVFF   r0x01, PRODL
+0042 5000      00462         MOVF    r0x02, W
+0044 EC00 F000 00463         CALL    __gptrget1
+0048 6E00      00464         MOVWF   r0x05
+004A 5000      00465         MOVF    r0x05, W
+004C E000      00466         BZ      _00108_DS_
+               00467 ;       .line   27; main.c      *t++ = *s++;
+---&gt; t++ を実行している。 ポインタ参照はすでに上記で実行済み
+004E 2A00      00468         INCF    r0x00, F
+0050 B0D8      00469         BTFSC   STATUS, 0
+0052 2A00      00470         INCF    r0x01, F
+0054 B0D8      00471         BTFSC   STATUS, 0
+0056 2A00      00472         INCF    r0x02, F
+---&gt; *s++ = val を実行している。
+0058 C000 FFE9 00473         MOVFF   r0x03, FSR0L
+005C C000 FFEA 00474         MOVFF   r0x04, FSR0H
+0060 C000 FFEF 00475         MOVFF   r0x05, INDF0
+0064 2A00      00476         INCF    r0x03, F
+0066 B0D8      00477         BTFSC   STATUS, 0
+0068 2A00      00478         INCF    r0x04, F
+006A D000      00479         BRA     _00105_DS_</pre>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>上記のコードはROM上の*sポインタからRAM上の*tポインタに文字列コピー(strcpy)
+するコードだ。</li>
+<li>つまり１文字をコピーするのに１８ステップ＋_gptrget1の処理ステップ数掛かる。</li>
+<li>MOVFFが多用されているので、１ステップ２クロック掛かる部分が多い。</li>
+<li>仮に５０クロック/文字だとして、６４バイトコピーは３２００クロックも掛かるのだ。</li>
+<li>さすがにだめだろ。</li></ul>
+
+<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h2 id="content_1_11">続：ところでsdccって、バグってない？  <a class="anchor_super" id="xcdc4d09" href="#xcdc4d09" title="xcdc4d09"> </a></h2>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>できたてのHIDmon（ドッグフード）を使って、sdccのポインタに関する挙動を調査していくと、ある事実にぶち当たった。</li></ul>
+<p><strong>ある事実とは</strong></p>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>ポインタのインクリメントに失敗するのだ。</li></ul>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>まさに、このコード！
+<pre>---&gt; t++ を実行している。 ポインタ参照はすでに上記で実行済み
+004E 2A00      00468         INCF    r0x00, F
+0050 B0D8      00469         BTFSC   STATUS, 0
+0052 2A00      00470         INCF    r0x01, F
+0054 B0D8      00471         BTFSC   STATUS, 0
+0056 2A00      00472         INCF    r0x02, F</pre></li>
+<li>さいしょのINCF    r0x00, F が機能しない。<strong>そんな馬鹿な！</strong></li>
+<li>機能はしているのだけれど、０番地だけビット化け（0xc7マスクが常時発生している感じ）なのだ。</li>
+<li>０番地以外（０〜３ｆｆまで見た）は大丈夫。</li>
+<li>なんで？？？？</li></ul>
+
+<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h2 id="content_1_12">すまん、全部忘れてくれ！  <a class="anchor_super" id="h9e14c5e" href="#h9e14c5e" title="h9e14c5e"> </a></h2>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>上の騒動はメモリー破壊とか、見えないＤＭＡではなかった。</li>
+<li>HIDmon(picmon.exe) のUSB端子マスク機能が悪さをしていた。</li>
+<li>HIDmon(picmon.exe) を修正して、０番地問題は解決。</li></ul>
+<p>で、sdccが全く（意図に沿って）動かない原因も分かった。</p>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li><pre>003A C000 FFE9 00460         MOVFF   r0x00, FSR0L
+003E C000 FFF3 00461         MOVFF   r0x01, PRODL
+0042 5000      00462         MOVF    r0x02, W      ＜＝＝この命令がバグっていた。
+0044 EC00 F000 00463         CALL    __gptrget1 </pre></li>
+<li>上記３行目のMOVF がまともにr0x02の仮想レジスタをフェッチしていないのだ。</li>
+<li>理由は、AccessBankだ。このローダーはXINST=1で焼いているので、sdccのバイナリーを正しく動作させることは出来ないわけだ。</li>
+<li>どうりで、<strong>ポインタ関連のアクセスが全滅</strong>だったわけだ</li></ul>
+<p><br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br /></p>
+
+<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h2 id="content_1_13">戯言（過去）  <a class="anchor_super" id="bade78e7" href="#bade78e7" title="bade78e7"> </a></h2>
+
+<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h3 id="content_1_14">実はバグだらけかも・・・・  <a class="anchor_super" id="ea3f6abd" href="#ea3f6abd" title="ea3f6abd"> </a></h3>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>GET_DESCRIPTORでstring tableが取得できないようだ。</li>
+<li>SnoopyProで調べてみると、おかしなGET_DESCRIPTORリクエストが出ている。</li>
+<li>オリジナルではちゃんと動いているのかな？</li>
+<li>これもXINSTビットの呪いか？</li>
+<li>比較実験のために、外部ライターで焼き直すのが面倒くさくなってきた。</li>
+<li>もう一台作るか・・・</li></ul>
+<p><br /></p>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>diolanのオリジナルに非常に近いROMで試したけれど、string tableが取得できていない。</li>
+<li>SnoopyProの結果はだいたい同じだ。</li>
+<li>じゃあ、sdcc版Firmware-Bと比較するしかない。</li></ul>
+<p><br /></p>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>オチはこうだ。sdcc版Firmware-Bはstring tableが省略されていた。</li>
+<li>そして、 最後のオチとしては、
+<pre>#define USB_MFG_DESC_off  12</pre></li>
+<li>この12が曲者で、なんと１６進だから 0x12 = 18になっていたのだ。（がーん）</li>
+<li>このアセンブラは１０進で数値を書きたいときは .12 と書くらしい。（それ 0.12じゃん）</li></ul>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li><strong>落とし穴</strong>だらけ</li></ul>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>そして修正済みファームでもstring tableを取得できない。</li>
+<li>string tableの先頭２バイトだけがパケット転送されている。</li></ul>
+<p>原因はわりとすぐに分かった。</p>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>requestパケット内の wLengthが 0x0402 になっていて</li>
+<li>返却するstring table は 0x0eバイト長だが、 wLengthの下位１バイトと比較して短いほうを選択している。</li>
+<li>このコーディング、<strong>激しくダメ</strong>じゃん。</li></ul>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>おまけに string table は MANUFACTUREだけしかサポートされていなかった。</li></ul>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>そこいらへんを修正して、HID_Reportの送受テストをやろうとしたがなかなかうまくいかない。</li>
+<li>Interrupt転送(というかdiolan版HID REPORT)のときとControl転送のときでは、HID_Reportのバッファ形式が異なるようだ。</li>
+<li>Interrupt転送版には、USBパケットの先頭に挿入される HID ReportIDが省略されている。</li>
+<li>Reportの種類は１種類だけ、サイズのバリエーションがないというわけか。</li></ul>
+<p><br />
+<br /></p>
+
+<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h4 id="content_1_15">ところでPICのアセンブラは変態だと言われているが、どうもわざと必要な命令を抜いているとしか思えない構造。  <a class="anchor_super" id="b889d316" href="#b889d316" title="b889d316"> </a></h4>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>cpfseq はあるが、cpfsneは無い。それから、これらの比較命令はリテラル（定数）版が欠落。
+<ul class="list2" style="padding-left:16px;margin-left:16px"><li>Wregの値によって複数分岐する処理が書けない。</li></ul></li>
+<li>cpfsgt,cpfsltはあるが、cpfsgeとかcpfsleがない。</li>
+<li>sublwはあるがcmplw（つまりWregを破壊しない版）がない。</li>
+<li>条件分岐のbnzとかbzの分岐オフセットが８ビットしかない。</li>
+<li>レジスタが異常に少ない(Wregだけ？)ので割り込みで退避するコンテクストが少なそうに見えるが実は大量に必要で、退避操作も大変。
+<ul class="list2" style="padding-left:16px;margin-left:16px"><li>TBLPTRU,TBLPTRH,TBLPTRL,TBLLAT</li>
+<li>PRODH,PRODL,</li>
+<li>BSR</li>
+<li>FSR0H,FSR0L,</li>
+<li>FSR1H,FSR1L,</li></ul></li></ul>
+<p><br />
+<br />
+<br />
+<br /></p>
+<hr class="full_hr" />
+
+<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h2 id="content_1_16">Linux OSネットブックの普及を阻害する、「イヤなうわさ」と「信憑性」  <a class="anchor_super" id="f9dd309e" href="#f9dd309e" title="f9dd309e"> </a></h2>
+<p>Linuxモデルの返品率は、Windowsモデルの返品率よりも高い？</p>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li><a href="http://www.computerworld.jp/topics/netbook/144569-1.html" rel="nofollow">http://www.computerworld.jp/topics/netbook/144569-1.html</a></li></ul>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>むしろVistaモデルを返品したい気持ち。（アプリが動かないとかで）</li>
+<li>Linuxなら最初から動かないのを承知で買うので無問題。</li></ul>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>ＡＲＭ搭載のubuntuノートなら大歓迎だが。</li>
+<li>一般ＰＣショップで売るのは難しいのかも。</li>
+<li>だが、現実に玄箱とかの例があるので不可能というわけではない。</li></ul>
+<p><br />
+<br />
+<br />
+<br /></p>
+<hr class="full_hr" />
+
+<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h3 id="content_1_17">HIDmon : 現在のステータス  <a class="anchor_super" id="g382655a" href="#g382655a" title="g382655a"> </a></h3>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>ECHOBACK はＯＫ。</li>
+<li>メモリーダンプ（現在は仮実装で、ROMダンプ）まで出来た。</li></ul>
+<p>躓き（落とし穴）</p>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>スキップ命令の後ろに２ワード命令(goto ,callなど)を入れてはいけない。ハングする。</li>
+<li>boot_rep[64]の送信バッファはboot_cmd[64]受信バッファのコピー置き場にすこし使っていた。</li>
+<li>が、これを上書きするような処理を書いてしまってはまった。</li>
+<li>変数の大小判断マクロを書いてみたが、なかなかちゃんと動かなかった。（書き方がまずかった）
+<ul class="list2" style="padding-left:16px;margin-left:16px"><li>だって、引き算の方向が普通のＣＰＵと逆だもん。</li></ul></li>
+<li>USBの受信FIFOは、処理時間が長いときには次のパケットで書き潰されることがあるようだ。</li>
+<li>次のパケットが来る前に別のバッファにコピーしないと駄目なの（？？？？）</li></ul>
+
+<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h3 id="content_1_18">diolan製(MPASM) bootloaderを改造してHIDmon( + bootloadHID)にしてみよう。  <a class="anchor_super" id="q3138d60" href="#q3138d60" title="q3138d60"> </a></h3>
+<p>現在進行中。</p>
+<ul class="list2" style="padding-left:32px;margin-left:32px"><li>実は非常に難儀している。</li>
+<li>とりあえずUSBデバイスとして認識し、ProductStringなどを正しく参照できるようにしたところだが</li>
+<li>現在、HID_Reportのやりとりでパケット同期タイミングずれがあり（ひとつ古いパケットが蓄積されていてハンドシェイクがうまくいってない）四苦八苦しているところ。</li>
+<li>ハンドシェイク問題はほぼ解決した。</li>
+<li>このPICはノイズパケットをいろいろ受信している（？）ようで、それらを無視するような条件をいれないとだめ。</li>
+<li>具体的には、HID_ReportIDとCMDが正しい値域に納まっているかどうかを検査する。</li>
+<li>範囲外のパケットを無視しないと上記のような問題が発生する。</li></ul>
+
+<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h3 id="content_1_19"><a href="HIDmon-2550.html" title="HIDmon-2550 (185d)">HIDmon-2550</a>を実装中  <a class="anchor_super" id="pa1246da" href="#pa1246da" title="pa1246da"> </a></h3>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>Flash書き込みと消去を実装</li>
+<li>ホスト側ツールも仮制作</li>
+<li>単独のブートローダーとしての動作を確認。</li>
+<li>このブートローダーにアプリケーションの書き込みを行わせて、アプリケーションが起動することを確認。</li></ul>
+<p><br /></p>
+<p>read more: <a href="HIDmon-2550.html" title="HIDmon-2550 (185d)">HIDmon-2550</a></p>
+<p><br />
+<br />
+<br /></p>
+<hr class="full_hr" />
+
+<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h2 id="content_1_20">PIC18F14K50-DIP20 お勧め  <a class="anchor_super" id="gad65f7b" href="#gad65f7b" title="gad65f7b"> </a></h2>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li><a href="http://www.microchip.com/wwwproducts/Devices.aspx?dDocName=en533924" rel="nofollow">http://www.microchip.com/wwwproducts/Devices.aspx?dDocName=en533924</a></li>
+<li><a href="http://www.microfan.jp/shop/45_230.html" rel="nofollow">http://www.microfan.jp/shop/45_230.html</a></li></ul>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>20ピンなんだけど、あんまりお勧めしないなぁ・・・。</li>
+<li>だって３３円足すと18F2550とか18F4550が買えるわけだし。</li>
+<li>省ピンでないと困ることって、ある？</li></ul>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>むしろ、アレか。1.8Vから5.5Vまでいけるので、JTAGアダプター作りにはGoodかも。</li></ul>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>電圧だけ下げた2550だってある。７３５円だ。</li>
+<li><a href="http://www.microfan.jp/shop/45_89.html" rel="nofollow">http://www.microfan.jp/shop/45_89.html</a></li></ul>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>もちろん、PIC18F14K50-DIP20だって秋月が扱えばもっと安いとは思う。</li>
+<li>思うけれど、あそこって大量仕入れだから扱わないだろうなぁ・・・・</li></ul>
+<p><br />
+<br />
+<br /></p>
+<hr class="full_hr" />
+
+<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h2 id="content_1_21">GNUPIC:gpasmは言うことを全く聞こうとしない。  <a class="anchor_super" id="ic018dcb" href="#ic018dcb" title="ic018dcb"> </a></h2>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>HIDmon-2550のgpasm対応をやっていたが、最終的に、諦めた。</li>
+<li>gpasmが悪いのは確かだが、どこが悪いのかがついに分からなかった。</li></ul>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>例のUSBディスクリプタのアセンブラ記述だが、<strong>どのような書き方をしても正しいコードを落とすことが出来ない</strong>のには参った。</li></ul>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>どうやったら、このような嫌がらせアセンブラを作ることが出来るのか。</li>
+<li>理解に苦しむ。</li></ul>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>PICのアーキテクチャーそのものも嫌がらせレベルは３くらいあるが、</li>
+<li>gpasmのUSBディスクリプタが記述できない嫌らしさレベルは<strong>フェーズ５</strong>くらいあると思う。</li></ul>
+<p>詳細は、HIDmon-2550のソースファイルにあるMakefile.gpasmを使ってみれば分かります。</p>
+<p><br />
+<br />
+<br /></p>
+<hr class="full_hr" />
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>----- 日記が長くなりすぎたので分割 ------</li></ul>
+<p><a href="2009-05ARM.html" title="2009-05ARM (496d)">続きを読む</a></p>
+<p><br /></p>
+   </div>
+  </div>
+ </div>
+ <div style="clear:both;height:1em;"></div>
+ <div id="logo"><a href="FrontPage.html"><img src="http://psp.dip.jp/web/title.jpg"></a></div>
+
+ <div id="personal"><ul><li class="login"><a href="#">ログインまたはアカウント作成</a></li></ul></div>
+ <div id="footer">
+  <div id="f-officialico">
+   <a href="http://pukiwiki.sourceforge.jp/"><img src="image/b_pukiwiki.official.png" alt="PukiWiki-official" /></a>
+  </div>
+  <div id="f-officialdevico">
+   <a href="http://pukiwiki.sourceforge.jp/dev/"><img src="image/b_pukiwiki.dev.png" alt="PukiWiki-dev" /></a>
+  </div>
+  <div id="f-list">
+   <ul><li>Site admin: <a href="http://pukiwiki.example.com/">anonymous</a></li>    <li>convert time: 0.193 sec</li>
+    <li>Powered by PukiWiki</li>
+    <li><a href="http://www.luntf.com/">Monobook for PukiWiki</a></li>
+   </ul>
+  </div>
+  <div style="clear:both;"></div>
+ </div>
+</div>
+</body>
+</html>

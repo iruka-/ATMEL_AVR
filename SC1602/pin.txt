@@ -1,0 +1,71 @@
+WS172基板の補足:
+ RESET JUMPERは下側にジャンパー。これはISPのRESETがATmega88のRESETに接続される.
+  [ ] 
+  [|]  [ATmega88]
+  [|] 
+ 
+ SLOW_JP は廃止.
+
+ 押しボタン===========================================
+
+
+                     SW4(→) = PD5 BOOT_JP
+
+           SW3(下) = RESET
+           
+           SW4を押したままSW3 RESETでBOOT MODEへ行く.
+               (bootloadhid が使えるようになる)
+
+ Xtalは16MHz. Bootloaderはbootmon-ws172をPD5 Boot Jumperで 使用.
+ ===============================================================
+ bootloader
+	PUSH SW=PD5  押すとLow. LowになったらBOOTLOADERのモード.
+
+---------------------------------
+フラットケーブル配線
+信号	AVR	色
+------- --- --
+REG_SEL	PD0	赤
+
+RW		PC5	白
+E		PC4	黒
+DB7		PC3	赤
+DB6		PC2	茶
+DB5		PC1	黄
+DB4		PC0	橙
+------- --- --
+
+
+
+LCDを逆さから見た図（正面　上下逆）
+---------------------------------------
+					橙	5V	 1 2 GND	青
+	D	EEEE LLLL	茶	adj	 3 4 REGSEL 赤
+	D		E	L	白	RW	 5 6 E		黒
+	D	 EEEE	L			 7 8	
+	D		E	L			 9 10	
+	D	EEEE	L	橙	DB4	11 12 DB5	黄
+					茶	DB6	13 14 DB7	赤
+----------------------
+SC1602
+
+
+
+1		5V
+2		GND
+3		Vadj(0.6V)
+4		REGSEL
+5		RW
+6		E
+7			DB0
+8			DB1
+9			DB2
+10			DB3
+11		DB4
+12		DB5
+13		DB6
+14		DB7
+
+
+---------------------------------------
+

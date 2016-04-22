@@ -1,0 +1,114 @@
+
+■ 配線
+                        ATmega88/168
+                         ___    ___
+    (PCINT14/_RESET)PC6*[1  |__| 28]-PC5(ADC5/SCL/PCINT13)
+       (PCINT16/RxD)PD0 [2       27]-PC4(ADC4/SDA/PCINT12)
+       (PCINT17/TxD)PD1 [3       26]-PC3(ADC3/PCINT11)
+      (PCINT18/INT0)PD2*[4       25]-PC2(ADC2/PCINT10)
+ (PCINT19/OC2B/INT1)PD3*[5       24]-PC1(ADC1/PCINT9)
+    (PCINT20/XCK/T0)PD4 [6       23] PC0(ADC0/PCINT8)
+                    Vcc [7       22] GND
+                    GND [8       21] AREF (5V)
+(PCINT6/XTAL1/TOSC1)PB6*[9       20] AVcc (5V)
+(PCINT7/XTAL2/TOSC2)PB7*[10      19]+PB5(SCK/PCINT5)      -------> SCK
+   (PCINT21/OC0B/T1)PD5+[11      18]+PB4(MISO/PCINT3)     -------> MISO
+ (PCINT22/OC0A/AIN0)PD6 [12      17]+PB3(MOSI/OC2A/PCINT3)-------> MOSI
+      (PCINT23/AIN1)PD7 [13      16]-PB2(_SS/OC1B/PCINT2)
+  (PCINT0/CLKO/ICP1)PB0-[14      15]-PB1(OC1A/PCINT1)
+                         ~~~~~~~~~~
+
+WS172注意:
+	PC0,PC1=LED
+	PC6=RESET 固定
+	PD2=INT0使用.(USB)
+	PD5=SW4(BOOT_SW)
+	
+	PD3=FET右GATE(常夜灯)
+	PD4=FET左GATE(PLANET)
+
+	
+PD2=PB1=USB D+
+	PB0=USB D-
+	PB2=UPDATE(???)
+	
+	PB3,4,5=MOSI,MISO,SCK (ISP)
+
+
+                                   
+   XTAL:    XTAL1,2 => Crystal 16MHz
+   ---------------------------------------
+
+
+WS172基板の補足:
+ RESET JUMPERは下側にジャンパー。これはISPのRESETがATmega88のRESETに接続される.
+  [ ] 
+  [|]  [ATmega88]
+  [|] 
+ 
+ SLOW_JP は廃止.
+
+ 押しボタン===========================================
+
+
+                     SW4(→) = PD5 BOOT_JP
+
+           SW3(下) = RESET
+           
+           SW4を押したままSW3 RESETでBOOT MODEへ行く.
+               (bootloadhid が使えるようになる)
+
+ Xtalは16MHz. Bootloaderはbootmon-ws172をPD5 Boot Jumperで 使用.
+ ===============================================================
+ bootloader
+	PUSH SW=PD5  押すとLow. LowになったらBOOTLOADERのモード.
+
+---------------------------------
+フラットケーブル配線
+信号	AVR	色
+------- --- --
+REG_SEL	PD0	赤
+
+RW		PD1	白
+
+E		PC4	黒
+DB7		PC3	赤
+DB6		PC2	茶
+DB5		PC1	黄
+DB4		PC0	橙
+------- --- --
+
+
+
+LCDを逆さから見た図（正面　上下逆）
+---------------------------------------
+					橙	5V	 1 2 GND	青
+	D	EEEE LLLL	茶	adj	 3 4 REGSEL 赤
+	D		E	L	白	RW	 5 6 E		黒
+	D	 EEEE	L			 7 8	
+	D		E	L			 9 10	
+	D	EEEE	L	橙	DB4	11 12 DB5	黄
+					茶	DB6	13 14 DB7	赤
+----------------------
+SC1602
+
+
+
+1		5V
+2		GND
+3		Vadj(0.6V)
+4		REGSEL
+5		RW
+6		E
+7			DB0
+8			DB1
+9			DB2
+10			DB3
+11		DB4
+12		DB5
+13		DB6
+14		DB7
+
+
+---------------------------------------
+

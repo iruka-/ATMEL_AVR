@@ -1,0 +1,30 @@
+
+#
+#  PB2(pin14) に TIMER0 のクロックを出力する.
+#
+p tccr0a 0100_0010  # COM0A=01 : 比較一致でOC0Aトグル.
+                    # WGM210 = 010 : 比較一致タイマー、カウンタクリア.
+p tccr0b 0000_0011  # fclk 1/64 分周.
+p ddrd.6 1			# PB2を出力.
+#
+#  TIMER0 の周期を設定する.
+#
+p ocr0a f1
+sleep 500
+p ocr0a d7
+sleep 500
+p ocr0a bf
+sleep 500
+p ocr0a b5
+sleep 500
+p ocr0a a1
+sleep 500
+p ocr0a 8f
+sleep 500
+p ocr0a 80
+sleep 500
+p ocr0a 78
+sleep 500
+#
+
+exit

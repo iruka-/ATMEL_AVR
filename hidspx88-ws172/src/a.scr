@@ -1,0 +1,4 @@
+p portb 0
+p ddrb ff
+p ddrb 0
+q
