@@ -35,5 +35,6 @@ https://play.google.com/store/apps/details?id=me.sheimi.sgit&hl=ja
 
 https://play.google.com/store/apps/details?id=com.lugalabs.sourcecodeviewerfree&hl=ja
 
+- 最初はコマンドラインでやろうとしたり、Webブラウザー＋Webサーバーでやろうとしたけど全部諦めた
 
 ## Happy Hacking!
