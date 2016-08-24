@@ -1,7 +1,13 @@
-## Android快適生活
+# Android快適生活
 
 - Android スマホやタブレットでGitに登録してあるソースコードを閲覧したい。
 - 編集は一応可能かもしれないが、出来ないものと思って諦める。
+
+
+- 主に電車の中や待合室等での時間つぶし用。
+- とは言っても、そういう場所でこそ、いろいろ発見や思い付きが生まれる。
+- ポケモンなんかで時間つぶすよりも、ソースコード見てるほうが落ち着くよ。
+- 
 
 ## 用意するもの
 - Gitリポジトリ　（ソースコードを登録してあるものと仮定）
@@ -27,3 +33,4 @@ https://play.google.com/store/apps/details?id=me.sheimi.sgit&hl=ja
 
 https://play.google.com/store/apps/details?id=com.lugalabs.sourcecodeviewerfree&hl=ja
 
+## Happy Hacking!
