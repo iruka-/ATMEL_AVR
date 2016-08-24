@@ -1,0 +1,9 @@
+## Android快適生活
+
+-sgit
+
+https://play.google.com/store/apps/details?id=me.sheimi.sgit&hl=ja
+
+-ソースコードビューワー
+
+https://play.google.com/store/apps/details?id=com.lugalabs.sourcecodeviewerfree&hl=ja
