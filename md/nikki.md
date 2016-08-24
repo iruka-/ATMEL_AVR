@@ -26,11 +26,14 @@ https://play.google.com/store/apps/details?id=me.sheimi.sgit&hl=ja
 - パスワード入力が面倒なので、サーバーで公開鍵作っておいてsgitに登録する。
 - URLは ssh://ユーザー名@サーバーURL/ディレクトリ/リポジトリ名.git
 - 公開鍵をsgitに入れておけばパスワードは空欄で良い
-- sgitの保存ディレクトリはAndroid端末内のわかりやすいところに置いておくのが吉（後述のソースコードビューワーやエディタで読み書きするため） /sdcard/DCIM/ 直下でもいいぐらい。
+- sgitの保存ディレクトリはAndroid端末内のわかりやすいところに置いておくのが吉
+- （後述のソースコードビューワーやエディタで読み書きするため） 
+- なんだったら、 /sdcard/DCIM/ 直下でもいいぐらい。(USB接続時にPCから上書きできる)
 
 ## Android用ソースコードビューワー
 - ソースコードビューワー がいい感じ。
 
 https://play.google.com/store/apps/details?id=com.lugalabs.sourcecodeviewerfree&hl=ja
+
 
 ## Happy Hacking!
