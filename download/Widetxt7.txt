@@ -1,56 +1,56 @@
 ===============================================================================
-�y�\ �t �g���z�@WIDETXT7.ZIP Win95��pV-text�h���C�o�[
-�y�o  �^  ���z�@WIDETXT7.ZIP  ( 18,320 bytes )
-�y�o �C �g���z  18,880Byte
-�y����  �L�[�z�@1:WIDETEXT  2:VTEXT  3:$DRIVER  4:#UTY
-�y���쌠  �ҁz�@IRUKA
-�y�f  ��  �ҁz  IRUKA (MAG00562)
-�y����  ���z�@IBM�݊��@ / Windows95
-�y�쐬  ���@�z�@pkunzip WIDETXT7.ZIP
-�y����  �m�F�z�@GA-586SVX with Pentium-100MHz Trio64V+
-�y��ĳ����ʁz  �t���[�\�t�g�E�F�A
-�y�]��  �����z  �]�ڂ͎��R�ł�
+【ソ フ ト名】　WIDETXT7.ZIP Win95専用V-textドライバー
+【登  録  名】　WIDETXT7.ZIP  ( 18,320 bytes )
+【バ イ ト数】  18,880Byte
+【検索  キー】　1:WIDETEXT  2:VTEXT  3:$DRIVER  4:#UTY
+【著作権  者】　IRUKA
+【掲  載  者】  IRUKA (MAG00562)
+【動作  環境】　IBM互換機 / Windows95
+【作成  方法】　pkunzip WIDETXT7.ZIP
+【動作  確認】　GA-586SVX with Pentium-100MHz Trio64V+
+【敳┻3種別】  フリーソフトウェア
+【転載  条件】  転載は自由です
 ===============================================================================
-�y�\�t�g�Љ�z
+【ソフト紹介】
 
-�EWide-Text Driver �́AWindows95�̂c�n�r�����u-�s������������h���C�o�[�ł��B
-�E���̑傫�����ő�P�Q�V�����~�W�O�s�܂ŉςɂł��܂��B
-�E�A���A�t���E�X�N���[���̂c�n�r��ʂ͎g���܂���B�f�t�h���ł̂ݓ��삵�܂��B
-�E�S�\�[�X���X�g�t���ł��B�����C������̍Ĕz�z���\�ł��B
-  ��Q�ŕύX�_
-      [ALT]+[Enter] �őS��ʂƑ���؂�ւ���Ɩ\������o�O���C��.
-      �ő�T�C�Y�� 127 * 80 �Ɋg��
-      wtdisp.sys�@�@�̃T�C�Y��1600�o�C�g�ɏk��.
-  ��R�ŕύX�_
-      int 10h �� func 13xx (DOS/V��ʂ̓Ǐ���)���S�ʓI�Ƀo�O���Ă����̂�
-      �C���B����ɂ��[ALT]+[Enter] �őS��ʂƑ���؂�ւ��Ă����z��ʂ�
-      �N���A����Ȃ��Ȃ�܂��B�܂��Anamazu����̃t�@�C���['FS'�������悤
-      �ɂȂ�܂����B
-      wtdisp.sys�@�@�̃T�C�Y��1610�o�C�g�Ɋg��.
-                    �̉��z��ʃT�C�Y��0x5080�o�C�g(128*81)�Ɋg��.
-      wtmode.com    �� -j -e�I�v�V������ǉ�.
+・Wide-Text Driver は、Windows95のＤＯＳ窓をＶ-Ｔｅｘｔ化するドライバーです。
+・窓の大きさを最大１２７文字×８０行まで可変にできます。
+・但し、フル・スクリーンのＤＯＳ画面は使えません。ＧＵＩ内でのみ動作します。
+・全ソースリスト付きです。改造，改造後の再配布も可能です。
+  第２版変更点
+      [ALT]+[Enter] で全画面と窓を切り替えると暴走するバグを修正.
+      最大サイズを 127 * 80 に拡張
+      wtdisp.sys　　のサイズを1600バイトに縮小.
+  第３版変更点
+      int 10h の func 13xx (DOS/V画面の読書き)が全面的にバグっていたのを
+      修正。これにより[ALT]+[Enter] で全画面と窓を切り替えても仮想画面は
+      クリアされなくなります。また、namazuさんのファイラー'FS'も動くよう
+      になりました。
+      wtdisp.sys　　のサイズが1610バイトに拡大.
+                    の仮想画面サイズを0x5080バイト(128*81)に拡大.
+      wtmode.com    に -j -eオプションを追加.
 
-  ��S�ŕύX�_
-      int 10h �� func 130x (Video��ʂ̏�����)�� DX���W�X�^��ۑ����Ă�
-      �Ȃ������o�O���C���B K-Launchar���ŕs��̌����ɂȂ��Ă��܂����B
-      wtdisp.sys�@�@�̃T�C�Y��1611�o�C�g�Ɋg��.
+  第４版変更点
+      int 10h の func 130x (Video画面の書込み)で DXレジスタを保存してい
+      なかったバグを修正。 K-Launchar等で不具合の原因になっていました。
+      wtdisp.sys　　のサイズが1611バイトに拡大.
 
-  ��T�ŕύX�_
-      �h�L�������g�̉���  �s�������̒ǉ�.
-      wtdisp.sys�@�@�̃T�C�Y��1599�o�C�g�ɏk��.
+  第５版変更点
+      ドキュメントの改訂  Ｔｉｐｓの追加.
+      wtdisp.sys　　のサイズを1599バイトに縮小.
 
-  ��U�ŕύX�_
-      �܂����� func 13xx �� CX���W�X�^��ۑ����Ă��Ȃ��o�O�����o.�C������.
-      wtdisp.sys�@�@�̃T�C�Y��1588�o�C�g�ɏk��.(�o�O����邽�тɏ������Ȃ�H)
+  第６版変更点
+      またもや func 13xx で CXレジスタを保存していないバグが発覚.修正した.
+      wtdisp.sys　　のサイズを1588バイトに縮小.(バグを取るたびに小さくなる？)
 
-  ��V�ŕύX�_
-      �܂����� int 2f ax=1606 �� AX���W�X�^��ۑ����Ă��Ȃ��o�O�����o.�C������.
-      func 13xx ��cld ����Ă��Ȃ��܂�lods���g���Ă����������C���B
-      �V�t�g�{Win�ċN�� �ł̃n���O�A�b�v���́A�I����̌�w�E�ɂ����������B
-      wtdisp.sys�@�@�̃T�C�Y��1587�o�C�g�ɏk��
+  第７版変更点
+      またもや int 2f ax=1606 で AXレジスタを保存していないバグが発覚.修正した.
+      func 13xx でcld されていないままlodsが使われていた部分を修正。
+      シフト＋Win再起動 でのハングアップ問題は、鯖さんの御指摘により解決した。
+      wtdisp.sys　　のサイズを1587バイトに縮小
   
 ===============================================================================
 
-�_�E�����[�h�t�@�C������ WIDETXT7.ZIP �Ƃ��Ă��������B
+ダウンロードファイル名を WIDETXT7.ZIP としてください。
 
 /post
