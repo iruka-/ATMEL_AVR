@@ -1,8 +1,14 @@
-## Welcome to GitHub Pages
+## 開発日記
 
-You can use the [editor on GitHub](https://github.com/iruka-/ATMEL_AVR/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+[開発日記](https://github.com/iruka-/ATMEL_AVR/blob/master/md/README.md)
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+
+
+
+
+
+
+
 
 ### Markdown
 
