@@ -1,0 +1,191 @@
+diff -r -c jed-orig/src/Makefile jed-kbox/src/Makefile
+*** jed-orig/src/Makefile	Thu Sep 11 20:14:00 2014
+--- jed-kbox/src/Makefile	Fri Sep 12 09:44:34 2014
+***************
+*** 151,157 ****
+  #---------------------------------------------------------------------------
+  all: jed
+  
+! jed: $(OBJDIR) $(CONFIG_H) slangversion $(OBJDIR)/jed
+  	@echo jed created in $(OBJDIR)
+  $(OBJDIR)/jed: $(COMMON_OBJS) $(JED_OBJS)
+  	cd $(OBJDIR); $(CC) $(COMMON_OFILES) $(JED_OFILES) -o jed $(COMMON_LIBS) $(JED_LIBS)
+--- 151,157 ----
+  #---------------------------------------------------------------------------
+  all: jed
+  
+! jed: $(OBJDIR) $(CONFIG_H) $(OBJDIR)/jed
+  	@echo jed created in $(OBJDIR)
+  $(OBJDIR)/jed: $(COMMON_OBJS) $(JED_OBJS)
+  	cd $(OBJDIR); $(CC) $(COMMON_OFILES) $(JED_OFILES) -o jed $(COMMON_LIBS) $(JED_LIBS)
+diff -r -c jed-orig/src/config.h jed-kbox/src/config.h
+*** jed-orig/src/config.h	Fri Sep 12 09:41:52 2014
+--- jed-kbox/src/config.h	Fri Sep 12 09:46:57 2014
+***************
+*** 152,160 ****
+  #endif
+  
+  #ifdef HAVE_TERMIOS_H
+! # if defined(HAVE_TCGETATTR) && defined(HAVE_TCSETATTR)
+  #  define REALLY_HAVE_TERMIOS_H
+! # endif
+  #endif
+  
+  
+--- 152,160 ----
+  #endif
+  
+  #ifdef HAVE_TERMIOS_H
+! //# if defined(HAVE_TCGETATTR) && defined(HAVE_TCSETATTR)
+  #  define REALLY_HAVE_TERMIOS_H
+! //# endif
+  #endif
+  
+  
+diff -r -c jed-orig/src/main.c jed-kbox/src/main.c
+*** jed-orig/src/main.c	Mon Dec 14 11:12:55 2009
+--- jed-kbox/src/main.c	Fri Sep 12 09:45:37 2014
+***************
+*** 155,164 ****
+  #endif
+     
+  #ifdef JED_ROOT
+!    if ((jr == NULL) && (file_status(JED_ROOT) == 2))
+       {
+! 	jr = JED_ROOT;
+       }
+  #endif
+  #ifdef MSWINDOWS
+     if (jr == NULL)
+--- 155,177 ----
+  #endif
+     
+  #ifdef JED_ROOT
+! 
+! // inside of KBOX_SHELL
+! #define	JED_ROOT1 "/usr/lib/jed"
+! 
+! // android standalone shell
+! #define	JED_ROOT2 "/data/data/jackpal.androidterm/kbox2/usr/lib/jed"
+!    
+!    if ((jr == NULL) && (file_status(JED_ROOT1) == 2))
+       {
+! 	    jr = JED_ROOT1;
+       }
++    if ((jr == NULL) && (file_status(JED_ROOT2) == 2))
++      {
++ 	    jr = JED_ROOT2;
++      }
++ 
++ 
+  #endif
+  #ifdef MSWINDOWS
+     if (jr == NULL)
+***************
+*** 538,543 ****
+--- 551,594 ----
+     return 0;
+  }
+  
++ 
++ #ifdef	DEBUG_PRINT_FILE
++ static FILE *debug_fp;
++ static void debug_log_init(void)
++ {
++    if (debug_fp == NULL)
++ 	   debug_fp = fopen ("debug.log", "w");
++ }
++ //static 
++ void debug_log_print(char *s)
++ {
++    if (debug_fp)
++    fprintf(debug_fp,"%s",s);   
++ }
++ static void debug_log_close()
++ {
++    if (debug_fp)
++ 	 {
++ 		fclose(debug_fp);
++ 	   	debug_fp=NULL;
++ 	 }
++ }
++ #else	//ifdef	DEBUG_PRINT_FILE
++ 
++ static void debug_log_init(void)
++ {
++ }
++ void debug_log_print(char *s)
++ {
++ }
++ static void debug_log_close()
++ {
++ }
++ 
++ #endif
++ 
++ 
++ 
+  int main(int argc, char **argv) /*{{{*/
+  {
+     int err;
+***************
+*** 551,557 ****
+       }
+  
+     set_jed_root (argv[0]);
+! 
+     if (argc > 1)
+       {
+  	if (!strcmp (argv[1], "--version"))
+--- 602,608 ----
+       }
+  
+     set_jed_root (argv[0]);
+! 	debug_log_init();
+     if (argc > 1)
+       {
+  	if (!strcmp (argv[1], "--version"))
+diff -r -c jed-orig/src/sysconf.h jed-kbox/src/sysconf.h
+*** jed-orig/src/sysconf.h	Thu Sep 11 20:14:00 2014
+--- jed-kbox/src/sysconf.h	Fri Sep 12 09:45:54 2014
+***************
+*** 152,160 ****
+  #endif
+  
+  #ifdef HAVE_TERMIOS_H
+! # if defined(HAVE_TCGETATTR) && defined(HAVE_TCSETATTR)
+  #  define REALLY_HAVE_TERMIOS_H
+! # endif
+  #endif
+  
+  
+--- 152,160 ----
+  #endif
+  
+  #ifdef HAVE_TERMIOS_H
+! //# if defined(HAVE_TCGETATTR) && defined(HAVE_TCSETATTR)
+  #  define REALLY_HAVE_TERMIOS_H
+! //# endif
+  #endif
+  
+  
+diff -r -c jed-orig/src/userinfo.c jed-kbox/src/userinfo.c
+*** jed-orig/src/userinfo.c	Mon Dec 14 11:12:55 2009
+--- jed-kbox/src/userinfo.c	Fri Sep 12 09:46:55 2014
+***************
+*** 37,43 ****
+  # define HAS_TCPIP_CODE		0
+  #endif
+  
+! #ifdef REAL_UNIX_SYSTEM
+  # include <pwd.h>
+  # define HAS_PASSWORD_CODE	1
+  #else
+--- 37,43 ----
+  # define HAS_TCPIP_CODE		0
+  #endif
+  
+! #if	0	//def REAL_UNIX_SYSTEM
+  # include <pwd.h>
+  # define HAS_PASSWORD_CODE	1
+  #else

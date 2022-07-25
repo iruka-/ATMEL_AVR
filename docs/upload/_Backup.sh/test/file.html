@@ -1,0 +1,85 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Firefox 3.6 W3C File APIデモンストレーション</title>
+<style type="text/css">
+body {
+    width: 600px;
+}
+#area_fileselection {
+    background: #eee;
+    border: 1px solid #333;
+    margin: 10px 10px 10px 10px;
+    padding: 10px 10px 10px 10px;
+}
+#area_fileinformation {
+    background: #efefef;
+    border: 1px solid #333;
+    margin: 10px 10px 10px 10px;
+    padding: 0px 10px 0px 10px;
+    min-height: 300px;
+}
+fieldset.inputbox {
+    text-align: center;
+}
+fieldset.inputbox label,input {
+    margin: 20px 0px 20px 0px;
+}
+</style>
+<script type="text/javascript">
+//<![CDATA[
+var inputfile, inputfiles, fileinfotext;
+
+
+function init()
+{
+    inputfile = document.getElementById("inputfile").files;
+    inputfiles = document.getElementById("inputfiles").files;
+    fileinfotext = document.getElementById("fileinfotext");
+
+
+    var submit = document.getElementById("submit");
+    submit.addEventListener("click", printFilesList, true);
+}
+
+
+function printFilesList()
+{
+    var buffer = "";
+    var addmessage = function(files) {
+        for (var i = 0; i < files.length; i++) {
+            var file = files[i];
+            buffer += "ファイル名: " + file.name + "<br />";
+            buffer += "タイプ: " + file.type + "<br />";
+            buffer += "URN: " + file.urn + "<hr />";
+        }
+    }
+    addmessage(inputfile);
+    addmessage(inputfiles);
+    fileinfotext.innerHTML = buffer;
+}
+
+
+window.addEventListener("load", init, true);
+//]]>
+</script>
+</head>
+<body>
+<div id="area_fileselection">
+  <form>
+    <fieldset class="inputbox">
+      <legend>W3C File APIデモンストレーション (Firefox 3.6)</legend>
+      <label for="inputfile">シングルファイルセレクタ</label> 
+      <input id="inputfile" type="file" /><br />
+      <label for="inputfiles">　マルチファイルセレクタ </label>
+      <input id="inputfiles" type="file" multiple="true" />
+      <input id="submit" type="button" value="選択されたファイルのチェック" />
+    </fieldset>
+  </form>
+</div>
+<div id="area_fileinformation">
+    <p id="fileinfotext"></p>
+</div>
+</body>
+</html>

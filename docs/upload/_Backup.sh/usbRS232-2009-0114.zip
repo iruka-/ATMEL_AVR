@@ -1,0 +1,730 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="application/xhtml+xml; charset=EUC-JP" />
+<meta http-equiv="content-style-type" content="text/css" />
+<title>AVR/HIDaspx にそのファイルは見つかりません - 千秋ゼミ</title>
+<link rel="stylesheet" href="skin/default.ja.css" type="text/css" media="screen" charset="Shift_JIS" />
+<link rel="stylesheet" href="skin/print.ja.css" type="text/css" media="print" charset="Shift_JIS" />
+</head>
+<body>
+
+<div align="left">
+<!--
+<div style="width:800px">
+-->
+<div>
+
+<table width="99%">
+<tr>
+<td width="1%">
+<a href="http://www-ice.yamagata-cit.ac.jp/ken/senshu/sitedev/">
+ <img src="sd_img/title.jpg" alt="Senshu LAB">
+</a>
+</td>
+<td width="99%" valign="bottom" align="right"><table>
+<form action="http://www-ice.yamagata-cit.ac.jp/ken/senshu/sitedev/index.php?cmd=search" method="post">
+<tr><td>サイト内検索：
+<INPUT name=word>
+<INPUT type=radio CHECKED value=AND name=type>AND検索
+<INPUT type=radio value=OR name=type>OR検索 &nbsp;<INPUT type=submit value=検索>
+</td></tr>
+</form>
+</table></td>
+</tr>
+</table>
+
+<div id="navigator">
+
+<!--
+ <a href="http://www-ice.yamagata-cit.ac.jp/ken/senshu/sitedev/index.php?AVR%2FHIDaspx">リロード</a>&nbsp;
+ <a href="http://www-ice.yamagata-cit.ac.jp/ken/senshu/sitedev/index.php?plugin=newpage&amp;refer=AVR%2FHIDaspx">新規</a>&nbsp;
+ <a href="http://www-ice.yamagata-cit.ac.jp/ken/senshu/sitedev/index.php?cmd=edit&amp;page=AVR%2FHIDaspx">編集</a>&nbsp;
+ <a href="http://www-ice.yamagata-cit.ac.jp/ken/senshu/sitedev/index.php?cmd=freeze&amp;page=AVR%2FHIDaspx">凍結</a>&nbsp;
+ <a href="http://www-ice.yamagata-cit.ac.jp/ken/senshu/sitedev/index.php?cmd=diff&amp;page=AVR%2FHIDaspx">差分</a>&nbsp;
+ <a href="http://www-ice.yamagata-cit.ac.jp/ken/senshu/sitedev/index.php?plugin=attach&amp;pcmd=upload&amp;page=AVR%2FHIDaspx">添付</a>&nbsp;
+ <a href="http://www-ice.yamagata-cit.ac.jp/ken/senshu/sitedev/index.php?TOP">トップ</a>&nbsp;
+ <a href="http://www-ice.yamagata-cit.ac.jp/ken/senshu/sitedev/index.php?cmd=list">一覧</a>&nbsp;
+ <a href="http://www-ice.yamagata-cit.ac.jp/ken/senshu/sitedev/index.php?cmd=search">単語検索</a>&nbsp;
+ <a href="http://www-ice.yamagata-cit.ac.jp/ken/senshu/sitedev/index.php?RecentChanges">最終更新</a>&nbsp;
+ <a href="http://www-ice.yamagata-cit.ac.jp/ken/senshu/sitedev/index.php?cmd=backup&amp;page=AVR%2FHIDaspx">バックアップ</a>&nbsp;
+ <a href="http://www-ice.yamagata-cit.ac.jp/ken/senshu/sitedev/index.php?cmd=edit&page=MENU">MENU編集</a>&nbsp;
+ <a href="http://www-ice.yamagata-cit.ac.jp/ken/senshu/sitedev/index.php?cmd=rss10">RSS</a>
+-->
+
+</div>
+<!-- 2004-4-12 -->
+<div align="center">
+
+</div>
+<hr class="full_hr" />
+
+<table border="0" style="width:100%">
+ <tr>
+  <td class="menubar">
+   <div>
+    <p><strong>===MENU===</strong><br />
+　<a href="http://www-ice.yamagata-cit.ac.jp/ken/senshu/sitedev/index.php?TOP" title="TOP (97d)">トップ</a><br />
+　<a href="http://www-ice.yamagata-cit.ac.jp/ken/senshu/sitedev/index.php?%A5%BC%A5%DF%A4%CE%CC%DC%C9%B8" title="ゼミの目標 (46d)">ゼミの目標</a><br />
+　<a href="http://www-ice.yamagata-cit.ac.jp/ken/senshu/sitedev/index.php?note" title="note (83d)">担当科目</a><br />
+　<a href="http://www-ice.yamagata-cit.ac.jp/ken/senshu/sitedev/index.php?%B8%F8%B3%AB%B9%D6%BA%C2" title="公開講座 (291d)">公開講座</a><br />
+　<a href="http://www-ice.yamagata-cit.ac.jp/ken/senshu/sitedev/index.php?%C2%B4%B6%C8%B8%A6%B5%E6" title="卒業研究 (68d)">卒業研究</a><br />
+　<a href="http://www-ice.yamagata-cit.ac.jp/ken/senshu/sitedev/index.php?%BC%E8%A4%EA%C1%C8%A4%DF" title="取り組み (1040d)">取り組み</a><br />
+　<a href="http://www-ice.yamagata-cit.ac.jp/ken/senshu/sitedev/index.php?%BA%C7%B6%E1%A4%CE%BC%E8%A4%EA%C1%C8%A4%DF" title="最近の取り組み (243d)">マイコン</a><br />
+<br />
+　<a href="http://www-ice.yamagata-cit.ac.jp/ken/senshu/sitedev/index.php?%BA%C7%BF%B7%A4%CE20%B7%EF" title="最新の20件 (54d)"><strong>更新情報</strong></a><br />
+　<a href="http://www-ice.yamagata-cit.ac.jp/ken/senshu/sitedev/index.php?AVR%2Fnews_contents_all" title="AVR/news_contents_all (26d)"><strong>総合掲示板</strong></a><br />
+　-<a href="http://www-ice.yamagata-cit.ac.jp/ken/senshu/sitedev/index.php?AVR" title="AVR (34d)">AVR情報</a><br />
+　-<a href="http://www-ice.yamagata-cit.ac.jp/ken/senshu/sitedev/index.php?AVR%2FHIDaspx00" title="AVR/HIDaspx00 (1d)">HIDaspx</a><br />
+　-<a href="http://www-ice.yamagata-cit.ac.jp/ken/senshu/sitedev/index.php?AVR%2FHIDmon00" title="AVR/HIDmon00 (20d)">HIDmon</a><br />
+　-<a href="http://www-ice.yamagata-cit.ac.jp/ken/senshu/sitedev/index.php?AVR%2FusbRS232" title="AVR/usbRS232 (28m)">usbRS232</a><br />
+　-<a href="http://www-ice.yamagata-cit.ac.jp/ken/senshu/sitedev/index.php?AVR%2Fshowcase" title="AVR/showcase (6d)">Arduino</a><br />
+　-<a href="http://www-ice.yamagata-cit.ac.jp/ken/senshu/sitedev/index.php?memo%2FUBW" title="memo/UBW (74d)">UBW(PIC18)</a><br />
+　-<a href="http://www-ice.yamagata-cit.ac.jp/ken/senshu/sitedev/index.php?install%2FSFC" title="install/SFC (191d)">Swordfish</a><br />
+　-<a href="http://www-ice.yamagata-cit.ac.jp/ken/senshu/sitedev/index.php?install%2Fsdcc" title="install/sdcc (194d)">SDCC</a><br />
+　-<a href="http://www-ice.yamagata-cit.ac.jp/ken/senshu/sitedev/index.php?embtech" title="embtech (2d)">組込み技法</a><br />
+<br />
+　<a href="http://www-ice.yamagata-cit.ac.jp/ken/senshu/sitedev/index.php?AVR%2FAVR%C6%FE%CC%E7" title="AVR/AVR入門 (1d)">AVRリンク</a><br />
+　<a href="http://www-ice.yamagata-cit.ac.jp/ken/senshu/sitedev/index.php?%A5%D6%A5%C3%A5%AF%A5%DE%A1%BC%A5%AF%BD%B8" title="ブックマーク集 (19d)">Links</a><br />
+<br />
+　<a href="http://www-ice.yamagata-cit.ac.jp/ken/senshu/sitedev/index.php?memo" title="memo (347d)">雑多なメモ</a><br />
+　<a href="http://www-ice.yamagata-cit.ac.jp/ken/senshu/sitedev/index.php?install" title="install (321d)">installメモ</a><br />
+　<a href="http://www-ice.yamagata-cit.ac.jp/ken/senshu/sitedev/index.php?%A5%EA%A5%F3%A5%AF%BD%B8" title="リンク集 (612d)">リンク集</a><br />
+<br />
+<a href="http://www-ice.yamagata-cit.ac.jp/ken/senshu/sitedev/?plugin=counterlist">カウンタ一覧</a><br /></p>
+
+   </div>
+  </td>
+  <td valign="top">
+   <div id="hdl"><a href="http://www-ice.yamagata-cit.ac.jp/ken/senshu/sitedev/index.php?cmd=search&amp;word=AVR%2FHIDaspx">AVR/HIDaspx</a>  にそのファイルは見つかりません</div>
+   <div id="body"><ul class="navi">
+ <li class="navi_left"><a href="http://www-ice.yamagata-cit.ac.jp/ken/senshu/sitedev/index.php?AVR%2FHIDasp" title="AVR/HIDasp (94d)">Prev</a></li>
+ <li class="navi_right"><a href="http://www-ice.yamagata-cit.ac.jp/ken/senshu/sitedev/index.php?AVR%2FHIDaspx00" title="AVR/HIDaspx00 (1d)">Next</a></li>
+ <li class="navi_none"><a href="http://www-ice.yamagata-cit.ac.jp/ken/senshu/sitedev/index.php?AVR" title="AVR (34d)">AVR</a></li>
+</ul>
+<hr class="full_hr" />
+<div class="counter">
+Counter: 10801,
+today: 33,
+yesterday: 127
+</div>
+<div class="contents">
+<a id="contents_1"></a><ul class="list1" style="padding-left:16px;margin-left:16px"><li><a href="#content_1_0"> ============= はじめに =============</a>
+<ul class="list2" style="padding-left:16px;margin-left:16px"><li><a href="#content_1_1">  HIDaspxとは（2008年9月） </a></li></ul></li>
+<li><a href="#content_1_2"> HIDaspxリンク集 ---【関連ページへの移動にご利用ください】 </a></li>
+<li><a href="#content_1_3">  HIDaspx(USB接続のAVRライタ)の紹介 </a>
+<ul class="list2" style="padding-left:16px;margin-left:16px"><li><a href="#content_1_4"> HIDaspxの回路図と製作例 </a></li></ul></li>
+<li><a href="#content_1_5"> 最新のHIDaspx用アーカイブ --------------- [Download] </a>
+<ul class="list2" style="padding-left:16px;margin-left:16px"><li><a href="#content_1_6"> 開発に協力していただける方へ（開発環境の補足） </a></li>
+<li><a href="#content_1_7"> 関連プロジェクト（ATmega88/168用） </a></li></ul></li>
+<li><a href="#content_1_8">  ファームウェア(ATtiny2313)のFUSE設定 </a></li>
+<li><a href="#content_1_9">  hidspx, hidmonなどのコマンドについて </a></li>
+<li><a href="#content_1_10">  動作確認済みのAVRリストと動作速度の目安 </a></li>
+<li><a href="#content_1_11">  ======= HIDaspxに関連するTips ======= </a>
+<ul class="list2" style="padding-left:16px;margin-left:16px"><li><a href="#content_1_12"> hidspxの使い方 </a></li>
+<li><a href="#content_1_13">  開発環境との統合（AVR studio, BASCOM-AVR） </a></li>
+<li><a href="#content_1_14">  AVRマイコンのFUSEデータ確認方法 </a></li>
+<li><a href="#content_1_15">  「-dオプション」と読出し時間の関係 </a></li>
+<li><a href="#content_1_16"> 実行時間の計測方法 </a></li>
+<li><a href="#content_1_17">  USB-HUBの利用で高速化 </a></li></ul></li>
+<li><a href="#content_1_18">  HIDaspとの出会い（コラム） </a></li></ul></div>
+
+<hr class="full_hr" />
+<h2 id="content_1_0">============= はじめに ============= <a class="anchor_super" id="ycb7aa9f" href="http://www-ice.yamagata-cit.ac.jp/ken/senshu/sitedev/index.php?AVR%2FHIDaspx#ycb7aa9f" title="ycb7aa9f">&dagger;</a></h2>
+<p>HIDaspxに興味を持った方でも、このページに含まれる技術的な話の多さに驚かれる方が多いようです。<br />
+その為、質問や感想のページを分離しました。技術的な内容やQ&amp;Aは別のページ<a href="http://www-ice.yamagata-cit.ac.jp/ken/senshu/sitedev/index.php?AVR%2FHID_QA00" title="AVR/HID_QA00 (93d)">AVR/HID_QA00</a>に<br />
+移しましたので、詳細はそちらを参照してください。<br />
+<br />
+また、「概要を知りたい方」は、簡潔に解説されている
+<a href="http://www.geocities.jp/kuman2600/n6programmer.html#13"><strong>kumanさんのページ</strong></a>をご覧ください。<br />
+<br /></p>
+
+<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h3 id="content_1_1">HIDaspxとは（2008年9月）  <a class="anchor_super" id="qa9690db" href="http://www-ice.yamagata-cit.ac.jp/ken/senshu/sitedev/index.php?AVR%2FHIDaspx#qa9690db" title="qa9690db">&dagger;</a></h3>
+<p>(2008-09-02 (火) 09:14:33)<br />
+<br />
+どんな組込みマイコンの開発を行う場合でも，特殊なドライバや開発用ソフトウェアのインストールが<br />
+必要です。しかし、これが許可されない環境（特に教育現場）も少なからずあることに気付きました。<br />
+特に教育現場では、「ドライバやソフトウェアのインストールは禁止」という環境は珍しくはありません。<br />
+<br />
+一方、現在ではWinAVRなどの開発環境はCD-ROMやUSBメモリに格納しても利用可能ですから、ドライバ不要<br />
+のAVRライタがあれば、インストール不要のAVRマイコン開発環境を実現できます。<br />
+<br />
+ドライバのインストールが出来ない環境でもマイコン関連の学習を可能にする為、HIDaspやHIDsphなどの<br />
+ライタやAVRUSBのプロジェクトを参考に、
+<a href="http://hp.vector.co.jp/authors/VA000177/html/A3C8A3C9A3C4A3E1A3F3A3F0.html">irukaさん</a>の協力を得て、HIDaspをベースに<br />
+独自に安定化と高速化などの改良したのが<strong>HIDaspx</strong>で、ハードウェアとファームウェア一式を意味します。<br />
+<br />
+　HIDaspxをAVRライタとして利用するには、PC用プログラムが必要になります。<br />
+これには私が保守しているavrspxを元に、HIDaspxをサポートを追加した<strong>hidspx</strong>コマンドを開発しまし<br />
+た。なお、HIDaspx対応のコードには、瓶詰堂さんの作成されたコード(hidasp.cの改造版)を含んでいます。<br />
+<br />
+2008年10月以降、<a href="http://hp.vector.co.jp/authors/VA000177/html/A3C8A3C9A3C4A3E1A3F3A3F0.html">hidmon</a>が
+利用可能です。hidmonコマンドにてHIDaspxの各種I/Oを操作可能で、<br />
+USB接続のIOとして利用できます。また、ATtiny2313のI/Oや各種のレジスタを制御できるため、マイコン<br />
+学習教材としても有用です。<br />
+<br />
+　以下が、私が製作したHIDaspxです。+3.3Vの安定化回路を実装し，この「ライタ」だけで、3.3V<br />
+（乾電池2本分）の回路実験が可能です．COMポートが付いていないノートパソコンによるマイコン開発<br />
+用に小型ケースに組み込んでみました．同様の目的にはUSBaspも使えますが、USBaspではドライバのイン<br />
+ストールが必要です。HIDaspxはドライバのインストールが不要という大きな特徴があります。<br />
+<br />
+○ ユニバーサル基板による製作例<br />
+<a href="http://www-ice.yamagata-cit.ac.jp/ken/senshu/sitedev/index.php?plugin=attach&amp;refer=AVR%2FHIDaspx&amp;openfile=HIDsph.jpg" title="zoom"><img src="http://www-ice.yamagata-cit.ac.jp/ken/senshu/sitedev/index.php?plugin=ref&amp;page=AVR%2FHIDaspx&amp;src=HIDsph.jpg" alt="zoom" title="zoom" width="480" height="330" /></a><br />
+<br />
+○HIDaspx専用プリント基板の例（写真は試作基板）<br />
+<a href="http://www-ice.yamagata-cit.ac.jp/ken/senshu/sitedev/index.php?plugin=attach&amp;refer=AVR%2FHIDaspx&amp;openfile=WSN214.jpg" title="WSN214.jpg"><img src="http://www-ice.yamagata-cit.ac.jp/ken/senshu/sitedev/index.php?plugin=ref&amp;page=AVR%2FHIDaspx&amp;src=WSN214.jpg" alt="WSN214.jpg" title="WSN214.jpg" width="500" height="368" /></a><br />
+<br />
+○USB-IO用ブレッドボード対応モジュール（写真は試作基板）<br />
+<a href="http://www-ice.yamagata-cit.ac.jp/ken/senshu/sitedev/index.php?plugin=attach&amp;refer=AVR%2FHIDaspx&amp;openfile=HIDaspx-ws216a.jpg" title="HIDaspx-ws216a.jpg"><img src="http://www-ice.yamagata-cit.ac.jp/ken/senshu/sitedev/index.php?plugin=ref&amp;page=AVR%2FHIDaspx&amp;src=HIDaspx-ws216a.jpg" alt="HIDaspx-ws216a.jpg" title="HIDaspx-ws216a.jpg" width="500" height="403" /></a><br />
+<br />
+○HIDaspxで書き込みを行っているところ（写真は試作基板）<br />
+<a href="http://www-ice.yamagata-cit.ac.jp/ken/senshu/sitedev/index.php?plugin=attach&amp;refer=AVR%2FHIDaspx&amp;openfile=WSN214-215.jpg" title="WSN214-215.jpg"><img src="http://www-ice.yamagata-cit.ac.jp/ken/senshu/sitedev/index.php?plugin=ref&amp;page=AVR%2FHIDaspx&amp;src=WSN214-215.jpg" alt="WSN214-215.jpg" title="WSN214-215.jpg" width="560" height="424" /></a>
+<br /></p>
+<hr class="full_hr" />
+<p>■ HIDaspxの特徴</p>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>どのUSBコネクタに繋いでも動作する（ドライバのインストールも不要）
+<ul class="list2" style="padding-left:16px;margin-left:16px"><li>COMポートの無いPCでも利用可能（今はこれが一般的です）</li>
+<li>Windows 2000/XP/Vistaで動作を確認（Windows95/98では動作しません）</li>
+<li>MacOSやLinuxへの移植版も登場（まだ動作確認が出来た段階ですが）</li></ul></li>
+<li>使い勝手に優れた <strong>hidspx(avrspxの別名)</strong>コマンドが利用できる
+<ul class="list2" style="padding-left:16px;margin-left:16px"><li>インストール不要（CD-ROMやUSBメモリからの実行も可能）</li>
+<li>ターゲットのAVRマイコンを自動認識（新・旧のAVRマイコンをサポート）
+<ul class="list3" style="padding-left:16px;margin-left:16px"><li>ごく一部の旧タイプを除き、CHIP名を指定する必要なし</li></ul></li>
+<li>BASCOM-AVRなどの開発環境にも組み込みできます。</li>
+<li>hidspxのショートカットに、HEXファイルをD&amp;Dすることでも書き込めます</li></ul></li>
+<li>ISPコネクタを外すことなく開発が可能（ターゲット実行時の影響は最小限）</li>
+<li>電源の投入順序も気にする必要なし（ライタのリセット時は自動で再接続）</li>
+<li>製作コストは最小限（安価（秋月電子では100円!）なATtiny2313のみで実現）
+<ul class="list2" style="padding-left:16px;margin-left:16px"><li>材料代は500円程度？（専用プリント基板を計画中）</li></ul></li>
+<li>小型に製作可能（USBメモリの形状で製作も可能）</li>
+<li>十分な速度で動作（USBaspとほぼ同じ）
+<ul class="list2" style="padding-left:16px;margin-left:16px"><li>HUBを利用すると更に動作速度が向上（USBaspでは速度は低下する）</li></ul></li>
+<li>USB-IOとして利用できる（hidmonを利用）
+<ul class="list2" style="padding-left:16px;margin-left:16px"><li>コマンドによる対話方式で内蔵レジスタを操作可能</li>
+<li>スクリプトによる一括実行も可能</li>
+<li>DLLを使って、各種のプログラム言語(C言語、Visual BASICなど)から操作可能
+<ul class="list3" style="padding-left:16px;margin-left:16px"><li><span style="color:RED">rubyを使っての制御が可能になりました</span>(2009年1月2日)</li>
+<li>詳細は<a href="http://www-ice.yamagata-cit.ac.jp/ken/senshu/sitedev/index.php?AVR%2FHIDmon03" title="AVR/HIDmon03 (20d)">AVR/HIDmon03</a>をご覧ください</li></ul></li></ul></li></ul>
+<p>※HIDaspとHIDaspxは同一のハードウェアですが、ソフトウェアの互換性はありま
+せんので、混同しないようにしてください。
+なお、HIDaspxは、<strong>エイチ・アイ・ディー アスペックス</strong>とお読みください。</p>
+<hr class="full_hr" />
+
+<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h2 id="content_1_2">HIDaspxリンク集 ---【関連ページへの移動にご利用ください】  <a class="anchor_super" id="ueb1304f" href="http://www-ice.yamagata-cit.ac.jp/ken/senshu/sitedev/index.php?AVR%2FHIDaspx#ueb1304f" title="ueb1304f">&dagger;</a></h2>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>HIDaspxに関する情報 <span style="color:RED">タイトル一覧</span> ⇒ <a href="http://www-ice.yamagata-cit.ac.jp/ken/senshu/sitedev/index.php?AVR%2FHIDaspx00" title="AVR/HIDaspx00 (1d)">AVR/HIDaspx00</a></li>
+<li>HIDaspx <span style="color:RED">更新履歴</span> ⇒ <a href="http://www-ice.yamagata-cit.ac.jp/ken/senshu/sitedev/index.php?AVR%2FHIDaspx_news" title="AVR/HIDaspx_news (6d)">AVR/HIDaspx_news</a></li>
+<li>HIDaspxに関するQ&amp;A <span style="color:RED">質問はこちら</span>  ⇒ <a href="http://www-ice.yamagata-cit.ac.jp/ken/senshu/sitedev/index.php?AVR%2FHID_QA00" title="AVR/HID_QA00 (93d)">AVR/HID_QA00</a></li>
+<li>HIDaspxの製作レポート <span style="color:RED">利用者の声</span>⇒ <a href="http://www-ice.yamagata-cit.ac.jp/ken/senshu/sitedev/index.php?AVR%2FHID_reports" title="AVR/HID_reports (53d)">AVR/HID_reports</a></li>
+<li>HIDaspxによる教材開発 ⇒ <a href="http://www-ice.yamagata-cit.ac.jp/ken/senshu/sitedev/index.php?AVR%2FHID_kyouzai" title="AVR/HID_kyouzai (65d)">AVR/HID_kyouzai</a></li>
+<li>AVRライタに関するFAQ集 ⇒ <a href="http://www-ice.yamagata-cit.ac.jp/ken/senshu/sitedev/index.php?AVR%2Fwriter_FAQ" title="AVR/writer_FAQ (77d)">AVR/writer_FAQ</a></li>
+<li>掲示板にも関連情報があります ⇒ <a href="http://www-ice.yamagata-cit.ac.jp/ken/senshu/sitedev/index.php?AVR%2Fnews_contents_all" title="AVR/news_contents_all (26d)">AVR/news_contents_all</a></li>
+<li><strong>「AVR-USB」</strong>(このソフトがHIDaspxを支えています)
+<ul class="list2" style="padding-left:16px;margin-left:16px"><li><a href="http://www.obdev.at/products/avrusb/index.html">http://www.obdev.at/products/avrusb/index.html</a></li></ul></li>
+<li>2008-10-29時点のこのページの内容 ⇒ <a href="http://www-ice.yamagata-cit.ac.jp/ken/senshu/sitedev/index.php?plugin=attach&amp;refer=AVR%2FHIDaspx&amp;openfile=HIDaspx-1029.pdf" title="2008/10/29 13:01:21 317.8KB"><img src="image/file.png" width="20" height="20" alt="file" style="border-width:0px" />HIDaspx-1029.pdf</a></li>
+<li>HIDaspxをUSB-IOとして利用する例
+<ul class="list2" style="padding-left:16px;margin-left:16px"><li>HIDmonについて ⇒ <a href="http://www-ice.yamagata-cit.ac.jp/ken/senshu/sitedev/index.php?AVR%2FHIDmon00" title="AVR/HIDmon00 (20d)">AVR/HIDmon00</a></li></ul></li>
+<li>HIDaspxのハードウェアをusb-RS232のブリッジとして利用 ⇒ <a href="http://www-ice.yamagata-cit.ac.jp/ken/senshu/sitedev/index.php?AVR%2FusbRS232" title="AVR/usbRS232 (28m)">AVR/usbRS232</a></li></ul>
+<p>※ ページの簡素化を図りました。以前のページの内容は↑のPDFをご覧ください。</p>
+<hr class="full_hr" />
+<p>関連するページへのリンク<br />
+AVR開発ツールのリンク（外部）<br /></p>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li><a href="http://delegate.uec.ac.jp:8081/club/koken/wiki/?%A5%DE%A5%A4%A5%B3%A5%F3%B9%D6%BA%C2%2F%B4%C4%B6%AD%A4%CE%B9%BD%C3%DB">ドライバをインストールする例（マイコン講座/環境の構築）</a>
+<ul class="list2" style="padding-left:16px;margin-left:16px"><li>avrspの使い方は、hidspxにもそのまま利用可能</li></ul></li>
+<li>ポータブルWinAVR ⇒ <a href="http://www.chip45.com/index.pl?page=PortableWinAVR&amp;lang=en">http://www.chip45.com/index.pl?page=PortableWinAVR&amp;lang=en</a></li>
+<li>瓶詰堂さん(HIDaspの開発元) ⇒ <a href="http://www.binzume.net/library/avr_hidasp.html">http://www.binzume.net/library/avr_hidasp.html</a>
+<ul class="list2" style="padding-left:16px;margin-left:16px"><li>このページにもリンクしていただきました</li></ul></li>
+<li>irukaさんのサイト（瓶詰堂さんもお薦め）
+<ul class="list2" style="padding-left:16px;margin-left:16px"><li><a href="http://hp.vector.co.jp/authors/VA000177/html/A3C8A3C9A3C4A3E1A3F3A3F0.html">http://hp.vector.co.jp/authors/VA000177/html/A3C8A3C9A3C4A3E1A3F3A3F0.html</a></li></ul></li>
+<li>kumanさんの回路図を含む、実践レポート(一読をお勧めします)
+<ul class="list2" style="padding-left:16px;margin-left:16px"><li><a href="http://www.geocities.jp/kuman2600/n6programmer.html#13">http://www.geocities.jp/kuman2600/n6programmer.html#13</a>  (10/12追記あり)</li>
+<li>hidspx-1012b.zipの感想が書かれています</li>
+<li><a href="http://www.geocities.jp/kuman2600/n6programmer.html#13c">HIDaspx kuman流の使い方</a> (10/19追加)</li></ul></li>
+<li>「工研Wiki」…電通大の学生さんによるHIDaspの解説
+<ul class="list2" style="padding-left:16px;margin-left:16px"><li><a href="http://delegate.uec.ac.jp:8081/club/koken/wiki/?AVR%2FHIDasp">http://delegate.uec.ac.jp:8081/club/koken/wiki/?AVR%2FHIDasp</a></li></ul></li>
+<li>AVRライタで有名なTADさんのページにもHIDaspxが登場
+<ul class="list2" style="padding-left:16px;margin-left:16px"><li><a href="http://homepage2.nifty.com/denshiken/AVW021.html">http://homepage2.nifty.com/denshiken/AVW021.html</a></li></ul></li>
+<li>「Fight with life」 (RAINさんのBlog)..HIDasp(x)を4台も作成されています
+<ul class="list2" style="padding-left:16px;margin-left:16px"><li><a href="http://rainyukizora.web.fc2.com/banner.png" title="banner.png"><img src="http://rainyukizora.web.fc2.com/banner.png" alt="banner.png" title="banner.png" /></a> <a href="http://amenotiyukizora.blog76.fc2.com/">http://amenotiyukizora.blog76.fc2.com/</a></li></ul></li>
+<li>HIDaspの使い方(マウス操作での利用法)
+<ul class="list2" style="padding-left:16px;margin-left:16px"><li><a href="http://delegate.uec.ac.jp:8081/club/koken/wiki/?AVR%2FHIDasp%2F%BB%C8%A4%A4%CA%FD">AVR/HIDasp/使い方</a></li></ul></li>
+<li>中学生向けの学習教材にHIDaspxを適用した例
+<ul class="list2" style="padding-left:16px;margin-left:16px"><li><a href="http://www.ne.jp/asahi/ja/asd/gijutu/HIDapio/">http://www.ne.jp/asahi/ja/asd/gijutu/HIDapio/</a></li></ul></li></ul>
+<hr class="full_hr" />
+
+<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h2 id="content_1_3">HIDaspx(USB接続のAVRライタ)の紹介  <a class="anchor_super" id="w5686c4a" href="http://www-ice.yamagata-cit.ac.jp/ken/senshu/sitedev/index.php?AVR%2FHIDaspx#w5686c4a" title="w5686c4a">&dagger;</a></h2>
+
+<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h3 id="content_1_4">HIDaspxの回路図と製作例  <a class="anchor_super" id="dee7a877" href="http://www-ice.yamagata-cit.ac.jp/ken/senshu/sitedev/index.php?AVR%2FHIDaspx#dee7a877" title="dee7a877">&dagger;</a></h3>
+<p>■ HIDaspxの回路例(HIDsphと同じ回路です。ISPコネクタ配置はWSNAKボードに準拠)<br />
+※クリックで拡大可能(後半で紹介しているHIDsphと同じものです）<br />
+三端子レギュレータの入出力に接続している47uFのコンデンサは、USB規格としては大きすぎるようです。<br />
+発振止めにはこの程度が必要だと思いますが、規格内に収めるなら、10uF程度に留める必要があります。<br />
+（メーカーさんではどうやっているのでしょうか）<br />
+<br />
+<a href="http://www-ice.yamagata-cit.ac.jp/ken/senshu/sitedev/index.php?plugin=attach&amp;refer=AVR%2FHIDaspx&amp;openfile=HIDaspx-kairo1.png" title="HIDaspx-kairo1.png"><img src="http://www-ice.yamagata-cit.ac.jp/ken/senshu/sitedev/index.php?plugin=ref&amp;page=AVR%2FHIDaspx&amp;src=HIDaspx-kairo1.png" alt="HIDaspx-kairo1.png" title="HIDaspx-kairo1.png" width="707" height="531" /></a><br />
+<br />
+なお、UARTコネクタはusbRS232での利用を想定しています。AVRライタとして使うだけなら、このコネクタ<br />
+を実装する必要はありません。</p>
+<p>※ <span style="color:RED">水晶発振子は必須です</span><br />
+ある方から、HIDaspではセラロックで動作するのにHIDaspxはセラミック振動子では動作しないとの報告が<br />
+ありました。HIDaspxでは高速化を実現する為にパケット長を32バイトに拡大しており、発振周波数の誤差<br />
+に敏感です。<br />
+回路図にも明記していますが、セラミック振動子（商品名の例：セラロック）では動作しないと考えて<br />
+ください。</p>
+
+<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h2 id="content_1_5">最新のHIDaspx用アーカイブ --------------- [Download]  <a class="anchor_super" id="q3b30e83" href="http://www-ice.yamagata-cit.ac.jp/ken/senshu/sitedev/index.php?AVR%2FHIDaspx#q3b30e83" title="q3b30e83">&dagger;</a></h2>
+<p>ここで公開するのは、オリジナルのHIDaspではなく、高速化といくつかの安定化対策を施した<strong>HIDaspx</strong><br />
+に関するものです。HIDaspxは、HIDsph互換の回路で利用できます。<br />
+<br />
+ぜひ<strong>利用しての感想</strong>をお寄せください。<br />
+これらは<span style="color:RED">評価用</span>に公開しており、予告無く変更することがあります。<br /></p>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>hidspxとHIDaspx（ソース含む）　  ... <a href="http://www-ice.yamagata-cit.ac.jp/ken/senshu/sitedev/index.php?plugin=attach&amp;refer=AVR%2FHIDaspx&amp;openfile=hidspx-2009-0115.zip" title="2009/01/15 10:09:56 1158.9KB"><img src="image/file.png" width="20" height="20" alt="file" style="border-width:0px" />hidspx-2009-0115.zip</a></li>
+<li>hidspxとHIDaspx（新バージョン）  ... <a href="http://www-ice.yamagata-cit.ac.jp/ken/senshu/sitedev/index.php?plugin=attach&amp;refer=AVR%2FHIDaspx&amp;openfile=hidspx-2009-0125b.zip" title="2009/01/25 17:19:10 1179.1KB"><img src="image/file.png" width="20" height="20" alt="file" style="border-width:0px" />hidspx-2009-0125b.zip</a></li>
+<li>avrspx説明書（改良点の説明書） 　... <a href="http://www-ice.yamagata-cit.ac.jp/ken/senshu/sitedev/index.php?plugin=attach&amp;refer=AVR%2FHIDaspx&amp;openfile=avrspx-doc.txt" title="2009/01/21 18:24:22 19.8KB"><img src="image/file.png" width="20" height="20" alt="file" style="border-width:0px" />avrspx-doc.txt</a></li>
+<li>hidspx(Linux-UTF8ソースのみ）　　... <a href="http://www-ice.yamagata-cit.ac.jp/ken/senshu/sitedev/index.php?plugin=attach&amp;refer=AVR%2FHIDaspx&amp;openfile=hidspx-2009-0126.tar.gz" title="2009/01/26 10:27:05 41.7KB"><img src="image/file.png" width="20" height="20" alt="file" style="border-width:0px" />hidspx-2009-0126.tar.gz</a>
+<ul class="list2" style="padding-left:16px;margin-left:16px"><li>ファームはhidspx-2009-****.zipに含まれる<strong>main-12.hex</strong>を使ってください。</li></ul></li>
+<li>hidmon(実行ファイル, ソースコード、スクリプト)  ... <a href="http://www-ice.yamagata-cit.ac.jp/ken/senshu/sitedev/index.php?plugin=attach&amp;refer=AVR%2FHIDaspx&amp;openfile=hidmon-1125.zip" title="2008/11/25 17:02:58 277.3KB"><img src="image/file.png" width="20" height="20" alt="file" style="border-width:0px" />hidmon-1125.zip</a>
+<ul class="list2" style="padding-left:16px;margin-left:16px"><li>RC発振器でUSB-IOの利用が可能（RC発振モードは評価目的に公開）</li></ul></li>
+<li>usbRS232(ファームウェア, ソースコード)  ... <a href="http://www-ice.yamagata-cit.ac.jp/ken/senshu/sitedev/index.php?plugin=attach&amp;refer=AVR%2FHIDaspx&amp;openfile=usbRS232-1109.zip" title="2008/11/09 11:53:21 132.6KB"><img src="image/file.png" width="20" height="20" alt="file" style="border-width:0px" />usbRS232-1109.zip</a>
+<ul class="list2" style="padding-left:16px;margin-left:16px"><li>HIDaspxのハードウェアでCDCクラスを実現した例（開発段階）</li></ul></li></ul>
+
+<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h3 id="content_1_6">開発に協力していただける方へ（開発環境の補足）  <a class="anchor_super" id="n97ef233" href="http://www-ice.yamagata-cit.ac.jp/ken/senshu/sitedev/index.php?AVR%2FHIDaspx#n97ef233" title="n97ef233">&dagger;</a></h3>
+<p>※ 上記のFirmwareは、WinAVR-20060421をインストールした後に、AVR-Wikiから入手できる<br />
+「機能追加版 2006-04-22」を上書きした環境で作成しています。<br />
+<br />
+<a href="http://avrwiki.jpn.ph/wiki.cgi?page=WinAVR%A5%D0%A5%B0%BE%F0%CA%F3">http://avrwiki.jpn.ph/wiki.cgi?page=WinAVR%A5%D0%A5%B0%BE%F0%CA%F3</a><br />
+<br />
+ATtiny2313用のファームウェアを作成したい方は、このavr-gccを利用してください。<br />
+これ以外のコンパイラでは、ATtiny2313用のFLASHサイズ2048バイトに収めることは困難です。<br /></p>
+<pre>2006/04/22  19:14           369,664 avr-ar.exe
+2006/04/22  19:14           514,560 avr-as.exe
+2006/04/22  21:23            91,136 avr-c++.exe
+2006/04/22  19:14           399,360 avr-c++filt.exe
+2006/04/22  21:23            90,624 avr-cpp.exe
+2006/04/22  21:23            91,136 avr-g++.exe
+2006/04/22  21:23            89,088 avr-gcc.exe
+2006/04/22  21:23            26,112 avr-gcov.exe</pre>
+<p>バージョンの確認は、CMD窓にて、以下の方法で確認できます。</p>
+<pre>&gt;avr-gcc -v
+Reading specs from C:/WinAVR/lib/gcc/avr/3.4.6/specs
+Configured with: ./configure --target=avr --prefix=/c/WinAVR 
+--enable-languages=c,c++ --with-dwarf2 --enable-win32-registry=WinAVR 
+--disable-nls --enable-c-mbchar
+Thread model: single
+gcc version 3.4.6</pre>
+<p><strong>--disable-nls --enable-c-mbchar</strong>の表示があるのを確認ください。実行ファイル群の<br />
+日付を確認するを忘れずに行ってください。<br /></p>
+<pre>&gt;which avr-gcc</pre>
+<p>でコンパイルに利用するコンパイラの実体（フルパス名）を確認できます。<br />
+<br /></p>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>開発者用のWinAVRアーカイブ(15MB) <a href="http://www-ice.yamagata-cit.ac.jp/ken/senshu/sitedev/index.php?plugin=attach&amp;refer=AVR%2FHIDaspx&amp;openfile=WinAVR-0604.7z" title="2008/12/09 07:44:48 15124.3KB"><img src="image/file.png" width="20" height="20" alt="file" style="border-width:0px" />WinAVR-0604.7z</a>
+<ul class="list2" style="padding-left:16px;margin-left:16px"><li>ファームウェアをコンパイルしたい方だけ、ダウンロードしてください</li>
+<li>展開したファイル群をWinAVR20060421のディレクトリに上書きします</li>
+<li>いつでも戻せるように、事前のバックアップを忘れずに行ってください</li></ul></li></ul>
+<p>パソコン用の実行ファイルは、MinGWとBorlabd C++ でコンパイルしています。<br />
+<br />
+また、今まで公開してきたアーカイブは、irukaさんのサイトから入手可能です。<br />
+（大量のファイルを保管していただき、感謝いたします。）<br />
+<br />
+<a href="http://psp.dip.jp/web/upload/filelist.cgi">http://psp.dip.jp/web/upload/filelist.cgi</a><br />
+<br />
+ここにあるアーカイブに不具合を発見した場合には、旧版もお試しください。<br /></p>
+<hr class="full_hr" />
+
+<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h3 id="content_1_7">関連プロジェクト（ATmega88/168用）  <a class="anchor_super" id="s17e5093" href="http://www-ice.yamagata-cit.ac.jp/ken/senshu/sitedev/index.php?AVR%2FHIDaspx#s17e5093" title="s17e5093">&dagger;</a></h3>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>bootloader + hidmon88
+<ul class="list2" style="padding-left:16px;margin-left:16px"><li>bootmon(ファーム・実行ファイル, ソースコード)  ... <a href="http://www-ice.yamagata-cit.ac.jp/ken/senshu/sitedev/index.php?plugin=attach&amp;refer=AVR%2FHIDaspx&amp;openfile=bootmon-1127.zip" title="2008/11/27 09:13:45 340.6KB"><img src="image/file.png" width="20" height="20" alt="file" style="border-width:0px" />bootmon-1127.zip</a></li>
+<li>RC発振器でbootloadHIDの動作が可能（RC発振モードは評価目的に公開）</li>
+<li>クリスタル発振子(12/20MHz)で動作確認済み</li></ul></li></ul>
+
+<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h2 id="content_1_8">ファームウェア(ATtiny2313)のFUSE設定  <a class="anchor_super" id="yb31665e" href="http://www-ice.yamagata-cit.ac.jp/ken/senshu/sitedev/index.php?AVR%2FHIDaspx#yb31665e" title="yb31665e">&dagger;</a></h2>
+<p><span style="color:RED">クリスタル発振器の場合（1028版以降の設定）</span><br /></p>
+<pre>Low: 11111111 (0xFF)
+     ||||++++-- CKSEL[3:0] システムクロック選択
+     ||++-- SUT[1:0] 起動時間
+     |+-- CKOUT (0:PD2にシステムクロックを出力)
+     +-- CKDIV8 クロック分周初期値 (1:1/1, 0:1/8)
+
+High:11-11011 (0xDB)
+     |||||||+-- RSTDISBL (RESETピン 1:有効, 0:無効(PA2))
+     ||||+++-- BODLEVEL[2:0] (111:Off, 110:1.8, 101:2.7, 100:4.3)
+     |||+-- WDTON (WDT 0:常時ON, 1:通常)
+     ||+-- SPIEN (1:ISP禁止, 0:ISP許可) ※Parallel時のみ
+     |+-- EESAVE (消去でEEPROMを 1:消去, 0:保持)
+     +-- DWEN (On-Chipデバッグ 1:無効, 0:有効)
+
+Ext: -------1 (0xFF)
+            +-- SPMEN (SPM命令 1:無効, 0:有効)</pre>
+<p>※ 1028版以降では、PD2端子は12MHzのクロック出力ではなく、
+AVR programmer/USB-IO の識別用に利用することにしました。
+<br />
+回路図とおりに製作している場合には、1kΩの抵抗があるので、従来のファームを使っている場合でも<br />
+悪影響はありません。
+<span style="color:RED">この変更は、一つのハードウェアをAVR programmer/USB-IOとして共用する</span>場合に重要な<br />
+仕様変更です。オープンでProgrammer、GNDに接続時、USB-IOとして利用します。このモード変更は、<br />
+HIDaspxモジュールがRESET時に一度だけ判断します。動作後にPINを変更してもモードは変わりません。<br />
+hidspxで利用する時には、Programmer モード、hidmonから利用する時には、USB-IOモードに設定して<br />
+ください。特に、Programmerモードでは、PB2には1MHzのクロック信号が出力されます。<br />
+この状態では、PB2をUSB-IOとしては使えませんので、ご注意ください。<br />
+<br />
+HIDaspxをAVR programmerとしてのみ使う場合には、従来（以下の設定）のままで利用可能です。</p>
+<p><span style="color:RED">PD2からの外部クロック出力を有効にする場合（従来の設定）</span><br /></p>
+<pre>Low: 10111111 (0xBF)
+     ||||++++-- CKSEL[3:0] システムクロック選択
+     ||++-- SUT[1:0] 起動時間
+     |+-- CKOUT (0:PD2にシステムクロックを出力)
+     +-- CKDIV8 クロック分周初期値 (1:1/1, 0:1/8)</pre>
+
+<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h2 id="content_1_9">hidspx, hidmonなどのコマンドについて  <a class="anchor_super" id="x44e31e4" href="http://www-ice.yamagata-cit.ac.jp/ken/senshu/sitedev/index.php?AVR%2FHIDaspx#x44e31e4" title="x44e31e4">&dagger;</a></h2>
+<p><strong>hidspx.exe, hidmon.exeなどのコマンド</strong>は、GUIツールから呼び出すことも可能ですが、<br />
+<span style="color:RED"><span style="font-size:16px;display:inline-block;line-height:130%;text-indent:0px"><strong>基本的にはコマンドプロンプト上で利用するツール</strong></span></span>です。<br />
+一度はコマンドプロンプト(CMD窓)でご利用いただき、CUIの便利さを堪能ください。<br />
+<br />
+現在（2009年）は、hidspxからAVRマイコンのデータシートやヒューズ設定などを確認できるWeb<br />
+ページを自動で開く機能なども利用できます。<br /></p>
+<p>HIDaspxに関連する用語について、特徴や相互の関係を整理してみます。<br /></p>
+<p>参考「HIDaspxのシステム構成図（aduinさんによるもの）」<br /></p>
+<p><a href="http://www-ice.yamagata-cit.ac.jp/ken/senshu/sitedev/index.php?plugin=attach&amp;refer=AVR%2FHIDaspx&amp;openfile=HIDaspx-struct.png" title="HIDaspx-struct.png"><img src="http://www-ice.yamagata-cit.ac.jp/ken/senshu/sitedev/index.php?plugin=ref&amp;page=AVR%2FHIDaspx&amp;src=HIDaspx-struct.png" alt="HIDaspx-struct.png" title="HIDaspx-struct.png" width="500" height="312" /></a></p>
+<p>(1) HIDaspx 解説ページ ⇒ <a href="http://www-ice.yamagata-cit.ac.jp/ken/senshu/sitedev/index.php?AVR%2FHIDaspx" title="AVR/HIDaspx (1h)">AVR/HIDaspx</a><br /></p>
+<ol class="list1" style="padding-left:16px;margin-left:16px"><li>HIDクラスを採用しATtiny2313一個で実現した「AVRライタ兼USB-IO」<br />
+　（hidaspを参考にスタートしましたが、今は互換性はありません）<br /></li>
+<li>シンプルでローコストに製作できるハードウェア<br /></li>
+<li>HIDクラスの採用により、ドライバのインストールは不要<br /></li>
+<li>USB接続で高速に動作する（特にUSB-HUB経由の利用時）<br /></li></ol>
+<p>(2) hidspxコマンド<br /></p>
+<ol class="list1" style="padding-left:16px;margin-left:16px"><li>HIDaspxをAVRライタとして使う場合に使用するプログラム</li>
+<li>SETUPコマンドで、簡単に導入できる<br /></li>
+<li>AVRマイコンを自動認識し、旧タイプのAVRマイコンもサポート<br /></li>
+<li>BASCOM-AVRやAVRstudioとの統合利用も可能<br /></li></ol>
+<p>(3) hidmonコマンド ⇒ <a href="http://www-ice.yamagata-cit.ac.jp/ken/senshu/sitedev/index.php?AVR%2FHIDmon00" title="AVR/HIDmon00 (20d)">AVR/HIDmon00</a><br /></p>
+<ol class="list1" style="padding-left:16px;margin-left:16px"><li>HIDaspxをUSB-IOとして利用する時に使用する</li>
+<li>HIDaspxのみでAVRマイコンの学習が可能</li>
+<li>hidmon.dllを使えば、一般的な言語(C言語やVB, VBAなど)から制御可能</li></ol>
+<p>(4) bootmon ⇒<a href="http://hp.vector.co.jp/authors/VA000177/html/HIDmon88.html">irukaさんによる解説</a><br /></p>
+<ol class="list1" style="padding-left:16px;margin-left:16px"><li>シンプルでローコストに製作できるハードウェア<br /></li>
+<li>ATmega88/168用(12/16/20MHzのクリスタル発振子、あるいは内蔵RC発振器で動作)</li>
+<li>ブートローダ＆簡易AVRマイコン用モニタです（現時点ではAVRライタ機能はありません）
+<ol class="list2" style="padding-left:16px;margin-left:16px"><li>bootloadHID互換のbootloader機能<br /></li>
+<li>AVRマイコンモニタ（簡易デバッガ）<br /></li></ol></li></ol>
+<p>(5) bootloadHIDコマンド<br /></p>
+<ol class="list1" style="padding-left:16px;margin-left:16px"><li>bootmon用の書き込み用ツール</li>
+<li>任意の開発ツールで作成したHEXファイルを書き込み、実行できる</li></ol>
+<p>(6)hidmon88コマンド<br /></p>
+<ol class="list1" style="padding-left:16px;margin-left:16px"><li>AVRマイコン内のRAMやI/Oの読み書き、EEPROMやFLASHの読み出しが可能</li>
+<li>対話的（一括実行も可能）な操作が可能</li>
+<li>シンボリック（レジスタ名は名前で指定）に操作可能</li></ol>
+<p>※ bootmonの名前が示すとおり、現時点ではAVRライタ機能はありません。<br />
+HIDaspxの完成度が高いので、AVRライタとしてはHIDaspxを使ってください。<br />
+HIDaspxが複数台あっても、HIDaspxは多機能で汎用性があり無駄にはなりません。<br />
+シリアル情報を設定すれば、一台のPCに複数台のHIDaspxを接続して利用できます。<br /></p>
+<p>このように、AVRマイコンを使って学習を考えている方には魅力的な仕様です。<br />
+どちらも、irukaさんと共同で開発を行ない、多くの方からの助言を元に、現在に<br />
+至っています。<br />
+（irukaさんの作成されたbootmonに対し、シリアル情報のサポート、RC発振対応<br />
+やmega168対応、各周波数のHEXファイルの一括生成やsetup機能を追加しました）<br /></p>
+<p>なお、bootmonではRC発振モードを利用できますが、hidmon88用のコード<br />
+が入りません。12や20MHzのクリスタルでの利用をお勧めします。<br /></p>
+
+<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h2 id="content_1_10">動作確認済みのAVRリストと動作速度の目安  <a class="anchor_super" id="fd71e31d" href="http://www-ice.yamagata-cit.ac.jp/ken/senshu/sitedev/index.php?AVR%2FHIDaspx#fd71e31d" title="fd71e31d">&dagger;</a></h2>
+<div class="ie5"><table class="style_table" cellspacing="1" border="0"><tbody><tr><td class="style_td">MCU名</td><td class="style_td">Device Signature</td><td class="style_td">FLASH</td><td class="style_td">page</td><td class="style_td">EEPROM</td></tr><tr><td class="style_td">AT90S2313</td><td class="style_td">1E-91-01</td><td class="style_td">2048</td><td class="style_td"></td><td class="style_td">128</td></tr><tr><td class="style_td">ATtiny2313</td><td class="style_td">1E-91-0A</td><td class="style_td">2048</td><td class="style_td">32 x 64</td><td class="style_td">128</td></tr><tr><td class="style_td">ATtyny26L</td><td class="style_td">1E-91-09</td><td class="style_td">2048</td><td class="style_td">32 x 64</td><td class="style_td">128</td></tr><tr><td class="style_td">ATtyny45</td><td class="style_td">1E-93-06</td><td class="style_td">4096</td><td class="style_td">64 x 64</td><td class="style_td">256</td></tr><tr><td class="style_td">ATtyny85</td><td class="style_td">1E-93-0B</td><td class="style_td">8192</td><td class="style_td">64 x 128</td><td class="style_td">512</td></tr><tr><td class="style_td">AT90S4433</td><td class="style_td">1E-92-03</td><td class="style_td">4096</td><td class="style_td"></td><td class="style_td">256</td></tr><tr><td class="style_td">AT90S8515</td><td class="style_td">1E-93-01</td><td class="style_td">8192</td><td class="style_td"></td><td class="style_td">512</td></tr><tr><td class="style_td">ATmega8515</td><td class="style_td">1E-93-06</td><td class="style_td">8192</td><td class="style_td">64 x 128</td><td class="style_td">512</td></tr><tr><td class="style_td">ATmega48</td><td class="style_td">1E-92-05</td><td class="style_td">4096</td><td class="style_td">64 x 64</td><td class="style_td">256</td></tr><tr><td class="style_td">ATmega8</td><td class="style_td">1E-93-07</td><td class="style_td">8192</td><td class="style_td">64 x 128</td><td class="style_td">512</td></tr><tr><td class="style_td">ATmega88</td><td class="style_td">1E-93-0A</td><td class="style_td">8192</td><td class="style_td">64 x 128</td><td class="style_td">512</td></tr><tr><td class="style_td">ATmega168</td><td class="style_td">1E-94-06</td><td class="style_td">16384</td><td class="style_td">128 x 128</td><td class="style_td">512</td></tr><tr><td class="style_td">ATmega64</td><td class="style_td">1E-96-02</td><td class="style_td">65536</td><td class="style_td">256 x 256</td><td class="style_td">2048</td></tr><tr><td class="style_td">ATmega644P</td><td class="style_td">1E-96-0A</td><td class="style_td">65536</td><td class="style_td">256 x 256</td><td class="style_td">2048</td></tr><tr><td class="style_td">ATmega128</td><td class="style_td">1E-97-02</td><td class="style_td">131072</td><td class="style_td">256 x 512</td><td class="style_td">4096</td></tr></tbody></table></div>
+<p>※ これらのAVRマイコンは、8MHz以上のクロックで動作していれば -d1でRead/Write可能です。<br />
+その時の読み取りは 4kB/秒程度です。書込み速度はベリファイが必要なため、この1/2程度になり<br />
+ます。この時間は、hidmon benchテストで15kB/秒の場合です。<br />
+<br />
+HIDaspxの利用者から、「ATmega8, ATmega64, ATtiny45でも使える」との報告がありました。<br />
+<br />
+1014a版を使い、ATtiny2313で2kBの全領域をWrite/Verify時間は、<br />
+8MHzの場合（-d1）で約1秒、<br />
+1MHzの場合（-d4）で約3秒です。<br /></p>
+<pre>&gt;timeit hidspx -d0 2kB.hex
+Detected device is ATtiny2313.
+Erase Flash memory.
+Write   Flash: 2048/2048 B
+Verify  Flash: 2048/2048 B
+Passed.
+
+Elapsed Time:     0:00:00.953</pre>
+
+<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h2 id="content_1_11">======= HIDaspxに関連するTips =======  <a class="anchor_super" id="l724bb83" href="http://www-ice.yamagata-cit.ac.jp/ken/senshu/sitedev/index.php?AVR%2FHIDaspx#l724bb83" title="l724bb83">&dagger;</a></h2>
+
+<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h3 id="content_1_12">hidspxの使い方  <a class="anchor_super" id="wdca1e21" href="http://www-ice.yamagata-cit.ac.jp/ken/senshu/sitedev/index.php?AVR%2FHIDaspx#wdca1e21" title="wdca1e21">&dagger;</a></h3>
+<ol class="list1" style="padding-left:16px;margin-left:16px"><li>HIDaspxライタとターゲットボードを6Pケーブルで接続します。
+<ol class="list2" style="padding-left:16px;margin-left:16px"><li>電源はターゲットボードから供給が基本です。</li></ol></li></ol>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>コマンドプロンプトを起動し、CDコマンドでHEXファイルのあるディレクトリに移動します。
+<ul class="list2" style="padding-left:16px;margin-left:16px"><li><a href="http://www-ice.yamagata-cit.ac.jp/ken/senshu/sitedev/index.php?AVR%2Fnews01#l124df77" title="AVR/news01 (212d)">そのフォルダ内で直接コンソールを開く方法</a>を利用すると便利です。</li></ul></li></ul>
+<div class="ie5"><table class="style_table" cellspacing="1" border="0">
+<tr class="style_tr"><td class="style_td">コマンド</td><td class="style_td">オプション</td><td class="style_td">機能</td><td class="style_td">備考</td></tr>
+
+<tr class="style_tr"><td class="style_td">hidspx</td><td class="style_td">無し</td><td class="style_td">オプション書式とライタの種類が表示</td><td class="style_td">(-?で詳細表示)</td></tr>
+
+<tr class="style_tr"><td class="style_td">hidspx</td><td class="style_td">--show-options</td><td class="style_td">コマンド行を表示</td><td class="style_td">iniファイルの設定内容も含む</td></tr>
+
+<tr class="style_tr"><td class="style_td">hidspx</td><td class="style_td">--atmel-avr</td><td class="style_td">Atmel社のAVRのページを開く</td><td class="style_td">Web browser（要インターネット接続）</td></tr>
+
+<tr class="style_tr"><td class="style_td">hidspx</td><td class="style_td">--avr-devices</td><td class="style_td">AVR マイコンのDEVICE一覧</td><td class="style_td">Web browser（要インターネット接続）</td></tr>
+
+<tr class="style_tr"><td class="style_td">hidspx</td><td class="style_td">-pu?</td><td class="style_td">USBのサーチ結果を表示</td><td class="style_td">DLLバージョンも同時に表示</td></tr>
+
+<tr class="style_tr"><td class="style_td">hidspx</td><td class="style_td">-pcN</td><td class="style_td">com writerを指定</td><td class="style_td">Nは接続COMポート番号</td></tr>
+
+<tr class="style_tr"><td class="style_td">hidspx</td><td class="style_td">-pbN</td><td class="style_td">com spi Bridgeを指定</td><td class="style_td">Nは接続COMポート番号</td></tr>
+
+<tr class="style_tr"><td class="style_td">hidspx</td><td class="style_td">-phN</td><td class="style_td">HIDaspxを指定</td><td class="style_td">シリアル番号の指定も可能</td></tr>
+
+<tr class="style_tr"><td class="style_td">hidspx</td><td class="style_td">-?</td><td class="style_td">サポートデバイス一覧を表示</td><td class="style_td"></td></tr>
+
+<tr class="style_tr"><td class="style_td">hidspx</td><td class="style_td">-r</td><td class="style_td">Device Read（デバイス仕様を表示）</td><td class="style_td"></td></tr>
+
+<tr class="style_tr"><td class="style_td">hidspx</td><td class="style_td">-rf</td><td class="style_td">Read Fuse</td><td class="style_td"></td></tr>
+
+<tr class="style_tr"><td class="style_td">hidspx</td><td class="style_td">-rF</td><td class="style_td">Read Fuse (command line example)</td><td class="style_td"></td></tr>
+
+<tr class="style_tr"><td class="style_td">hidspx</td><td class="style_td">-ri</td><td class="style_td">Read Fuse Information</td><td class="style_td">Web browser（要インターネット接続）</td></tr>
+
+<tr class="style_tr"><td class="style_td">hidspx</td><td class="style_td">-rd</td><td class="style_td">Read Document</td><td class="style_td">Web browser（要インターネット接続）</td></tr>
+
+<tr class="style_tr"><td class="style_td">hidspx</td><td class="style_td">XXX.hex</td><td class="style_td">Flash Write(複数ファイルを指定可)</td><td class="style_td"></td></tr>
+
+<tr class="style_tr"><td class="style_td">hidspx</td><td class="style_td">XXX.eep</td><td class="style_td">EEPROM Write(Flashと同時指定が可能)</td><td class="style_td"></td></tr>
+
+<tr class="style_tr"><td class="style_td">hidspx</td><td class="style_td">-v- XXX.hex</td><td class="style_td">Verify無しのWrite(複数ファイルを指定可)</td><td class="style_td"></td></tr>
+
+<tr class="style_tr"><td class="style_td">hidspx</td><td class="style_td">-v XXX.hex</td><td class="style_td">Verify(複数ファイルを指定可)</td><td class="style_td"></td></tr>
+
+<tr class="style_tr"><td class="style_td">hidspx</td><td class="style_td">-rp</td><td class="style_td">Read Program</td><td class="style_td">&gt;出力ファイル名でファイルに出力可能</td></tr>
+
+<tr class="style_tr"><td class="style_td">hidspx</td><td class="style_td">-fL&lt;hex&gt;</td><td class="style_td">Fuse Lowの設定</td><td class="style_td">-ri で詳細を確認可能</td></tr>
+
+<tr class="style_tr"><td class="style_td">hidspx</td><td class="style_td">-fH&lt;hex&gt;</td><td class="style_td">Fuse Highの設定</td><td class="style_td">-ri で詳細を確認可能</td></tr>
+
+<tr class="style_tr"><td class="style_td">hidspx</td><td class="style_td">-fX&lt;hex&gt;</td><td class="style_td">Fuse eXtendの設定</td><td class="style_td">-ri で詳細を確認可能</td></tr>
+
+<tr class="style_tr"><td class="style_td">hidspx</td><td class="style_td">-e</td><td class="style_td">Erase(ロックビットの解除)</td><td class="style_td"></td></tr>
+
+<tr class="style_tr"><td class="style_td">hidspx</td><td class="style_td">-l&lt;hex&gt;</td><td class="style_td">メモリロックビット設定</td><td class="style_td"></td></tr>
+
+<tr class="style_tr"><td class="style_td">hidspx</td><td class="style_td">-qDEVICE</td><td class="style_td">デバイス確認後に実行</td><td class="style_td"></td></tr>
+
+<tr class="style_tr"><td class="style_td">hidspx</td><td class="style_td">-tDEVICE</td><td class="style_td">デバイス特定</td><td class="style_td"></td></tr>
+
+<tr class="style_tr"><td class="style_td">hidspx</td><td class="style_td">-dNN</td><td class="style_td">Delay設定</td><td class="style_td"></td></tr>
+
+<tr class="style_tr"><td class="style_td">hidspx</td><td class="style_td">-w1</td><td class="style_td">Wait</td><td class="style_td">処理完了後、キー入力を待つ</td></tr>
+
+<tr class="style_tr"><td class="style_td">hidspx</td><td class="style_td">-wN</td><td class="style_td">N秒Wait</td><td class="style_td">処理完了後、N(2以上)秒間、動作を停止</td></tr>
+</table></div>
+<p>※ &lt;hex&gt;は、0x1b のように書くことができます。00011101のように2進数で書くこともできます。<br />
+詳細は、hidspxに同梱のavrx-tool.txtをご覧ください。<br /></p>
+
+<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h3 id="content_1_13">開発環境との統合（AVR studio, BASCOM-AVR）  <a class="anchor_super" id="v0a3f8cb" href="http://www-ice.yamagata-cit.ac.jp/ken/senshu/sitedev/index.php?AVR%2FHIDaspx#v0a3f8cb" title="v0a3f8cb">&dagger;</a></h3>
+<p>各種の開発環境から、HIDaspxを利用する事ができます。<br /></p>
+<p>例1: Atmel社の開発環境(AVR studio)から利用する</p>
+<p>AVR studioでは、外部ツールを呼び出す仕組みを持っています。
+「MENUのTools ⇒ Custmize ⇒ Tools」と選択し、以下の内容を登録します。</p>
+<p><a href="http://www-ice.yamagata-cit.ac.jp/ken/senshu/sitedev/index.php?plugin=attach&amp;refer=AVR%2FHIDaspx&amp;openfile=avr-studio-custum.png" title="avr-studio-custum.png"><img src="http://www-ice.yamagata-cit.ac.jp/ken/senshu/sitedev/index.php?plugin=ref&amp;page=AVR%2FHIDaspx&amp;src=avr-studio-custum.png" alt="avr-studio-custum.png" title="avr-studio-custum.png" width="508" height="341" /></a></p>
+<p>以下のメニュを選択すると、HEXファイルが生成される場所でCMDプロンプトを
+起動できます。<br /></p>
+<p><a href="http://www-ice.yamagata-cit.ac.jp/ken/senshu/sitedev/index.php?plugin=attach&amp;refer=AVR%2FHIDaspx&amp;openfile=avr-tools-cmd.png" title="avr-tools-cmd.png"><img src="http://www-ice.yamagata-cit.ac.jp/ken/senshu/sitedev/index.php?plugin=ref&amp;page=AVR%2FHIDaspx&amp;src=avr-tools-cmd.png" alt="avr-tools-cmd.png" title="avr-tools-cmd.png" width="384" height="406" /></a></p>
+<p>CMDが表示されれば、その中で<strong>hidspx *.hex</strong>を入力し、書き込むことができます。<br />
+Commandに hidspx.exe、Argumentsの部分に、<strong>*.hex</strong>を登録することも不可能ではありませ<br />
+んが、FUSE設定や「-d」指定ができないため、お奨めはできません。<br /></p>
+<hr class="full_hr" />
+<p>例2: BASCOM-AVRから利用する</p>
+<p>BASCOM-AVRは、一般的なAVR用プログラマを書き込み用プログラマとして設定できます。</p>
+<p>BASCOM-AVRのメニューのOptions=&gt;Programmerを選択し、以下のように（自分が利用している）<br />
+hidspx.exeのフルパス名を指定します。これで、[F4キー]やメニューの書込みボタンを操作<br />
+すれば、hidspxで書き込みできます。<br />
+なおこの場合、BASCOM-AVRからはFUSE設定はできませんので、事前に CMDプロンプト上でhidspxを<br />
+使って、希望するFUSE設定を書き込みます。<br />
+<a href="http://www-ice.yamagata-cit.ac.jp/ken/senshu/sitedev/index.php?plugin=attach&amp;refer=AVR%2FHIDaspx&amp;openfile=BASCOM-hidspx.png" title="BASCOM-hidspx.png"><img src="http://www-ice.yamagata-cit.ac.jp/ken/senshu/sitedev/index.php?plugin=ref&amp;page=AVR%2FHIDaspx&amp;src=BASCOM-hidspx.png" alt="BASCOM-hidspx.png" title="BASCOM-hidspx.png" width="505" height="362" /></a></p>
+<p>※ avrspxでも同じ設定で利用できます。</p>
+<pre>-w5 {file}</pre>
+<p>「-w1」は完了後も指示のあるまで表示を続けます。2以上の値（例えば<strong>-w5</strong>）は、書込み完了後に<br />
+その指定した秒数だけCMD窓を表示することを意味します。これにより、書込み結果を確認できます。<br /></p>
+
+<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h3 id="content_1_14">AVRマイコンのFUSEデータ確認方法  <a class="anchor_super" id="x39f46e2" href="http://www-ice.yamagata-cit.ac.jp/ken/senshu/sitedev/index.php?AVR%2FHIDaspx#x39f46e2" title="x39f46e2">&dagger;</a></h3>
+<p>AVRマイコンでは、複雑なFUSE設定が可能なため、マニュアルとの格闘が必要になります。</p>
+<p>そこで、hidspxではfuse.txtをhidspx.exeと同一の場所にコピーしておくことにより
+「-rf」(Read Fuse)で、現在設定された値が人間にもわかる形式で表示できます。</p>
+<pre>&gt; hidspx -rf&lt;Enter&gt;
+Low: 11100100
+     ||||++++-- CKSEL[3:0] システムクロック選択
+     ||++-- SUT[1:0] 起動時間
+     |+-- CKOUT (0:PD2にシステムクロックを出力)
+     +-- CKDIV8 クロック分周初期値 (1:1/1, 0:1/8)
+
+High:11-11111
+     |||||||+-- RSTDISBL (RESETピン 1:有効, 0:無効(PA2))
+     ||||+++-- BODLEVEL[2:0] (111:Off, 110:1.8, 101:2.7, 100:4.3)
+     |||+-- WDTON (WDT 0:常時ON, 1:通常)
+     ||+-- SPIEN (1:ISP禁止, 0:ISP許可) ※Parallel時のみ
+     |+-- EESAVE (消去でEEPROMを 1:消去, 0:保持)
+     +-- DWEN (On-Chipデバッグ 1:無効, 0:有効)
+
+Ext: -------1
+            +-- SPMEN (SPM命令 1:無効, 0:有効)
+
+Cal: 84 85</pre>
+<p>FUSE設定を誤ると、AVRマイコンを書き込み不能にすることもあります。<br />
+詳しくは、<strong>hidspx付属の説明書（特にavrx-tool.txt）</strong>を熟読の上、FUSE設定を行ってください。<br />
+（実例を示していますので、それほど難しくはありません）</p>
+<p>avrx-tool.txtに書かれていない場合には、データシートを読むのが一番なのですが、必ずしも読み<br />
+やすくはありません。どういう設定を行えば希望する動作が出来るかは、経験を必要とします。<br /></p>
+<p>しかし以下のサイトが用意しているツールを利用すれば、比較的容易にFUSEデータを確認し、理解を<br />
+深めることができます。<br /></p>
+<p>AVRマイコンのFUSE情報が確認できるサイト ⇒ <a href="http://www.engbedded.com/cgi-bin/fc.cgi/">http://www.engbedded.com/cgi-bin/fc.cgi/</a></p>
+<p>私が利用するAVRはほぼ全て（ATmega644PはATmega644で利用）サポートされ、非常に重宝しています。<br />
+以下の機能があります。<br /></p>
+<p>1. プルダウンメニューから設定してFUSEを得る<br />
+2. FUSEの値から設定値を確認する<br />
+3. 工場出荷時の値の表示<br /></p>
+<p><span style="color:RED">hidspxの新機能</span><br />
+2009年1月10日以降のhidspxでは、-riオプションを指定で、「FUSE情報URLで設定内容を確認」<br />
+が可能になりました。以下の図は、電子オルゴールのファームウェアを「hidspx -ri」とした<br />
+時の表示です。（この機能はインターネットに接続した状態でのみ利用可能な機能です）<br />
+<a href="http://www-ice.yamagata-cit.ac.jp/ken/senshu/sitedev/index.php?plugin=attach&amp;refer=AVR%2FHIDaspx&amp;openfile=avr-fuse-web.jpg" title="avr-fuse-web.jpg"><img src="http://www-ice.yamagata-cit.ac.jp/ken/senshu/sitedev/index.php?plugin=ref&amp;page=AVR%2FHIDaspx&amp;src=avr-fuse-web.jpg" alt="avr-fuse-web.jpg" title="avr-fuse-web.jpg" width="600" height="587" /></a></p>
+<p>この機能により、AVRマイコンのFUSE設定を改善できますので、ご活用ください。<br /></p>
+
+<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h3 id="content_1_15">「-dオプション」と読出し時間の関係  <a class="anchor_super" id="h26dc9fb" href="http://www-ice.yamagata-cit.ac.jp/ken/senshu/sitedev/index.php?AVR%2FHIDaspx#h26dc9fb" title="h26dc9fb">&dagger;</a></h3>
+<p>HIDaspx（AVRライタ全般に共通です）では、-dの値によって大きく処理時間が変化します。<br />
+そこで、delay値と読み出し時間をグラフ(ディレイ値と時間[秒])を作成しました。<br />
+縦軸は、NECのチップによる増設ボードのUSBポートを使い、ATmega128の全メモリの読み出し<br />
+に要する時間を表しています。</p>
+<p><a href="http://www-ice.yamagata-cit.ac.jp/ken/senshu/sitedev/index.php?plugin=attach&amp;refer=AVR%2FHIDaspx&amp;openfile=d_opt_m128.png" title="d_opt_m128.png"><img src="http://www-ice.yamagata-cit.ac.jp/ken/senshu/sitedev/index.php?plugin=ref&amp;page=AVR%2FHIDaspx&amp;src=d_opt_m128.png" alt="d_opt_m128.png" title="d_opt_m128.png" width="451" height="530" /></a></p>
+<p>このグラフから、-d0と-d5では5倍もの違いがあることがわかります。hidspx.iniでは<br />
+「-d4」を省略時の値にしています。これは、工場出荷時の値でもエラー無く処理できる<br />
+ということから、この値を設定しています。<br />
+書き込みと照合に必要な時間は、この時間の約2倍が必要と考えてください。<br /></p>
+<p>この特性を理解し、書き込み対象のマイコン速度に合った値を指定し、効率的な利用を<br />
+行ってください。</p>
+<p>指定の例(ATtiny2313の場合)<br /></p>
+<div class="ie5"><table class="style_table" cellspacing="1" border="0"><tbody><tr><td class="style_td">No</td><td class="style_td">FUSE Low</td><td class="style_td">-dの値</td><td class="style_td">発振周波数</td><td class="style_td">備考</td></tr><tr><td class="style_td">0</td><td class="style_td">----</td><td class="style_td">-d0</td><td class="style_td">18MHz以上</td><td class="style_td">外部クリスタル/セラミック発振子</td></tr><tr><td class="style_td">1</td><td class="style_td">-fL0xe4</td><td class="style_td">-d1</td><td class="style_td">8MHz</td><td class="style_td">14CK+65ms</td></tr><tr><td class="style_td">2</td><td class="style_td">-fL0xe2</td><td class="style_td">-d2</td><td class="style_td">4MHz</td><td class="style_td">14CK+65ms</td></tr><tr><td class="style_td">3</td><td class="style_td">-fL0x64</td><td class="style_td">-d4</td><td class="style_td">1MHz</td><td class="style_td">工場出荷値</td></tr><tr><td class="style_td">4</td><td class="style_td">-fL0x62</td><td class="style_td">-d5</td><td class="style_td">500kHz</td><td class="style_td">14CK+65ms</td></tr><tr><td class="style_td">5</td><td class="style_td">-fL0xe6</td><td class="style_td">-d17</td><td class="style_td">128kHz</td><td class="style_td">14CK+65ms</td></tr><tr><td class="style_td">6</td><td class="style_td">-fL0x66</td><td class="style_td">-d120</td><td class="style_td">16kHz</td><td class="style_td">118, 119では不安定</td></tr></tbody></table></div>
+
+<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h3 id="content_1_16">実行時間の計測方法  <a class="anchor_super" id="ta0827bb" href="http://www-ice.yamagata-cit.ac.jp/ken/senshu/sitedev/index.php?AVR%2FHIDaspx#ta0827bb" title="ta0827bb">&dagger;</a></h3>
+<p>動作報告には、実行時間の報告をお願いしています。しかし、実行時間は
+どうすれば計測できるのでしょうか。簡単には時計があれば計ることができますが、
+短い時間を正確に計測することはできません。</p>
+<p>そこで、作成したプログラムの性能評価のためのストップウォッチ的なソフトウェアが
+必要になります。</p>
+<p>私は、動作時間の計測には、MS社の提供する無償ツール<strong>timeit</strong>コマンドを使い、
+1/1000秒の分解能(実際には1/100秒程度?)で計測を行っています。</p>
+<p>以下が、timeitコマンドで、ATtiny2313の全メモリを書き出し・照合に要する時間を
+計測した結果です。8MHzで動作しているATtiny2313の2kBの書込み・照合を1.03秒で
+完了していることがわかります。手動計測では、人間の反応時間を計っているような
+ものであり、この種のツールを利用しなければ計測は不可能です。</p>
+<pre>&gt;timeit hidspx -d1 2313.hex
+ ^^^^^^^^^^^^^^^^^^^^^^^^^^
+Detected device is ATtiny2313.
+Erase Flash memory.
+Verify  Flash: 2048/2048 B
+
+Passed.
+
+Version Number:   Windows NT 5.0 (Build 2195)
+Exit Time:        10:40 am, Thursday, October 30 2008
+Elapsed Time:     0:00:01.031
+Process Time:     0:00:00.265
+System Calls:     296309     
+Context Switches: 1945       
+Page Faults:      616        
+Bytes Read:       10106      
+Bytes Written:    4876       
+Bytes Other:      8326       </pre>
+<p>詳細は、<a href="http://www.atmarkit.co.jp/fwin2k/win2ktips/422timecmd/timecmd.html">＠ITの紹介記事</a>を
+参考にしてください。</p>
+<p>コマンドプロンプトから利用しますが、計測の対象はWindows上で動作する全アプリケーション
+です。実に便利で、標準でOSに含めて欲しいツールです。各種のスイッチを持っていますが、
+非常にUNIXの香りのするツールです。</p>
+<pre>Usage: TIMEIT [-f filename] [-a] [-c] [-i] [-d] [-s] [-t] [-k keyname | -r keyname] 
+ [-m mask] [commandline...]
+where:        -f specifies the name of the database file where TIMEIT
+                 keeps a history of previous timings.  Default is .\timeit.dat
+              -k specifies the keyname to use for this timing run
+              -r specifies the keyname to remove from the database.  If
+                 keyname is followed by a comma and a number then it will
+                 remove the slowest (positive number) or fastest (negative)
+                 times for that keyname.
+              -a specifies that timeit should display average of all timings
+                 for the specified key.
+              -i specifies to ignore non-zero return codes from program
+              -d specifies to show detail for average
+              -s specifies to suppress system wide counters
+              -t specifies to tabular output
+              -c specifies to force a resort of the data base
+              -m specifies the processor affinity mask</pre>
+<p>実行結果は、STDERRに出力されますので、</p>
+<pre>(timeit 計測するコマンド) 2&gt;&amp;1 &gt; 結果
+                         ^^^^</pre>
+<p>と指定すれば、ファイルに書き出すことが出来ます。<strong>()</strong>で括ることで、コマンドの<br />
+範囲を明確にします。このコマンドは、過去に実行したコマンドの統計情報を出力する<br />
+こともできる強力なツールです。<br /></p>
+
+<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h3 id="content_1_17">USB-HUBの利用で高速化  <a class="anchor_super" id="b40d7d74" href="http://www-ice.yamagata-cit.ac.jp/ken/senshu/sitedev/index.php?AVR%2FHIDaspx#b40d7d74" title="b40d7d74">&dagger;</a></h3>
+<p>HIDaspxの転送速度を向上させるには、OHCIのUSB I/Fを使うほかに、UHCIでもUSB 2.0規格の<br />
+HUBを介することで、OHCI以上の速度が得られ、格段に使用感は向上します。<br />
+<br />
+HUB経由の利用を行っていない方は、hidmonのbenchコマンドで転送速度を検証してください。<br />
+このテストが正常であれば、HIDaspxはHUB経由で利用可能です。<br />
+<br />
+関連情報 ⇒ <a href="http://www-ice.yamagata-cit.ac.jp/ken/senshu/sitedev/index.php?AVR%2FHIDmon00" title="AVR/HIDmon00 (20d)">hidmonの紹介</a></p>
+<pre>&gt;hidmon
+ ^^^^^^
+■ UHCIのポートに接続
+AVR&gt; bench
+hid write start
+hid write end 38000 10953 s  3469 byte/s
+AVR&gt; q
+Bye.
+
+■ UHCIのポートからHUB経由で接続
+AVR&gt; bench
+hid write start
+hid write end 38000 2250 s  16888 byte/s
+AVR&gt; q
+Bye.</pre>
+<p>このように4〜5倍程度の違いが生じます。17kB/sの転送速度は、RS232C(115.2kbps)の
+速度を上回るものです。</p>
+<p>USB 2.0規格のHUB経由で利用すれば、UHCI規格のPCでも転送速度が上がるため、
+HIDaspx全体の処理速度が向上し、結果としてUSBaspxに迫る性能が得られます。</p>
+<hr class="full_hr" />
+
+<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h2 id="content_1_18">HIDaspとの出会い（コラム）  <a class="anchor_super" id="hcc433d4" href="http://www-ice.yamagata-cit.ac.jp/ken/senshu/sitedev/index.php?AVR%2FHIDaspx#hcc433d4" title="hcc433d4">&dagger;</a></h2>
+<p>先の問題を改善する為、ネット上で公開されている<a href="http://www.binzume.net/library/avr_hidasp.html">瓶詰堂さん</a>開発の「HIDを使ったAVRライタ(HIDasp)」を試作してみました。<br />
+HIDaspは、ATtiny2313のみで構成され、安価に製作でき、ドライバのインストールが<br />
+不要です。非常に魅力的な仕様を持っていますが、製作して使ってみると、<br /></p>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>Windows 2000ではエラーになり使えない（Windows Vistaでは動作しない）</li>
+<li>かなりの頻度でISP移行時にエラー（AVRマイコンを認識できない）になる</li>
+<li>HIDaspの電源ON直後の通信でエラーになることが多い</li>
+<li>類似の構成のUSBaspに比べ、処理に時間がかかる</li>
+<li>ISP用の信号がHi-Zになっておらず、回路構成によって不具合が生じる</li></ul>
+<p>などの問題を確認しました。改善したいと細かな修正を試みましたが、なかなかうまく行きません。<br />
+<br />
+<strong>追記</strong><br />
+この件を瓶詰堂さんに報告したところ、HIDasp（≠HIDaspx）の修正版を公開していただきました。<br />
+以下の問題点が改善されました（私は動作を確認しておりません）。<br /></p>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>Windows 2000で使えない問題</li>
+<li>電源ON時にリセット状態</li></ul>
+<hr class="full_hr" />
+</div>
+   <div id="notes"></div>
+   <div id="related"></div>
+  </td>
+ </tr>
+</table>
+
+<hr class="full_hr" />
+
+<!--
+
+-->
+
+<div id="footer">
+<strong><a href="http://fol.axisz.jp/php/">siteDev</a></strong> extends <strong>PukiWiki 1.4.4</strong> Copyright &copy; 2001-2004 <a href="http://pukiwiki.sourceforge.jp">PukiWiki Developers Team</a>. License is <a href="http://www.gnu.org/licenses/gpl.html">GPL</a>.<br /> Based on "PukiWiki" 1.3 by <a href="http://factage.com/yu-ji/">yu-ji</a>&nbsp;customized by <a href="http://fol.axisz.jp/php/">php spot</a>.
+<br />
+</div>
+<br />
+<img src="sd_img/pukiwiki.png"> <img src="http://fol.axisz.jp/php/img/banner.jpg">
+<br />
+</div>
+</div>
+
+</body>
+</html>

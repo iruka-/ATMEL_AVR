@@ -1,0 +1,175 @@
+diff -r -c slang2-orig/modules/termios-module.c slang2-kbox/modules/termios-module.c
+*** slang2-orig/modules/termios-module.c	Mon Apr 11 11:37:07 2011
+--- slang2-kbox/modules/termios-module.c	Fri Sep 12 09:33:47 2014
+***************
+*** 109,115 ****
+  
+  static int tcdrain_intrin (SLFile_FD_Type *f)
+  {
+!    return DO_SYSCALL_0 (tcdrain, f);
+  }
+  
+  static int tcflow_intrin (SLFile_FD_Type *f, int *action)
+--- 109,116 ----
+  
+  static int tcdrain_intrin (SLFile_FD_Type *f)
+  {
+! //  return DO_SYSCALL_0 (tcdrain, f);
+! 	return 0;
+  }
+  
+  static int tcflow_intrin (SLFile_FD_Type *f, int *action)
+diff -r -c slang2-orig/src/config.h slang2-kbox/src/config.h
+*** slang2-orig/src/config.h	Fri Sep 12 09:28:54 2014
+--- slang2-kbox/src/config.h	Fri Sep 12 09:38:56 2014
+***************
+*** 27,32 ****
+--- 27,33 ----
+  #define HAVE_UNISTD_H 1
+  
+  /* define if you have termios.h */
++ //
+  #define HAVE_TERMIOS_H 1
+  
+  /* define if you have memory.h */
+***************
+*** 41,48 ****
+  /* define if you have memcpy */
+  #define HAVE_MEMCPY 1
+  
+! #define HAVE_SETLOCALE 1
+! #define HAVE_LOCALE_H 1
+  /* #undef HAVE_LANGINFO_H */
+  /* #undef HAVE_NL_LANGINFO_CODESET */
+  
+--- 42,50 ----
+  /* define if you have memcpy */
+  #define HAVE_MEMCPY 1
+  
+! //#define HAVE_SETLOCALE 1
+! //#define HAVE_LOCALE_H 1
+! 
+  /* #undef HAVE_LANGINFO_H */
+  /* #undef HAVE_NL_LANGINFO_CODESET */
+  
+diff -r -c slang2-orig/src/slstd.c slang2-kbox/src/slstd.c
+*** slang2-orig/src/slstd.c	Mon Apr 11 11:37:07 2011
+--- slang2-kbox/src/slstd.c	Fri Sep 12 09:36:53 2014
+***************
+*** 1230,1236 ****
+  #endif
+  
+  #ifdef SLANG_INSTALL_PREFIX
+! static SLCONST char *Install_Prefix = SLANG_INSTALL_PREFIX;
+  #else
+  static char *Install_Prefix = "";
+  #endif
+--- 1230,1238 ----
+  #endif
+  
+  #ifdef SLANG_INSTALL_PREFIX
+! // KBOX ignore Build HOST Prefix!
+! //static SLCONST char *Install_Prefix = SLANG_INSTALL_PREFIX;
+! static SLCONST char *Install_Prefix = "/usr";
+  #else
+  static char *Install_Prefix = "";
+  #endif
+diff -r -c slang2-orig/src/slutty.c slang2-kbox/src/slutty.c
+*** slang2-orig/src/slutty.c	Mon Apr 11 11:37:07 2011
+--- slang2-kbox/src/slutty.c	Fri Sep 12 09:32:59 2014
+***************
+*** 77,106 ****
+  
+  #ifdef HAVE_TERMIOS_H
+  # if !defined(HAVE_TCGETATTR) || !defined(HAVE_TCSETATTR)
+! #   undef HAVE_TERMIOS_H
+  # endif
+  #endif
+  
+- #ifndef HAVE_TERMIOS_H
+- 
+- # if !defined(CBREAK) && defined(sun)
+- #  ifndef BSD_COMP
+- #   define BSD_COMP 1
+- #  endif
+- #  include <sys/ioctl.h>
+- # endif
+- 
+- typedef struct
+-   {
+-       struct tchars t;
+-       struct ltchars lt;
+-       struct sgttyb s;
+-   }
+- TTY_Termio_Type;
+- #else
+  # include <termios.h>
+  typedef struct termios TTY_Termio_Type;
+- #endif
+  
+  static TTY_Termio_Type Old_TTY;
+  
+--- 77,89 ----
+  
+  #ifdef HAVE_TERMIOS_H
+  # if !defined(HAVE_TCGETATTR) || !defined(HAVE_TCSETATTR)
+! //#   undef HAVE_TERMIOS_H
+  # endif
+  #endif
+  
+  # include <termios.h>
++ 
+  typedef struct termios TTY_Termio_Type;
+  
+  static TTY_Termio_Type Old_TTY;
+  
+***************
+*** 343,349 ****
+  	  }
+       }
+  
+! #ifndef HAVE_TERMIOS_H
+     (void) opost;
+     (void) no_flow_control;
+     newtty.s.sg_flags &= ~(ECHO);
+--- 326,332 ----
+  	  }
+       }
+  
+! #if	0	//ndef HAVE_TERMIOS_H
+     (void) opost;
+     (void) no_flow_control;
+     newtty.s.sg_flags &= ~(ECHO);
+diff -r -c slang2-orig/src/sysconf.h slang2-kbox/src/sysconf.h
+*** slang2-orig/src/sysconf.h	Thu Sep 11 20:13:47 2014
+--- slang2-kbox/src/sysconf.h	Fri Sep 12 09:38:52 2014
+***************
+*** 27,32 ****
+--- 27,33 ----
+  #define HAVE_UNISTD_H 1
+  
+  /* define if you have termios.h */
++ //
+  #define HAVE_TERMIOS_H 1
+  
+  /* define if you have memory.h */
+***************
+*** 41,48 ****
+  /* define if you have memcpy */
+  #define HAVE_MEMCPY 1
+  
+! #define HAVE_SETLOCALE 1
+! #define HAVE_LOCALE_H 1
+  /* #undef HAVE_LANGINFO_H */
+  /* #undef HAVE_NL_LANGINFO_CODESET */
+  
+--- 42,50 ----
+  /* define if you have memcpy */
+  #define HAVE_MEMCPY 1
+  
+! //#define HAVE_SETLOCALE 1
+! //#define HAVE_LOCALE_H 1
+! 
+  /* #undef HAVE_LANGINFO_H */
+  /* #undef HAVE_NL_LANGINFO_CODESET */
+  

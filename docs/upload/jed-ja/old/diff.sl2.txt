@@ -1,0 +1,126 @@
+diff -r -c slang2/modules/termios-module.c slang2-kb/modules/termios-module.c
+*** slang2/modules/termios-module.c	Mon Apr 11 11:37:07 2011
+--- slang2-kb/modules/termios-module.c	Thu Sep  4 16:18:12 2014
+***************
+*** 109,115 ****
+  
+  static int tcdrain_intrin (SLFile_FD_Type *f)
+  {
+!    return DO_SYSCALL_0 (tcdrain, f);
+  }
+  
+  static int tcflow_intrin (SLFile_FD_Type *f, int *action)
+--- 109,116 ----
+  
+  static int tcdrain_intrin (SLFile_FD_Type *f)
+  {
+! //   return DO_SYSCALL_0 (tcdrain, f);
+! return 0;
+  }
+  
+  static int tcflow_intrin (SLFile_FD_Type *f, int *action)
+diff -r -c slang2/src/slutty.c slang2-kb/src/slutty.c
+*** slang2/src/slutty.c	Mon Apr 11 11:37:07 2011
+--- slang2-kb/src/slutty.c	Fri Sep  5 10:20:26 2014
+***************
+*** 77,106 ****
+  
+  #ifdef HAVE_TERMIOS_H
+  # if !defined(HAVE_TCGETATTR) || !defined(HAVE_TCSETATTR)
+! #   undef HAVE_TERMIOS_H
+  # endif
+  #endif
+  
+- #ifndef HAVE_TERMIOS_H
+- 
+- # if !defined(CBREAK) && defined(sun)
+- #  ifndef BSD_COMP
+- #   define BSD_COMP 1
+- #  endif
+- #  include <sys/ioctl.h>
+- # endif
+- 
+- typedef struct
+-   {
+-       struct tchars t;
+-       struct ltchars lt;
+-       struct sgttyb s;
+-   }
+- TTY_Termio_Type;
+- #else
+  # include <termios.h>
+  typedef struct termios TTY_Termio_Type;
+- #endif
+  
+  static TTY_Termio_Type Old_TTY;
+  
+--- 77,89 ----
+  
+  #ifdef HAVE_TERMIOS_H
+  # if !defined(HAVE_TCGETATTR) || !defined(HAVE_TCSETATTR)
+! //#   undef HAVE_TERMIOS_H
+  # endif
+  #endif
+  
+  # include <termios.h>
++ 
+  typedef struct termios TTY_Termio_Type;
+  
+  static TTY_Termio_Type Old_TTY;
+  
+***************
+*** 343,349 ****
+  	  }
+       }
+  
+! #ifndef HAVE_TERMIOS_H
+     (void) opost;
+     (void) no_flow_control;
+     newtty.s.sg_flags &= ~(ECHO);
+--- 326,332 ----
+  	  }
+       }
+  
+! #if	0	//ndef HAVE_TERMIOS_H
+     (void) opost;
+     (void) no_flow_control;
+     newtty.s.sg_flags &= ~(ECHO);
+Only in slang2-kb/src: slutty.c~
+diff -r -c slang2/src/sysconf.h slang2-kb/src/sysconf.h
+*** slang2/src/sysconf.h	Fri Sep  5 11:54:00 2014
+--- slang2-kb/src/sysconf.h	Thu Sep  4 16:05:39 2014
+***************
+*** 27,33 ****
+  #define HAVE_UNISTD_H 1
+  
+  /* define if you have termios.h */
+! #define HAVE_TERMIOS_H 1
+  
+  /* define if you have memory.h */
+  #define HAVE_MEMORY_H 1
+--- 27,33 ----
+  #define HAVE_UNISTD_H 1
+  
+  /* define if you have termios.h */
+! //#define HAVE_TERMIOS_H 1
+  
+  /* define if you have memory.h */
+  #define HAVE_MEMORY_H 1
+***************
+*** 41,47 ****
+  /* define if you have memcpy */
+  #define HAVE_MEMCPY 1
+  
+! #define HAVE_SETLOCALE 1
+  #define HAVE_LOCALE_H 1
+  /* #undef HAVE_LANGINFO_H */
+  /* #undef HAVE_NL_LANGINFO_CODESET */
+--- 41,47 ----
+  /* define if you have memcpy */
+  #define HAVE_MEMCPY 1
+  
+! //#define HAVE_SETLOCALE 1
+  #define HAVE_LOCALE_H 1
+  /* #undef HAVE_LANGINFO_H */
+  /* #undef HAVE_NL_LANGINFO_CODESET */
+Only in slang2-kb/src: terminfo.inc

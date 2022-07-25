@@ -1,0 +1,60 @@
+diff -r -c jed/src/main.c jed-kb/src/main.c
+*** jed/src/main.c	Mon Dec 14 11:12:55 2009
+--- jed-kb/src/main.c	Thu Sep  4 16:54:02 2014
+***************
+*** 155,163 ****
+  #endif
+     
+  #ifdef JED_ROOT
+!    if ((jr == NULL) && (file_status(JED_ROOT) == 2))
+       {
+! 	jr = JED_ROOT;
+       }
+  #endif
+  #ifdef MSWINDOWS
+--- 155,166 ----
+  #endif
+     
+  #ifdef JED_ROOT
+! 
+! #define	JED_ROOT1 "/usr/lib/jed"
+!    
+!    if ((jr == NULL) && (file_status(JED_ROOT1) == 2))
+       {
+! 	jr = JED_ROOT1;
+       }
+  #endif
+  #ifdef MSWINDOWS
+Only in jed-kb/src: objs
+diff -r -c jed/src/unix.c jed-kb/src/unix.c
+*** jed/src/unix.c	Mon Dec 14 11:12:55 2009
+--- jed-kb/src/unix.c	Thu Sep  4 16:50:27 2014
+***************
+*** 268,273 ****
+--- 268,278 ----
+     TTY_Inited = 1;
+  
+  #ifndef REALLY_HAVE_TERMIOS_H
+     newtty.s.sg_flags &= ~(ECHO);
+     newtty.s.sg_flags &= ~(CRMOD);
+  /*   if (Flow_Control == 0) newtty.s.sg_flags &= ~IXON; */
+diff -r -c jed/src/userinfo.c jed-kb/src/userinfo.c
+*** jed/src/userinfo.c	Mon Dec 14 11:12:55 2009
+--- jed-kb/src/userinfo.c	Thu Sep  4 16:35:44 2014
+***************
+*** 37,43 ****
+  # define HAS_TCPIP_CODE		0
+  #endif
+  
+! #ifdef REAL_UNIX_SYSTEM
+  # include <pwd.h>
+  # define HAS_PASSWORD_CODE	1
+  #else
+--- 37,43 ----
+  # define HAS_TCPIP_CODE		0
+  #endif
+  
+! #if	0	//def REAL_UNIX_SYSTEM
+  # include <pwd.h>
+  # define HAS_PASSWORD_CODE	1
+  #else

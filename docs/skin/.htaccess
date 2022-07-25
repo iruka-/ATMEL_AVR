@@ -1,0 +1,3 @@
+<FilesMatch "\.(skin\.php)$">
+  Require all denied
+</FilesMatch>

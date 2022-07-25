@@ -1,0 +1,186 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="application/xhtml+xml; charset=EUC-JP" />
+<meta http-equiv="content-style-type" content="text/css" />
+<title>AVR/HIDaspx_news02 にそのファイルは見つかりません - 千秋ゼミ</title>
+<link rel="stylesheet" href="skin/default.ja.css" type="text/css" media="screen" charset="Shift_JIS" />
+<link rel="stylesheet" href="skin/print.ja.css" type="text/css" media="print" charset="Shift_JIS" />
+</head>
+<body>
+
+<div align="left">
+<!--
+<div style="width:800px">
+-->
+<div>
+
+<table width="99%">
+<tr>
+<td width="1%">
+<a href="http://www-ice.yamagata-cit.ac.jp/ken/senshu/sitedev/">
+ <img src="sd_img/title.jpg" alt="Senshu LAB">
+</a>
+</td>
+<td width="99%" valign="bottom" align="right"><table>
+<form action="http://www-ice.yamagata-cit.ac.jp/ken/senshu/sitedev/index.php?cmd=search" method="post">
+<tr><td>サイト内検索：
+<INPUT name=word>
+<INPUT type=radio CHECKED value=AND name=type>AND検索
+<INPUT type=radio value=OR name=type>OR検索 &nbsp;<INPUT type=submit value=検索>
+</td></tr>
+</form>
+</table></td>
+</tr>
+</table>
+
+<div id="navigator">
+
+<!--
+ <a href="http://www-ice.yamagata-cit.ac.jp/ken/senshu/sitedev/index.php?AVR%2FHIDaspx_news02">リロード</a>&nbsp;
+ <a href="http://www-ice.yamagata-cit.ac.jp/ken/senshu/sitedev/index.php?plugin=newpage&amp;refer=AVR%2FHIDaspx_news02">新規</a>&nbsp;
+ <a href="http://www-ice.yamagata-cit.ac.jp/ken/senshu/sitedev/index.php?cmd=edit&amp;page=AVR%2FHIDaspx_news02">編集</a>&nbsp;
+ <a href="http://www-ice.yamagata-cit.ac.jp/ken/senshu/sitedev/index.php?cmd=freeze&amp;page=AVR%2FHIDaspx_news02">凍結</a>&nbsp;
+ <a href="http://www-ice.yamagata-cit.ac.jp/ken/senshu/sitedev/index.php?cmd=diff&amp;page=AVR%2FHIDaspx_news02">差分</a>&nbsp;
+ <a href="http://www-ice.yamagata-cit.ac.jp/ken/senshu/sitedev/index.php?plugin=attach&amp;pcmd=upload&amp;page=AVR%2FHIDaspx_news02">添付</a>&nbsp;
+ <a href="http://www-ice.yamagata-cit.ac.jp/ken/senshu/sitedev/index.php?TOP">トップ</a>&nbsp;
+ <a href="http://www-ice.yamagata-cit.ac.jp/ken/senshu/sitedev/index.php?cmd=list">一覧</a>&nbsp;
+ <a href="http://www-ice.yamagata-cit.ac.jp/ken/senshu/sitedev/index.php?cmd=search">単語検索</a>&nbsp;
+ <a href="http://www-ice.yamagata-cit.ac.jp/ken/senshu/sitedev/index.php?RecentChanges">最終更新</a>&nbsp;
+ <a href="http://www-ice.yamagata-cit.ac.jp/ken/senshu/sitedev/index.php?cmd=backup&amp;page=AVR%2FHIDaspx_news02">バックアップ</a>&nbsp;
+ <a href="http://www-ice.yamagata-cit.ac.jp/ken/senshu/sitedev/index.php?cmd=edit&page=MENU">MENU編集</a>&nbsp;
+ <a href="http://www-ice.yamagata-cit.ac.jp/ken/senshu/sitedev/index.php?cmd=rss10">RSS</a>
+-->
+
+</div>
+<!-- 2004-4-12 -->
+<div align="center">
+
+</div>
+<hr class="full_hr" />
+
+<table border="0" style="width:100%">
+ <tr>
+  <td class="menubar">
+   <div>
+    <p><strong>===MENU===</strong><br />
+　<a href="http://www-ice.yamagata-cit.ac.jp/ken/senshu/sitedev/index.php?%BA%C7%BF%B7%A4%CE20%B7%EF" title="最新の20件 (131d)"><span style="color:BLUE"><strong>更新情報</strong></span></a><br />
+　<a href="http://www-ice.yamagata-cit.ac.jp/ken/senshu/sitedev/?plugin=counterlist">カウンタ一覧</a><br />
+　<a href="http://www-ice.yamagata-cit.ac.jp/ken/senshu/sitedev/index.php?best100" title="best100 (303d)">ベスト100</a><br />
+<br />
+　<a href="http://www-ice.yamagata-cit.ac.jp/ken/senshu/sitedev/index.php?AVR%2Fnews_contents_all" title="AVR/news_contents_all (141d)">wiki掲示板</a><br />
+　<a href="http://www-ice.yamagata-cit.ac.jp/forum"><span style="color:GREEN"><strong>新掲示板</strong></span></a><br />
+　<a href="http://www-ice.yamagata-cit.ac.jp/ken/senshu/sitedev/index.php?AVR" title="AVR (494d)">AVR情報</a><br />
+　├<a href="http://www-ice.yamagata-cit.ac.jp/ken/senshu/sitedev/index.php?AVR%2Fshowcase" title="AVR/showcase (114d)">Arduino</a><br />
+　├<a href="http://www-ice.yamagata-cit.ac.jp/ken/senshu/sitedev/index.php?AVR%2Favrdude00" title="AVR/avrdude00 (141d)">AVRdude</a><br />
+　├<a href="http://www-ice.yamagata-cit.ac.jp/ken/senshu/sitedev/index.php?AVR%2FHIDaspx00" title="AVR/HIDaspx00 (587d)">HIDaspx</a><br />
+　├<a href="http://www-ice.yamagata-cit.ac.jp/ken/senshu/sitedev/index.php?AVR%2Fpic18spx" title="AVR/pic18spx (222d)">pic18spx</a><br />
+　├<a href="http://www-ice.yamagata-cit.ac.jp/ken/senshu/sitedev/index.php?AVR%2FHIDmon00" title="AVR/HIDmon00 (1149d)">HIDmon</a><br />
+　└<a href="http://www-ice.yamagata-cit.ac.jp/ken/senshu/sitedev/index.php?AVR%2FusbRS232" title="AVR/usbRS232 (1109d)">usbRS232</a><br />
+　┌<a href="http://www-ice.yamagata-cit.ac.jp/ken/senshu/sitedev/index.php?memo%2FUBW" title="memo/UBW (444d)">UBW(PIC)</a><br />
+　├<a href="http://www-ice.yamagata-cit.ac.jp/ken/senshu/sitedev/index.php?install%2FSFC" title="install/SFC (919d)">Swordfish</a><br />
+　├<a href="http://www-ice.yamagata-cit.ac.jp/ken/senshu/sitedev/index.php?GAINER" title="GAINER (1022d)">GAINER</a><br />
+　└<a href="http://www-ice.yamagata-cit.ac.jp/ken/senshu/sitedev/index.php?install%2Fsdcc" title="install/sdcc (120d)">SDCC</a><br />
+　<a href="http://www-ice.yamagata-cit.ac.jp/ken/senshu/sitedev/index.php?embtech" title="embtech (152d)">組込み技法</a><br />
+　<a href="http://www-ice.yamagata-cit.ac.jp/forum/viewforum.php?f=14">評価ファイル</a><br />
+<br />
+　<a href="http://www-ice.yamagata-cit.ac.jp/ken/senshu/sitedev/index.php?AVR%2FAVR%C6%FE%CC%E7" title="AVR/AVR入門 (23d)">AVRリンク</a><br />
+　<a href="http://www-ice.yamagata-cit.ac.jp/ken/senshu/sitedev/index.php?%A5%D6%A5%C3%A5%AF%A5%DE%A1%BC%A5%AF%BD%B8" title="ブックマーク集 (726d)">Links</a><br />
+<br />
+　<a href="http://www-ice.yamagata-cit.ac.jp/ken/senshu/sitedev/index.php?%A5%EA%A5%F3%A5%AF%BD%B8" title="リンク集 (289d)">リンク集</a><br />
+<br /></p>
+
+   </div>
+  </td>
+  <td valign="top">
+   <div id="hdl"><a href="http://www-ice.yamagata-cit.ac.jp/ken/senshu/sitedev/index.php?cmd=search&amp;word=AVR%2FHIDaspx_news02">AVR/HIDaspx_news02</a>  にそのファイルは見つかりません</div>
+   <div id="body"><ul class="navi">
+ <li class="navi_left"><a href="http://www-ice.yamagata-cit.ac.jp/ken/senshu/sitedev/index.php?AVR%2FHIDaspx_news01" title="AVR/HIDaspx_news01 (1086d)">Prev</a></li>
+ <li class="navi_right"><a href="http://www-ice.yamagata-cit.ac.jp/ken/senshu/sitedev/index.php?AVR%2FHIDaspx_other_01" title="AVR/HIDaspx_other_01 (1105d)">Next</a></li>
+ <li class="navi_none"><a href="http://www-ice.yamagata-cit.ac.jp/ken/senshu/sitedev/index.php?AVR" title="AVR (494d)">AVR</a></li>
+</ul>
+<hr class="full_hr" />
+<div class="counter">
+Counter: 27709,
+today: 14,
+yesterday: 24
+</div>
+<div class="contents">
+<a id="contents_1"></a><ul class="list1" style="padding-left:16px;margin-left:16px"><li><a href="#content_1_0">  HIDaspxに関するお願い </a></li>
+<li><a href="#content_1_1">  最新のHIDaspx関係ファイル[Download] </a></li>
+<li><a href="#content_1_2"> HIDaspx/hidpsxの変更履歴 </a></li></ul></div>
+
+<hr class="full_hr" />
+<h2 id="content_1_0">HIDaspxに関するお願い  <a class="anchor_super" id="ma73cf13" href="http://www-ice.yamagata-cit.ac.jp/ken/senshu/sitedev/index.php?AVR%2FHIDaspx_news02#ma73cf13" title="ma73cf13">&dagger;</a></h2>
+<p>2008年の10月に公開を開始し、2009年1月からは使い勝手の向上と対応プラットホーム拡大<br />
+に努力してきました。今では、Windows(2000,XP,Vista)、Mac OS X, Linuxでの動作が確認<br />
+されています。多くの方々のレポートや協力が得られれば、今後も改良が可能になります。<br />
+<br />
+書式は問いませんので、HIDaspx関連の報告や感想をお待ちしております。 <br />
+⇒ <del><a href="http://www-ice.yamagata-cit.ac.jp/ken/senshu/sitedev/index.php?AVR%2FHID_reports">旧掲示板</a></del><br />
+⇒ <a href="http://www-ice.yamagata-cit.ac.jp/forum/viewforum.php?f=13">新掲示板</a><br />
+<br /></p>
+
+<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h2 id="content_1_1">最新のHIDaspx関係ファイル[Download]  <a class="anchor_super" id="o2ec2e47" href="http://www-ice.yamagata-cit.ac.jp/ken/senshu/sitedev/index.php?AVR%2FHIDaspx_news02#o2ec2e47" title="o2ec2e47">&dagger;</a></h2>
+<p>ここで公開するものは、HIDaspではなく高速化と安定化対策を施した<strong>HIDaspx</strong>に<br />
+関するものであり、HIDsph互換のHIDaspと同一の回路で利用できます。<br />
+HIDaspx用ファームウェアは、hidspxアーカイブに同梱しています。これは、V-USBが<br />
+ホスト側のプログラムを同梱するように求めていることに応えるためで、ソースコードの規模<br />
+を判断し、全体をhidspxパッケージとしています。<br />
+<br />
+これらは<span style="color:RED">評価用</span>に公開しており、より良いものにするため頻繁に更新します。<br />
+迅速な改善を実現するため、<strong>利用しての感想やご意見</strong>を求めています。<br />
+<br />
+以下のファイル群は何れも実験的なものです。利用者の手で不具合を改善できるように、<br />
+全てのアーカイブにソースコードを含めています。そのため、一部のファイルのみの転載は<br />
+ご遠慮ください。ライセンスに関しては、同梱の資料をご覧ください。（不明な場合には<br />
+「新掲示板」にてお問い合わせください）<br />
+<br />
+irukaさんに協力をいただき、<a href="http://hp.vector.co.jp/authors/VA000177/html/A3C4A3EFA3F7A3EEA3CCA3EFA3E1A3E4.html">ミラー</a>していただいています。<br />
+<br /></p>
+<div class="ie5"><table class="style_table" cellspacing="1" border="0"><tbody><tr><td class="style_td">hidspxとHIDaspx（2種類のGUIを同梱）</td><td class="style_td"><a href="http://www-ice.yamagata-cit.ac.jp/ken/senshu/sitedev/index.php?plugin=attach&amp;refer=AVR%2FHIDaspx_news02&amp;openfile=hidspx-2012-0322.zip" title="2012/03/22 15:38:58 4076.3KB"><img src="image/file.png" width="20" height="20" alt="file" style="border-width:0px" />hidspx-2012-0322.zip</a></td></tr><tr><td class="style_td"><strong>dude-wrapng</strong>（Arduino-0018専用、hidspxで書き込みを実現）</td><td class="style_td"><a href="http://www-ice.yamagata-cit.ac.jp/ken/senshu/sitedev/index.php?plugin=attach&amp;refer=AVR%2FHIDaspx_news02&amp;openfile=dude-wrapng-2010-0531.zip" title="2010/05/31 17:48:52 2306.7KB"><img src="image/file.png" width="20" height="20" alt="file" style="border-width:0px" />dude-wrapng-2010-0531.zip</a></td></tr><tr><td class="style_td">hidspx-GUIのソース（Visual C# 2005用) ※6</td><td class="style_td"><a href="http://www-ice.yamagata-cit.ac.jp/ken/senshu/sitedev/index.php?plugin=attach&amp;refer=AVR%2FHIDaspx_news02&amp;openfile=hidspx-GUI-2009-0817.zip" title="2009/08/17 14:15:10 112.6KB"><img src="image/file.png" width="20" height="20" alt="file" style="border-width:0px" />hidspx-GUI-2009-0817.zip</a></td></tr><tr><td class="style_td">HIDaspx, hidspxユーザーズガイド</td><td class="style_td"><a href="http://www-ice.yamagata-cit.ac.jp/ken/senshu/sitedev/index.php?plugin=attach&amp;refer=AVR%2FHIDaspx_news02&amp;openfile=hidspx-guide1.pdf" title="2009/09/25 16:01:29 1618.0KB"><img src="image/file.png" width="20" height="20" alt="file" style="border-width:0px" />hidspx-guide1.pdf</a></td></tr><tr><td class="style_td">hidspxG（ソースと実行ファイル）</td><td class="style_td"><a href="http://www-ice.yamagata-cit.ac.jp/ken/senshu/sitedev/index.php?plugin=attach&amp;refer=AVR%2FHIDaspx_news02&amp;openfile=hidspxG-20100215.zip" title="2010/02/23 12:29:21 56.2KB"><img src="image/file.png" width="20" height="20" alt="file" style="border-width:0px" />hidspxG-20100215.zip</a></td></tr><tr><td class="style_td">avrspx説明書（改良点の説明書） 　</td><td class="style_td"><a href="http://www-ice.yamagata-cit.ac.jp/ken/senshu/sitedev/index.php?plugin=attach&amp;refer=AVR%2FHIDaspx_news02&amp;openfile=avrspx-doc.txt" title="2009/04/11 22:17:08 19.8KB"><img src="image/file.png" width="20" height="20" alt="file" style="border-width:0px" />avrspx-doc.txt</a></td></tr><tr><td class="style_td">hidspx(Linux/MacOS兼用-UTF8ソースコード）※1</td><td class="style_td"><a href="http://www-ice.yamagata-cit.ac.jp/ken/senshu/sitedev/index.php?plugin=attach&amp;refer=AVR%2FHIDaspx_news02&amp;openfile=hidspx-2010-0125.tar.gz" title="2010/01/24 12:37:33 50.3KB"><img src="image/file.png" width="20" height="20" alt="file" style="border-width:0px" />hidspx-2010-0125.tar.gz</a></td></tr><tr><td class="style_td">hidmon(実行ファイル, ソースコード、スクリプト) ※2</td><td class="style_td"><a href="http://www-ice.yamagata-cit.ac.jp/ken/senshu/sitedev/index.php?plugin=attach&amp;refer=AVR%2FHIDaspx_news02&amp;openfile=hidmon-2010-0214.zip" title="2010/02/14 15:36:45 243.8KB"><img src="image/file.png" width="20" height="20" alt="file" style="border-width:0px" />hidmon-2010-0214.zip</a></td></tr><tr><td class="style_td">hidmon(Linux/MacOS兼用-UTF8ソースコード)</td><td class="style_td"><a href="http://www-ice.yamagata-cit.ac.jp/ken/senshu/sitedev/index.php?plugin=attach&amp;refer=AVR%2FHIDaspx_news02&amp;openfile=hidmon-2009-0203-linux.tar.gz" title="2009/04/11 22:17:32 60.0KB"><img src="image/file.png" width="20" height="20" alt="file" style="border-width:0px" />hidmon-2009-0203-linux.tar.gz</a></td></tr><tr><td class="style_td">usbRS232(ファームウェア, ソースコード) ※3</td><td class="style_td"><a href="http://www-ice.yamagata-cit.ac.jp/ken/senshu/sitedev/index.php?plugin=attach&amp;refer=AVR%2FHIDaspx_news02&amp;openfile=usbRS232-1109.zip" title="2009/04/11 22:18:22 132.6KB"><img src="image/file.png" width="20" height="20" alt="file" style="border-width:0px" />usbRS232-1109.zip</a></td></tr><tr><td class="style_td">usbRS232(ファームウェア, ソースコード) ※4</td><td class="style_td"><a href="http://www-ice.yamagata-cit.ac.jp/ken/senshu/sitedev/index.php?plugin=attach&amp;refer=AVR%2FHIDaspx_news02&amp;openfile=usbRS232-2009-0914.zip" title="2009/09/14 17:40:12 149.3KB"><img src="image/file.png" width="20" height="20" alt="file" style="border-width:0px" />usbRS232-2009-0914.zip</a></td></tr></tbody></table></div>
+<blockquote><p class="quotation">
+※0 旧版を入手したい方は、<a href="http://www-ice.yamagata-cit.ac.jp/ken/senshu/sitedev/index.php?AVR%2Fnews_contents_all" title="AVR/news_contents_all (141d)">wiki掲示板</a>にご相談ください。<br />
+※1 ファームや説明書は、Windows用のアーカーブに含まれています。<br />
+　　利用に先立って、同梱の<strong>Readme-j.txt</strong>と<strong>2つのPDFファイル</strong>をご覧ください<br />
+※2 RC発振器でUSB-IOの利用が可能（RC発振モードは評価目的に公開）。<br />
+※3 HIDaspxのハードウェアでCDCクラスを実現した例（開発段階です）。<br />
+※4 HIDaspxのハードウェアでCDCクラスを実現した例（12M/16Mの両方に対応）。<br />
+※5 Linux版は、同名のWindows版に含まれる説明書を参照ください。<br />
+※6 hidspx-GUIの実行には<strong>.NET Framework 2.0</strong>以降が必要です。<br /></p>
+<pre> これがインストールされていない場合には、
+「アプリケーションを正しく初期化できませんでした(0xc0000135)。..」
+ というダイアログが表示されます。その場合は、↓を参考にインストールしてください。 </pre>
+<p class="quotation">　　　<a href="http://www.atmarkit.co.jp/fwin2k/dnitpro/dntech/002instdnfw/002instdnfw.html">Windows Update / Microsoft Update</a><br />
+※7 hidspxGはhidspx-GUIと同等の機能ですが、.NET Frameworkの導入は不要です。<br />
+※8 hidspx-GUIは、Visual C# 2008 express版でもコンパイル可能です。<br />
+※9 dude-wrapng は、avrdude-0018専用です。YCIY版 avrdude, avrdude-GUIを利用すれ<br />
+　  ば、dude-wrapngなしで同等の利用が可能です。 ⇒ <a href="http://www-ice.yamagata-cit.ac.jp/ken/senshu/sitedev/index.php?AVR%2Favrdude00" title="AVR/avrdude00 (141d)">こちら</a>
+<br /></p></blockquote>
+
+<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h2 id="content_1_2">HIDaspx/hidpsxの変更履歴  <a class="anchor_super" id="k321b917" href="http://www-ice.yamagata-cit.ac.jp/ken/senshu/sitedev/index.php?AVR%2FHIDaspx_news02#k321b917" title="k321b917">&dagger;</a></h2>
+<p><span style="color:RED">重要な情報が書かれています。</span>ぜひ、<a href="http://www-ice.yamagata-cit.ac.jp/ken/senshu/sitedev/index.php?AVR%2FHIDaspx_history" title="AVR/HIDaspx_history (1d)">AVR/HIDaspx_history</a>をご覧ください。</p>
+</div>
+   <div id="notes"></div>
+   <div id="related"></div>
+  </td>
+ </tr>
+</table>
+
+<hr class="full_hr" />
+
+<!--
+
+-->
+
+<div id="footer">
+<strong><a href="http://fol.axisz.jp/php/">siteDev</a></strong> extends <strong>PukiWiki 1.4.4</strong> Copyright &copy; 2001-2004 <a href="http://pukiwiki.sourceforge.jp">PukiWiki Developers Team</a>. License is <a href="http://www.gnu.org/licenses/gpl.html">GPL</a>.<br /> Based on "PukiWiki" 1.3 by <a href="http://factage.com/yu-ji/">yu-ji</a>&nbsp;customized by <a href="http://fol.axisz.jp/php/">php spot</a>.
+<br />
+</div>
+<br />
+<img src="sd_img/pukiwiki.png"> <img src="http://fol.axisz.jp/php/img/banner.jpg">
+<br />
+</div>
+</div>
+
+</body>
+</html>
