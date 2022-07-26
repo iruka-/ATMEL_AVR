@@ -239,7 +239,7 @@
 <div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h3 id="content_1_5">（２.１）<a href="http://d.hatena.ne.jp/pcm1723/20121230/1356849249" rel="nofollow">シンセ・アンプラグド</a>さんのLPC1114FN28ライターをMARY基板で使う。<a class="anchor_super" id="d0c2610c" href="#d0c2610c" title="d0c2610c" style="user-select:none;">&dagger;</a></h3>
 <ul class="list1 list-indent1"><li>MARY基板を使う場合は、USB-serial変換器やDIP ICを配線する手間が省けます。</li>
 <li>が、MARY基板はDTR信号でリセットが掛かる仕様なので、PIC32UBL.exeを(DTR制御しないように改造して)リビルドする一手間が余計に掛かります。
-<ul class="list2 list-indent1"><li>ビルド済みのexeを<a href="http:/ATMEL_AVR/upload.cgi/PIC/PIC32UBL.zip" rel="nofollow">ここ</a>に置いておきます。</li></ul></li></ul>
+<ul class="list2 list-indent1"><li>ビルド済みのexeを<a href="http:/ATMEL_AVR/upload/PIC/PIC32UBL.zip" rel="nofollow">ここ</a>に置いておきます。</li></ul></li></ul>
 
 <div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h3 id="content_1_6">（３）FTDIのチップ FT232やFT2232D を使って書き込む。<a class="anchor_super" id="je957e7b" href="#je957e7b" title="je957e7b" style="user-select:none;">&dagger;</a></h3>
 <ul class="list1 list-indent1"><li>pic32progを改造することでそのようなことが可能です。</li>
@@ -290,7 +290,7 @@ RA5(pin7)-10k-|
 <pre>PICkit2: invalid status = 0046.</pre></li>
 <li>本物のPickit2のアナログ系回路を全部省いてしまっているため、このエラーが出る。</li>
 <li>なので、pic32progのinvalid statusが出てreturn する処理をコメントアウトして再コンパイル。</li></ul>
-<pre>pic32prog ダウンロード:[[source.zip:http:/ATMEL_AVR/upload.cgi/PIC/source.zip]]</pre>
+<pre>pic32prog ダウンロード:[[source.zip:http:/ATMEL_AVR/upload/PIC/source.zip]]</pre>
 <p><br /></p>
 <ul class="list1 list-indent1"><li>もう一度トライする。</li></ul>
 <p>こんな感じ。</p>
@@ -342,19 +342,19 @@ E:\pic32prog\src&gt;</pre>
 
 <div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h2 id="content_1_10">Pinguinoのgccコンパイラとフレームワークを使ってＬチカをやってみる。<a class="anchor_super" id="lc3a9804" href="#lc3a9804" title="lc3a9804" style="user-select:none;">&dagger;</a></h2>
 <p><strong>やってみました。</strong></p>
-<ul class="list1 list-indent1"><li>ダウンロード:<a href="http:/ATMEL_AVR/upload.cgi/PIC/pled.zip" rel="nofollow">pled.zip</a></li></ul>
+<ul class="list1 list-indent1"><li>ダウンロード:<a href="http:/ATMEL_AVR/upload/PIC/pled.zip" rel="nofollow">pled.zip</a></li></ul>
 <p><br />
 <br /></p>
 
 <div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h3 id="content_1_11">続編・・・<a class="anchor_super" id="l291294a" href="#l291294a" title="l291294a" style="user-select:none;">&dagger;</a></h3>
 <p><strong>CDCprintfとタイマー割り込みとＬチカの同時実行です</strong></p>
 <p>ソースはかなり強引です。</p>
-<ul class="list1 list-indent1"><li>ダウンロード:<a href="http:/ATMEL_AVR/upload.cgi/PIC/cdcint.zip" rel="nofollow">cdcint.zip</a></li></ul>
+<ul class="list1 list-indent1"><li>ダウンロード:<a href="http:/ATMEL_AVR/upload/PIC/cdcint.zip" rel="nofollow">cdcint.zip</a></li></ul>
 <p><br /></p>
 <ul class="list1 list-indent1"><li>コツ： USB<span class="noexists"><a href="./?cmd=edit&amp;page=DeviceTasks&amp;refer=PIC32MX">DeviceTasks</a></span>()相当品をポーリングで呼び出す場合は、最近のPCだと125uS間隔で呼ばないとデバイスエラーが起きやすいようです。1mSだと不明なデバイスになって接続できませんでした。</li></ul>
 <p><strong>Serial Portを使用したprintfテスト</strong></p>
 <p>スケッチのまんまです。</p>
-<ul class="list1 list-indent1"><li>ダウンロード:<a href="http:/ATMEL_AVR/upload.cgi/PIC/serial.zip" rel="nofollow">serial.zip</a></li></ul>
+<ul class="list1 list-indent1"><li>ダウンロード:<a href="http:/ATMEL_AVR/upload/PIC/serial.zip" rel="nofollow">serial.zip</a></li></ul>
 <p><br /></p>
 <p>利点</p>
 <ul class="list1 list-indent1"><li>制限付きのXC32コンパイラ(Microchip)ではなく</li>
@@ -386,7 +386,7 @@ E:\pic32prog\src&gt;</pre>
 #endif
 	    continue;
 	}</pre></li></ul>
-<p>対処済みpic32prog.exeのダウンロード:<a href="http:/ATMEL_AVR/upload.cgi/PIC/source.zip" rel="nofollow">source.zip</a></p>
+<p>対処済みpic32prog.exeのダウンロード:<a href="http:/ATMEL_AVR/upload/PIC/source.zip" rel="nofollow">source.zip</a></p>
 <ul class="list1 list-indent1"><li>bootエリアとconfigエリアが物理アドレスでないHEXを扱うことが可能。</li>
 <li>devcfg0&lt;bit1:0&gt;が'10'のときに気を利かせて'11'にすることで、PinguinoのブートローダーHEXをそのまま書き込んで動作ＯＫ。</li>
 <li>即席版PicKit2に対応。</li></ul>
@@ -406,7 +406,7 @@ E:\pic32prog\src&gt;</pre>
 ---
 &gt; :040bfc00eeffff7f8a</pre></li>
 <li>差し替えたpatch.hexをpic32progで焼くと、MX220F032B(DIPパッケージ)でHID bootloaderが使えるようになります。</li>
-<li>上記の対処済み<a href="http:/ATMEL_AVR/upload.cgi/PIC/source.zip" rel="nofollow">pic32prog.exe</a>を使用する場合はHEXのパッチも不要です。</li></ul>
+<li>上記の対処済み<a href="http:/ATMEL_AVR/upload/PIC/source.zip" rel="nofollow">pic32prog.exe</a>を使用する場合はHEXのパッチも不要です。</li></ul>
 
 <div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h2 id="content_1_14">Pinguinoブートローダーの使い方。<a class="anchor_super" id="l8343c81" href="#l8343c81" title="l8343c81" style="user-select:none;">&dagger;</a></h2>
 <ul class="list1 list-indent1"><li>RB15にLEDを、また、RB7を抵抗pullupして、GNDに落とすBOOT-SWを実装します。</li>
@@ -458,12 +458,12 @@ E:\pic32prog\src&gt;</pre>
 <li>'-mips16'オプションが有効です。</li>
 <li>こちらは、Mchipコンパイラを使用しないため、60日制限はありません。</li>
 <li>crt0.Sを改造してありますので、さらにコンパクトです。</li></ul>
-<ul class="list1 list-indent1"><li><strong>ダウンロード:</strong><a href="http:/ATMEL_AVR/upload.cgi/PIC/HIDBoot_Mips32gcc.X.zip" rel="nofollow">HIDBoot_Mips32gcc.X.zip</a></li></ul>
+<ul class="list1 list-indent1"><li><strong>ダウンロード:</strong><a href="http:/ATMEL_AVR/upload/PIC/HIDBoot_Mips32gcc.X.zip" rel="nofollow">HIDBoot_Mips32gcc.X.zip</a></li></ul>
 
 <div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h2 id="content_1_21">HIDBoot.Xを内蔵ＲＣ発振(FRC)で動かす。<a class="anchor_super" id="ace0d76d" href="#ace0d76d" title="ace0d76d" style="user-select:none;">&dagger;</a></h2>
 <ul class="list1 list-indent1"><li>8MHz水晶を実装しない選択を用意しました。</li>
 <li>但しRA4に4MHz FRC出力を指定して、それをOSC1に入力する配線が必要になります。(RA4はGPIOとしては使えなくなります)代わりにOSC2が空きます。</li></ul>
-<ul class="list1 list-indent1"><li><strong>ダウンロード:</strong><a href="http:/ATMEL_AVR/upload.cgi/PIC/HIDBoot.X.zip" rel="nofollow">HIDBoot.X.zip</a></li></ul>
+<ul class="list1 list-indent1"><li><strong>ダウンロード:</strong><a href="http:/ATMEL_AVR/upload/PIC/HIDBoot.X.zip" rel="nofollow">HIDBoot.X.zip</a></li></ul>
 <p><br />
 <br />
 <br /></p>
@@ -521,7 +521,7 @@ E:\pic32prog\src&gt;</pre>
 <li>これより低くするとLED点滅しませんし、USBデバイス認識もしないようです。</li>
 <li>USBスタックのどこかにDelayタイマーのような処理が埋まっていて、あまり遅くするとデバイス認識出来ないようになるのかもしれませんが、原因はまだ突き止めていません。</li></ul>
 <p><br /></p>
-<ul class="list1 list-indent1"><li>HIDBoot.Xのかわりに:<a href="http:/ATMEL_AVR/upload.cgi/PIC/pled.zip" rel="nofollow">pled.zip</a>で試したところ、
+<ul class="list1 list-indent1"><li>HIDBoot.Xのかわりに:<a href="http:/ATMEL_AVR/upload/PIC/pled.zip" rel="nofollow">pled.zip</a>で試したところ、
 <pre>#define	CONFIG_FPLLMUL			MUL_16	/* 4 MHz -&gt;  64 MHz */	 
 #define	CONFIG_FPLLODIV			ODIV_256	/* 64 MHz -&gt; 250 kHz */	  </pre></li>
 <li>250kHzクロックでも正しくLED点滅していましたので、USB周りの速度限界が存在する可能性があります。</li></ul>
@@ -609,7 +609,7 @@ E:\pic32prog\src&gt;</pre>
    <a href="http://pukiwiki.sourceforge.jp/dev/"><img src="../image/b_pukiwiki.dev.png" alt="PukiWiki-dev" /></a>
   </div>
   <div id="f-list">
-   <ul><li id="lastmod">Last-modified: 2015-05-02 (土) 16:17:40<span class="page_passage" data-mtime="2015-05-02T16:17:40+09:00"></span></li><li>Site admin: <a href="http://pukiwiki.example.com/">anonymous</a></li>    <li>convert time: 0.012 sec</li>
+   <ul><li id="lastmod">Last-modified: 2015-05-02 (土) 16:17:40<span class="page_passage" data-mtime="2015-05-02T16:17:40+09:00"></span></li><li>Site admin: <a href="http://pukiwiki.example.com/">anonymous</a></li>    <li>convert time: 0.018 sec</li>
     <li>Powered by PukiWiki</li>
     <li><a href="http://www.luntf.com/">Monobook for PukiWiki</a></li>
    </ul>

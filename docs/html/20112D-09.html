@@ -216,7 +216,7 @@ uint32 usbReceiveBytes(uint8* recvBuf, uint32 len) {
 <br /></p>
 
 <div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h2 id="content_1_2">バグその２<a class="anchor_super" id="wd5ba2e0" href="#wd5ba2e0" title="wd5ba2e0" style="user-select:none;">&dagger;</a></h2>
-<ul class="list1 list-indent1"><li>現状の<a href="http:/ATMEL_AVR/upload.cgi/STM/cdctool.zip" rel="nofollow">cdctool</a>は、大量のデータをホストＰＣに送れない。</li>
+<ul class="list1 list-indent1"><li>現状の<a href="http:/ATMEL_AVR/upload/STM/cdctool.zip" rel="nofollow">cdctool</a>は、大量のデータをホストＰＣに送れない。</li>
 <li>必ず、32byteのコマンドパケットを送って、32byteの返答を貰うようにしている。</li>
 <li>これを、不定長というか32byte以上のデータをまとめて送ると、何故か転送が完了せずにハングするのだ。</li>
 <li>これ、仮想COMとはいえ、<strong>RS232Cだぞ</strong>。まとめて送ろうが五月雨に送ろうが、TxDはTxDのはずなのにハングするとか
@@ -267,7 +267,7 @@ uint32 usbReceiveBytes(uint8* recvBuf, uint32 len) {
 $ git clone git://github.com/leaflabs/maple-bootloader.git</pre>
 <p><br />
 追伸</p>
-<ul class="list1 list-indent1"><li><a href="http:/ATMEL_AVR/upload.cgi/STM/libmaple.zip" rel="nofollow">libmaple</a>と<a href="http:/ATMEL_AVR/upload/STM/cdctool.zip" rel="nofollow">cdctool</a>に関しては最新のgitから落としたソースに更新済み。</li></ul>
+<ul class="list1 list-indent1"><li><a href="http:/ATMEL_AVR/upload/STM/libmaple.zip" rel="nofollow">libmaple</a>と<a href="http:/ATMEL_AVR/upload/STM/cdctool.zip" rel="nofollow">cdctool</a>に関しては最新のgitから落としたソースに更新済み。</li></ul>
 <p><br />
 <br />
 <br />
@@ -312,7 +312,7 @@ $ git clone git://github.com/leaflabs/maple-bootloader.git</pre>
 <li>USBをイネーブルするとハングする。USB用割り込みベクターの名称が異なるようだ・・・<del>修正中</del> --- USB割り込みハンドラーの関数名だけを変更したら、一応デバイス認識まで通るようになった。</li></ul>
 <p><br />
 ダウンロード（仮）：</p>
-<ul class="list1 list-indent1"><li><a href="http:/ATMEL_AVR/upload.cgi/STM/cdcboot.zip" rel="nofollow">cdcboot.zip</a></li></ul>
+<ul class="list1 list-indent1"><li><a href="http:/ATMEL_AVR/upload/STM/cdcboot.zip" rel="nofollow">cdcboot.zip</a></li></ul>
 <p>説明：</p>
 <ul class="list1 list-indent1"><li><del>ブートローダーとしての機能はまだありません。</del> ---使えるようになりました。</li></ul>
 <p><br />

@@ -217,7 +217,7 @@ sys     0m0.000s</pre>
 
 <div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h2 id="content_1_2">ＨＩＤ　Ｒｅｐｏｒｔ送信の遅延評価<a class="anchor_super" id="c2b871b8" href="#c2b871b8" title="c2b871b8" style="user-select:none;">&dagger;</a></h2>
 <ul class="list1 list-indent1"><li>HID Reportのパケットを受け取った後、isp書き込み時間がどの程度許されるのかを評価してみた。</li></ul>
-<ul class="list1 list-indent1"><li><a href="http:/ATMEL_AVR/upload.cgi/hidmon-test-1007.zip" rel="nofollow">ソースアーカイブ：hidmon-test-1007.zip</a></li></ul>
+<ul class="list1 list-indent1"><li><a href="http:/ATMEL_AVR/upload/hidmon-test-1007.zip" rel="nofollow">ソースアーカイブ：hidmon-test-1007.zip</a></li></ul>
 <ul class="list1 list-indent1"><li>結果</li>
 <li>bench2コマンドは第一引数が試行回数、第二引数が遅延係数（単位は１０μ秒）</li>
 <li>ＨＩＤパケットサイズは３９バイト固定。送信（ホストからデバイス宛）のみ。</li>
@@ -405,7 +405,7 @@ Bye.
 <ul class="list1 list-indent1"><li>senshuさんにより取り纏め頂いたhidspx-0928b.zipに対して、firmware容量の削減を
 行いました。</li>
 <li>機能やコンフィギュレーションは同一です。</li></ul>
-<ul class="list1 list-indent1"><li><a href="http:/ATMEL_AVR/upload.cgi/hidspx-0928c.zip" rel="nofollow">ソースアーカイブ：hidspx-0928c.zip</a></li></ul>
+<ul class="list1 list-indent1"><li><a href="http:/ATMEL_AVR/upload/hidspx-0928c.zip" rel="nofollow">ソースアーカイブ：hidspx-0928c.zip</a></li></ul>
 <pre>avr-objcopy -j .text -j .data -O ihex main.elf main.hex
 avr-size --mcu=attiny2313 main.elf
   text    data     bss     dec     hex filename
@@ -413,14 +413,14 @@ avr-size --mcu=attiny2313 main.elf
 <ul class="list1 list-indent1"><li>1988バイトは気の迷いでした。（とあるコーディングミスで最適化され機能削除されていました。）</li></ul>
 <ul class="list1 list-indent1"><li>WinAVRのバージョンは2006-0421でビルドしていますので、最新のWinAVRではサイズが変わる（増える）かもしれません。</li></ul>
 <p>おまけソフト</p>
-<ul class="list1 list-indent1"><li><a href="http:/ATMEL_AVR/upload.cgi/hidmon-0929.zip" rel="nofollow">ＨＩＤｍｏｎ：hidmon-0929.zip</a></li></ul>
+<ul class="list1 list-indent1"><li><a href="http:/ATMEL_AVR/upload/hidmon-0929.zip" rel="nofollow">ＨＩＤｍｏｎ：hidmon-0929.zip</a></li></ul>
 <hr class="full_hr" />
 
 <div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h2 id="content_1_4">ＳＣＫ、ＭＯＳＩのＨｉ−Ｚ化改良<a class="anchor_super" id="z551790c" href="#z551790c" title="z551790c" style="user-select:none;">&dagger;</a></h2>
 <ul class="list1 list-indent1"><li>senshuさんにより取り纏め頂いたhidspx-0928.zipに対して、ＳＣＫ、ＭＯＳＩのＨｉ−Ｚ化を
 行いました。</li>
 <li>ライターが書き込み動作を行っていないときはＳＣＫ、ＭＯＳＩをＨｉ−Ｚにします。</li></ul>
-<ul class="list1 list-indent1"><li><a href="http:/ATMEL_AVR/upload.cgi/hidspx-0928a.zip" rel="nofollow">ソースアーカイブ：hidspx-0928a.zip</a></li></ul>
+<ul class="list1 list-indent1"><li><a href="http:/ATMEL_AVR/upload/hidspx-0928a.zip" rel="nofollow">ソースアーカイブ：hidspx-0928a.zip</a></li></ul>
 <hr class="full_hr" />
 
 <div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h2 id="content_1_5">高速化改良その６<a class="anchor_super" id="p7941a5a" href="#p7941a5a" title="p7941a5a" style="user-select:none;">&dagger;</a></h2>
@@ -428,9 +428,9 @@ avr-size --mcu=attiny2313 main.elf
 <li>tiny2313では、かなり有効かと思われます。</li></ul>
 <ul class="list1 list-indent1"><li>それに伴って命令セット体系に少し変更が生じました。</li>
 <li><del>ソースは現在整理中です。乞うご期待。</del> <strong>任務完了！</strong></li></ul>
-<ul class="list1 list-indent1"><li><a href="http:/ATMEL_AVR/upload.cgi/hidspx-0927a.zip" rel="nofollow">ソースアーカイブ：hidspx-0927a.zip</a></li></ul>
+<ul class="list1 list-indent1"><li><a href="http:/ATMEL_AVR/upload/hidspx-0927a.zip" rel="nofollow">ソースアーカイブ：hidspx-0927a.zip</a></li></ul>
 <p>おまけソフト</p>
-<ul class="list1 list-indent1"><li><a href="http:/ATMEL_AVR/upload.cgi/hidmon-0927a.zip" rel="nofollow">ＨＩＤｍｏｎ：hidmon-0927a.zip</a></li></ul>
+<ul class="list1 list-indent1"><li><a href="http:/ATMEL_AVR/upload/hidmon-0927a.zip" rel="nofollow">ＨＩＤｍｏｎ：hidmon-0927a.zip</a></li></ul>
 <p>注意</p>
 <ul class="list1 list-indent1"><li><del>ＨＩＤｍｏｎを使用される場合は命令Fusionが使えませんので、</del> --使えるようにしました。
 <pre>#define INCLUDE_FUSION       0
@@ -451,7 +451,7 @@ avr-size --mcu=attiny2313 main.elf
 <ul class="list2 list-indent1"><li>-d&lt;delay&gt; で思いのほかメモリー使用量が増えたので、ダイエットです。</li></ul></li>
 <li>タイマー０によるＵＳＩクロック生成は諦めました。
 <ul class="list2 list-indent1"><li>うまくいく方法が見つかったらこっそり教えてください。</li></ul></li></ul>
-<ul class="list1 list-indent1"><li><a href="http:/ATMEL_AVR/upload.cgi/hidspx-src-0925.zip" rel="nofollow">ソースアーカイブ：hidspx-src-0925.zip</a></li></ul>
+<ul class="list1 list-indent1"><li><a href="http:/ATMEL_AVR/upload/hidspx-src-0925.zip" rel="nofollow">ソースアーカイブ：hidspx-src-0925.zip</a></li></ul>
 <hr class="full_hr" />
 
 <div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h2 id="content_1_7">高速化改良その４<a class="anchor_super" id="pb2d0ff9" href="#pb2d0ff9" title="pb2d0ff9" style="user-select:none;">&dagger;</a></h2>
@@ -489,7 +489,7 @@ avr-size --mcu=attiny2313 main.elf
 <li>でも、どう頑張っても５Ｋの半分(2.5k/s)よりは出ないでしょう。</li>
 <li>だったら、今の最速（Ｗ＆Ｖで２Ｋ弱）をキープして、コード保守するほうが堅実なのかもしれません。</li></ul>
 <p>実計測結果<br />
-<a href="http:/ATMEL_AVR/upload.cgi/hidspx-test-0925.zip" rel="nofollow">テストアーカイブ：hidspx-test-0925.zip</a></p>
+<a href="http:/ATMEL_AVR/upload/hidspx-test-0925.zip" rel="nofollow">テストアーカイブ：hidspx-test-0925.zip</a></p>
 <ul class="list1 list-indent1"><li>マシン＝Athlon64 USBホスト＝VIAチップPCIカード(UHCI)</li>
 <li>delayループ取り払い状態（1.5MHz SCLK)</li></ul>
 <ul class="list1 list-indent1"><li>ATmega88へ8192バイトのHEXを書き込み＆ベリファイ
@@ -531,7 +531,7 @@ bash-3.2$</pre></li></ul>
 </li>
 <li>使い方は win32/ で
 <pre> term -iscript</pre></li></ul>
-<p><a href="http:/ATMEL_AVR/upload.cgi/AVRbench.zip" rel="nofollow">テストアーカイブ：AVRbench.zip</a></p>
+<p><a href="http:/ATMEL_AVR/upload/AVRbench.zip" rel="nofollow">テストアーカイブ：AVRbench.zip</a></p>
 <hr class="full_hr" />
 
 <div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h2 id="content_1_9">高速化改良その３<a class="anchor_super" id="ke5da781" href="#ke5da781" title="ke5da781" style="user-select:none;">&dagger;</a></h2>
@@ -639,7 +639,7 @@ RAM: 93 bytes</pre>
 <li>但し、読み込みパケットサイズは38に留めています。（現在のところ固定）</li>
 <li>waitのループを瓶詰堂さんのオリジナルに戻しています(nopを消してしまいました：実は書き込み速度向上にはこれ＋オプション「-d0」が一番効きます。)</li>
 <li>さらに速くするには、-d0のときはdelay()を外したusi_trans()を用意するか、あるいはＨＩＤａｓｐを２０ＭＨｚ動作させる等が考えられますが、ターゲットデバイスが遅い場合は意味がありません。</li></ul>
-<p><a href="http:/ATMEL_AVR/upload.cgi/hidspx-src-0920.zip" rel="nofollow">ダウンロードはこちらです：hidspx-src-0920.zip</a></p>
+<p><a href="http:/ATMEL_AVR/upload/hidspx-src-0920.zip" rel="nofollow">ダウンロードはこちらです：hidspx-src-0920.zip</a></p>
 <ul class="list1 list-indent1"><li>書き込み速度の実測値ですが、ATmega88に６ｋＢの書き込み＆ベリファイで約５秒に短縮しました。</li>
 <li>CMD_PEEKとCMD_POKEを追加してあります。（未デバッグ）</li>
 <li>また、サイズは以下の通りです。
@@ -667,7 +667,7 @@ RAM: 93 bytes</pre></li></ul>
 <li>上位プロトコルは瓶詰堂さんのHIDaspと同じままです。</li>
 <li>配線はUSBのD+,D-だけを PORTD,3,2 に変えて、他は瓶詰堂さんのHIDaspと同じです。</li>
 <li>usbHidReportDescriptorが異なりますので、上記exeとファームはペアでないと動作しません。</li></ul>
-<p><a href="http:/ATMEL_AVR/upload.cgi/hidspx-src-0919.zip" rel="nofollow">ダウンロードはこちらです：hidspx-src-0919.zip</a></p>
+<p><a href="http:/ATMEL_AVR/upload/hidspx-src-0919.zip" rel="nofollow">ダウンロードはこちらです：hidspx-src-0919.zip</a></p>
 <ul class="list1 list-indent1"><li>期待したほど速くはなりませんでした。
 <ul class="list2 list-indent1"><li>ATmega88に６ＫＢのHEXを書き込み＆ベリファイにて、所要時間６秒（ＡＭＤマザーボード）</li>
 <li>（後でＰｅｎｔｉｕｍ４マシンで追試しましたところ９秒でしたので、実は遅くなっただけかも・・・）</li></ul></li>
@@ -799,7 +799,7 @@ RAM: 87 bytes</pre>
    <a href="http://pukiwiki.sourceforge.jp/dev/"><img src="../image/b_pukiwiki.dev.png" alt="PukiWiki-dev" /></a>
   </div>
   <div id="f-list">
-   <ul><li id="lastmod">Last-modified: 2022-07-25 (月) 21:56:43<span class="page_passage" data-mtime="2022-07-25T21:56:43+09:00"></span></li><li>Site admin: <a href="http://pukiwiki.example.com/">anonymous</a></li>    <li>convert time: 0.015 sec</li>
+   <ul><li id="lastmod">Last-modified: 2022-07-25 (月) 21:56:43<span class="page_passage" data-mtime="2022-07-25T21:56:43+09:00"></span></li><li>Site admin: <a href="http://pukiwiki.example.com/">anonymous</a></li>    <li>convert time: 0.017 sec</li>
     <li>Powered by PukiWiki</li>
     <li><a href="http://www.luntf.com/">Monobook for PukiWiki</a></li>
    </ul>

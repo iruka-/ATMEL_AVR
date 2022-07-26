@@ -190,7 +190,7 @@
 <li>ですので、mips-gccで書くときは割り込み応答関数には __attribute__（(interrupt,nomips16)）だけを与えて、
 ROM上のどこにあっても良いようにしておきます。</li>
 <li>割り込みベクターから応答関数へのジャンプは、アセンブラで記述することにします。（現在はとりあえずcrt0.S内に書いています）</li></ul></li></ul>
-<ul class="list2 list-indent2"><li>参考ファイル:<a href="http:/ATMEL_AVR/upload.cgi/PIC/vgagfx.zip" rel="nofollow">vgagfx.zip</a> の中にある、crt0.S を参考にしてください。</li>
+<ul class="list2 list-indent2"><li>参考ファイル:<a href="http:/ATMEL_AVR/upload/PIC/vgagfx.zip" rel="nofollow">vgagfx.zip</a> の中にある、crt0.S を参考にしてください。</li>
 <li><del>BOOT-ROM領域からFLASH-ROM領域への(１命令) jmpは届きませんので、なんらかの工夫が必要です。</del></li>
 <li><del>($k0,$k1レジスタはコンパイラが使用しないことが一応保証されていますので、これを使用してセグメントを跨ぐ分岐を書きます。)</del></li></ul>
 <ul class="list1 list-indent1"><li>上記問題を回避するためは、
@@ -235,7 +235,7 @@ user.c    &lt;=== main32.c がmain()関数の直前にインクルードする�
    <a href="http://pukiwiki.sourceforge.jp/dev/"><img src="../image/b_pukiwiki.dev.png" alt="PukiWiki-dev" /></a>
   </div>
   <div id="f-list">
-   <ul><li id="lastmod">Last-modified: 2014-11-17 (月) 14:44:26<span class="page_passage" data-mtime="2014-11-17T14:44:26+09:00"></span></li><li>Site admin: <a href="http://pukiwiki.example.com/">anonymous</a></li>    <li>convert time: 0.006 sec</li>
+   <ul><li id="lastmod">Last-modified: 2014-11-17 (月) 14:44:26<span class="page_passage" data-mtime="2014-11-17T14:44:26+09:00"></span></li><li>Site admin: <a href="http://pukiwiki.example.com/">anonymous</a></li>    <li>convert time: 0.008 sec</li>
     <li>Powered by PukiWiki</li>
     <li><a href="http://www.luntf.com/">Monobook for PukiWiki</a></li>
    </ul>
