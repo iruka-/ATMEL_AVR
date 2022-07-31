@@ -1,0 +1,114 @@
+<html>
+<HEAD>
+
+  <TITLE>キーボードまにあ</TITLE>
+
+</HEAD>
+
+
+
+<body bgcolor=#104040 text=#ffffef link=#50ffef alink=#ccccef vlink=#00ffef>
+<hr>
+<font size=+2>
+
+<center>Ａｐｐｌｅキーボードを互換機に繋ごう
+
+</center>
+
+<p>
+Ａｐｐｌｅ（Ｍａｃｉｎｔｏｓｈ用）キーボードを互換機のＰＳ／２ポートに接続するための
+アダプターを制作してみました。<br>
+<p>
+制作動機：<br>
+・キーボードがそこにあったから。<br>
+・本物メカニカル・キーボードだった。手触りも良く、最も肝心なのは、英語(101)配列だったことと、
+もうひとつはコンパクトスタイルだったのだ。<br>
+<p>
+<pre>
+使用部品は、
+
+・PIC 16F84             × 1
+・プルアップ抵抗 10 kΩ × 1
+・プルアップ抵抗 3.3kΩ × 3
+・コンデンサー   33pF   × 2
+・水晶    10.000 MHz    × 1
+と、とても少ないです。
+
+
+</pre>
+
+<hr>
+
+今回の生け贄となったかわいそうなキーボード
+<center>
+
+	<img src="kbsmall.jpg">
+
+</center>
+
+
+
+<hr>
+
+変換アダプターの実体配線図：<br>
+
+
+
+<img src="adbadptr.jpg">
+
+<hr>
+
+配線方法：<br>
+<pre>
+                          PIC 16F84
+                        +----  ----+
+                       [ 1   ∪  18 ]
+                       [ 2       17 ] RA0 ------ Apple kbDATA           10MHz Xtal
+           R1          [ 3       16 ] OSC1 ------------------------T-----□
+   +5V----*10k*-- MCLR [ 4       15 ] OSC2 ---------------T--------------□
+   GND----------- Vss  [ 5       14 ] Vdd ------ +5V      |        |
+   PS2 kbDATA --- RB0  [ 6       13 ]                     | 33pF x2|
+   PS2 kbCLK ---- RB1  [ 7       12 ]                C1  ===  C2  ===
+                       [ 8       11 ]                     |        |
+                       [ 9       10 ]                    GND      GND
+                        ------------
+
+   註：回路図には書いていませんが、RB0 RB1 RA0 はいずれも3.3kΩで+5Vプルアップします。
+       ＰＩＣの空きピン(1-3,8-13,18)はN.C.です。
+
+
+</pre>
+<hr>
+ＰＩＣのプログラム：<br>
+・<a href="adbadptr.zip">ソースコード、HEXファイル 一式(adbadptr.zip)</a><br>
+・<a href="key.asm">ソースコードをそのまま閲覧する</a><br>
+<br>
+無保証です。改造は自由に行なってください。<br>
+<p>
+現在かかえている問題点は、<br>
+・ＣＡＰＳキーの反応が互換機に合わない（ＡＤＢ仕様との差異による）<br>
+　が、それを解決できていない。(CAPSは)２回押せば互換機は反応する。<br>
+・ＬＥＤの制御が出来ない（仕様不明の為）<br>
+・キーリピート速度の制御を行なっていない。（単なる手抜き）<br>
+　現在、割りと速めのリピート設定になっている。ソースの定数を変更すれば変えられる<br>
+
+<hr>
+参考資料：<br>
+・<a href="http://developer.apple.com/techpubs/mac/Devices/Devices-205.html">ＡＤＢ関係の資料</a><br>
+・<a href="http://developer.apple.com/techpubs/hardware/Developer_Notes/Macintosh_CPUs-G3/PowerMacintosh_G3/PowerMacG3.2b.html">ＡＤＢコネクタピン配置資料</a><br>
+<hr>
+<table border=1><tr><td>
+	<img src="../cgi-bin/Count.cgi?dd=B|df=adb">
+</td></tr>
+</table>
+<a href="http://plaza4.mbn.or.jp/~iruka/">戻る</a>
+
+
+
+</center>
+
+</font>
+
+</body>
+</html>
+

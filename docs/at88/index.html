@@ -1,0 +1,114 @@
+<html>
+<HEAD>
+  <TITLE>じゃんくキーボード補完計画</TITLE>
+</HEAD>
+
+<!---body bgcolor=#101600 text=#ffffef link=#ffffef alink=#ffffef---->
+<body bgcolor=#cccccc text=#000000>
+<font size=+1>
+<center>ＰＣ８８０１のキーボードを互換機に繋ごう
+</center>
+<hr>
+<center>
+	<img src="k1.jpg">
+</center>
+・上の写真のようなものは、実はスキャナーの上にキーボードを載せて
+撮り込んだ画像です。（しかも、モノクロで取って適当に味付けしてます）<br>
+<p>
+・テンキーの配置が変ですが、気にしないでください。<br>
+（気に入らない場合は好きなようにカスタマイズできます）<br>
+<p>
+
+<hr>
+<pre>
+用意するもの：
+（１）ＰＩＣライター（<a href="http://www1.tomakomai.or.jp/akizuki/">秋月</a>の<a href="http://www1.tomakomai.or.jp/akizuki/picdev1.htm">キット（５７００円のやつ）</a>が良い）<a href="http://www.geocities.co.jp/SiliconValley/3011/circuit.htm">自作</a>も可能<font size=-9>(ちょっとやばいかな？)</font>
+（２）ＰＩＣ １６Ｆ８４ ・・・・・・１個（５００～６００円くらい）
+（３）ＴＴＬ ７４ＬＳ１５８ ・・・・１個
+（４）抵抗 2.2kΩ×4個,10kΩ×2個、2SCタイプの小型Tr２個.
+（５）ＤＩＮ５ピンオスコネクタ（サイズは互換機に合わせる）
+（６）最後に忘れてはならないのが、ジャンクのＰＣ８８０１キーボード.
+</pre>
+<p>
+<hr>
+実体配線図：<br>
+
+<img src="k2.jpg">
+<p>
+・ＰＣ８８０１のキーボードケーブルから、７４１５９Ｎに接続されているセレクト信号線（４本）
+は途中でパターンカットされています。（ケーブルをそのまま再利用して互換機に繋いでいる為）<br>
+・真ん中に張り付けになっているＴＴＬが７４ＬＳ１５８です。<br>
+あまり参考にならないかもしれません。<br>
+<hr>
+<img src="k5.jpg">
+<p>
+#ＭＯＤ　ＣＨＩＰの貼紙は、御愛嬌ということで・・・<br>
+・実はこの「写真のようなもの」も、スキャナーの上にブツを置いて取り込んだ画像です。<br>
+#デジカメがなくても、結構代用がきくものである（笑）<br>
+<hr>
+<p>
+<hr>
+おもいっきりくだけた回路図：<br>
+<p>
+<img src="k3.jpg">
+<p>
+#とりあえずソースのコメントを読んで作ってください(笑)<br>
+<p>
+<hr>
+アセンブル方法：<br>
+Ｃ：＞ mpasmwin  key.asm /P16F84<br>
+<p>
+mpasmwin.exeは、MPLAB.に含まれています。<br>
+microchipのサイトか、秋月のライターを買うと付属しているＣＤＲＯＭから入手出来ます。<br>
+<p>
+<hr>
+現在分かっている問題点：<br>
+・発振周波数がええかげんなので、時定数が適当である。<br>
+・漢字変換ＯＮ時にウィンドウを切り替えると、化け字が出る。<br>
+生ＤＯＳや変換ＯＦＦ時は問題ない。<br>
+・[CAPS]と[カナ]はロックがあると不便な状態になっている・・・（すまん）<br>
+・受信時のパリティとストップビットをチェックしていない（まだ仮）<br>
+<p>
+<hr>
+ダウンロード<br>
+<a href="source.zip">ＰＩＣ １６Ｆ８４のソースとＨＥＸファイル</a><br><br>
+<a href="key.asm">ＰＩＣ １６Ｆ８４のソース（そのまま閲覧可）</a><br><br>
+<a href="key.hex">ＰＩＣ １６Ｆ８４のＨＥＸファイル</a><br><br>
+<p>
+<a href="keyscan.zip">互換機でキーボードから送られてくるコードをダンプするツール</a><br>
+keyscan.zipの注意:<br>
+・Turbo-Cでコンパイルします。( _AXとか__int__(0x10)とかをふんだんに使っているため・・・ )<br>
+・ダンプツールは生ＤＯＳで起動してください。<br>
+・ダンプツール終了後は互換機をリセットしてください。<br>
+
+<br>
+<hr>
+その他互換機のキーボードにまつわる参考資料：<br>
+<p>
+・<a href="http://www.cqpub.co.jp/toragi/TR_index.htm">トランジスタ技術９９年８月号</a><br>
+ＰＣ９８０１のキーボードを互換機に接続するアダプタの制作記事と、ＰＩＣソースがあります。<br>
+<p>
+・<a href="http://www.arne.si/~mauricio/PIC.HTM">PIC Page , PC KeyBoard FAQ</a><br>
+<p>
+
+おまけリンク：<br>
+・<a href="http://www.hitex.com/chipdir/giicm/">Chip Directory（TTL ICのピン配列を忘れてしまったときはここへどうぞ：って、ふつーの人間は74LS***のピン廃なんて覚えてないはずだが・・・）</a><br>
+<p>
+・<a href="http://www.bekkoame.or.jp/~gokan/picframe.html">電子工作室（ＰＩＣ ＰＡＧＥ）</a><br>
+<p>
+・<a href="http://u2.alan.co.jp/ml/pic/">ＰＩＣ  ＭＬ</a><br>
+<p>
+・<a href="http://www.tsp.ne.jp/~sawada/mago/index.html">まごの手本舗（ＰＣ９８＜－＞互換機のキーボードアダプタ等の制作）</a><br>
+<p>
+<hr>
+<table border=1><tr><td>
+	<img src="../cgi-bin/Count.cgi?dd=B|df=at88">
+</td></tr>
+</table>
+
+<a href="http://plaza4.mbn.or.jp/~iruka/">戻る</a>
+
+</center>
+</font>
+</body>
+</html>
