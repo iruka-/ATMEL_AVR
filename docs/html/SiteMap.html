@@ -4,7 +4,7 @@
 
 <head>
  <meta http-equiv="content-type" content="application/xhtml+xml; charset=UTF-8" />
- <title>KeyBoardマニア - PukiWiki</title>
+ <title>SiteMap - PukiWiki</title>
 
 <!---
  <link rel="stylesheet" media="screen and (max-width:768px)" href="../skin/180wiki-sp.css" />
@@ -38,7 +38,7 @@
 <li><a href="Arduino2313.html" class="link_page_passage" data-mtime="2014-11-17T14:44:26+09:00">Arduino2313</a></li>
 <li><a href="E3-83-87-E3-82-B8-E3-82-BF-E3-83-AB-E3-83-86-E3-82-B9-E3-82-BF-E3-83-BC-.html" class="link_page_passage" data-mtime="2014-11-17T14:44:27+09:00">デジタルテスター</a></li>
 <li><a href="ATmega88E7-94-9F-E6-B4-BB-.html" class="link_page_passage" data-mtime="2014-11-17T14:44:26+09:00">ATmega88生活</a></li>
-<li><a href="" class="link_page_passage" data-mtime="2014-11-17T14:44:26+09:00">KeyBoardマニア</a></li>
+<li><a href="KeyBoardE3-83-9E-E3-83-8B-E3-82-A2-.html" class="link_page_passage" data-mtime="2014-11-17T14:44:26+09:00">KeyBoardマニア</a></li>
 <li><a href="KeyBoardE3-83-9E-E3-83-8B-E3-82-A2-II.html" class="link_page_passage" data-mtime="2014-11-17T14:44:26+09:00">KeyBoardマニアII</a></li>
 <li><a href="Arduino400.html" class="link_page_passage" data-mtime="2014-11-17T14:44:26+09:00">Arduino400</a></li>
 <li><a href="PICspx.html" title="PICspx" class="link_page_passage" data-mtime="2014-11-17T14:44:27+09:00">PICライター</a></li>
@@ -122,7 +122,7 @@
 <h5>最新の20件</h5>
 <div><strong>2022-07-30</strong>
 <ul class="recent_list">
- <li><a href="SiteMap.html" class="link_page_passage" data-mtime="2022-07-30T10:15:03+09:00">SiteMap</a></li>
+ <li>SiteMap</li>
 </ul>
 <strong>2022-07-25</strong>
 <ul class="recent_list">
@@ -165,37 +165,12 @@
 </div>
  <div id="mainColumnWrapper">
   <div id="main-column">
-   <div id="navigator"><ul><li id="wn_main" class="selected"><a href="" title="KeyBoardマニア" class="link_page_passage" data-mtime="2014-11-17T14:44:26+09:00">本文</a></li><li id="wn_note"><span class="noexists"><a href="./?cmd=edit&amp;page=note%2FKeyBoard%E3%83%9E%E3%83%8B%E3%82%A2">ノート</a></span></li><li><a href="./?cmd=edit&amp;page=KeyBoard%E3%83%9E%E3%83%8B%E3%82%A2">編集</a></li><li><a href="./?cmd=diff&amp;page=KeyBoard%E3%83%9E%E3%83%8B%E3%82%A2">差分</a></li></ul></div>
+   <div id="navigator"><ul><li id="wn_main" class="selected"><a href="" title="SiteMap" class="link_page_passage" data-mtime="2022-07-30T10:15:03+09:00">本文</a></li><li id="wn_note"><span class="noexists"><a href="./?cmd=edit&amp;page=note%2FSiteMap">ノート</a></span></li><li><a href="./?cmd=edit&amp;page=SiteMap">編集</a></li><li><a href="./?cmd=diff&amp;page=SiteMap">差分</a></li></ul></div>
    <div id="content">
-    <h1 class="firstHeading">KeyBoardマニア</h1><div id="contentSub"></div>
-    <h3 id="content_1_0">キーボードまにあ!!!(スリー) for Atmel AVRマイコン<a class="anchor_super" id="s9b8292b" href="#s9b8292b" title="s9b8292b" style="user-select:none;">&dagger;</a></h3>
-<p>いきなりダウンロード：</p>
-<ul class="list1 list-indent1"><li><a href="http:/ATMEL_AVR/upload/keybrd-mania-1211.zip" rel="nofollow">アーカイブ：keybrd-mania-1211.zip</a></li>
-<li>オープンソース、HEXファイル込みです。</li></ul>
-<p>説明：</p>
-<ul class="list1 list-indent1"><li>ATmega88あるいはATtiny2313に<strong>PS/2タイプのキーボード</strong>を繋いで、<strong>押されたキーに反応するプログラム</strong>を作ることが出来ます。</li></ul>
-<p>同梱サンプルプログラム：</p>
-<ul class="list1 list-indent1"><li>ATmega88あるいはATtiny2313にPS/2タイプのキーボードを繋いで、<strong>電子楽器風のおもちゃ</strong>を作っています。
-<ul class="list2 list-indent1"><li>PS/2キーボード側の仕様制限にもよりますが、一応和音が鳴らせます。</li></ul></li>
-<li>ATmega88のほうでは、<strong>モールス信号発生器風のおもちゃ</strong>にもなります。
-<ul class="list2 list-indent1"><li>ファンクションキーを押すことで、電子楽器とモールス発生器が切り替わります。</li></ul></li></ul>
-<p>割り込みリソース：</p>
-<ul class="list1 list-indent1"><li>ATmega88では、PCINT8かTIMER1のどちらかを選択できます。</li>
-<li>ATtiny2313では、TIMER1割り込みでPS/2キーボードからのCLOCKをサンプリングしています。</li></ul>
-<p>用意するもの：</p>
-<ul class="list1 list-indent1"><li>ATmega88/168あるいはATtiny2313を実装した簡単な実験基板（何かを流用しても可。たとえばArduino基板とか）CPUは5V動作に限る。</li>
-<li>AVR書き込み器(<a href="EF-BC-A8-EF-BC-A9-EF-BC-A4-EF-BD-81-EF-BD-93-EF-BD-90-EF-BD-98-.html" class="link_page_passage" data-mtime="2014-11-17T14:44:27+09:00">ＨＩＤａｓｐｘ</a>を推奨。でも何でも良い)</li>
-<li>PS/2タイプのキーボード(USBは不可。USB/PS2両用はたぶん可）とそれをAVRに繋ぐためのメスコネクタのようなもの・・・。<a id="notetext_1" href="#notefoot_1" class="note_super" title="PS/2タイプのMini-DINコネクタはたぶん入手性悪いと思います。PS/2延長ケーブルを買ってきてぶったぎるか、USB/PS2両用キーボードを探してきて、USBコネクタで受けてみるとか・・・。キー...">*1</a></li>
-<li>スピーカーかライン出力のオーディオ。</li></ul>
-<hr class="full_hr" />
-
-<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h3 id="content_1_1">積み残し問題<a class="anchor_super" id="s7072f43" href="#s7072f43" title="s7072f43" style="user-select:none;">&dagger;</a></h3>
-<ul class="list1 list-indent1"><li>音質にやや不満点があります。（今後の課題）</li>
-<li>キーボードからのDATA受信のエラー処理(stop,parity等)を実装していません。</li>
-<li>キーボードへのデータ送信(LED点灯やモード、リピート等設定)を実装していません。</li>
-<li>ATtiny2313では、クロックが低いため音程が低いです。（20MHzにすればATmega88と同等になるはずです）</li></ul>
-<hr class="note_hr" /><a id="notefoot_1" href="#notetext_1" class="note_super">*1</a>
-<span class="small">PS/2タイプのMini-DINコネクタはたぶん入手性悪いと思います。PS/2延長ケーブルを買ってきてぶったぎるか、USB/PS2両用キーボードを探してきて、USBコネクタで受けてみるとか・・・。キーボードはキータッチにこだわらないと演奏の面白さ半滅です</span><br />   </div>
+    <h1 class="firstHeading">SiteMap</h1><div id="contentSub"></div>
+    
+<p>'SiteMap/' には、下位層のページがありません。</p>
+   </div>
   </div>
  </div>
  <div style="clear:both;height:1em;"></div>
@@ -209,7 +184,7 @@
    <a href="http://pukiwiki.sourceforge.jp/dev/"><img src="../image/b_pukiwiki.dev.png" alt="PukiWiki-dev" /></a>
   </div>
   <div id="f-list">
-   <ul><li id="lastmod">Last-modified: 2014-11-17 (月) 14:44:26<span class="page_passage" data-mtime="2014-11-17T14:44:26+09:00"></span></li><li>Site admin: <a href="http://pukiwiki.example.com/">anonymous</a></li>    <li>convert time: 0.012 sec</li>
+   <ul><li id="lastmod">Last-modified: 2022-07-30 (土) 10:15:03<span class="page_passage" data-mtime="2022-07-30T10:15:03+09:00"></span></li><li>Site admin: <a href="http://pukiwiki.example.com/">anonymous</a></li>    <li>convert time: 0.005 sec</li>
     <li>Powered by PukiWiki</li>
     <li><a href="http://www.luntf.com/">Monobook for PukiWiki</a></li>
    </ul>
