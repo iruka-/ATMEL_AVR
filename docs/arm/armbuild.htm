@@ -1,0 +1,191 @@
+<pre>
+Mingw32 による、armクロスコンパイラのインストールメモ.
+
+
+・用意するもの
+
+Ｗｉｎ９５マシン：
+  Ｗｉｎ９８でも可
+
+Ｃコンパイラ：
+  i386用 mingwコンパイラ・バイナリー
+ツール：
+  cygwin1.1 (主にツール類、コンパイラは不要です)
+ＧＣＣのソース：
+  gcc-2.95.2-1-src.tar.gz 
+binutilsのソース：
+  binutils-19990818-src.tar.gz
+
+cygwinは、 http://sourceware.cygnus.com/cygwin/ から辿ります.
+そのほかは、http://www.mingw.org/ などから辿ります.
+
+
+
+★環境を整える＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+
+（１）まず、mingwをインストールします.
+  例えば c:/mingw/ にmingw32を展開します.
+
+（２）cygwin1.1をインストールします.
+  cygwin1.1がミラーされているサイトから latest/ 以下を取ってきて、
+  setup と行きたいところですが、うまく行かない場合は後述します.
+  インストール先（ルートとも言う）は、例えば c:/cygnus/ にしておきます。
+  c:/としたほうが簡単ですが、c:/bin がすでにあってdosのバイナリー
+  と衝突すると気まずいこともあります.
+
+（３）mingwコンパイラが優先起動するようにDOSのCOMMAND.COM上でパスを切ります.
+  例えば、
+  C:＞  path c:\mingw\bin;c:\cygnus\bin;c:\cygnus\usr\bin;
+
+（４）mingwコマンドとcygwinコマンドの間で、ファイルパスの行き違いが無い
+  ようにmountを工夫します.例えば、
+  device       mount-point
+  c:/cygnus    /
+  c:/mingw     /mingw
+
+  マウントモードはbinaryでないと駄目です。例えば、
+  mount -f -b c:/mingw /mingw 
+  というふうにマウントを掛けます。マウントテーブルが腐ったら、regeditを
+  起動して、cygnusで検索し、mount_v2のキーを編集するか消してmountし直します。
+
+
+★クロスbinutilsをビルドする＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+
+（１）bashを起動します。
+
+（２）binutils-19990818-src.tar.gz を適当な場所に展開します。
+      例）
+      mkdir /mingw/src
+      cd    /mingw/src
+      tar xvfz ../binutils-19990818-src.tar.gz
+
+（３）ビルド用のワークディレクトリを掘って、configure & make します.
+      例）
+      mkdir /mingw/src/armbin
+      cd    /mingw/src/armbin
+      ../binutils-19990818/configure --target=arm-coff --prefix=/usr/local/arm
+      make
+
+小Q&A : なぜ binutils ディレクトリでconfigureしないで、ワークを掘ってやるの？
+    A : 元ソースと作業ファイル（コンパイラが吐いたものとか）を分離出来るからです。
+        失敗したらarmbin/ ディレクトリを消せば作業ファイルは奇麗さっぱり消えます。
+        configureによって、元ソースのディレクトリ内容を傷つけることがありません。
+        別のＣＰＵのconfigure&makeをやりたいときにも別名のワークを掘るだけなので
+        おおもとのソースは共通で使えます。なんだったら同時にmakeを掛けてもokです。
+
+
+うまく行かない場合の対処例）
+Ｑ：opcodes/ の configure時に no acceptable ld found in $PATH と言われて停止する
+    んですけど。
+Ｑ：同じく、opcodes/libtoolの実行中に何故かlibという名前のコマンドが起動されちゃ
+　　って困ってるんですけど。
+
+Ａ：うーん何故ld を見つけられないんでしょうねぇ。私にも良く分かりませんが、
+    とりあえずbash上から環境変数LDを、
+    export LD=ld
+    としておけば、configureは通るみたいです。
+
+Ｑ：make中にエラーで止まります。何やらintl/libintl.h の内容が１行ファイルに
+    なっていてＣのヘッダーじゃないみたいです。
+Ａ：それは、シンボリックリンクされたファイルです。
+    ls -l すると、リンク先のファイルが何であるか分かりますので、
+    rm libintl.h
+    して、
+    cp  ＜リンク先の実体ファイル名＞  libintl.h
+    でコピーを置きます。
+
+★クロスgccをビルドする＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+
+（１）gcc-2.95.2-1-src.tar.gz を適当な場所に展開します。
+      例）
+      cd    /mingw/src
+      tar xvfz ../gcc-2.95.2-1-src.tar.gz
+
+（２）ビルド用のワークディレクトリを掘って、configure & make します.
+      例）
+      mkdir /mingw/src/armgcc
+      cd    /mingw/src/armgcc
+      ../gcc-2.95.2/configure --target=arm-coff --prefix=/usr/local/arm
+      make
+
+うまく行かない場合の対処例）
+
+Ｑ： gcc/prefix.c の、windows.hをインクルードする行で、何やら'type name'
+     がどうのこうのと言ってるみたいです。
+     エラー箇所はmingwのincludeにある、winnt.h 1464行あたり。
+typedef struct _IMAGE_IMPORT_BY_NAME {
+	WORD Hint; 　　　　　　＜−−−このへん。
+	BYTE Name[1];
+} IMAGE_IMPORT_BY_NAME,*PIMAGE_IMPORT_BY_NAME;
+
+Ａ： な、な何なんでしょうねこれは、windows.hをインクルードする前にインクルード
+　　 されている、#include "i386/xm-i386.h" の内容が悪さしているみたいなんです
+　　 けど、深く考えずに適当に置換しちゃいましょう。
+	short Hint;
+	char Name[1];
+     あまりに長い WinNT.h なんて、ほとんどの部分は参照されてないですから。
+
+Ｑ： また、シンボリックリンクファイルが邪魔してmakeが通りません。
+　　 手動でシンボリックリンクファイルを消して実体をコピーしても、makeが勝手に
+     リンクを張り直しちゃうんですぅ。
+
+Ａ： そこの Makefile 中にある
+     LN=ln
+     とか
+     LN_S=ln -s
+     を
+     LN_S=cp
+     のように書き換えてしまえばうまくだませます。
+
+　　 ディレクトリに対するlinkが張られた場合は、cp -a でまるごとコピーしてくる必要が
+　　 あるんですが、今回のビルドでは、そこまでしなくてもokでした。
+
+Ｑ： GET_ENV_PATH_LIST というマクロを使ったソースで
+     cygwin_win32_to_posix_path_list_buf_size()とかが無いと言って怒られます。
+
+Ａ： それは gcc/config/i386/xm-cygwin.h で定義されているマクロ中の関数です。
+     うざったいので、そのマクロのif 以下 '}' までを削ってしまいましょう。（ぃぃのか？）
+
+
+Ｑ： collect2.c でmakeが通りません。
+
+Ａ： すみません、これまだ原因追求してないんです。Ｃ＋＋使わないなら無視していいです。
+
+Ｑ： 上記の変更だけでarmgccが出来上がるんですか？
+
+Ａ： 実は他にも姑息なことをやってます。 ありきたりのcc1という名前をcc1armに書き換えたり
+　   とか・・・。その点を気にしないならば、gcc/に出来ている、xgcc.exe , cc1.exe , cpp.exe
+     と as-new.exe ld-new.exe を as.exe ld.exeに名称変更したものとを、一ヶ所のディレクトリ
+     に集めればとりあえず使えることは使えます。
+　　 他には、libgcc.aとlibc.aを作らないといけないんですが、今回は、旧バージョンのものを
+     そのまま使ってます。newlibを最後までコンパイル通すのは結構難儀するので、libの作成
+     はＬｉｎｕｘＢＯＸでやるというのも手のような気がします。
+
+★環境を整えるのがうまくいかない対処＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+Ｑ： cygwin11のsetupがうまくいきません。
+
+Ａ： cygnusのサイトにある、cygwin mailing listのバックログを全部読みましょう。
+
+　　 というのは冗談ですが、とりあえず私は setup.exe に頼らずにインストールして
+　　 みました。
+
+     latest/ 以下の各パッケージ.tar.gz を C:/cygnus/ をルートにしてtar で開きます。
+     setup.exe が実行されているならば、tar.exe と gzip.exe と cygwin1.dll が
+     そこにあるはずなので、適当なバッチを書いて、tar xvfz 各パッケージ.tar.gz
+     をすべて実行させます。
+     tar.exe が文句をいう(gzipが起動できないとか)場合は、c:/cygnus/ だけにPATHが
+     通るようにしてみてください。それでもだめなら、c:/windows/ や c:/windows/system/
+     に残っている、古いバージョン(β20.1)のcygwin1.dllを消してからやります。
+     mountが腐ってだめになる場合は、
+     mount -f -b c:/ /
+     とやるか、Windowsのregeditを起動して、"cygnus"で検索し、"mount_v2"のメンバーキー
+     をかたっぱしから消して（regeditで直すという手もあり）、mountしなおします。
+     新しいsetup.exe なら、ここまでしなくてもsetup出来るかもしれません。
+     
+     終わったら、mountし直します。（面倒ですね）
+     mount -f -b c:/cygnus /   （c:/cygnus をルートにします）
+     そして、setupで生成されている仮のcygwin1.dllはやや古くて悪さするので消しておきます。
+     （もっと厳格には c:/cygnus/usr/bin/cygwin1.dll 以外の場所にあるcygwin1.dllがもし
+     　残っていたら消したほうがよいみたいです。pathが切られてなくてもc:/windows/あたり
+     　のdllは優先されることがあります。）
+</pre>
