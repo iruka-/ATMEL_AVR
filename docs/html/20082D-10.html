@@ -225,7 +225,7 @@
 <li>残りの要素はprivateということらしい。</li>
 <li>やっぱりそういうことだったんだよなぁ・・・。</li></ul>
 <p>どう考えても *dataとlenだけでは管理しきれない。</p>
-<ul class="list1 list-indent1"><li>注意しないといけないことは、自分の構造体の中にGArrayやG<span class="noexists"><a href="./?cmd=edit&amp;page=ByteArray&amp;refer=2008-10">ByteArray</a></span>
+<ul class="list1 list-indent1"><li>注意しないといけないことは、自分の構造体の中にGArrayやGByteArray
 の実体を含めるような書き方をしてはいけない、ということだ。</li>
 <li>実体はGRealArrayなので、サイズが異なり、メモリー破壊を起こす。</li>
 <li>というかＣ＋＋のｎｅｗのように、GArrayのインスタンスを受け取るように
@@ -498,7 +498,7 @@ avr-size main.elf
 <li>ますますＵＨＣＩだめ。どうしてくれよう。</li></ul>
 <ul class="list1 list-indent1"><li>AVR-CDC.2008.08.25/のCDC-mega.pdfを読む限りでは、ＵＨＣＩで５７６００キープ、ＮＥＣのチップだと１１５２００がＯＫの場合もあるようだ。</li></ul>
 <p>抜粋</p>
-<div class="ie5"><table class="style_table" cellspacing="1" border="0"><tbody><tr><td class="style_td">b.p.s</td><td class="style_td"><span class="noexists"><a href="./?cmd=edit&amp;page=HalfDuplex&amp;refer=2008-10">HalfDuplex</a></span>(interrupt)</td><td class="style_td"><span class="noexists"><a href="./?cmd=edit&amp;page=FullDuplex&amp;refer=2008-10">FullDuplex</a></span>(interrupt)</td><td class="style_td"><span class="noexists"><a href="./?cmd=edit&amp;page=HalfDuplex&amp;refer=2008-10">HalfDuplex</a></span>(polling)</td><td class="style_td"><span class="noexists"><a href="./?cmd=edit&amp;page=FullDuplex&amp;refer=2008-10">FullDuplex</a></span>(polling)</td></tr>
+<div class="ie5"><table class="style_table" cellspacing="1" border="0"><tbody><tr><td class="style_td">b.p.s</td><td class="style_td">HalfDuplex(interrupt)</td><td class="style_td">FullDuplex(interrupt)</td><td class="style_td">HalfDuplex(polling)</td><td class="style_td">FullDuplex(polling)</td></tr>
 <tr><td class="style_td">115200</td><td class="style_td">○</td><td class="style_td">×</td><td class="style_td">×</td><td class="style_td">×</td></tr>
 <tr><td class="style_td">57600</td><td class="style_td">○</td><td class="style_td">○</td><td class="style_td">×</td><td class="style_td">×</td></tr>
 <tr><td class="style_td">38400</td><td class="style_td">○</td><td class="style_td">○</td><td class="style_td">○</td><td class="style_td">×</td></tr>
@@ -525,7 +525,7 @@ Macでも何やら怒られてますが，libusbからは見えるようです�
 <div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h2 id="content_1_21">ＨＩＤｓｐｘ-ｏｓｘ．ｔａｒ.ｇｚについて<a class="anchor_super" id="x280f326" href="#x280f326" title="x280f326" style="user-select:none;">&dagger;</a></h2>
 <ul class="list1 list-indent1"><li>瓶詰堂さんは偉大です。</li>
 <li>osx版と言いながら、普通にＬｉｎｕｘでそのままコンパイル出来ます
-<ul class="list2 list-indent1"><li>（要：libusb-devel）<span class="noexists"><a href="./?cmd=edit&amp;page=VineLinux&amp;refer=2008-10">VineLinux</a></span> 4.2では以下のようにしてライブラリを取得
+<ul class="list2 list-indent1"><li>（要：libusb-devel）VineLinux 4.2では以下のようにしてライブラリを取得
 <pre># apt-get install libusb-devel</pre></li></ul></li>
 <li>hidasp.cのソースはHIDaspx版でした。</li>
 <li>これを試すためにわざわざＬｉｎｕｘを別マシンにセットアップして、ビルドまで来たところです。

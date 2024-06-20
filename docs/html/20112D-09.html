@@ -202,7 +202,7 @@
 <p>現状の問題認識</p>
 <ul class="list1 list-indent1"><li>libmapleでも仮想COMの実装は手抜きになっている（というかバグがあるくさい）</li></ul>
 <ul class="list1 list-indent1"><li>具体的には、以下のusb関数に、受信データから(len)バイト分の要求を行った場合、</li>
-<li>必ず、vcom<span class="noexists"><a href="./?cmd=edit&amp;page=BufferRx&amp;refer=2011-09">BufferRx</a></span>[]の先頭から(len)バイトをコピーして寄越すので、</li>
+<li>必ず、vcomBufferRx[]の先頭から(len)バイトをコピーして寄越すので、</li>
 <li>ぜんぜんFIFOっぽくないというかバグじゃねえか？という件である。</li></ul>
 <p><br /></p>
 <pre>/* copies len bytes from the local recieve FIFO (not
@@ -430,7 +430,7 @@ $ git clone git://github.com/leaflabs/maple-bootloader.git</pre>
 <li>都市圏だったら、地下鉄やビルの谷間でも聞けるというメリットがあるかもしれない。（ただしパケ死とかするかも）</li></ul>
 <p>弱点？</p>
 <ul class="list1 list-indent1"><li>弱点ではないけれど・・・やっぱり作業の邪魔になる。（話番組が多いので）</li>
-<li><span class="noexists"><a href="./?cmd=edit&amp;page=HappyDay&amp;refer=2011-09">HappyDay</a></span>(インターネットラジオ)を聞きながら、のほうが効率が良いので。</li></ul>
+<li>HappyDay(インターネットラジオ)を聞きながら、のほうが効率が良いので。</li></ul>
 <ul class="list1 list-indent1"><li>mp3で録音とかしないで、流し聞きするだけだったら、わざわざパソコンつけるのが面倒くさい。</li></ul>
 <p><br />
 <br />
@@ -452,7 +452,7 @@ $ git clone git://github.com/leaflabs/maple-bootloader.git</pre>
 <ul class="list1 list-indent1"><li><a href="http://akizukidenshi.com/catalog/g/gM-05113/" rel="nofollow">ＸＩＬＩＮＸ　ＦＰＧＡ評価ボードＳｐａｒｔａｎ−６　ＬＸ９</a></li>
 <li>ナナキュッパ。</li>
 <li>すこし惹かれた。</li>
-<li>DRAMが64MB乗っているので、Linuxっぽいものがぎりぎり走るかも。(<span class="noexists"><a href="./?cmd=edit&amp;page=MicroBlaze&amp;refer=2011-09">MicroBlaze</a></span>)</li>
+<li>DRAMが64MB乗っているので、Linuxっぽいものがぎりぎり走るかも。(MicroBlaze)</li>
 <li>基板形状と拡張コネクタが、ちょっとだめか。</li></ul>
 <p><br />
 <br />
@@ -481,14 +481,14 @@ $ git clone git://github.com/leaflabs/maple-bootloader.git</pre>
 <li>armbootに戻して調べるの面倒だな。そうだ１枚だけSTM8S-Discovery基板をarmboot専用にしておこう。</li></ul>
 <p>残念なお知らせ２。</p>
 <ul class="list1 list-indent1"><li>STBeeのファーム復旧のために、手持ちのLPC-Xpresso(1343)にvcomサンプルを焼いて使ってみたのだけれど、
-<span class="noexists"><a href="./?cmd=edit&amp;page=FlashLoader&amp;refer=2011-09">FlashLoader</a></span> Demonstratorで書き込み中、（４％くらいのところで）必ず失敗する。</li>
+FlashLoader Demonstratorで書き込み中、（４％くらいのところで）必ず失敗する。</li>
 <li>しかたがないので携快電話に付いてきたProlificのUSB-Serialポート（を改造して電子工作用にした）ドングル経由でファームを書き換えたら問題なくうまくいった。</li>
 <li>LPCのvcomサンプルはマジ馬具ッテイルのかな？</li></ul>
 <p>なんかここんところ仮想COMファームのバグに当たりっぱなしだぎゃー。</p>
 <p><br />
 今後の予定</p>
 <ul class="list1 list-indent1"><li><del>書き込みの高速化。</del> --- <strong>済み</strong>
-<ul class="list2 list-indent1"><li>maple-bootloaderのコードを見たら、flash<span class="noexists"><a href="./?cmd=edit&amp;page=ProgramWord&amp;refer=2011-09">ProgramWord</a></span>()で４バイト書くごとにベリファイしてエラーコードを返しているので、このエラーをカウントして、ノーエラーだったら基本、読み出しチェックいらないのでは。</li>
+<ul class="list2 list-indent1"><li>maple-bootloaderのコードを見たら、flashProgramWord()で４バイト書くごとにベリファイしてエラーコードを返しているので、このエラーをカウントして、ノーエラーだったら基本、読み出しチェックいらないのでは。</li>
 <li>エラーカウントが０じゃないときだけ、普通のベリファイを実行するようにすると速度<strong>２倍お得</strong>。</li></ul></li></ul>
 <ul class="list2 list-indent2"><li>ついでに、書き込みのブロックサイズを1024単位にしてみた。</li>
 <li>注意: 前のバージョンから自己書き換えでupdateする場合は、0x803000番地hexを書くときだけ、</li>
@@ -510,7 +510,7 @@ D:&gt; cdcboot.exe -B DISCOVERY-0000.hex
 <ul class="list1 list-indent1"><li>Flash書き込みを1024バイト単位に・・・ならない。
 <ul class="list2 list-indent1"><li>ファームの受け側のsize変数が何故かuchar。これpicのソースか。</li></ul></li>
 <li>Flashに書くと化けまくり
-<ul class="list2 list-indent1"><li>flash<span class="noexists"><a href="./?cmd=edit&amp;page=ProgramWord&amp;refer=2011-09">ProgramWord</a></span>()関数のsizeはword(4byte)単位なのに上位層のsizeは全部byte数に統一していた。</li>
+<ul class="list2 list-indent1"><li>flashProgramWord()関数のsizeはword(4byte)単位なのに上位層のsizeは全部byte数に統一していた。</li>
 <li>ある関数レベルからword単位に換算するのだけれど、その後の大小判定や分割処理をbyte数だと勘違いして実装。</li></ul></li></ul>
 <p><br />
 その他</p>
@@ -520,7 +520,7 @@ D:&gt; cdcboot.exe -B DISCOVERY-0000.hex
 <li>libmapleでは最大32byteまでしかホストに送らない（超えたら分割送信）</li></ul>
 <ul class="list1 list-indent1"><li>ホストＰＣから受信するときはこの制限は一応ない。</li>
 <li>実は内部で分割転送しているから。</li>
-<li>ただし、受信パケットの扱いは非効率。usb<span class="noexists"><a href="./?cmd=edit&amp;page=ReceiveBytes&amp;refer=2011-09">ReceiveBytes</a></span>()で64byteの受信バッファを全部引き取って空にするまでは、次のパケットの受信をイネーブルに出来ない。ホストＰＣからの送信はふんづまりになる。</li></ul>
+<li>ただし、受信パケットの扱いは非効率。usbReceiveBytes()で64byteの受信バッファを全部引き取って空にするまでは、次のパケットの受信をイネーブルに出来ない。ホストＰＣからの送信はふんづまりになる。</li></ul>
 <p><br />
 <br />
 <br /></p>

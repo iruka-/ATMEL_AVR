@@ -187,7 +187,7 @@
 <ul class="list1 list-indent1"><li>不完全ですが、PS/2 Keyboard to USB 変換アダプタとして一応機能するようになっています。</li></ul>
 <hr class="full_hr" />
 <p>元のサンプルにあった keyboard.c の動作内容は、以下のように、かなり投げ槍っぽいです。</p>
-<ul class="list1 list-indent1"><li>sw3 (<span class="noexists"><a href="./?cmd=edit&amp;page=HardwareProfile&amp;refer=pic18hidkey">HardwareProfile</a></span>.h 経由で各マイコンごとに定義されているポート) が押されたら、キー番号 key をホストＰＣに送信し、key を +1 する。</li>
+<ul class="list1 list-indent1"><li>sw3 (HardwareProfile.h 経由で各マイコンごとに定義されているポート) が押されたら、キー番号 key をホストＰＣに送信し、key を +1 する。</li>
 <li>変数 keyの初期値は4 で、40になったらまた4に戻す。</li></ul>
 <hr class="full_hr" />
 
@@ -222,7 +222,7 @@ HIDデバイスとしての動作はすると思いますがブートローダ�
 C:&gt; xcopy /s AMYDRIVE:\ApplicationLibraries\Microchip\USB     usb</pre>
 かなり不要なファイルもコピーされますので、あとで掃除します。</li></ul>
 <ul class="list2 list-indent2"><li>不足ファイルや更新ファイルがない場合はコピー作業は不要です。</li></ul>
-<ul class="list1 list-indent1"><li><span class="noexists"><a href="./?cmd=edit&amp;page=ApplicationLibraries&amp;refer=pic18hidkey">ApplicationLibraries</a></span>\USBDevice-HID-<span class="noexists"><a href="./?cmd=edit&amp;page=CustomDemos&amp;refer=pic18hidkey">CustomDemos</a></span>\ など、それぞれのファームソースがある場所から、 usb_config.h とか mouse.cのような元ソースを拾ってきます。</li>
+<ul class="list1 list-indent1"><li>ApplicationLibraries\USBDevice-HID-CustomDemos\ など、それぞれのファームソースがある場所から、 usb_config.h とか mouse.cのような元ソースを拾ってきます。</li>
 <li>main.cという名称だと、こちらのフレームワークのmain.cと被るので、適当にリネームします。</li>
 <li>Makefileを編集して、ターゲット名(hexファイルのファイル名)と、必要なソースファイルのリストを書き換えます。</li>
 <li>(例えば)mouse.c だったら、その中にある fuse設定をばっさりと削除します（ソースが見にくいので）</li>

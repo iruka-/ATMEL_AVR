@@ -203,7 +203,7 @@
 </tbody></table></div>
 <p>ブートモード</p>
 <div class="ie5"><table class="style_table" cellspacing="1" border="0"><tbody><tr><td class="style_td">BOOT1</td><td class="style_td">BOOT0</td><td class="style_td">ブートモード</td><td class="style_td">備考</td></tr>
-<tr><td class="style_td">−</td><td class="style_td">0</td><td class="style_td">ユーザーFlash</td><td class="style_td">0800_0000ユーザーFlashからのブート（この基板ではこのモードになっている(両方<span class="noexists"><a href="./?cmd=edit&amp;page=PullDown&amp;refer=ARMCortexM3">PullDown</a></span>)）</td></tr>
+<tr><td class="style_td">−</td><td class="style_td">0</td><td class="style_td">ユーザーFlash</td><td class="style_td">0800_0000ユーザーFlashからのブート（この基板ではこのモードになっている(両方PullDown)）</td></tr>
 <tr><td class="style_td">0</td><td class="style_td">1</td><td class="style_td">システムメモリー</td><td class="style_td">1fff_f000からのブート(シリアルブート?uart1から?)</td></tr>
 <tr><td class="style_td">1</td><td class="style_td">1</td><td class="style_td">内蔵SRAM</td><td class="style_td">内蔵SRAMからのブート(内蔵SRAM?誰が書き込むんだろう？JTAGかな)</td></tr>
 </tbody></table></div>
@@ -232,7 +232,7 @@
 <ul class="list1 list-indent1"><li>--&gt; 雑誌付属CDROMのsoft/ST/USB関連サンプル・マニュアル/STM32F10xUSBLib/USBLib/demos/Device_Firmware_Upgrade/project/ にあるらしい。</li></ul>
 <p>DFU馬鹿じゃね？</p>
 <ul class="list1 list-indent1"><li>HEXかmotorora-Sを *.dfuファイルに変換。</li>
-<li>D<span class="noexists"><a href="./?cmd=edit&amp;page=FuSe&amp;refer=ARMCortexM3">FuSe</a></span> ツールから *.dfuをデバイスに転送。</li>
+<li>DFuSe ツールから *.dfuをデバイスに転送。</li>
 <li>なんで普通にHEXを読まないのか意味不明。</li></ul>
 <p><br />
 <br />
@@ -315,7 +315,7 @@ D:&gt;dir main.*
 <ul class="list1 list-indent1"><li>hidとvcomはデバイス認識ＯＫになりました。</li>
 <li>ただし、STmicroサンプルのままなので、ファームの内容はかなりやる気のないものです。</li>
 <li>hid(Custom_HID)のPC側appletというかexeファイルかそのソースが見当たりません。配布元ファイルのum0424.zipの中を探したのですが・・・。</li></ul>
-<ul class="list1 list-indent1"><li>dfu.zipは、まだNVIC_<span class="noexists"><a href="./?cmd=edit&amp;page=SetVectorTable&amp;refer=ARMCortexM3">SetVectorTable</a></span>(NVIC_VectTab_FLASH, 0x3000);を入れていないので0x8003000番地では動きません。</li>
+<ul class="list1 list-indent1"><li>dfu.zipは、まだNVIC_SetVectorTable(NVIC_VectTab_FLASH, 0x3000);を入れていないので0x8003000番地では動きません。</li>
 <li>というよりはdfuなので、0x8000000に置かないとだめなような気がします。</li></ul>
 <ul class="list1 list-indent1"><li>各zipファイルに含まれるHW/ディレクトリの内容は同一のはずです。(自分のLinux上ではシンボリックリンクにより共通場所を指す様にしています)</li></ul>
 <p><br />
@@ -349,7 +349,7 @@ read more : <a href="armon.html" title="armon" class="link_page_passage">STM32�
 <hr class="full_hr" />
 
 <div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h2 id="content_1_9">リンク<a class="anchor_super" id="w063a9cb" href="#w063a9cb" title="w063a9cb" style="user-select:none;">&dagger;</a></h2>
-<p>ＣＱ出版<span class="noexists"><a href="./?cmd=edit&amp;page=DesignWave&amp;refer=ARMCortexM3">DesignWave</a></span> ５月号</p>
+<p>ＣＱ出版DesignWave ５月号</p>
 <ul class="list1 list-indent1"><li><a href="http://www.cqpub.co.jp/DWM/contents/dwm0126i.htm" rel="nofollow">http://www.cqpub.co.jp/DWM/contents/dwm0126i.htm</a></li></ul>
 <p>若松通商Design Wave Magazine 5月号</p>
 <ul class="list1 list-indent1"><li><a href="http://www.wakamatsu-net.com/cgibin/biz/pageshousai.cgi?code=63130001&amp;CATE=6313" rel="nofollow">http://www.wakamatsu-net.com/cgibin/biz/pageshousai.cgi?code=63130001&amp;CATE=6313</a></li></ul>

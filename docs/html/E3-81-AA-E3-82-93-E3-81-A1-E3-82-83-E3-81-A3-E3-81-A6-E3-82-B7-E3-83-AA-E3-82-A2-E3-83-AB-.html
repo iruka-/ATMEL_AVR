@@ -194,7 +194,7 @@
 | size |     受信データ（最大７バイト）                 |
 +------+------------------------------------------------+</pre>
 <ul class="list2 list-indent1"><li>sizeは０〜７</li>
-<li>sizeのＭＳＢが１になるときは送信が拒否された。(<span class="noexists"><a href="./?cmd=edit&amp;page=TxBuf&amp;refer=%E3%81%AA%E3%82%93%E3%81%A1%E3%82%83%E3%81%A3%E3%81%A6%E3%82%B7%E3%83%AA%E3%82%A2%E3%83%AB">TxBuf</a></span> FULL)</li>
+<li>sizeのＭＳＢが１になるときは送信が拒否された。(TxBuf FULL)</li>
 <li>その場合ＰＣ側は同じデータを再送する。
 <br /></li></ul></li>
 <li>ターミナルソフト
@@ -275,7 +275,7 @@
 <ul class="list1 list-indent1"><li>ＵＳＢ１.１までのホストコントローラは歴史的事情でインテル（ＵＨＣＩ）とそれ以外（ＯＨＣＩ）という風に実装が別々になってしまった。</li>
 <li>その反省を踏まえてＵＳＢ２.０のホストコントローラの設計（ハードウェアのインターフェース）はＥＨＣＩに統一された。</li>
 <li>つまり、現在ＵＳＢ２.０をサポートしているホストコントローラは全てＥＨＣＩ規格なはず。（パソコンに内蔵されるチップセットの話として）
-<ul class="list2 list-indent1"><li>但し、ホストから見て<span class="noexists"><a href="./?cmd=edit&amp;page=FullSpeed&amp;refer=%E3%81%AA%E3%82%93%E3%81%A1%E3%82%83%E3%81%A3%E3%81%A6%E3%82%B7%E3%83%AA%E3%82%A2%E3%83%AB">FullSpeed</a></span>,LowSpeedでの接続時はＵＨＣＩもしくはＯＨＣＩとしての動作になる。</li></ul></li></ul>
+<ul class="list2 list-indent1"><li>但し、ホストから見てFullSpeed,LowSpeedでの接続時はＵＨＣＩもしくはＯＨＣＩとしての動作になる。</li></ul></li></ul>
 <p>参考</p>
 <ul class="list1 list-indent1"><li><a href="http://mcn.oops.jp/wiki/index.php?USB%2FHost%20Controller" rel="nofollow">http://mcn.oops.jp/wiki/index.php?USB%2FHost%20Controller</a></li></ul>
 <p>上記の資料によれば、ＶＩＡはＵＨＣＩに属するので、やっぱり遅いわけだ。</p>

@@ -234,7 +234,7 @@
 <li>物理ポート、たとえばＣＯＭ１：とＣＯＭ２：をクロスケーブルで結んでみよう。どうなるか。</li>
 <li>それと同じことをこのドライバーで行ない、ＣＯＭ５：の送信データはＣＯＭ６：で拾えるというわけだ。</li></ul>
 <p>こいつは便利かも。</p>
-<ul class="list1 list-indent1"><li>だってWin32APIの<span class="noexists"><a href="./?cmd=edit&amp;page=CreateFile&amp;refer=2007-08">CreateFile</a></span>()でCOM5:をオープンするだけでしょ？</li>
+<ul class="list1 list-indent1"><li>だってWin32APIのCreateFile()でCOM5:をオープンするだけでしょ？</li>
 <li>なんちゃんてＣＯＭポートドライバーをCOM5に繋いでおけば、TeratermからＣＯＭ６経由でＡＶＲに接続完了！ナイスアイディア！</li></ul>
 <p>試してみた。</p>
 <ul class="list1 list-indent1"><li>COMポートに対するReadFileとWriteFileは競合するようだ（別スレッドで動かしても）。非同期モードを使うしかない。</li></ul>

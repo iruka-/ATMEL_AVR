@@ -319,7 +319,7 @@
 <div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h2 id="content_1_8">RX62N:なんかダメっぽい感じ。<a class="anchor_super" id="l9e3cc48" href="#l9e3cc48" title="l9e3cc48" style="user-select:none;">&dagger;</a></h2>
 <p>USB-CDC（エコーバック）がまともに動かない。</p>
 <ul class="list1 list-indent1"><li>teratermからの接続、手打ち入力はおＫ。</li>
-<li><span class="noexists"><a href="./?cmd=edit&amp;page=WriteFile&amp;refer=2011-12">WriteFile</a></span>()で39バイト以下の書き込みだと、まあまあＯＫ。（後述）
+<li>WriteFile()で39バイト以下の書き込みだと、まあまあＯＫ。（後述）
 =40byte以上書き込むと無反応になる。（なぜかわからない）無反応ではなくて文字欠けが起きるだけかもしれない。</li>
 <li>まあまあＯＫと書いたのは、１回書いたあと20mS待てばＯＫだ。10msとか、それ以下だと無応答か、文字欠け。</li></ul>
 <p>ソースを全部調べたけれど40のマジックナンバーを60とか64に直しても上記症状は全く改善されない。</p>
@@ -344,7 +344,7 @@ L3100 (F) Section address overflow out of range : &quot;L&quot;</pre></li>
 <li>要らないソースをどんどん削ってエッセンスだけにした。</li>
 <li>基本、HEW版とUSB部分は変わらないっぽい。</li>
 <li>USBの入出力方法をUSBCDC_Read()とUSBCDC_Write()のみに限定、余計なラッパーを全部排除してエコーバックを書いた。</li>
-<li>速度は1.8Mbps 出ている。字化けもしない。Windowsからの<span class="noexists"><a href="./?cmd=edit&amp;page=WriteFile&amp;refer=2011-12">WriteFile</a></span>()の単位を250byteほどに増やしてもハングしなくなった。非常に安定している。</li></ul>
+<li>速度は1.8Mbps 出ている。字化けもしない。WindowsからのWriteFile()の単位を250byteほどに増やしてもハングしなくなった。非常に安定している。</li></ul>
 <p>gccでも何ら問題ないことが分かった。</p>
 <ul class="list1 list-indent1"><li>結局デバッガもシリアルprintも使わずに、LEDチカチカだけで直してしまった。<strong>ぃぃのか？</strong></li>
 <li>これだから、OpenOCDもＲＯＭライター以外の機能を使おうとしないんだ。</li></ul>
@@ -508,7 +508,7 @@ sub main() {
 <ul class="list1 list-indent1"><li>シリアルROMの前半32KはHEWモニターなので触らない。</li>
 <li>シリアルROMの後半32Kは（今は）scif2/usb両対応簡易ブート(sh7264_usb_function_sample.zip)を焼いている。</li>
 <li>後半32Kのファームを使いたいときは、JPP2クローズ。</li>
-<li>後半32Kのファームを書き換えたいときは、JPP2オープンで起動して、HEWからSPI<span class="noexists"><a href="./?cmd=edit&amp;page=WriterUser&amp;refer=2011-12">WriterUser</a></span>.hwsを読み込んで、absとROMのBINをダウンロードして、CPUリセット、実行、という手順を踏む。</li></ul>
+<li>後半32Kのファームを書き換えたいときは、JPP2オープンで起動して、HEWからSPIWriterUser.hwsを読み込んで、absとROMのBINをダウンロードして、CPUリセット、実行、という手順を踏む。</li></ul>
 <ul class="list1 list-indent1"><li>通常のデバッグは1MBのSRAM(1c00_0000〜)を使う。</li></ul>
 <p><br />
 というわけで、現在、順調に<strong>積み基板</strong>を消化中であった。<br /></p>
@@ -646,7 +646,7 @@ sh-elf-gccの挙動メモ</p>
 <hr class="full_hr" />
 
 <div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h2 id="content_1_25">少し古い（<strong>安定版</strong>の） CodeSourcery_G++_Lite の入手方法<a class="anchor_super" id="mdfa016a" href="#mdfa016a" title="mdfa016a" style="user-select:none;">&dagger;</a></h2>
-<ul class="list1 list-indent1"><li><span class="noexists"><a href="./?cmd=edit&amp;page=CodeSourcery&amp;refer=2011-12">CodeSourcery</a></span> はmentor graphicsに買収されてしまったので、G++_Liteの入手性が悪くなっている。</li>
+<ul class="list1 list-indent1"><li>CodeSourcery はmentor graphicsに買収されてしまったので、G++_Liteの入手性が悪くなっている。</li>
 <li>MentorからＤＬする代替として、<a href="http://leaflabs.com/" rel="nofollow">leaflabs</a>から、maple-ide-0.0.12-windowsxp32.zipを入手してインストールする方法がお勧め。
 <ul class="list2 list-indent1"><li>そうすると、<strong>maple-IDE</strong>まで使えるようになるおまけ付き。</li>
 <li>さらに、GCCのVersionも4.4.1なので<strong>-Os</strong>オプション指定によるバグに当たらずに済むメリットがある。</li>

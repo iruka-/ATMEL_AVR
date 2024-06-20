@@ -225,7 +225,7 @@
 <li>data1 が0以外なら *address = (*address &amp; data1) | data0;</li></ul></li>
 <li>読み出しの場合は data0に長さを入れる（最大８バイトまで)</li>
 <li>読み出しの場合のアドレス空間は cmd の上位［6:5］bitの値で決める。(0=RAM 20=EEPROM 40=PGMEM)</li>
-<li>reqはコントロール転送時の予約(bm<span class="noexists"><a href="./?cmd=edit&amp;page=RequestType&amp;refer=AVR_Monit">RequestType</a></span>)
+<li>reqはコントロール転送時の予約(bmRequestType)
 <br /></li>
 <li>リターンパケットの内容
 <pre>   0      1      2      3      4      5      6      7

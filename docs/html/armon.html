@@ -220,13 +220,13 @@ HIDクラス・ブートローダー 兼 簡易モニターです。</li></ul>
 <p><br />
 いずれの版も、使用に関しては自己責任でお願いします。</p>
 <ul class="list1 list-indent1"><li>アプリケーションというのは簡単なUSBデバイス作成サンプルのことです。</li>
-<li><span class="noexists"><a href="./?cmd=edit&amp;page=CodeSourcery&amp;refer=armon">CodeSourcery</a></span> G++ Liteを使用してビルドすることが出来ますが、実際に動作させるにはそれなりの付加回路(SD-CARDとか)が必要だったり、基板ごとの仕様に合わせて手直しが必要な場合があります。</li>
+<li>CodeSourcery G++ Liteを使用してビルドすることが出来ますが、実際に動作させるにはそれなりの付加回路(SD-CARDとか)が必要だったり、基板ごとの仕様に合わせて手直しが必要な場合があります。</li>
 <li>armbootブートローダーを用いないで単独使用したい場合は、開始番地を2000番地から0000番地へ変更する必要があります。
 (Makefile内にROMADRSというmake変数が用意してあります。)</li></ul>
 <hr class="full_hr" />
 
 <div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h2 id="content_1_4">■ 現在のステータス<a class="anchor_super" id="e841ab9d" href="#e841ab9d" title="e841ab9d" style="user-select:none;">&dagger;</a></h2>
-<ul class="list1 list-indent1"><li>・コンパイラ &quot;<span class="noexists"><a href="./?cmd=edit&amp;page=CodeSourcery&amp;refer=armon">CodeSourcery</a></span> G++ Lite&quot; にて、ビルドは通ります。</li>
+<ul class="list1 list-indent1"><li>・コンパイラ &quot;CodeSourcery G++ Lite&quot; にて、ビルドは通ります。</li>
 <li>・通電すると、LEDが点灯します。</li>
 <li>・HIDクラスとしてＰＣから認識されます。</li>
 <li>・host/armon.exe を起動すると、メモリーダンプなどが実行できます。</li>
@@ -350,7 +350,7 @@ HW/Libraries/CMSIS/Core/Documentation/</pre>
 <li><a href="20102D-04.html#b817f226" title="2010-04" class="link_page_passage">ARMクロスコンパイラ構築（Linux）</a></li>
 <li><a href="http://www.lineo.co.jp/modules/codesourcery/editions.html" rel="nofollow">CodeSourcery_G++_Lite</a>　←今のところこれが一番お勧めです。</li></ul>
 <p>2011-12追記</p>
-<ul class="list2 list-indent2"><li>↑ <span class="noexists"><a href="./?cmd=edit&amp;page=CodeSourcery&amp;refer=armon">CodeSourcery</a></span> はmentor graphicsに買収されてしまいましたので、G++_Liteの入手性が悪くなっています。</li>
+<ul class="list2 list-indent2"><li>↑ CodeSourcery はmentor graphicsに買収されてしまいましたので、G++_Liteの入手性が悪くなっています。</li>
 <li>代替として、<a href="http://leaflabs.com/" rel="nofollow">leaflabs</a>から、maple-ide-0.0.12-windowsxp32.zipを入手して使用することをお勧めします。</li>
 <li>さいわいなことに、GCCのVersionも4.4.1なので<strong>-Os</strong>オプション指定によるバグも回避できます。</li>
 <li>arm-none-eabi-gcc.exeの実行パスは、「maple-ide-0.0.12をインストールしたパス」の hardware/tools/arm/bin/ に通します。</li>

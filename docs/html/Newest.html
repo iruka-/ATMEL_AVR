@@ -182,7 +182,7 @@
 
 <div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h3 id="content_1_2">SC/MP 強化月間<a class="anchor_super" id="n8340a81" href="#n8340a81" title="n8340a81" style="user-select:none;">&dagger;</a></h3>
 <ul class="list1 list-indent1"><li>SC/MP-II と SC/MP-III のプログラムを実行できる環境をLinuxやWindows上に用意してみた。</li></ul>
-<ul class="list1 list-indent1"><li><span class="noexists"><a href="./?cmd=edit&amp;page=GitHub&amp;refer=Newest">GitHub</a></span> リポジトリに公開したよ。
+<ul class="list1 list-indent1"><li>GitHub リポジトリに公開したよ。
 <div class="ie5"><table class="style_table" cellspacing="1" border="0">
 <tr class="style_tr"><td class="style_td">SC/MP-II 機械語モニタ</td><td class="style_td"><a href="https://github.com/iruka-/SCMP2monitor" rel="nofollow">https://github.com/iruka-/SCMP2monitor</a></td></tr>
 
@@ -196,6 +196,84 @@
 </table></div></li></ul>
 <ul class="list1 list-indent1"><li>最後のやつ(NIBLFP BASIC 2024)作った人、あたまおかしいやろ（最大限の賛辞）</li>
 <li>俺じゃあありません</li></ul>
+<p><br /></p>
+
+<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h4 id="content_1_3">ここがだめだよ、SC/MP-II<a class="anchor_super" id="c7968986" href="#c7968986" title="c7968986" style="user-select:none;">&dagger;</a></h4>
+<p><span style="font-size:9px">Qiitaからのパクリですが</span></p>
+<p><br /></p>
+
+<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h2 id="content_1_4">SC/MP-II CPUは、どこが変であるかを簡単にご説明<a class="anchor_super" id="ba9b64e9" href="#ba9b64e9" title="ba9b64e9" style="user-select:none;">&dagger;</a></h2>
+<ul class="list1 list-indent1"><li>8bit CPUなのに、16bitポインタが4つもある。</li>
+<li>ところが P0 P1 P2 P3 （と勝手に命名）のポインタのうち、最初のやつ P0 は実はプログラムカウンタであること。</li>
+<li>これら４つは統一的に扱われている。（PC相対とPTR相対は命令コード内では同じ扱い）</li>
+<li>相対オフセット値は命令コードのオペランド(8bit)で指定するので、PTR[127]～PTR[-128]までのメモリーが演算対象になったり、ロード、ストア命令が使えたりする</li>
+<li>最近分かったこと：PC以外のP1～P3も、分岐命令の飛び先に使用できる(+-127)</li>
+<li>それ以外のアドレッシングモードがない。（即値 8bitは存在）</li>
+<li>:</li>
+<li>ところで、相対オフセット値が 0x80 (-128) だけ特別扱いで、その場合のみ PTR相対のオフセットは定数ではなく、Eレジスタ(8bit)で代用されるんだ。（知らんがなそんなこと）</li>
+<li>また、オートインデックスという不思議なアドレッシングモードを持っていて、相対オフセットでメモリーアクセスしたあとで、インデックスレジスタが実効アドレスに変化する、というやつがある。</li>
+<li>これは68000やPDP-11などにもみられる奴だけど、一つ注意があって</li>
+<li>相対値が負の時はフェッチされるデータはPTR＋相対オフセットのメモリーになるんだけど</li>
+<li>相対値が正の時はフェッチされるデータはPTR＋00 のメモリーになる。</li>
+<li>もちろん命令実行後は PTR は オフセット値が加減算される。</li>
+<li>使い方によってはスタックポインタ的に使えなくはない。</li>
+<li>:</li></ul>
+
+<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h2 id="content_1_5">エミュレータは、なんですんなりと動かなかったの？<a class="anchor_super" id="u8d076e0" href="#u8d076e0" title="u8d076e0" style="user-select:none;">&dagger;</a></h2>
+<ul class="list1 list-indent1"><li>上記のオートインデックスの実装が間違っていたこと</li>
+<li>相対オフセットが 0x80 のときに相対値をEレジスタにすり替える実装をしていなかったこと</li>
+<li>ななんと、ステータスレジスタの初期値が 0x20 (out B=1) でないと、NIBL BASICは動きません。（知らんがな）</li></ul>
+
+<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h2 id="content_1_6">このCPUのだめなところ<a class="anchor_super" id="l12ea788" href="#l12ea788" title="l12ea788" style="user-select:none;">&dagger;</a></h2>
+<ul class="list1 list-indent1"><li>上記の16bitポインタへのアクセス(LD,ST)が存在しない（！？？）</li>
+<li>Aレジスタ(8bit) と、ポインタの上位あるいは下位とをエクスチェンジ（交換）することだけが許されている。（XPAL P1, XPAH P2 など）</li>
+<li>8bit オフセットを超えるジャンプ命令が存在しない</li>
+<li>それどころか、一般的なCPUに存在するはずの、CALL/RET 命令が存在しない</li>
+<li>（代わりに、ミニコン時代の XPPCという、ポインタとPCを交換する命令だけが存在）</li>
+<li>遅い。とっても遅い。どれくらい遅いかというと、外部クロック1MHzで仮に動かした場合、典型的な即値8bit を Aレジスタに与える 2byte命令 (LDI #0xNN) の実行時間は72クロック(72マイクロ秒)・・・絶句します</li></ul>
+
+<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h2 id="content_1_7">追伸<a class="anchor_super" id="a87497dd" href="#a87497dd" title="a87497dd" style="user-select:none;">&dagger;</a></h2>
+<ul class="list1 list-indent1"><li>NIBL BASIC は、ロストテクノロジーで書かれたアセンブラなので、解読はおそらく無理です。（SC/MP-IIのアセンブラをすらすら読める人でも）</li></ul>
+<ul class="list1 list-indent1"><li>上記以外にも変なところはいっぱいあって、たとえば</li>
+<li>プログラムカウンタはフェッチ直前に＋１される。これにより、リセット直後の０番地は永遠に実行されない。</li>
+<li>XPPC命令でロングジャンプしたときも、飛び先の命令フェッチ直前に＋１される。なので、実際のエントリーアドレス－１をPTRに入れておく必要がある。</li>
+<li>引き算の代わりにコンプリメンタリーADD（引く数のビットを反転しただけで加算）で代用している（つまり２の補数ではなく１の補数）。なので、キャリーフラグの意味が普通のALUと逆になる。</li>
+<li>:</li></ul>
+<p>で、SC/MP-IIIでは、まともになったの？</p>
+<ul class="list1 list-indent1"><li>SC/MP-III用のNIBL BASICをエミュレータで動かせないか試行中です。→うごきました</li>
+<li>SC/MP-IIIは EレジスタとAレジスタを連結して16bitレジスタとして使えるようになりました。</li>
+<li>ポインタオフセットが0x80(-128)だったときに、オフセット値をEレジスタの内容に読み替える処理は、無くなりました。</li>
+<li>6800/6502系のゼロページアドレッシングに近い、FFxxページの256バイトを直接参照するダイレクトアドレッシングが出来るようになりました。</li>
+<li>ポインタ P1 がスタックポインタになり、16bit 絶対番地指定のJSR命令やJMP命令 が追加されました。</li>
+<li>乗除算用にTレジスタ(16bit)が追加され、16bitの乗算/除算命令がそれぞれ追加されています。</li></ul>
+
+<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h2 id="content_1_8">ここが変だよ SC/MP-III CPU<a class="anchor_super" id="la3e0dd5" href="#la3e0dd5" title="la3e0dd5" style="user-select:none;">&dagger;</a></h2>
+<ul class="list1 list-indent1"><li>ついでなので、SC/MP-III エミュレータとか、独自言語を入れてみて、だめだったことを追記します。</li></ul>
+<p>まず、独自言語Asmpp3 を公開しています。</p>
+<p>SC/MP-III CPU 用のマシン語モニタ：
+<a href="https://github.com/iruka-/SCMP3monitor" rel="nofollow">https://github.com/iruka-/SCMP3monitor</a></p>
+<p>SC/MP-II用も書きました。独自言語Asmpp2 を公開しています。</p>
+<p>SC/MP-II CPU 用のマシン語モニタ：
+<a href="https://github.com/iruka-/SCMP2monitor" rel="nofollow">https://github.com/iruka-/SCMP2monitor</a></p>
+
+<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h2 id="content_1_9">SC/MP-IIIのどこがだめ？<a class="anchor_super" id="wdc1e431" href="#wdc1e431" title="wdc1e431" style="user-select:none;">&dagger;</a></h2>
+<ul class="list1 list-indent1"><li>比較命令(cmp) がない。減算で代用。（できるか！A regが毎回壊れる。）</li>
+<li>大小比較の結果の取得や分岐が大変面倒。条件分岐命令が A regの内容でしか分岐できない。しかも条件分岐命令は BZ、BNZ、BP (Aregが正) の３個のみ。</li>
+<li>さらに 16bitレジスタ EA の値を大小比較しようとすると、もっと面倒なことに・・・</li></ul>
+<ul class="list1 list-indent1"><li>まあ、それ以外は、可もなく不可もなく、16bit同士の乗除算命令がある8bitレガシーCPUは珍しいんですけどね。・・・</li></ul>
+
+<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h2 id="content_1_10">おまけ<a class="anchor_super" id="i97c484f" href="#i97c484f" title="i97c484f" style="user-select:none;">&dagger;</a></h2>
+<ul class="list1 list-indent1"><li>2024年版、NIBLFP_2024 BASIC も、ついでに動かしてみました。
+<a href="https://github.com/iruka-/SCMP2_NIBLFP_2024BASIC" rel="nofollow">https://github.com/iruka-/SCMP2_NIBLFP_2024BASIC</a></li></ul>
+<ul class="list1 list-indent1"><li>最初、動かなかったんですが、まさか、分岐命令のPC相対オフセットが、PC以外でも使えるなんて・・・ （JZ 12(P3) など） 夢にも思わなかったわ。</li></ul>
+
+<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h2 id="content_1_11">参考<a class="anchor_super" id="c0d088d6" href="#c0d088d6" title="c0d088d6" style="user-select:none;">&dagger;</a></h2>
+<p>SC/MP使いの憂鬱
+<a href="https://electrelic.com/electrelic/node/1299" rel="nofollow">https://electrelic.com/electrelic/node/1299</a></p>
+<p><br /></p>
+<p>SC/MPおわり。</p>
+<hr class="full_hr" />
+<p><br /></p>
    </div>
   </div>
  </div>
@@ -210,7 +288,7 @@
    <a href="http://pukiwiki.sourceforge.jp/dev/"><img src="../image/b_pukiwiki.dev.png" alt="PukiWiki-dev" /></a>
   </div>
   <div id="f-list">
-   <ul><li id="lastmod">Last-modified: 2024-06-20 (木) 18:05:10<span class="page_passage" data-mtime="2024-06-20T18:05:10+09:00"></span></li><li>Site admin: <a href="http://pukiwiki.example.com/">anonymous</a></li>    <li>Powered by PukiWiki</li>
+   <ul><li id="lastmod">Last-modified: 2024-06-20 (木) 18:17:17<span class="page_passage" data-mtime="2024-06-20T18:17:17+09:00"></span></li><li>Site admin: <a href="http://pukiwiki.example.com/">anonymous</a></li>    <li>Powered by PukiWiki</li>
     <li><a href="http://www.luntf.com/">Monobook for PukiWiki</a></li>
    </ul>
   </div>

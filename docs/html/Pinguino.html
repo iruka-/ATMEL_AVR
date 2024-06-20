@@ -239,7 +239,7 @@ GND    GND              ~~~~~~~~~~</pre>
 <li>安定版はPinguino3.Xです。</li>
 <li>開発版はPinguino4.Xです。</li>
 <li>Pinguino4.Xは ここ（ <a href="http://code.google.com/p/pinguino32/downloads/list" rel="nofollow">http://code.google.com/p/pinguino32/downloads/list</a> ）にある
-<ul class="list2 list-indent1"><li>これ（ Pinguino-X4-<span class="noexists"><a href="./?cmd=edit&amp;page=EasyPack&amp;refer=Pinguino">EasyPack</a></span>-Win32-Rev903-v01-2013-10.7z ）もしくはこれより新しいものを入手して 7zファイルを展開します。</li>
+<ul class="list2 list-indent1"><li>これ（ Pinguino-X4-EasyPack-Win32-Rev903-v01-2013-10.7z ）もしくはこれより新しいものを入手して 7zファイルを展開します。</li>
 <li>展開したディレクトリ名は分かりにくいので、</li>
 <li>すこし分かりやすいように C:\Pinguino4.X\とか D:\Pinguino4.X\のようなディレクトリ名にリネームしておきます。</li></ul></li></ul>
 <p><br /></p>
@@ -307,7 +307,7 @@ void IOsetRemap()
 	#endif
 ・・・</pre></li>
 <li>ちなみにUART2のほうはRC8/RC9に割り当てられるっぽいけれど、これは44PINのChipでないと出てこない。</li>
-<li>なので、UART2をRC8/RC9以外にしたい場合は、システム側のI<span class="noexists"><a href="./?cmd=edit&amp;page=OsetRemap&amp;refer=Pinguino">OsetRemap</a></span>()を書き直すか、これを呼ばずに、コピペして作ったOwnCodeを代わりに呼ぶしかなさそうだ。</li></ul>
+<li>なので、UART2をRC8/RC9以外にしたい場合は、システム側のIOsetRemap()を書き直すか、これを呼ばずに、コピペして作ったOwnCodeを代わりに呼ぶしかなさそうだ。</li></ul>
 <ul class="list1 list-indent1"><li>UART以外のI/O Remapに関しても、このio.cを読めばどうなっているか判ると思う。</li></ul>
 <p><br />
 <br />

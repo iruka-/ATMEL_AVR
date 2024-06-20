@@ -352,15 +352,15 @@ uint32_t USART_Rx_ptr_out = 0;</pre>
 <p><br />
 <br /></p>
 <ul class="list1 list-indent1"><li>FIFOから取り出して、ＰＣに返送するルーチンが２種類ある。
-<ul class="list2 list-indent1"><li>１つは、void Handle_USB<span class="noexists"><a href="./?cmd=edit&amp;page=AsynchXfer&amp;refer=STM32vcom">AsynchXfer</a></span> (void)・・・・これはUSBの１フレームの頭でキックされる。（実際には1:5くらいに間引かれている）</li>
+<ul class="list2 list-indent1"><li>１つは、void Handle_USBAsynchXfer (void)・・・・これはUSBの１フレームの頭でキックされる。（実際には1:5くらいに間引かれている）</li>
 <li>もう一つは、void EP1_IN_Callback (void)・・・・これはUSBエンドポイント１がＰＣから読まれたらキックされる。</li></ul></li></ul>
 <ul class="list1 list-indent1"><li>上記２つのルーチンは、書き方がそれぞれ微妙に異なっていて、バグッているのかいないのか分からない変なコーディングだ。
 <ul class="list2 list-indent1"><li>FIFOキューから取り出す処理は１箇所で書くべきだし、アトミックにすべきだし、一見してバグらないことが分かるようになっていないといけないと思う。</li></ul></li></ul>
 <p><br /></p>
 <ul class="list1 list-indent1"><li>この２つのルーチンの動作はステート（USB_Tx_State）により排他動作になっていて、
-<ul class="list2 list-indent1"><li><strong>USB_Tx_State=0</strong>・・・Handle_USB<span class="noexists"><a href="./?cmd=edit&amp;page=AsynchXfer&amp;refer=STM32vcom">AsynchXfer</a></span>()が実行。EP1_IN_Callback()は無効。
-<ul class="list3 list-indent1"><li>一度Handle_USB<span class="noexists"><a href="./?cmd=edit&amp;page=AsynchXfer&amp;refer=STM32vcom">AsynchXfer</a></span>()が実行されると、USB_Tx_State=1となる。</li></ul></li></ul></li></ul>
-<ul class="list2 list-indent2"><li><strong>USB_Tx_State=1</strong>・・・Handle_USB<span class="noexists"><a href="./?cmd=edit&amp;page=AsynchXfer&amp;refer=STM32vcom">AsynchXfer</a></span>()は無効。EP1_IN_Callback()のみ有効。
+<ul class="list2 list-indent1"><li><strong>USB_Tx_State=0</strong>・・・Handle_USBAsynchXfer()が実行。EP1_IN_Callback()は無効。
+<ul class="list3 list-indent1"><li>一度Handle_USBAsynchXfer()が実行されると、USB_Tx_State=1となる。</li></ul></li></ul></li></ul>
+<ul class="list2 list-indent2"><li><strong>USB_Tx_State=1</strong>・・・Handle_USBAsynchXfer()は無効。EP1_IN_Callback()のみ有効。
 <ul class="list3 list-indent1"><li>USARTのFIFOが無くなるまでUSB_Tx_State=1が続く。無くなったらUSB_Tx_State=0にリセットされる。</li></ul></li></ul>
 <ul class="list1 list-indent1"><li>これだと、一時的にFIFOが途切れたら（RS232C受信データが空になったら）、次にUSB SOFが来るまで何も出来なくなる。
 <ul class="list2 list-indent1"><li>つまり、(FRAME_INTERVALという意味不明な間引きカウンタ)5mS程度の時間内に、五月雨式でパラパラUSART割り込みが来たらホストPCが受け取れない空白の時間が発生する。</li></ul></li>

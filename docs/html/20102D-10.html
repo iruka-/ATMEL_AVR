@@ -529,7 +529,7 @@ jtag_interfaces[0]を書き換えるのではなく、配列要素を追加す�
 <ul class="list1 list-indent1"><li>しかし、ドライバーを分離してはみたものの、ドライバー実装のために、openocd側ヘッダーをいろいろ参照しなければならないという欠点に気づいた。</li>
 <li>気づくの遅い。</li></ul>
 <ul class="list1 list-indent1"><li>けど、Linuxを使わずに、&lt;windows.h&gt; なオレオレ環境上でドライバー開発できるのは便利だ。</li>
-<li>もちろん、Linuxには<span class="noexists"><a href="./?cmd=edit&amp;page=LoadLibrary&amp;refer=2010-10">LoadLibrary</a></span>()など無いし、&lt;windows.h&gt;をインクルードしてはいけない。</li>
+<li>もちろん、LinuxにはLoadLibrary()など無いし、&lt;windows.h&gt;をインクルードしてはいけない。</li>
 <li>Windows上でしか動かないが、それはそれで仕方が無いかな。</li></ul>
 <p>ここまで、やっつけてみたら、OpenOCDのやる気無いUSB-Blaster対応ドライバーと同程度のものをATtiny2313で作るのは
 ２，３日もあれば出来る気がしてきた。（それはほとんど実用性がないけれど）</p>
@@ -680,7 +680,7 @@ Polling target failed, GDB will be halted. Polling again in 6300ms
 <div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h2 id="content_1_13">v-usb本家 : vusb-20100715/example<a class="anchor_super" id="caf36a7c" href="#caf36a7c" title="caf36a7c" style="user-select:none;">&dagger;</a></h2>
 <ul class="list1 list-indent1"><li>AVRマイコンによる、ソフトウェアUSB実装。</li>
 <li>昔と比べると、だいぶ整備されている。(exampleディレクトリが追加されている)</li>
-<li>example/hid-data/commandlineにあるhiddata.cはusbhid<span class="noexists"><a href="./?cmd=edit&amp;page=GetReport&amp;refer=2010-10">GetReport</a></span>()とusbhid<span class="noexists"><a href="./?cmd=edit&amp;page=SetReport&amp;refer=2010-10">SetReport</a></span>()が実装されていて、Linuxと同様に使えるようになっている。</li>
+<li>example/hid-data/commandlineにあるhiddata.cはusbhidGetReport()とusbhidSetReport()が実装されていて、Linuxと同様に使えるようになっている。</li>
 <li>commandlineツールはWindowsビルドとLinux/MacOSビルドの両方が出来るようになっている。</li></ul>
 <p><br />
 <br /></p>
@@ -970,7 +970,7 @@ avr-size --mcu=attiny2313 main-12.elf
 <li><strong>ATtiny2313を使って、ARMのflash書き込みに成功した</strong></li></ul>
 <p>read more : <a href="hid_blaster.html" class="link_page_passage">hid_blaster</a></p>
 <p><br /></p>
-<ul class="list1 list-indent1"><li>死ぬほど遅い理由は <span class="noexists"><a href="./?cmd=edit&amp;page=BitBang&amp;refer=2010-10">BitBang</a></span>.c（パラレルポート直叩きドライバー）のプリンタポートがそのままUSBの先
+<ul class="list1 list-indent1"><li>死ぬほど遅い理由は BitBang.c（パラレルポート直叩きドライバー）のプリンタポートがそのままUSBの先
 にあるAttiny2313のPB4〜PB7に移動しただけという手抜き実装だから。</li></ul>
 <ul class="list1 list-indent1"><li>死ぬほど遅いんだけれど、PICより安定している何故？(PIC18F14K50固有の不安定要素をまだ引きずっているようだ。PICはUSBパケットの処理が間に合わないときinterruptパケットを捨てる癖があるらしく、そこでハンドシェイクが死ぬことがある問題)</li></ul>
 <ul class="list1 list-indent1"><li>これから、JTAG専用のコマンドを拡充する<strong>予定。</strong></li></ul>
@@ -1060,7 +1060,7 @@ wrote 8192 bytes from file main-0000.hex in 12.484375s (0.641 KiB/s)</pre>
 
 <div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h2 id="content_1_23">OpenOCD : 次はATtiny2313でOpenOCD : 高速化完了！<a class="anchor_super" id="nfc6e504" href="#nfc6e504" title="nfc6e504" style="user-select:none;">&dagger;</a></h2>
 <p>今のところ8kB書き込みに4.8秒。(USB2.0HUBを入れた状態)</p>
-<ul class="list1 list-indent1"><li><span class="noexists"><a href="./?cmd=edit&amp;page=BitBang&amp;refer=2010-10">BitBang</a></span>,JTAGなどいずれのパケットも出来る限りバッファに溜めてからUSB経由で送るようにしてみた。</li>
+<ul class="list1 list-indent1"><li>BitBang,JTAGなどいずれのパケットも出来る限りバッファに溜めてからUSB経由で送るようにしてみた。</li>
 <li>接続は非常に安定している。書き込みに失敗することはない。</li>
 <li>JTAG_SCAN（４バイトのFLASH書き込み）の合間にJTAG_RUNTESTが走るので、せっかくの高速化が台無しだが、それでもだいぶ速くなった。</li>
 <li>RUNTESTを減らしたり、FLASH書き込み中は抑止できるようにすればあと２倍くらいは速くなる。</li>
@@ -1465,12 +1465,12 @@ shutdown command invoked
 <li>そうすると月間維持費は（従来より）高くなる。</li>
 <li>それが嫌なら、<a href="http://andronavi.com/2010/06/28588" rel="nofollow">IS01</a>のようにSIMカードを抜いてWiFi専用機として使う（つまり携帯電話は従来のものを併用）しかしWiFi電波の無いところでは使えないのでそれはそれで不便な端末になる。</li></ul>
 <ul class="list1 list-indent1"><li>PDAのようなものは昔もいくつか存在した。
-<ul class="list2 list-indent1"><li>Psion-&gt;Palm(SONY CLIE)-&gt;WindowsCE-&gt;Sharp ZAURUS-&gt;<span class="noexists"><a href="./?cmd=edit&amp;page=NetWalker&amp;refer=2010-10">NetWalker</a></span>-&gt;...</li></ul></li>
+<ul class="list2 list-indent1"><li>Psion-&gt;Palm(SONY CLIE)-&gt;WindowsCE-&gt;Sharp ZAURUS-&gt;NetWalker-&gt;...</li></ul></li>
 <li>つまり、何が言いたい？
 <ul class="list2 list-indent1"><li>PDAのカテゴリーに属する端末は、一時期は流行るけれど、いずれ廃れるものなんだ。</li>
 <li>iPhoneやAndroidが流行るのももしかしたら一時的な現象かもしれない。</li>
 <li>通信料はたしかに頭の痛い問題ではあるけれど、端末としては衝動買い可能なレベルだ。</li></ul></li></ul>
-<p>全然関係ないけど、うちには今もIBMのWorkPadとNECの<span class="noexists"><a href="./?cmd=edit&amp;page=MobileGear&amp;refer=2010-10">MobileGear</a></span>(WinCE)がある。</p>
+<p>全然関係ないけど、うちには今もIBMのWorkPadとNECのMobileGear(WinCE)がある。</p>
 <ul class="list1 list-indent1"><li>さすがにPsionは持っていない。</li>
 <li>ZAURUSやNetWalkerについてはキーボードと字が小さすぎて駄目。手を出さなかった。</li></ul>
 <hr class="full_hr" />
@@ -1511,7 +1511,7 @@ shutdown command invoked
 <li>もはや切り離せない基板。</li></ul>
 <hr class="full_hr" />
 
-<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h2 id="content_1_43"><span class="noexists"><a href="./?cmd=edit&amp;page=PlayStation&amp;refer=2010-10">PlayStation</a></span> Move Teardown<a class="anchor_super" id="eb0f1fba" href="#eb0f1fba" title="eb0f1fba" style="user-select:none;">&dagger;</a></h2>
+<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h2 id="content_1_43">PlayStation Move Teardown<a class="anchor_super" id="eb0f1fba" href="#eb0f1fba" title="eb0f1fba" style="user-select:none;">&dagger;</a></h2>
 <p>iFixit</p>
 <ul class="list1 list-indent1"><li><a href="http://www.ifixit.com/Teardown/PlayStation-Move-Teardown/3594/1" rel="nofollow">http://www.ifixit.com/Teardown/PlayStation-Move-Teardown/3594/1</a></li>
 <li>STM32F103VBT6</li>

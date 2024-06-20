@@ -264,7 +264,7 @@
 <ul class="list1 list-indent1"><li>やってみた結果、<strong>PinguinoのUSB CDCは遅い</strong>（390kBPSしか出ない）ということが分かった。</li>
 <li>Mchipサンプルのほうが優秀で、2M BPS出る。</li></ul>
 <ul class="list1 list-indent1"><li>Mchipサンプルから作成したUSB-シリアル変換器も動いた。（以前はuart2.cがおかしくてBugっていたので、uart1.cを新たに起こした。）</li></ul>
-<ul class="list1 list-indent1"><li>USB HOST(<span class="noexists"><a href="./?cmd=edit&amp;page=KeyBoard&amp;refer=2013-03">KeyBoard</a></span>)は、sbrkのバグを直して、とりあえず動作確認の手前に辿り着いた。けど肝心のキーボードが規格外（HUB内蔵）だったので、別のキーボードを探し中</li></ul>
+<ul class="list1 list-indent1"><li>USB HOST(KeyBoard)は、sbrkのバグを直して、とりあえず動作確認の手前に辿り着いた。けど肝心のキーボードが規格外（HUB内蔵）だったので、別のキーボードを探し中</li></ul>
 <p>続きを読む: <a href="PIC32MX_USBCDC.html" title="PIC32MX_USBCDC" class="link_page_passage">PIC32MXで仮想シリアル</a></p>
 <p>続きを読む: <a href="USB_CUSTOM.html" title="USB_CUSTOM" class="link_page_passage">USBカスタムデバイス</a></p>
 <p>続きを読む: <a href="USB_HOST.html" title="USB_HOST" class="link_page_passage">USBホスト</a>　</p>
@@ -327,7 +327,7 @@ Android ADK</p>
 <li>usb_host.c あたりで DEBUG_MODE を定義すると、attachとかdetachの表示をしてくれる(Serial Printに繋ぐ)</li>
 <li>それで、ADKのファームを再ビルドして、いろいろなデバイスを繋いでみる。</li>
 <li>KB MouseなどのLowSpeedデバイスはちゃんと認識する。</li>
-<li>USB内蔵マイコン(<span class="noexists"><a href="./?cmd=edit&amp;page=FullSpeed&amp;refer=2013-03">FullSpeed</a></span>)を使ったHIDやCDCデバイスはだいたい認識する。</li>
+<li>USB内蔵マイコン(FullSpeed)を使ったHIDやCDCデバイスはだいたい認識する。</li>
 <li>USBメモリーの中には認識するものとしないものがある。しないものは無反応。</li>
 <li>Androidを、（アプリ起動状態あり、なしの両方で）接続してみたけれど、PIC32MX側は全く無反応。</li></ul>
 <p>どうやら、Android端末がHighSpeedデバイスなので、そもそも物理的にネゴシエーションしてないんじゃないか疑惑。</p>
@@ -429,7 +429,7 @@ __do002          = 6	(0x6)</pre>
 <li>r16simディレクトリで a.bat を実行するとエミュレータが動きます。</li></ul>
 <p>エミュレータは逆アセンブル表示が遅いので、カーソル上キーを１回押して、スペースキーを１回押してください。</p>
 <ul class="list1 list-indent1"><li>ナイトライダーします。</li></ul>
-<ul class="list1 list-indent1"><li>詳しくは各ディレクトリの<span class="noexists"><a href="./?cmd=edit&amp;page=ReadMe&amp;refer=2013-03">ReadMe</a></span>.txtを参照してください。</li></ul>
+<ul class="list1 list-indent1"><li>詳しくは各ディレクトリのReadMe.txtを参照してください。</li></ul>
 
 <div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h2 id="content_1_11">R16でインベーダー<a class="anchor_super" id="lf43953c" href="#lf43953c" title="lf43953c" style="user-select:none;">&dagger;</a></h2>
 <ul class="list1 list-indent1"><li>一匹表示のみです。ゲームではありません。</li></ul>

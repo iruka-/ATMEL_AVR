@@ -539,8 +539,8 @@ bash-3.2$</pre></li></ul>
 <hr class="full_hr" />
 
 <div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h2 id="content_1_8">ＡＶＲｂｅｎｃｈ<a class="anchor_super" id="baa8c2ec" href="#baa8c2ec" title="baa8c2ec" style="user-select:none;">&dagger;</a></h2>
-<p>usb<span class="noexists"><a href="./?cmd=edit&amp;page=FunctionWrite&amp;refer=%EF%BC%A8%EF%BC%A9%EF%BC%A4%EF%BD%81%EF%BD%93%EF%BD%90%E9%AB%98%E9%80%9F%E5%8C%96">FunctionWrite</a></span>()の性能テスト.</p>
-<ul class="list1 list-indent1"><li>usb<span class="noexists"><a href="./?cmd=edit&amp;page=FunctionWrite&amp;refer=%EF%BC%A8%EF%BC%A9%EF%BC%A4%EF%BD%81%EF%BD%93%EF%BD%90%E9%AB%98%E9%80%9F%E5%8C%96">FunctionWrite</a></span>()内に遅延関数の呼び出しを入れる。</li>
+<p>usbFunctionWrite()の性能テスト.</p>
+<ul class="list1 list-indent1"><li>usbFunctionWrite()内に遅延関数の呼び出しを入れる。</li>
 <li>どのくらい遅延すると、ホスト側の速度に影響するかのテスト.
 </li>
 <li>0060 番地が遅延係数で 1 増えるごとに100uS
@@ -600,7 +600,7 @@ sys     0m0.000s</pre>
 <div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h2 id="content_1_10">高速化改良（案のみ）<a class="anchor_super" id="ybae0820" href="#ybae0820" title="ybae0820" style="user-select:none;">&dagger;</a></h2>
 <ul class="list1 list-indent1"><li>書き込みのみですが、３２バイトのＨＩＤ　Ｒｅｐｏｒｔを送りつけられている間もＳＰＩ転送するような
 ソリューションが考えられます。</li>
-<li>具体的には、usb<span class="noexists"><a href="./?cmd=edit&amp;page=FunctionWrite&amp;refer=%EF%BC%A8%EF%BC%A9%EF%BC%A4%EF%BD%81%EF%BD%93%EF%BD%90%E9%AB%98%E9%80%9F%E5%8C%96">FunctionWrite</a></span>()で全部貯めてからＳＰＩ書き込みではなくて、８バイト貯まったＨＥＸをそのつどＳＰＩで送るといった方法です。</li>
+<li>具体的には、usbFunctionWrite()で全部貯めてからＳＰＩ書き込みではなくて、８バイト貯まったＨＥＸをそのつどＳＰＩで送るといった方法です。</li>
 <li>読み出しは今のところAVRUSB側にポインタと長さを渡してそれっきり、という方法でやってますのでこれも、usbFunctionReadに引っ掛けて、ちまちま読み出す、というところでしょうか。</li></ul>
 <ul class="list1 list-indent1"><li>ただし、delayオプションが長い場合はＵＳＢ転送の足を思いっきり引っ張るような気もしています。</li></ul>
 <ul class="list1 list-indent1"><li>readに対してだけ実際に試してみましたが、8Kのreadに1.4秒が限界でした.</li></ul>
@@ -639,7 +639,7 @@ RAM: 93 bytes</pre>
 </tbody></table></div>
 <ul class="list1 list-indent1"><li>計測に使用したマザーボードはSiS製です。</li>
 <li>マザーとHIDaspの間にはELECOM製のＵＳＢ１.１ハブが挟まっています。</li></ul>
-<p><span class="noexists"><a href="./?cmd=edit&amp;page=ToDo&amp;refer=%EF%BC%A8%EF%BC%A9%EF%BC%A4%EF%BD%81%EF%BD%93%EF%BD%90%E9%AB%98%E9%80%9F%E5%8C%96">ToDo</a></span>:</p>
+<p>ToDo:</p>
 <ul class="list1 list-indent1"><li>時間計測コマンド(unixのtime相当)をちゃんと作る。
 <ul class="list2 list-indent1"><li>今使っているのは自作ツールで 16bit MSDOSのコード。
 <pre>1993/07/09  02:33            11,682 WATCH.EXE</pre></li></ul></li>
@@ -677,7 +677,7 @@ RAM: 93 bytes</pre></li></ul>
 <pre>| hidspx-src/ HIDspx.exe とそのソースです。
 | firmware/   AVR側のファームウェアHEXとそのソースです。</pre>
 <p>変更内容:</p>
-<ul class="list1 list-indent1"><li>HID Reportの転送をHidD_<span class="noexists"><a href="./?cmd=edit&amp;page=GetFeature&amp;refer=%EF%BC%A8%EF%BC%A9%EF%BC%A4%EF%BD%81%EF%BD%93%EF%BD%90%E9%AB%98%E9%80%9F%E5%8C%96">GetFeature</a></span>()/HidD_<span class="noexists"><a href="./?cmd=edit&amp;page=SetFeature&amp;refer=%EF%BC%A8%EF%BC%A9%EF%BC%A4%EF%BD%81%EF%BD%93%EF%BD%90%E9%AB%98%E9%80%9F%E5%8C%96">SetFeature</a></span>()で行うようにしました。</li>
+<ul class="list1 list-indent1"><li>HID Reportの転送をHidD_GetFeature()/HidD_SetFeature()で行うようにしました。</li>
 <li>usbHidReportDescriptorを４種類用意して、サイズをそれぞれ、6,14,22,30にしました。</li>
 <li>変更点はたったそれだけです。</li>
 <li>上位プロトコルは瓶詰堂さんのHIDaspと同じままです。</li>
@@ -727,10 +727,10 @@ RAM: 86 bytes</pre></li></ul>
 <div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h2 id="content_1_17">HIDasp高速化検討中<a class="anchor_super" id="ab6a2305" href="#ab6a2305" title="ab6a2305" style="user-select:none;">&dagger;</a></h2>
 <p>光が見えてきたので、作業記録を書いてみる。</p>
 <p><strong>現状</strong></p>
-<ul class="list1 list-indent1"><li>HIDaspはWindowsAPIの<span class="noexists"><a href="./?cmd=edit&amp;page=ReadFile&amp;refer=%EF%BC%A8%EF%BC%A9%EF%BC%A4%EF%BD%81%EF%BD%93%EF%BD%90%E9%AB%98%E9%80%9F%E5%8C%96">ReadFile</a></span>()/<span class="noexists"><a href="./?cmd=edit&amp;page=WriteFile&amp;refer=%EF%BC%A8%EF%BC%A9%EF%BC%A4%EF%BD%81%EF%BD%93%EF%BD%90%E9%AB%98%E9%80%9F%E5%8C%96">WriteFile</a></span>()によってHID Reportを転送している。</li>
+<ul class="list1 list-indent1"><li>HIDaspはWindowsAPIのReadFile()/WriteFile()によってHID Reportを転送している。</li>
 <li>HID Reportというのは、たとえばマウスならボタン情報、座標などを含む、固定サイズのデータだ。</li>
-<li>そのReportの１パケットは８バイトになっている。<span class="noexists"><a href="./?cmd=edit&amp;page=ReadFile&amp;refer=%EF%BC%A8%EF%BC%A9%EF%BC%A4%EF%BD%81%EF%BD%93%EF%BD%90%E9%AB%98%E9%80%9F%E5%8C%96">ReadFile</a></span>()/<span class="noexists"><a href="./?cmd=edit&amp;page=WriteFile&amp;refer=%EF%BC%A8%EF%BC%A9%EF%BC%A4%EF%BD%81%EF%BD%93%EF%BD%90%E9%AB%98%E9%80%9F%E5%8C%96">WriteFile</a></span>()に与える転送長は＋１した９を与える。</li>
-<li>Report_IDは０になっている。<span class="noexists"><a href="./?cmd=edit&amp;page=ReadFile&amp;refer=%EF%BC%A8%EF%BC%A9%EF%BC%A4%EF%BD%81%EF%BD%93%EF%BD%90%E9%AB%98%E9%80%9F%E5%8C%96">ReadFile</a></span>()/<span class="noexists"><a href="./?cmd=edit&amp;page=WriteFile&amp;refer=%EF%BC%A8%EF%BC%A9%EF%BC%A4%EF%BD%81%EF%BD%93%EF%BD%90%E9%AB%98%E9%80%9F%E5%8C%96">WriteFile</a></span>()のバッファ先頭にReport_IDを置く。</li>
+<li>そのReportの１パケットは８バイトになっている。ReadFile()/WriteFile()に与える転送長は＋１した９を与える。</li>
+<li>Report_IDは０になっている。ReadFile()/WriteFile()のバッファ先頭にReport_IDを置く。</li>
 <li>他の例(AVR-DoperやHIDsph)を見るとReportIDは１〜のようだ。</li></ul>
 <p><strong>問題点</strong></p>
 <ul class="list1 list-indent1"><li>Windows2000では、起動時のハンドシェークでやりとりがうまく行かず、ハングする。</li>
@@ -744,10 +744,10 @@ RAM: 86 bytes</pre></li></ul>
 <li>(16-2),(32-2),(64-2),(128-2),(64-2) のようになっている。</li>
 <li>なぜ２のべき-2なのかというと、パケットの先頭にReport ID(1〜5のどれか)を入れる必要があるからだ。</li>
 <li>(でもそれは-1である理由にしかなってないんだけど)</li>
-<li>実はキリの良い値でなければならないという理由はないが<span class="noexists"><a href="./?cmd=edit&amp;page=LowSpeed&amp;refer=%EF%BC%A8%EF%BC%A9%EF%BC%A4%EF%BD%81%EF%BD%93%EF%BD%90%E9%AB%98%E9%80%9F%E5%8C%96">LowSpeed</a></span> USBのパケット長上限は８バイトなので、総転送サイズが８の倍数になっているほうが効率が良い。</li>
+<li>実はキリの良い値でなければならないという理由はないがLowSpeed USBのパケット長上限は８バイトなので、総転送サイズが８の倍数になっているほうが効率が良い。</li>
 <li>最後のやつだけ数列から外れているが、これはデバッグパケットらしい。</li></ul>
 <p><br />
-そして、HID Reportの転送には<strong>HidD_<span class="noexists"><a href="./?cmd=edit&amp;page=GetFeature&amp;refer=%EF%BC%A8%EF%BC%A9%EF%BC%A4%EF%BD%81%EF%BD%93%EF%BD%90%E9%AB%98%E9%80%9F%E5%8C%96">GetFeature</a></span>()/HidD_<span class="noexists"><a href="./?cmd=edit&amp;page=SetFeature&amp;refer=%EF%BC%A8%EF%BC%A9%EF%BC%A4%EF%BD%81%EF%BD%93%EF%BD%90%E9%AB%98%E9%80%9F%E5%8C%96">SetFeature</a></span>()</strong> を使う。</p>
+そして、HID Reportの転送には<strong>HidD_GetFeature()/HidD_SetFeature()</strong> を使う。</p>
 <ul class="list1 list-indent1"><li>転送サイズはREPORT_COUNT+1を与え、バッファの先頭にはReport_IDを書き込んで使う。</li></ul>
 <p><strong>今日やったこと</strong></p>
 <ul class="list1 list-indent1"><li>AVR-DoperのHidReportDescriptorを移植したAVR-USBのフレームワークを用意して、

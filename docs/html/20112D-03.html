@@ -295,7 +295,7 @@
   and always set the maximum to new bytes to the space remaining
   in the fifo. this number will be reincremented after calls
   to usbReceiveBytes */</pre>
-<p>void vcom<span class="noexists"><a href="./?cmd=edit&amp;page=DataRxCb&amp;refer=2011-03">DataRxCb</a></span>(void) {</p>
+<p>void vcomDataRxCb(void) {</p>
 <pre> /* do whatever after data has been received from host */
 
  /* setEPRxCount on the previous cycle should garuntee
@@ -353,7 +353,7 @@
  PMAToUserBufferCopy(&amp;vcomBufferRx[0],VCOM_RX_ADDR,newBytes);
 }</pre>
 <ul class="list1 list-indent1"><li>DTRがNEGATEされているときに&quot;1EAF&quot; (leaflabsの頭文字？)という文字列が来たら</li>
-<li>usb<span class="noexists"><a href="./?cmd=edit&amp;page=WaitReset&amp;refer=2011-03">WaitReset</a></span>()関数 ( 論理or 1 しているのは ThumbステートのPCを指したいから)</li>
+<li>usbWaitReset()関数 ( 論理or 1 しているのは ThumbステートのPCを指したいから)</li>
 <li>へ例外リターンするようになっている。</li></ul>
 <p><strong>それでいいのか？</strong></p>
 <ul class="list1 list-indent1"><li>firmataのようなスケッチでＰＣと仮想COMで通信中のときは&quot;1EAF&quot;はスケッチ側がゲット済みしてしまう可能性が高いのではないだろうか。</li>

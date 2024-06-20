@@ -184,7 +184,7 @@
 <p><a href="http://akizukidenshi.com//img/goods/L/M-04276.jpg" rel="nofollow"><img src="http://akizukidenshi.com//img/goods/L/M-04276.jpg" alt="http://akizukidenshi.com//img/goods/L/M-04276.jpg" /></a></p>
 <ul class="list1 list-indent1"><li>なんといってもPCに接続する仮想COMポートをデバイス側から普通のシリアルポートのように扱える。（あまりUSBを意識しなくてgetc(),putc()出来るという感じ）</li></ul>
 <ul class="list1 list-indent1"><li>なので、これをCQ-STARMとSTM8S-Discovery用に改造中。 ---&gt; 済み</li>
-<li>STBee , ST<span class="noexists"><a href="./?cmd=edit&amp;page=BeeMini&amp;refer=2011-08">BeeMini</a></span> , STM32VL-Discovery対応はxshigeさんの成果を利用させていただいております。<strong>感謝!!</strong></li></ul>
+<li>STBee , STBeeMini , STM32VL-Discovery対応はxshigeさんの成果を利用させていただいております。<strong>感謝!!</strong></li></ul>
 <hr class="full_hr" />
 <ul class="list1 list-indent1"><li>結局自分は(STM32用の)Arduinoが使いたいわけではなく、仮想COMを使ったアプリを書きたいだけだった。</li>
 <li>STM32のサンプルアプリケーションの仮想COMは、とてもやる気ない実装なのと、デバイスから自由にgetc(),putc()出来るように改造するのが面倒なのでそのまま放置している。</li></ul>
@@ -195,16 +195,16 @@
 
 
 <div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h3 id="content_1_1">謝辞<a class="anchor_super" id="ra7e39b5" href="#ra7e39b5" title="ra7e39b5" style="user-select:none;">&dagger;</a></h3>
-<ul class="list1 list-indent1"><li>STBee , ST<span class="noexists"><a href="./?cmd=edit&amp;page=BeeMini&amp;refer=2011-08">BeeMini</a></span> , STM32VLD への対応にあたり、<a href="/ATMEL_AVR/cgi-bin/note/index.cgi?%b7%c7%bc%a8%c8%c4" rel="nofollow">xshigeさん</a>の<a href="http://cid-bbd4ba3beeca403e.office.live.com/self.aspx/pub/Maple%5E_0011%5E_Adaptation%5E_20110611.zip" rel="nofollow">Maple_0011_Adaptation_20110611.zip</a>
+<ul class="list1 list-indent1"><li>STBee , STBeeMini , STM32VLD への対応にあたり、<a href="/ATMEL_AVR/cgi-bin/note/index.cgi?%b7%c7%bc%a8%c8%c4" rel="nofollow">xshigeさん</a>の<a href="http://cid-bbd4ba3beeca403e.office.live.com/self.aspx/pub/Maple%5E_0011%5E_Adaptation%5E_20110611.zip" rel="nofollow">Maple_0011_Adaptation_20110611.zip</a>
 の成果を思いっきり使わせていただきましたので、ここに謝辞を申し上げます。</li></ul>
 
 <div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h3 id="content_1_2">DOWNLOAD<a class="anchor_super" id="k2312e6f" href="#k2312e6f" title="k2312e6f" style="user-select:none;">&dagger;</a></h3>
-<p>CQ-STARM , STM8S-Discovery , STBee , ST<span class="noexists"><a href="./?cmd=edit&amp;page=BeeMini&amp;refer=2011-08">BeeMini</a></span> の４基板を追加したバージョンを公開します。</p>
+<p>CQ-STARM , STM8S-Discovery , STBee , STBeeMini の４基板を追加したバージョンを公開します。</p>
 <ul class="list1 list-indent1"><li>こちらから<a href="/ATMEL_AVR/upload/STM/libmaple.zip" rel="nofollow">ダウンロード</a>してください。</li></ul>
 <p><br /></p>
 <hr class="full_hr" />
 
-<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h3 id="content_1_3"><span class="noexists"><a href="./?cmd=edit&amp;page=QuickStart&amp;refer=2011-08">QuickStart</a></span><a class="anchor_super" id="i40bb151" href="#i40bb151" title="i40bb151" style="user-select:none;">&dagger;</a></h3>
+<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h3 id="content_1_3">QuickStart<a class="anchor_super" id="i40bb151" href="#i40bb151" title="i40bb151" style="user-select:none;">&dagger;</a></h3>
 <p>CQ-STARM基板:</p>
 <ul class="list1 list-indent1"><li>libmaple.zipを解凍します。</li>
 <li>libmaple/ 直下のMakefileがありますので、
@@ -457,13 +457,13 @@ $(BUILD_PATH)/$(BOARD).bin: $(BUILD_PATH)/$(BOARD).elf
 <br /></p>
 <hr class="full_hr" />
 
-<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h2 id="content_1_11">比較的最新の<span class="noexists"><a href="./?cmd=edit&amp;page=CodeSourcery&amp;refer=2011-08">CodeSourcery</a></span>-G++ Liteにて、libmapleの動作が怪しい件<a class="anchor_super" id="c0025497" href="#c0025497" title="c0025497" style="user-select:none;">&dagger;</a></h2>
+<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h2 id="content_1_11">比較的最新のCodeSourcery-G++ Liteにて、libmapleの動作が怪しい件<a class="anchor_super" id="c0025497" href="#c0025497" title="c0025497" style="user-select:none;">&dagger;</a></h2>
 <pre>gcc version 4.5.1 (Sourcery G++ Lite 2010.09-51)  Windows/Linux
 gcc version 4.5.2 (Sourcery G++ Lite 2011.03-42)  Windows/Linux</pre>
 <ul class="list1 list-indent1"><li>にて、libmapleのusbサンプルをビルドしてもちっとも動かない。</li></ul>
 <pre>gcc version 4.4.1 (Sourcery G++ Lite 2010q1-188)  Windows/Linux</pre>
 <ul class="list1 list-indent1"><li>だとＯＫ。</li></ul>
-<p>つまり、maple-IDEに付属の<span class="noexists"><a href="./?cmd=edit&amp;page=CodeSourcery&amp;refer=2011-08">CodeSourcery</a></span>(gcc-4.4ベースのもの)ならＯＫだが、<strong>CodeSourceryが配布しているgcc-4.5ベースのものは全滅</strong>だ。</p>
+<p>つまり、maple-IDEに付属のCodeSourcery(gcc-4.4ベースのもの)ならＯＫだが、<strong>CodeSourceryが配布しているgcc-4.5ベースのものは全滅</strong>だ。</p>
 <p><br /></p>
 <hr class="full_hr" />
 <p>最初は、Windows上でビルドしたものは動いて、Linuxでビルドしたものが動かない

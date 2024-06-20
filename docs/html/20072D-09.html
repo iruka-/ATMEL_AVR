@@ -211,7 +211,7 @@ RAM: 95 bytes</pre>
 <ul class="list1 list-indent1"><li>サイズ的には余裕のよっちゃん、なのでigorさんのと同じようにirdaとか追加できそう。</li>
 <li>monitに仕込んでおいたポート内容のダンプ機能がデバッグに思いのほか役立った。</li></ul>
 
-<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h3 id="content_1_3"><span class="noexists"><a href="./?cmd=edit&amp;page=ToDo&amp;refer=2007-09">ToDo</a></span><a class="anchor_super" id="qef73068" href="#qef73068" title="qef73068" style="user-select:none;">&dagger;</a></h3>
+<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h3 id="content_1_3">ToDo<a class="anchor_super" id="qef73068" href="#qef73068" title="qef73068" style="user-select:none;">&dagger;</a></h3>
 <ul class="list1 list-indent1"><li><del>受信FIFOの正しい扱い</del> 済み</li>
 <li><del>送信FIFOのFULLチェック</del> 済み</li>
 <li><del>受信割り込みでの割り込み許可ポイント</del> 今のところポーリングで受信しているので不要</li>
@@ -261,8 +261,8 @@ RAM: 95 bytes</pre>
 <p><strong>なんで？</strong></p>
 <ul class="list1 list-indent1"><li>どうやらＡＶＲ側はシロだ。</li>
 <li>ＡＶＲと交信せずに、ＷＩＮ３２内で完結するエコーバックを書いて回しても反応は同じ。</li>
-<li>ところが<span class="noexists"><a href="./?cmd=edit&amp;page=WriteFile&amp;refer=2007-09">WriteFile</a></span>(Ex)せずに直接printfする場合はすんなりと速い。</li>
-<li>COM9:に対する<span class="noexists"><a href="./?cmd=edit&amp;page=WriteFile&amp;refer=2007-09">WriteFile</a></span>(Ex)が発生すると長時間(0.5秒くらい)待たされているような感じだ。</li>
+<li>ところがWriteFile(Ex)せずに直接printfする場合はすんなりと速い。</li>
+<li>COM9:に対するWriteFile(Ex)が発生すると長時間(0.5秒くらい)待たされているような感じだ。</li>
 <li>これは同一ファイルハンドルCOM9を使ったReadFileExとWriteFileが競合するパターンのようだ。</li>
 <li>単体テストのときはうまく回避する術を見つけたような気がしたのだが・・・（気がしただけだったのか？）</li></ul>
 <hr class="full_hr" />
@@ -295,7 +295,7 @@ RAM: 95 bytes</pre>
 <p>手詰まりとなった。</p>
 <ul class="list1 list-indent1"><li>ＡＶＲとは接続しない状態で、ＣＯＭポートをオープンし、１バイトづつ文字を読み書きする。</li>
 <li>すなわち、ごく単純な無手順ターミナルすら作れないという謎現象だ。</li></ul>
-<ul class="list1 list-indent1"><li>突き詰めていったところ、<span class="noexists"><a href="./?cmd=edit&amp;page=WriteFile&amp;refer=2007-09">WriteFile</a></span>()でＣＯＭに書き込むと、それが反対側のＣＯＭポート（ｔｅｒａｔｅｒｍ）に表示されるまでに０.５秒くらいのラグが出来るのだ。</li>
+<ul class="list1 list-indent1"><li>突き詰めていったところ、WriteFile()でＣＯＭに書き込むと、それが反対側のＣＯＭポート（ｔｅｒａｔｅｒｍ）に表示されるまでに０.５秒くらいのラグが出来るのだ。</li>
 <li>ReadFileもスレッドも一切使わない状態でもそうなる。</li>
 <li>OVERLAPPEDをやめてもそうなる。</li>
 <li>送信文字数が１バイトだろうが１００バイトだろうが、０.５秒後にしか出現しない。</li>
@@ -449,7 +449,7 @@ RAM: 95 bytes</pre>
 <br />
 <span style="font-size:32px">不思議だ。</span>
 <br /></li>
-<li>不思議なことにOVERLAPPED引数エリアを<span class="noexists"><a href="./?cmd=edit&amp;page=ReadFile&amp;refer=2007-09">ReadFile</a></span>() <span class="noexists"><a href="./?cmd=edit&amp;page=WriteFile&amp;refer=2007-09">WriteFile</a></span>() 直前に毎回ゼロクリアしている。</li>
+<li>不思議なことにOVERLAPPED引数エリアをReadFile() WriteFile() 直前に毎回ゼロクリアしている。</li>
 <li>そんなことWIN32HELPに書いてないぞ。</li>
 <li>やってみたが・・・今一つだ。</li>
 <li>むしろ、readfileのthreadでsleep(1)しているのが悪いらしい。</li></ul>
@@ -457,7 +457,7 @@ RAM: 95 bytes</pre>
 
 <div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h4 id="content_1_15">自分が馬鹿であることに気づいた（もっと早く気づけよ）<a class="anchor_super" id="ic5a4d00" href="#ic5a4d00" title="ic5a4d00" style="user-select:none;">&dagger;</a></h4>
 <ul class="list1 list-indent1"><li>Sleep(1mS)が悪い、と書いたが、実はそうではなくて。</li>
-<li><span class="noexists"><a href="./?cmd=edit&amp;page=ReadFile&amp;refer=2007-09">ReadFile</a></span>( ... OVERLAPPED &amp;ovl );でIO_PENDINGじゃないときは、既に読み込み完になっている。</li>
+<li>ReadFile( ... OVERLAPPED &amp;ovl );でIO_PENDINGじゃないときは、既に読み込み完になっている。</li>
 <li>そのときはGetOverlappedResultとかWaitForなんとかとかは、一切不要で。</li>
 <li>すでに受信できてるわけ。</li>
 <li>なのに、そのデータを捨てちゃだめだよなー。＞アホ。</li></ul>
@@ -500,7 +500,7 @@ RAM: 95 bytes</pre>
 <hr class="full_hr" />
 
 <div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h4 id="content_1_18">Win32 Commポートリベンジ！<a class="anchor_super" id="zf70a73e" href="#zf70a73e" title="zf70a73e" style="user-select:none;">&dagger;</a></h4>
-<ul class="list1 list-indent1"><li>なんかほんとにteraterm--&gt;<span class="noexists"><a href="./?cmd=edit&amp;page=ComEmulDrv&amp;refer=2007-09">ComEmulDrv</a></span>--&gt;自作Comm通信は相性が悪いようだ。</li>
+<ul class="list1 list-indent1"><li>なんかほんとにteraterm--&gt;ComEmulDrv--&gt;自作Comm通信は相性が悪いようだ。</li>
 <li>症状としては、Commに対するReadFileとWriteFileの発行（オーバーラップも含め）が重なるだけでダメダメになる。</li>
 <li>teratermの代わりにPuTTYだと、割といい感じ。</li>
 <li>なぜだかわからない。</li>
@@ -516,13 +516,13 @@ RAM: 95 bytes</pre>
 <p>結果、成功。</p>
 <ul class="list1 list-indent1"><li>わざわざWIN32用の無手順端末を書いた。</li>
 <li>投槍的にはせずに、普通に書いてみた。</li>
-<li>RS232C受信文字があるかどうかをポーリングする関数<span class="noexists"><a href="./?cmd=edit&amp;page=ClearCommError&amp;refer=2007-09">ClearCommError</a></span>()を使って、結局スレッドは用いなかった。</li>
+<li>RS232C受信文字があるかどうかをポーリングする関数ClearCommError()を使って、結局スレッドは用いなかった。</li>
 <li>さらに、無手順端末モードの他にエコーバックサーバーモードを追加した。</li>
 <li>２つのtermを立ち上げ、片方をエコーバックサーバーにして、もう片方を無手順端末にする。</li></ul>
 <p>ばっちりだ。</p>
 <ul class="list1 list-indent1"><li>無手順端末でなくteratermを使ったときだけ、応答が遅い現象が起きる。</li>
 <li>PuTTYでは起きないので、teratermだけ本物のRS232Cポートを仮定した何かのエラーチェックがあるのではないか？？？</li>
-<li>ComEmulDrvのCOMポートに対して、<span class="noexists"><a href="./?cmd=edit&amp;page=GetCommProperties&amp;refer=2007-09">GetCommProperties</a></span>()を発行すると、COMPROP構造体がオールゼロのままで何も情報を返さないので、やはり実在COMポートとは異なるようだ。</li></ul>
+<li>ComEmulDrvのCOMポートに対して、GetCommProperties()を発行すると、COMPROP構造体がオールゼロのままで何も情報を返さないので、やはり実在COMポートとは異なるようだ。</li></ul>
    </div>
   </div>
  </div>

@@ -193,7 +193,7 @@
 <li>144MHz動作</li>
 <li>FPU内蔵</li>
 <li>スーパースカラー実行ユニットにより１クロックに２命令実行!</li>
-<li>USB <span class="noexists"><a href="./?cmd=edit&amp;page=HighSpeed&amp;refer=SH2A">HighSpeed</a></span> (480Mbps ) host機能あり</li>
+<li>USB HighSpeed (480Mbps ) host機能あり</li>
 <li>LCDコントローラー機能まであり。</li>
 <li>１年半も前の基板なのに超最新のSTM32F4を遥かに超える破壊力！</li></ul>
 <p>最強にして最凶（最も凶悪）な基板。</p>
@@ -228,13 +228,13 @@
 <ul class="list1 list-indent1"><li>基板はとくに手を加える必要はないけれど、動作不安定だった場合は、参考ＵＲＬのSYSLABさんのblogを参考に、電源周りの補強をしてみる。</li>
 <li>（１）Renesasのサイトに登録して、HEWとSH2A用のＣコンパイラを入手してインストール。
 <ul class="list2 list-indent1"><li>Ｃコンパイラは試用期間が過ぎたら128kB制限が掛かるけれど、ＰＩＣみたいに最適化ＯＦＦになるわけではないので、それなりに役に立つ。</li></ul></li>
-<li>（２）CQのサイトから、SH2A<span class="noexists"><a href="./?cmd=edit&amp;page=StartUp&amp;refer=SH2A">StartUp</a></span>.zipをダウンロードする。仮想COMのinfファイルはUSB接続時のドライバー
+<li>（２）CQのサイトから、SH2AStartUp.zipをダウンロードする。仮想COMのinfファイルはUSB接続時のドライバー
 なのでUSBを繋いだときにインストールする。</li>
-<li>（３）同じくSH2A<span class="noexists"><a href="./?cmd=edit&amp;page=StartUp&amp;refer=SH2A">StartUp</a></span>.zipにある、HEWmonitorUSB.zipを開いて、説明どおりにHEWをセットアップする。
+<li>（３）同じくSH2AStartUp.zipにある、HEWmonitorUSB.zipを開いて、説明どおりにHEWをセットアップする。
 <ul class="list2 list-indent1"><li>これをセットアップしない限り、この基板にターゲット接続できない。</li></ul></li>
-<li>（４）次に、同じくSH2A<span class="noexists"><a href="./?cmd=edit&amp;page=StartUp&amp;refer=SH2A">StartUp</a></span>.zipにある、LチカサンプルをHEWプロジェクトで開いてビルド、実行してみる。
+<li>（４）次に、同じくSH2AStartUp.zipにある、LチカサンプルをHEWプロジェクトで開いてビルド、実行してみる。
 <ul class="list2 list-indent1"><li>うまくいけばＬＥＤが点滅する。</li></ul></li>
-<li>（５）最後に、同じ要領で、ROM_<span class="noexists"><a href="./?cmd=edit&amp;page=UpDate&amp;refer=SH2A">UpDate</a></span>.zipを開き、中の説明どおりに実行するとHEWのファームを更新することが出来る。失敗すると文鎮基板の出来上がりだ。</li></ul>
+<li>（５）最後に、同じ要領で、ROM_UpDate.zipを開き、中の説明どおりに実行するとHEWのファームを更新することが出来る。失敗すると文鎮基板の出来上がりだ。</li></ul>
 <ul class="list1 list-indent1"><li>自分のＰＣ(H61+Corei3)ではHEWと基板の接続や実行が全然うまくいかなかった。たぶんAMD系やOHCIホストのマザーでも同様かもしれない。結局USB1.1ハブを間に挟んで実行させたらうまくいった。</li></ul>
 <p><br />
 結構面倒いのよこれが。</p>
@@ -363,7 +363,7 @@
 <ul class="list1 list-indent1"><li><a href="/ATMEL_AVR/upload/SH2A/sh2a.zip" rel="nofollow">sh2a.zip</a></li></ul>
 <ul class="list1 list-indent1"><li>とりあえず、<strong>gccでビルドできるブートローダー兼USB-CDCサンプル</strong>（番地を変えることでブートされる側にもなれる）。</li>
 <li>CQのサイトにあるCygwin版gccを使ってビルド可能。</li>
-<li>SP<span class="noexists"><a href="./?cmd=edit&amp;page=IwriteUser&amp;refer=SH2A">IwriteUser</a></span>.hwsを使ってSH2A-FFF82000.binをシリアルEEPROMに書き込んで使用する。</li>
+<li>SPIwriteUser.hwsを使ってSH2A-FFF82000.binをシリアルEEPROMに書き込んで使用する。</li>
 <li>1MBのRAM空間にSH2A-1C000000.mot をブートすることで、いろいろ試すことも可能。
 <ul class="list2 list-indent1"><li>ブートすると、一時的にUSB-CDCが切断されて、自動でアプリケーション側のUSB-CDCに切り替わる。</li></ul></li>
 <li>user_cmd()関数にテストを記述して、cdctool.exeから userコマンドで実行可能。</li>

@@ -175,12 +175,12 @@
     <h1 class="firstHeading">mcc18</h1><div id="contentSub"></div>
     <p><a href="/ATMEL_AVR/log/2009-08.html" rel="nofollow">2009-08</a> 　<a href="/ATMEL_AVR/log/2009-05PIC.html" rel="nofollow">PIC日記</a> 　<a href="PIC18F2550.html" class="link_page_passage">PIC18F2550</a>　<a href="PIC18F4550.html" class="link_page_passage">PIC18F4550</a>　<a href="HIDmon2D-2550.html" class="link_page_passage">HIDmon-2550</a>　<a href="HIDmon2D-14K50.html" class="link_page_passage">HIDmon-14K50</a>　<a href="sdcc.html" class="link_page_passage">sdcc</a></p>
 <hr class="full_hr" />
-<h3 id="content_1_0"><span class="noexists"><a href="./?cmd=edit&amp;page=MicroChip&amp;refer=mcc18">MicroChip</a></span> C18 Compilerを使いこなす<a class="anchor_super" id="qdd17ecb" href="#qdd17ecb" title="qdd17ecb" style="user-select:none;">&dagger;</a></h3>
-<ul class="list1 list-indent1"><li><span class="noexists"><a href="./?cmd=edit&amp;page=MicroChip&amp;refer=mcc18">MicroChip</a></span> C18 Compiler は評価版と称して事実上無償配布されています。<a id="notetext_1" href="#notefoot_1" class="note_super" title="これは適切な表現ではありません。">*1</a><a id="notetext_2" href="#notefoot_2" class="note_super" title="Lite版は無償無期限で使用できます。評価版は60日だけ使用できます。期限の切れた評価版はLite版と同等の機能に格下げになります。">*2</a><a id="notetext_3" href="#notefoot_3" class="note_super" title="評価版はVerup版が出るたびに古いものをアン・インストールして、インストールしなおすことが出来るので、改版のタイミングから２ヶ月は最適化ありの状態で使用できるといった具合です。">*3</a><a id="notetext_4" href="#notefoot_4" class="note_super" title="Lite版と、期限の切れた評価版は最適化なしになりコードサイズが２割以上大きくなりますが、">*4</a><a id="notetext_5" href="#notefoot_5" class="note_super" title="それ以外の制限は無く普通に使用できます。そういった意味では無償配布です。">*5</a></li>
-<li><span class="noexists"><a href="./?cmd=edit&amp;page=MicroChip&amp;refer=mcc18">MicroChip</a></span> が用意しているUSBアプリケーションフレームワークは、基本的に C18 Compilerでコンパイルできるように記述されています。</li>
+<h3 id="content_1_0">MicroChip C18 Compilerを使いこなす<a class="anchor_super" id="qdd17ecb" href="#qdd17ecb" title="qdd17ecb" style="user-select:none;">&dagger;</a></h3>
+<ul class="list1 list-indent1"><li>MicroChip C18 Compiler は評価版と称して事実上無償配布されています。<a id="notetext_1" href="#notefoot_1" class="note_super" title="これは適切な表現ではありません。">*1</a><a id="notetext_2" href="#notefoot_2" class="note_super" title="Lite版は無償無期限で使用できます。評価版は60日だけ使用できます。期限の切れた評価版はLite版と同等の機能に格下げになります。">*2</a><a id="notetext_3" href="#notefoot_3" class="note_super" title="評価版はVerup版が出るたびに古いものをアン・インストールして、インストールしなおすことが出来るので、改版のタイミングから２ヶ月は最適化ありの状態で使用できるといった具合です。">*3</a><a id="notetext_4" href="#notefoot_4" class="note_super" title="Lite版と、期限の切れた評価版は最適化なしになりコードサイズが２割以上大きくなりますが、">*4</a><a id="notetext_5" href="#notefoot_5" class="note_super" title="それ以外の制限は無く普通に使用できます。そういった意味では無償配布です。">*5</a></li>
+<li>MicroChip が用意しているUSBアプリケーションフレームワークは、基本的に C18 Compilerでコンパイルできるように記述されています。</li>
 <li>しかし、普通のMakeが通りません。Makefileも整備されていないようです。</li></ul>
 <p><a href="/ATMEL_AVR/jpg/PIC/14k50.jpg" rel="nofollow"><img src="/ATMEL_AVR/jpg/PIC/14k50.jpg" alt="/ATMEL_AVR/jpg/PIC/14k50.jpg" /></a></p>
-<ul class="list1 list-indent1"><li><span class="noexists"><a href="./?cmd=edit&amp;page=MicroChip&amp;refer=mcc18">MicroChip</a></span> が用意しているUSBアプリケーションフレームワークを<a href="sdcc.html" class="link_page_passage">sdcc</a>に移植するのは茨の道です。MicroChipのバージョンアップに追いつけません。</li>
+<ul class="list1 list-indent1"><li>MicroChip が用意しているUSBアプリケーションフレームワークを<a href="sdcc.html" class="link_page_passage">sdcc</a>に移植するのは茨の道です。MicroChipのバージョンアップに追いつけません。</li>
 <li>現状、<a href="sdcc.html" class="link_page_passage">sdcc</a>はＣコンパイラとしての基本性能に問題があります。もちろんC18にも問題はあります。
 <ul class="list2 list-indent1"><li>結局、どちらがましか、という議論になると、C18のほうがましであるという結論に達しました。</li></ul></li></ul>
 <p><a href="http://mpu.seesaa.net/article/1187467.html" rel="nofollow">Audinさんのサイトのまとめ記事</a>が非常に参考になります。</p>
@@ -238,7 +238,7 @@
 <ul class="list1 list-indent1"><li><a href="/ATMEL_AVR/upload/PIC/mchip-hidboot.zip" rel="nofollow">mchip-hidboot.zip</a></li></ul>
 <ul class="list1 list-indent1"><li>内容は<a href="http://www-ice.yamagata-cit.ac.jp/ken/senshu/sitedev/index.php?AVR%2Fnews43" rel="nofollow">千秋ゼミさんのサイト</a>に登録されているHIDBoot-14k50.zip とほぼ同じです。（千秋さん、ありがとうございました。）</li></ul>
 <ul class="list1 list-indent1"><li>Makefileを少し変更して汎用性を持たせてあります。</li></ul>
-<ul class="list1 list-indent1"><li><span class="noexists"><a href="./?cmd=edit&amp;page=ReadMe&amp;refer=mcc18">ReadMe</a></span>.txtドキュメントを追加しました。</li></ul>
+<ul class="list1 list-indent1"><li>ReadMe.txtドキュメントを追加しました。</li></ul>
 <p><strong>これでやっとC18が使えるようになります</strong></p>
 <ul class="list1 list-indent1"><li>今まではC18でのビルド方法が全く不明（GUIは苦手です）だったのでどうすることも出来ませんでした。</li></ul>
 <p><br />

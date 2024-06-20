@@ -218,7 +218,7 @@
 <ul class="list2 list-indent1"><li>勿論、水晶発振<strong>子</strong>ではなくて、水晶発振モジュール出力をPICに突っ込むことも出来ますが、その場合は
 外部12MHzか、外部48MHzにして内部x4PLLをdisableするかの２択となります。</li></ul></li>
 <li>18F14K50の内部発振16MHzではどうやってもUSBが使えないような気がします。</li></ul>
-<ul class="list1 list-indent1"><li>USB <span class="noexists"><a href="./?cmd=edit&amp;page=LowSpeed&amp;refer=HIDmon-14K50">LowSpeed</a></span>(1.5Mbps)を使う場合は、その４倍の6MHzのUSB Clockが必要になりますが、
+<ul class="list1 list-indent1"><li>USB LowSpeed(1.5Mbps)を使う場合は、その４倍の6MHzのUSB Clockが必要になりますが、
 <ul class="list2 list-indent1"><li>その場合もXtalの選択は２択であり、6MHzを直接つなぐか、12MHzを内部２分周で使うかのどちらかです。</li></ul></li>
 <li>もし6MHz Xtalを選択した場合、CPU Clockは x4PLLを通しても24MHzにしか上げられないので、
 <ul class="list2 list-indent1"><li>結局12MHz Xtalを選択して、x4PLLでCPUを48MHz駆動し、USBモジュールに1/2の6MHzを与えるのが良いでしょう。</li></ul></li></ul>
@@ -357,7 +357,7 @@
 <p>おおまかに推測すると、0x2c0〜0x2ff あたりは誰かがわざと壊しているとしか思えません。</p>
 <ul class="list1 list-indent1"><li>で、壊される領域に、usb_sm_ctrl_stateという大事な（？）変数がさしかかると、USBデバイス認識しなかったり、USB接続が切れたりするという感じです。</li></ul>
 <p><br /></p>
-<p>結論から言って、USB <span class="noexists"><a href="./?cmd=edit&amp;page=DualPort&amp;refer=HIDmon-14K50">DualPort</a></span> RAM (0x200〜0x2ff)の最後の0x30バイトあたりは破壊されやすいようです。</p>
+<p>結論から言って、USB DualPort RAM (0x200〜0x2ff)の最後の0x30バイトあたりは破壊されやすいようです。</p>
 <ul class="list1 list-indent1"><li>HIDmonのワークを0x210〜0x23Fに移すと、何事もなかったように正しく動作します。</li>
 <li>現在はUSBのinput packet bufferに割り当てて、ホストパケット受信後の短時間だけ信用するというやりかたで回避しています。</li></ul>
    </div>

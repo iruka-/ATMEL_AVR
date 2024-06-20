@@ -303,11 +303,11 @@ WindowsとOfficeだ。このため、この2つの部門が紛れもなく莫大
 <li>何もマイクロソフトだけに起きた問題ではない。</li></ul>
 <p><br /></p>
 <ul class="list1 list-indent1"><li>WindowsとOfficeに限って言えば、これらのソフトは代替品が充分成熟してきている。</li>
-<li>それはubuntuと<span class="noexists"><a href="./?cmd=edit&amp;page=OpenOffice&amp;refer=2010-02">OpenOffice</a></span>.orgだ。しかも両方ともオープンソースだ。</li>
+<li>それはubuntuとOpenOffice.orgだ。しかも両方ともオープンソースだ。</li>
 <li>自分はいまだにWindowsXPに依存している。そして以前(2005年くらいまで)はWindows98に、その前はWindows95やMSDOSに依存していた。</li>
 <li>しかし、今後はWindowsVistaやWindows7に依存しないかもしれない。つまりXPの次のＯＳとしてVistaや7を選択せず、むしろubuntuに乗り換えたいとさえ思っている。</li></ul>
 <ul class="list1 list-indent1"><li>その気になれば、例えば予算不足の自治体や教育機関では、WindowsとOfficeを使う代わりに
-ubuntuや<span class="noexists"><a href="./?cmd=edit&amp;page=OpenOffice&amp;refer=2010-02">OpenOffice</a></span>.orgを使うことで経費節減が可能だ。</li></ul>
+ubuntuやOpenOffice.orgを使うことで経費節減が可能だ。</li></ul>
 <p>では、（エンドユーザーが直接ＭＳ製品を買ってくれなくなりつつあるのに）マイクロソフトがなぜWindowsで利益を上げ続けられたのだろうか？</p>
 <ul class="list1 list-indent1"><li>それは、メーカー出荷されるパソコン１台に付きほぼ１セットのWindowsがプリインストールされ、ＰＣ価格に上乗せされているからだ。</li></ul>
 <ul class="list1 list-indent1"><li>ところが、将来的にはそうならないかもしれない。</li>
@@ -551,7 +551,7 @@ read more : <a href="PICmonitor.html" class="link_page_passage">PICmonitor</a>
 <ul class="list2 list-indent1"><li>実際にはデータを１バイト受け取ったあとの処理が256クロックをはみ出ているので対策は必要だが・・。</li></ul></li></ul>
 <p><br />
 残りの課題</p>
-<ul class="list1 list-indent1"><li>HID Reportの受信にWindowsAPIの<span class="noexists"><a href="./?cmd=edit&amp;page=ReadFile&amp;refer=2010-02">ReadFile</a></span>()を使っていて、デバイス側応答がない場合にハングアップする問題の対策を考える。</li>
+<ul class="list1 list-indent1"><li>HID Reportの受信にWindowsAPIのReadFile()を使っていて、デバイス側応答がない場合にハングアップする問題の対策を考える。</li>
 <li>PIC側UARTの送受信を割り込みハンドラーで行ってみる。</li>
 <li>hidaspxのAVR書き込みファンクションの部分も移植する。</li>
 <li>WinLIRCっぽいやつを作ってみる。（赤外線でビビビ）</li></ul>
@@ -718,7 +718,7 @@ hid write end,    1.250 kB/    0.28 s,   4.448 kB/s</pre></li></ul>
 <hr class="full_hr" />
 
 <div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h2 id="content_1_26">今日のPICmon<a class="anchor_super" id="we9064e3" href="#we9064e3" title="we9064e3" style="user-select:none;">&dagger;</a></h2>
-<ul class="list1 list-indent1"><li>ASYNC <span class="noexists"><a href="./?cmd=edit&amp;page=ReadFile&amp;refer=2010-02">ReadFile</a></span> / <span class="noexists"><a href="./?cmd=edit&amp;page=WriteFile&amp;refer=2010-02">WriteFile</a></span> を実装した。</li>
+<ul class="list1 list-indent1"><li>ASYNC ReadFile / WriteFile を実装した。</li>
 <li>poll系コマンドの仮実装をしてみた。</li>
 <li>Win7だとハブあり、ハブなしのどちらでも登り64kB/Sの速度が出る。</li>
 <li>WinXPだと不調。48kB/Sしか出ないし、ハブありだとほぼ全滅。というかUSB 2.0ハブ自体を認識しなくなった。XPとHubの相性？わけわからん。</li></ul>
@@ -734,7 +734,7 @@ hid write end,    1.250 kB/    0.28 s,   4.448 kB/s</pre></li></ul>
 <ul class="list2 list-indent2"><li>あえてLPCXpressoを買わず、<a href="http://akizukidenshi.com/catalog/g/gM-03457/" rel="nofollow">STM8S-Discovery</a>だけで手に入れて、オレオレファームを焼くという野望だけのために存在。</li></ul>
 <ul class="list1 list-indent1"><li><a href="http://www.eleki-jack.com/arm/2010/02/lpcxpressoled-1.html" rel="nofollow">http://www.eleki-jack.com/arm/2010/02/lpcxpressoled-1.html</a></li></ul>
 <p><a href="http://www.eleki-jack.com/arm/noritan-lpcxp-01-02-400.jpg" rel="nofollow"><img src="http://www.eleki-jack.com/arm/noritan-lpcxp-01-02-400.jpg" alt="http://www.eleki-jack.com/arm/noritan-lpcxp-01-02-400.jpg" /></a></p>
-<p>ちなみにLPCXpressoのLPC Linkの石は<span class="noexists"><a href="./?cmd=edit&amp;page=HighSpeed&amp;refer=2010-02">HighSpeed</a></span>-USB(480Mbps) 付のARM-926EJ-Sでクロック最大270MHz(LPC3154は180MHz)</p>
+<p>ちなみにLPCXpressoのLPC Linkの石はHighSpeed-USB(480Mbps) 付のARM-926EJ-Sでクロック最大270MHz(LPC3154は180MHz)</p>
 <ul class="list1 list-indent1"><li><a href="http://ics.nxp.com/products/lpc3000/lpc313x.lpc314x.lpc315x/~LPC3154/" rel="nofollow">http://ics.nxp.com/products/lpc3000/lpc313x.lpc314x.lpc315x/~LPC3154/</a></li>
 <li>SRAM 192kB / オンチップFlashは、入っていない、bootROMにより,外部Flash(SPI/NAND)かUSB(DFU)かSD-Cardを読み取ってBoot出来る。</li>
 <li>つまり超ハイエンド(DS-Liteよりずっと上)のARM-926と、Cortex-M0もしくはM3のターゲットボードがペアで、
@@ -758,7 +758,7 @@ hid write end,    1.250 kB/    0.28 s,   4.448 kB/s</pre></li></ul>
 <li><a href="http://www.jp.nxp.com/news/content/file_1668.html" rel="nofollow">http://www.jp.nxp.com/news/content/file_1668.html</a></li>
 <li>ＣのランタイムライブラリRedlibはnon GNU、でもnewlibも使えるとある。（そりゃまあgccだから普通は使えて当然だ）</li>
 <li><a href="http://lpcxpresso.code-red-tech.com/LPCXpresso/" rel="nofollow">http://lpcxpresso.code-red-tech.com/LPCXpresso/</a></li>
-<li>ターゲットボード側のLPC1343には<span class="noexists"><a href="./?cmd=edit&amp;page=FullSpeed&amp;refer=2010-02">FullSpeed</a></span>(12Mbps)のUSBは接続可能。LPC1114(Cortex-M0)にはUSBはない。</li></ul>
+<li>ターゲットボード側のLPC1343にはFullSpeed(12Mbps)のUSBは接続可能。LPC1114(Cortex-M0)にはUSBはない。</li></ul>
 <p><br />
 <br />
 <br /></p>

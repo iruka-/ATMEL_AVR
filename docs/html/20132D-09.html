@@ -196,7 +196,7 @@ PIC32MXでVGA出力</p>
 <div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h2 id="content_1_1"><a href="PIC32MX.html" class="link_page_passage">PIC32MX</a>: HIDBoot.Xを地道に改良。<a class="anchor_super" id="md61762e" href="#md61762e" title="md61762e" style="user-select:none;">&dagger;</a></h2>
 <ul class="list1 list-indent1"><li>crt0.Sに .weakな例外ベクターのjmpテーブルを作成。（実際には例外は使ってないので他プロジェクトで活用するためのもの）</li>
 <li>コードサイズを1K弱縮めてみた。</li>
-<li>__<span class="noexists"><a href="./?cmd=edit&amp;page=IntVectorTable&amp;refer=2013-09">IntVectorTable</a></span>[]とか__<span class="noexists"><a href="./?cmd=edit&amp;page=IntSrcTable&amp;refer=2013-09">IntSrcTable</a></span>[]という大ボスがまだ残っている。</li>
+<li>__IntVectorTable[]とか__IntSrcTable[]という大ボスがまだ残っている。</li>
 <li>HIDBoot.Xでは、実際のところ例外（割り込み）を使用しないので、INT***()関数を追放するか、最小機能のものに置き換えることが出来れば、さらに2kBは縮むはずだ。</li>
 <li>あと、一般例外(general_exception_vector)とブート例外(boot_exception)も、どうせ使ってない（NOPが置かれて放置されているだけ）ので、これらも外して、BOOT-ROMを全部フラットで使っちゃうとかすれば、下手すると常駐4kB FLASH(+3kB BOOT)に収まるかも。</li></ul>
 <p><br />
@@ -205,7 +205,7 @@ PIC32MXでVGA出力</p>
 <hr class="full_hr" />
 
 <div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h2 id="content_1_2"><a href="PIC32MX.html" class="link_page_passage">PIC32MX</a>: HIDBoot.Xをさらに改良<a class="anchor_super" id="oe9fdc58" href="#oe9fdc58" title="oe9fdc58" style="user-select:none;">&dagger;</a></h2>
-<ul class="list1 list-indent1"><li>__<span class="noexists"><a href="./?cmd=edit&amp;page=IntVectorTable&amp;refer=2013-09">IntVectorTable</a></span>[]とか__<span class="noexists"><a href="./?cmd=edit&amp;page=IntSrcTable&amp;refer=2013-09">IntSrcTable</a></span>[]は、無くてもなんとかなるっぽい。（INT<span class="noexists"><a href="./?cmd=edit&amp;page=ClearFlag&amp;refer=2013-09">ClearFlag</a></span>()がダミー関数になるけど）</li>
+<ul class="list1 list-indent1"><li>__IntVectorTable[]とか__IntSrcTable[]は、無くてもなんとかなるっぽい。（INTClearFlag()がダミー関数になるけど）</li>
 <li>消してみたら、FLASH使用量は5kB強になった。</li>
 <li>あと1kBなんだけど、BOOT-ROMのほうには512byteは空きがあるので、結局のところ<strong>4kBに収める射程内</strong>に入ってしまった。</li></ul>
 <p><strong>ああどうしよう。縮めちゃうよ。</strong></p>
@@ -287,7 +287,7 @@ PIC32MXでVGA出力</p>
 <pre>	INTEnableSystemMultiVectoredInt();
 	INTEnableInterrupts();</pre></li>
 <li>これを入れて解決。最初は asm(&quot;ei&quot;);を入れていたがハングするばかり。</li>
-<li>crt0.Sを見た限りでは、INT<span class="noexists"><a href="./?cmd=edit&amp;page=EnableSystemMultiVectoredInt&amp;refer=2013-09">EnableSystemMultiVectoredInt</a></span>();等価の処理は書かれている。まさかシングルベクターなわけはない（はず）。</li></ul></li></ul>
+<li>crt0.Sを見た限りでは、INTEnableSystemMultiVectoredInt();等価の処理は書かれている。まさかシングルベクターなわけはない（はず）。</li></ul></li></ul>
 <p><br /></p>
 <ul class="list1 list-indent1"><li>３） USB_POLLINGでもジッターは出る。
 <ul class="list2 list-indent1"><li>USBを使うのを諦めて、main()側を
@@ -421,7 +421,7 @@ PIC32MXでVGA出力</p>
 <br /></p>
 <hr class="full_hr" />
 
-<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h2 id="content_1_8">TinyBasic2 for <span class="noexists"><a href="./?cmd=edit&amp;page=RasPi&amp;refer=2013-09">RasPi</a></span><a class="anchor_super" id="ka44eb40" href="#ka44eb40" title="ka44eb40" style="user-select:none;">&dagger;</a></h2>
+<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h2 id="content_1_8">TinyBasic2 for RasPi<a class="anchor_super" id="ka44eb40" href="#ka44eb40" title="ka44eb40" style="user-select:none;">&dagger;</a></h2>
 <p>これ：</p>
 <ul class="list1 list-indent1"><li><a href="http://www.staff.city.ac.uk/afl/tinybasic/downloads.html" rel="nofollow">http://www.staff.city.ac.uk/afl/tinybasic/downloads.html</a></li></ul>
 <p><br /></p>

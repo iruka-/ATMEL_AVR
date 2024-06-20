@@ -266,7 +266,7 @@
 <p><br /></p>
 <ul class="list1 list-indent1"><li>とはいえ、PinguinoはほぼArduinoと同じように使えるので、Flash128kBのチップが安く入手できるようになるとか、OlimexのPIC32基板を入手できるならそんなに悪くないと思っている。</li>
 <li><strong>Pinguinoのスケッチがおおむねちゃんと動くようになってればね。</strong></li>
-<li>今はまだ無理。<span class="noexists"><a href="./?cmd=edit&amp;page=OnTimer&amp;refer=2013-02">OnTimer</a></span>()とか割り込みとかSerialとか、ちゃんと動かないし。</li></ul>
+<li>今はまだ無理。OnTimer()とか割り込みとかSerialとか、ちゃんと動かないし。</li></ul>
 <p><br /></p>
 
 <div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h3 id="content_1_6">そういうわけで・・・<a class="anchor_super" id="f81d204f" href="#f81d204f" title="f81d204f" style="user-select:none;">&dagger;</a></h3>
@@ -380,9 +380,9 @@ void loop()
 <pre>	_CP0_SET_EBASE(0xBD003000); // Set an EBase value of 0xBD003000 Pinguinoから起動。	
 ---
 	_CP0_SET_EBASE(0xBFC00000); // Set an EBase value of 0xBFC00000	ライター書き込みの単独HEX</pre></li>
-<li>但し、<span class="noexists"><a href="./?cmd=edit&amp;page=IntConfigureSystem&amp;refer=2013-02">IntConfigureSystem</a></span>()内に_CP0_SET_EBASE()が記述されているので、その直後にやるとかしないとだめなのだ。</li>
-<li>さらに言うと、<span class="noexists"><a href="./?cmd=edit&amp;page=IntConfigureSystem&amp;refer=2013-02">IntConfigureSystem</a></span>()はTimer割り込みがバリバリ来てる時にやっちゃあいけない。</li>
-<li>割り込み発生前に<span class="noexists"><a href="./?cmd=edit&amp;page=IntConfigureSystem&amp;refer=2013-02">IntConfigureSystem</a></span>()やって、直後に_CP0_SET_EBASE()で正しいベクターを設定する。タイマーの設定はその後だ。
+<li>但し、IntConfigureSystem()内に_CP0_SET_EBASE()が記述されているので、その直後にやるとかしないとだめなのだ。</li>
+<li>さらに言うと、IntConfigureSystem()はTimer割り込みがバリバリ来てる時にやっちゃあいけない。</li>
+<li>割り込み発生前にIntConfigureSystem()やって、直後に_CP0_SET_EBASE()で正しいベクターを設定する。タイマーの設定はその後だ。
 <pre>// configure timer 1
 void init_timer1(void)
 {
@@ -438,7 +438,7 @@ void init_timer1(void)
 
 <div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h2 id="content_1_13">しつこくPIC32MX続き。<a class="anchor_super" id="gc3735e9" href="#gc3735e9" title="gc3735e9" style="user-select:none;">&dagger;</a></h2>
 <p>HIDBoot.Xのバキバキ改造は一区切り付いた。</p>
-<ul class="list1 list-indent1"><li>FLASHが書き込めない原因は、NVM<span class="noexists"><a href="./?cmd=edit&amp;page=WriteWord&amp;refer=2013-02">WriteWord</a></span>()の前のEraseでエラーしてリカバリーできていなかった模様。</li>
+<ul class="list1 list-indent1"><li>FLASHが書き込めない原因は、NVMWriteWord()の前のEraseでエラーしてリカバリーできていなかった模様。</li>
 <li>AN1388のNVMem.cを借用してきた。他にもEraseのループ回数は間違ってた模様。</li>
 <li>PAGE SIZEが4096決めうちになっていたけれど、MX220では1024に変更しないといけない。</li></ul>
 <p>ついでに、-mips16化して、コードサイズを最小に追い込んだら、8K(+3K)のサイズに収まった。</p>

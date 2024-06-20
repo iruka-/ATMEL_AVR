@@ -243,14 +243,14 @@ ArduinoやPinguinoのようなお手軽開発環境は、ブートローダー�
 
 <div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h4 id="content_1_5">（１）<a href="http://wiki.pinguino.cc/index.php/Main_Page/ja" rel="nofollow">Pinguino4.X</a><a class="anchor_super" id="d99406dc" href="#d99406dc" title="d99406dc" style="user-select:none;">&dagger;</a></h4>
 <ul class="list2 list-indent2"><li>ダウンロード: <a href="http://code.google.com/p/pinguino32/downloads/list" rel="nofollow">http://code.google.com/p/pinguino32/downloads/list</a></li>
-<li>安定版のPinguino-X4-<span class="noexists"><a href="./?cmd=edit&amp;page=EasyPack&amp;refer=HIDBootX">EasyPack</a></span>-Win32-Rev999-v01-2014-04.7z をダウンロードして D:\x4-easy-rev999\ に展開してください。</li></ul>
+<li>安定版のPinguino-X4-EasyPack-Win32-Rev999-v01-2014-04.7z をダウンロードして D:\x4-easy-rev999\ に展開してください。</li></ul>
 
-<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h4 id="content_1_6">（２）<span class="noexists"><a href="./?cmd=edit&amp;page=MicroChip&amp;refer=HIDBootX">MicroChip</a></span> MPLAB<a class="anchor_super" id="o006b863" href="#o006b863" title="o006b863" style="user-select:none;">&dagger;</a></h4>
+<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h4 id="content_1_6">（２）MicroChip MPLAB<a class="anchor_super" id="o006b863" href="#o006b863" title="o006b863" style="user-select:none;">&dagger;</a></h4>
 <ul class="list2 list-indent2"><li>紛らわしいのですが、新しいほうの<strong>MPLABXは駄目です</strong></li>
 <li><a href="http://www.microchip.com/" rel="nofollow">MicroChipのサイト</a>から、<a href="http://www.microchip.com/stellent/idcplg?IdcService=SS_GET_PAGE&amp;nodeId=1406&amp;dDocName=en019469&amp;part=SW007002" rel="nofollow">MPLAB_IDE_8_89.zip</a>を入手してインストールします。</li></ul>
 <ul class="list2 list-indent2"><li>インストール時にPIC32用のコンパイラも同時に選択してインストールするようにします。</li></ul>
 
-<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h4 id="content_1_7">（３）<span class="noexists"><a href="./?cmd=edit&amp;page=MicroChip&amp;refer=HIDBootX">MicroChip</a></span> USBフレームワーク（アプリケーションライブラリ）<a class="anchor_super" id="z2da25f3" href="#z2da25f3" title="z2da25f3" style="user-select:none;">&dagger;</a></h4>
+<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h4 id="content_1_7">（３）MicroChip USBフレームワーク（アプリケーションライブラリ）<a class="anchor_super" id="z2da25f3" href="#z2da25f3" title="z2da25f3" style="user-select:none;">&dagger;</a></h4>
 <ul class="list1 list-indent1"><li>Microchip Libraries for Applications v2013-06-15 Windows を入手してインストールします。</li></ul>
 <p><a href="http://www.microchip.com/stellent/idcplg?IdcService=SS_GET_PAGE&amp;nodeId=2680&amp;dDocName=en547784" rel="nofollow">このあたり</a>からmicrochip-application-libraries-v2013-06-15-windows-installer.exeを入手してインストールします。</p>
 <p><br /></p>
@@ -391,7 +391,7 @@ __attribute__（（nomips16）） </pre></li>
 }</pre></li>
 <li>のようにします。</li></ul>
 <p><br /></p>
-<ul class="list1 list-indent1"><li>gccの困るところとして、最適化のため勝手にインライン関数化されることがあり、それによって、たとえば<span class="noexists"><a href="./?cmd=edit&amp;page=SystemInit&amp;refer=HIDBootX">SystemInit</a></span>()が別の関数に埋め込まれてしまうことがあります。</li>
+<ul class="list1 list-indent1"><li>gccの困るところとして、最適化のため勝手にインライン関数化されることがあり、それによって、たとえばSystemInit()が別の関数に埋め込まれてしまうことがあります。</li>
 <li>そうすると、別の関数まで _MIPS32をあたえないといけなくなります。</li>
 <li>これを避けるには、__attribute__（（nomips16,noinline）） のように記述します。</li></ul>
 <p><br />

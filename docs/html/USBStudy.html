@@ -182,8 +182,8 @@
 <p><br />
 非互換の原因になっている問題</p>
 <ul class="list1 list-indent1"><li>BDT(Buffer Descriptor Table)の構造が違う。
-<ul class="list2 list-indent1"><li>PIC24Fでは BDTは1個あたり4byte。内訳は BDSTAT(6bit)        , COUNT(10bit) , <span class="noexists"><a href="./?cmd=edit&amp;page=BufferAddress&amp;refer=USBStudy">BufferAddress</a></span>(16bit)</li>
-<li>PIC32MXでは BDTは1個あたり8byte。内訳は BDSTAT(2byte中6bit) , COUNT(2byte中10bit) , <span class="noexists"><a href="./?cmd=edit&amp;page=BufferAddress&amp;refer=USBStudy">BufferAddress</a></span>(32bit)</li></ul></li></ul>
+<ul class="list2 list-indent1"><li>PIC24Fでは BDTは1個あたり4byte。内訳は BDSTAT(6bit)        , COUNT(10bit) , BufferAddress(16bit)</li>
+<li>PIC32MXでは BDTは1個あたり8byte。内訳は BDSTAT(2byte中6bit) , COUNT(2byte中10bit) , BufferAddress(32bit)</li></ul></li></ul>
 <ul class="list1 list-indent1"><li>BDTの配置が異なる
 <ul class="list2 list-indent1"><li>PIC24FではNO PING PONGモードで使用。BDTは稠密に並んでいます ( EP0〜15 x IN/OUT )</li>
 <li>PIC32MXではFULL PING PONGモードしか存在せず、EP0〜15(x Even / Odd)( x IN/OUT)でPING PONGモード（EvenバッファとOddバッファ交代を毎回行う）が強制的に採用されます。</li></ul></li></ul>
@@ -222,7 +222,7 @@ GND    GND              ~~~~~~~~~~</pre>
 <ul class="list1 list-indent1"><li>PIC32MX250F128Bでも回路図、ファームウェアは共通に使用できます。
 <ul class="list2 list-indent1"><li>（ファームウェアサイズはFlash32K,SRAM8Kに十分収まっています）</li></ul></li></ul>
 
-<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h2 id="content_1_3"><span class="noexists"><a href="./?cmd=edit&amp;page=UsbStudy&amp;refer=USBStudy">UsbStudy</a></span> ファームウェアの挙動<a class="anchor_super" id="f4c49eb6" href="#f4c49eb6" title="f4c49eb6" style="user-select:none;">&dagger;</a></h2>
+<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h2 id="content_1_3">UsbStudy ファームウェアの挙動<a class="anchor_super" id="f4c49eb6" href="#f4c49eb6" title="f4c49eb6" style="user-select:none;">&dagger;</a></h2>
 <ul class="list1 list-indent1"><li>USBのD+/D-は、適当なUSBデバイス(KB,Mouse,...)に繋ぎます。(Type-Aメスに配線する)</li>
 <li>PIC32MX側はUSB HOSTになります。</li></ul>
 <p><br /></p>

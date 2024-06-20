@@ -621,7 +621,7 @@ PIC/AVRを始めることにした。まずはライタを作らないと。
 <pre>for(...)
  pMesh-&gt;DrawSubset( i );</pre></li>
 <li>だなんて言われた日には、まるで「<strong>おまえら何も分からんでいいからＶｉｓｕａｌＢａｓｉｃでも使ってろ</strong>」と言われているのと同じだ。</li></ul>
-<p>じゃあ、自力でＸファイルを読んで、<span class="noexists"><a href="./?cmd=edit&amp;page=DrawPrimitive&amp;refer=2008-09">DrawPrimitive</a></span>()してみろと。</p>
+<p>じゃあ、自力でＸファイルを読んで、DrawPrimitive()してみろと。</p>
 <ul class="list1 list-indent1"><li>というわけでＸファイルの解析を始めたわけだが、</li>
 <li>なんかだめだめフォーマットなんだなこれが。</li>
 <li>特にＸバイナリーなんて、元のテキストをトークン番号に置換しただけのテキスト並びのまんまじゃないか。</li>
@@ -636,9 +636,9 @@ PIC/AVRを始めることにした。まずはライタを作らないと。
 <li>モデリングソフト毎に独自のフォーマットが存在するが、それは(面倒なので)扱いきれない。</li>
 <li>割とポピュラーなフォーマットとしては
 <ul class="list2 list-indent1"><li>DXF(AutoCAD)</li>
-<li>3DS(<span class="noexists"><a href="./?cmd=edit&amp;page=AutoDesk&amp;refer=2008-09">AutoDesk</a></span> 3D Studio)</li>
-<li>obj(<span class="noexists"><a href="./?cmd=edit&amp;page=WaveFront&amp;refer=2008-09">WaveFront</a></span>)</li>
-<li>FBX(<span class="noexists"><a href="./?cmd=edit&amp;page=AutoDesk&amp;refer=2008-09">AutoDesk</a></span>)</li>
+<li>3DS(AutoDesk 3D Studio)</li>
+<li>obj(WaveFront)</li>
+<li>FBX(AutoDesk)</li>
 <li>Collada(SCEA)</li>
 <li>VRML / X3D (Web3D)</li>
 <li>Xfile / SDKMesh (DirectX)</li></ul></li></ul>
@@ -653,18 +653,18 @@ PIC/AVRを始めることにした。まずはライタを作らないと。
 <div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h2 id="content_1_28">ＨＩＤデバイスのアクセス方法について誤解していた。<a class="anchor_super" id="jdb3a2b8" href="#jdb3a2b8" title="jdb3a2b8" style="user-select:none;">&dagger;</a></h2>
 <ul class="list1 list-indent1"><li><span style="font-size:8px">また恥をかいてしまった。</span></li>
 <li>ＨＩＤデバイスというのは、単にディスクリプタのテーブルが拡張されただけのものかと思っていた。</li>
-<li>ところが<span class="noexists"><a href="./?cmd=edit&amp;page=ReadFile&amp;refer=2008-09">ReadFile</a></span>()や<span class="noexists"><a href="./?cmd=edit&amp;page=WriteFile&amp;refer=2008-09">WriteFile</a></span>()で転送されるのは、生パケットではなく、レポートディスクリプタというやつらしい。</li>
+<li>ところがReadFile()やWriteFile()で転送されるのは、生パケットではなく、レポートディスクリプタというやつらしい。</li>
 <li>転送サイズは９を指定するのだが、その９バイトバッファの先頭の１バイトはREPORT_IDに割り当てられていて、しかも０ｘ００固定だ。</li>
 <li>実際に転送されているパケットは９バイトのうちの後ろ８バイトのようだ。</li>
 <li>これを長くすることが出来ないと、帯域を稼ぐこともできないっぽい・・・。</li>
 <li>なんかlibusbと全然違うんだな。</li>
 <li>HID.DLLにはベンダー独自リクエストを直接送信するような呼び出しはないのかな？</li>
-<li><span class="noexists"><a href="./?cmd=edit&amp;page=ReadFile&amp;refer=2008-09">ReadFile</a></span>() <span class="noexists"><a href="./?cmd=edit&amp;page=WriteFile&amp;refer=2008-09">WriteFile</a></span>()はブロックされるので、個別に制御するなら別スレッドにするという話だが、</li>
-<li>HIDというかUSBのパケットなのに、なんでも<span class="noexists"><a href="./?cmd=edit&amp;page=ReadFile&amp;refer=2008-09">ReadFile</a></span>()関数に押し付けるのは強引だと思った。</li></ul>
+<li>ReadFile() WriteFile()はブロックされるので、個別に制御するなら別スレッドにするという話だが、</li>
+<li>HIDというかUSBのパケットなのに、なんでもReadFile()関数に押し付けるのは強引だと思った。</li></ul>
 <p>参考ＵＲＬはこのへん？<br />
 すｚのAVR研究</p>
 <ul class="list1 list-indent1"><li><a href="http://suz-avr.sblo.jp/article/8636190.html" rel="nofollow">http://suz-avr.sblo.jp/article/8636190.html</a></li></ul>
-<p>Obtaining HID Reports / HidD_<span class="noexists"><a href="./?cmd=edit&amp;page=GetFeature&amp;refer=2008-09">GetFeature</a></span></p>
+<p>Obtaining HID Reports / HidD_GetFeature</p>
 <ul class="list1 list-indent1"><li><a href="http://www.osronline.com/DDKx/intinput/hidclass_6xpj.htm" rel="nofollow">http://www.osronline.com/DDKx/intinput/hidclass_6xpj.htm</a></li></ul>
 <hr class="full_hr" />
 
@@ -678,7 +678,7 @@ PIC/AVRを始めることにした。まずはライタを作らないと。
 <ul class="list2 list-indent1"><li>但しこの現象はHIDaspをUSBに接続した直後だけに発生する。</li>
 <li>SnoopyProでデバイスリセットを行った直後にも良く発生することが多い。</li></ul></li>
 <li>Windows2000, WindowsXPの両方でSnoopyProを見ながらやってみたのだが、原因を掴むには至っていない。</li></ul>
-<ul class="list1 list-indent1"><li>やりにくいのはHID Reportの送受信が<span class="noexists"><a href="./?cmd=edit&amp;page=ReadFile&amp;refer=2008-09">ReadFile</a></span>() <span class="noexists"><a href="./?cmd=edit&amp;page=WriteFile&amp;refer=2008-09">WriteFile</a></span>()という
+<ul class="list1 list-indent1"><li>やりにくいのはHID Reportの送受信がReadFile() WriteFile()という
 Windowsのブロック関数でやらなければならない点だ。</li>
 <li>これは、rs232cの簡易ターミナルを書いたときも相当いらついた。
 <ul class="list2 list-indent1"><li>非同期リード、ライトにしたければ、CreateFileでFILE_FLAG_OVERLAPモードオープンして、</li>
@@ -693,19 +693,19 @@ Windowsのブロック関数でやらなければならない点だ。</li>
 <div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h2 id="content_1_30">HIDsphを研究しておくべきだった。<a class="anchor_super" id="o06ba269" href="#o06ba269" title="o06ba269" style="user-select:none;">&dagger;</a></h2>
 <ul class="list1 list-indent1"><li>ソースがかなり洗練されている。</li>
 <li>AVRUSBのAVR Bootloader HID がベースになっているようだ。</li>
-<li>HID Reportの送受には <span class="noexists"><a href="./?cmd=edit&amp;page=ReadFile&amp;refer=2008-09">ReadFile</a></span>()/<span class="noexists"><a href="./?cmd=edit&amp;page=WriteFile&amp;refer=2008-09">WriteFile</a></span>()ではなく HidD_<span class="noexists"><a href="./?cmd=edit&amp;page=GetFeature&amp;refer=2008-09">GetFeature</a></span>()/HidD_<span class="noexists"><a href="./?cmd=edit&amp;page=SetFeature&amp;refer=2008-09">SetFeature</a></span>()で行われている。</li></ul>
+<li>HID Reportの送受には ReadFile()/WriteFile()ではなく HidD_GetFeature()/HidD_SetFeature()で行われている。</li></ul>
 <ul class="list1 list-indent1"><li>やっぱり<a href="http://www.obdev.at/products/avrusb/index.html" rel="nofollow">AVRUSB</a>で紹介されているリファレンス実装は一通り見ておくべきだと思った。どれもレベルが高い。</li></ul>
 <ul class="list1 list-indent1"><li>ATmega88は秋月で＠250円なので、もう2313にこだわらなくてもいいかなと。</li></ul>
 <hr class="full_hr" />
 
 <div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h2 id="content_1_31">HIDsphを実際に焼いてみた。<a class="anchor_super" id="la187b2c" href="#la187b2c" title="la187b2c" style="user-select:none;">&dagger;</a></h2>
-<p>HIDspxのHidD_<span class="noexists"><a href="./?cmd=edit&amp;page=SetFeature&amp;refer=2008-09">SetFeature</a></span>()改造版を作ってみたもののHidD_<span class="noexists"><a href="./?cmd=edit&amp;page=SetFeature&amp;refer=2008-09">SetFeature</a></span>()が常に失敗するので、
+<p>HIDspxのHidD_SetFeature()改造版を作ってみたもののHidD_SetFeature()が常に失敗するので、
 比較対象が欲しかった。</p>
 <ul class="list1 list-indent1"><li>テスト基板が普通のAVR-USB接続だったので、PortD,4,3の設定をPortD,3,2に変更。</li>
 <li>INT1になっていたのでINT0に変更。</li>
 <li>ATmega8だったのでATtiny2313に。そしてbootloaderのスタートが1800だったのを0に。</li>
 <li>同梱exeを使って接続のみ確認。</li></ul>
-<p>次にHIDspx-srcのソースの<span class="noexists"><a href="./?cmd=edit&amp;page=ReadFile&amp;refer=2008-09">ReadFile</a></span>()/<span class="noexists"><a href="./?cmd=edit&amp;page=WriteFile&amp;refer=2008-09">WriteFile</a></span>()をHidD_<span class="noexists"><a href="./?cmd=edit&amp;page=GetFeatur&amp;refer=2008-09">GetFeatur</a></span>()/HidD_<span class="noexists"><a href="./?cmd=edit&amp;page=SetFeature&amp;refer=2008-09">SetFeature</a></span>()
+<p>次にHIDspx-srcのソースのReadFile()/WriteFile()をHidD_GetFeatur()/HidD_SetFeature()
 に置換したソースで接続を確認。</p>
 <ul class="list1 list-indent1"><li>WindowsXPで正しくハンドシェイクされている。</li>
 <li>USB挿抜直後でも正しくハンドシェイクされていることを確認。</li></ul>
@@ -714,7 +714,7 @@ Windowsのブロック関数でやらなければならない点だ。</li>
 <li>HIDsphターゲットでは、すべてコントロール転送（クラスリクエスト）になっている。</li></ul>
 <p>HIDディスクリプタの内容が双方でかなり違うのでこうなるのだろうか・・・<br /></p>
 <ul class="list1 list-indent1"><li>Report IDは1,2以外はダメ。</li>
-<li>サイズは<span class="noexists"><a href="./?cmd=edit&amp;page=GetDevCaps&amp;refer=2008-09">GetDevCaps</a></span>()で取得できないのであとで代入しているがその値は7以上でないとダメ。
+<li>サイズはGetDevCaps()で取得できないのであとで代入しているがその値は7以上でないとダメ。
 <pre>PROGMEM char usbHidReportDescriptor[42] = {
    0x06, 0x00, 0xff,              // USAGE_PAGE (Generic Desktop)
    0x09, 0x01,                    // USAGE (Vendor Usage 1)
@@ -845,8 +845,8 @@ RAM: 93 bytes</pre></li>
 <li>HIDspx.exeで同じように書き込み＆ベリファイを行ってみる。</li>
 <li>ＳｎｏｏｐｙＰｒｏのログにはそのパケットが送られた時間が記録される。１ｍＳが１フレームと考える。</li>
 <li>そして、ａｖｒｓｐｘのソースを見ながら、どのようなことが起こっているのかを想像すればよい。</li></ul>
-<p>速くしようと思えば、無駄なパケットを減らすことと、ＨＩＤ　Ｒｅｐｏｒｔを６４バイトにまで拡張することと、usb<span class="noexists"><a href="./?cmd=edit&amp;page=FunctionWrite&amp;refer=2008-09">FunctionWrite</a></span>()に８バイト来た時点で行動を起こすことだ。</p>
-<ul class="list1 list-indent1"><li>usb<span class="noexists"><a href="./?cmd=edit&amp;page=FunctionWrite&amp;refer=2008-09">FunctionWrite</a></span>()では、８バイト単位で処理を行い、ＳＰＩ経由でデータを送ってしまうことが出来るので、ＲｅｐｏｒｔＢｕｆは長く取る必要がない。最初に来た８バイトのヘッダー部分だけ覚えておけばいいはずだ。</li>
+<p>速くしようと思えば、無駄なパケットを減らすことと、ＨＩＤ　Ｒｅｐｏｒｔを６４バイトにまで拡張することと、usbFunctionWrite()に８バイト来た時点で行動を起こすことだ。</p>
+<ul class="list1 list-indent1"><li>usbFunctionWrite()では、８バイト単位で処理を行い、ＳＰＩ経由でデータを送ってしまうことが出来るので、ＲｅｐｏｒｔＢｕｆは長く取る必要がない。最初に来た８バイトのヘッダー部分だけ覚えておけばいいはずだ。</li>
 <li>アドレスセットとページライト、書き込みまでをその長いパケットに全部含めてしまえばさらに無駄は減るが、ちょっとやりすぎかもしれない。</li></ul>
 <ul class="list1 list-indent1"><li>また、読み込みも速くしたければ、ページリードのコマンドは省略してしまい、長いＨＩＤ　Ｒｅｐｏｒｔの要求が来たら、さっさと固定長でページリードを行なってしまえばよい。端数に関してだけ、従来どおりページリードコマンドでサイズを指定して転送してもらうようにする。</li>
 <li>これも８バイト単位で並列処理させると良いかもしれない。</li>
@@ -882,7 +882,7 @@ RAM: 93 bytes</pre></li>
 <ul class="list1 list-indent1"><li>（もちろんＫｎｏｐｐｉｘとかでも最近はＮＴＦＳをマウントして書き込みまで出来るのだが、壊れたＷｉｎｄｏｗｓの障害状況を見たり、ファイルを比較したりといったことまでやるなら、そっくり同じＯＳを別パーティションに入れるにこしたことはない。）</li></ul>
 
 <div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h2 id="content_1_38">ＨＩＤａｓｐ：時には諦めも肝心？<a class="anchor_super" id="l321b1b1" href="#l321b1b1" title="l321b1b1" style="user-select:none;">&dagger;</a></h2>
-<ul class="list1 list-indent1"><li>例のusb<span class="noexists"><a href="./?cmd=edit&amp;page=FunctionRead&amp;refer=2008-09">FunctionRead</a></span>()に引っ掛けて８バイトづつちまちま転送したらどうなるかテスト.</li>
+<ul class="list1 list-indent1"><li>例のusbFunctionRead()に引っ掛けて８バイトづつちまちま転送したらどうなるかテスト.</li>
 <li>ＨＩＤ　Ｒｅｐｏｒｔ長はついに１２６バイト。（ＳｎｏｏｐｙＰｒｏで確認したから間違いない）
 <pre>bash-2.02$ time ./hidspx.exe -rp &gt;1
 Detected device is ATmega88.
@@ -902,7 +902,7 @@ sys     0m0.000s</pre></li>
 <li>というかＬｏｗＳｐｅｅｄの限界を見たような気もする。</li></ul>
 <ul class="list1 list-indent1"><li>いろいろ考えたが解法は無い。ＳＰＩクロックをタイマー０から与えるようにしてクロックを上げる（？）</li>
 <li>現状１２ＭＨｚ/４Ｃｙｃｌｅ/２（２回叩いて１ＳＣＬ）＝１.５ＭＨｚのＳＰＩクロックなので、これを２ＭＨｚ（８ＭＨｚＣＰＵ焼きの上限いっぱい）まで上げれば・・・たいして変わらない？</li>
-<li>ここまで来るとパズルだな。ＳＰＩ転送を割り込み駆動にしてバックグラウンド処理すれば良さそうに見えるけど、実はusb<span class="noexists"><a href="./?cmd=edit&amp;page=FunctionRead&amp;refer=2008-09">FunctionRead</a></span>()は遅延実行できない関数なので、やるなら１パケット先読みで先回りするしかないだろう。書くほうは先読みの必要はないし（データが来るまで）出来ないから遅延実行するようにして即時復帰だ。</li>
+<li>ここまで来るとパズルだな。ＳＰＩ転送を割り込み駆動にしてバックグラウンド処理すれば良さそうに見えるけど、実はusbFunctionRead()は遅延実行できない関数なので、やるなら１パケット先読みで先回りするしかないだろう。書くほうは先読みの必要はないし（データが来るまで）出来ないから遅延実行するようにして即時復帰だ。</li>
 <li>そういった処理を書きたいならｍｅｇａ８８を使うしかない。Ｒｅａｄのインターリーブを実装しただけで２ｋＢを使い尽くしてLED,MONITORを外すことまでやった。</li></ul>
 <p>と、まあいろいろ考えたけれどここらが２ｋの限界点だ。</p>
 <hr class="full_hr" />
@@ -967,7 +967,7 @@ SCK option to support targets with low clock speed (&lt; 1,5MHz). </pre>
 こんな感じ。</li>
 <li>firmwareのソースを見る。</li>
 <li>普通にlibusbでやっていて、コントロール転送のみ、エンドポイント無し。</li>
-<li>usb<span class="noexists"><a href="./?cmd=edit&amp;page=FunctionRead&amp;refer=2008-09">FunctionRead</a></span>,Writeは存在する。８バイト単位でisp転送を処理。</li>
+<li>usbFunctionRead,Writeは存在する。８バイト単位でisp転送を処理。</li>
 <li><strong>まるでＨＩＤａｓｐと変わらない。ＨＩＤデバイスであるかどうかだけ。</strong></li>
 <li>ＳＣＬＫは３７５ｋＨｚ（ターゲット１.５ＭＨｚ以上の場合）</li>
 <li>もしくは８ＫＨｚ（ＳＬＯＷ　ＭＯＤＥ）</li></ul>
@@ -1169,7 +1169,7 @@ Bye.
 <div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h2 id="content_1_46">ＨＩＤａｓｐ：積み残し作業について<a class="anchor_super" id="o4b87cbf" href="#o4b87cbf" title="o4b87cbf" style="user-select:none;">&dagger;</a></h2>
 <p>結局振り出しに戻ってしまった。</p>
 <ul class="list1 list-indent1"><li>ベンチマークＨＩＤｍｏｎ専用のファームを開発する。</li>
-<li>usb<span class="noexists"><a href="./?cmd=edit&amp;page=FunctionWrite&amp;refer=2008-09">FunctionWrite</a></span>()に遅延ループを入れて、遅延を制御しながら、長いＨＩＤ　Ｒｅｐｏｒｔの転送をベンチする。</li>
+<li>usbFunctionWrite()に遅延ループを入れて、遅延を制御しながら、長いＨＩＤ　Ｒｅｐｏｒｔの転送をベンチする。</li>
 <li>ＵＨＣＩとＯＨＣＩでの傾向を調べる。</li></ul>
 <ul class="list1 list-indent1"><li>libusbならＵＳＢａｓｐ相当（５ｋ/秒）の速度が出るはず（予想）</li>
 <li>しかし、今回はＨＩＤで試みる</li></ul>

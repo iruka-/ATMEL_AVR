@@ -401,7 +401,7 @@ $ ./setup</pre></li>
 どれも、３分で使用をあきらめた。
 <br /></p>
 <ul class="list1 list-indent1"><li>Kbox2にはsshdサーバーやtelnetdサーバーのようなものが用意されていて、ssh経由で繋ぐことが出来る・・・筈なんだけれど</li>
-<li>たいていの無線LAN(<span class="noexists"><a href="./?cmd=edit&amp;page=WiFi&amp;refer=2014-08">WiFi</a></span>)はWindows PCやLinux PCと異なるLANセグメントに閉じ込められる(ルーターモード)ので、WiFiセグメントからLANセグメントへのssh接続は可能だが、その逆(PCからAndroidへssh)はブロックされる。</li></ul>
+<li>たいていの無線LAN(WiFi)はWindows PCやLinux PCと異なるLANセグメントに閉じ込められる(ルーターモード)ので、WiFiセグメントからLANセグメントへのssh接続は可能だが、その逆(PCからAndroidへssh)はブロックされる。</li></ul>
 <p><strong>結局adbで繋ぐことに・・・・</strong></p>
 <ul class="list1 list-indent1"><li>AndroidSDKを入れる。（既に入れてあるなら不要)</li>
 <li>USBで繋いでおいて、adb shell を立ち上げる。</li>
@@ -633,7 +633,7 @@ $ mv /home/kbox/tar .</pre></li></ul>
 <ul class="list1 list-indent1"><li>公式イメージ。人気なのは言わずもがな</li></ul>
 <p>dockerfile/*</p>
 <ul class="list1 list-indent1"><li>Dockerfile Projectが管理。</li>
-<li><span class="noexists"><a href="./?cmd=edit&amp;page=ElasticSearch&amp;refer=2014-08">ElasticSearch</a></span>,nginx,redis,mongodbなど。baseはubuntu 14.04</li></ul>
+<li>ElasticSearch,nginx,redis,mongodbなど。baseはubuntu 14.04</li></ul>
 <p>base</p>
 <ul class="list1 list-indent1"><li>今は非推奨。中身はubuntu12.10。</li></ul>
 <p><br />

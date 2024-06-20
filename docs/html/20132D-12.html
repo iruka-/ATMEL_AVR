@@ -302,7 +302,7 @@ DEFINES		=	-D__PIC32MX__ -D__$(PROC)__ -D$(BOARD)</pre>
 <li>モジュール別コンパイルされるＣソース内に、肝心の '__PIC32MX__'とか'32MX220F032B'が定義されずに、コンパイルされていた。</li>
 <li>Pinguinoでは、Ｃソースをmain32.cに全部includeして一発芸リンクするので、ELF_FLAGSに含まれていればそれでおＫ</li>
 <li>だけど、手で書いた（モジュール分割した）Ｃソースを分割コンパイルする場合にはCFLAGSに肝心の定義が含まれないという<strong>クソバグ</strong></li></ul>
-<ul class="list1 list-indent1"><li>I<span class="noexists"><a href="./?cmd=edit&amp;page=OsetRemap&amp;refer=2013-12">OsetRemap</a></span>()とかの関数をio.c使うのやめてmain32.c内にインラインで書くと動くようになる、ということで気づいた次第。</li></ul>
+<ul class="list1 list-indent1"><li>IOsetRemap()とかの関数をio.c使うのやめてmain32.c内にインラインで書くと動くようになる、ということで気づいた次第。</li></ul>
 <p><br /></p>
 <p>全くもう、<strong>ＯＲＺ</strong>だぜー。</p>
 <p><br />
@@ -415,7 +415,7 @@ PIC32MX版エミュレータのリポジトリはこのへん</p>
 <br /></p>
 <hr class="full_hr" />
 
-<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h2 id="content_1_15">PCで見る<span class="noexists"><a href="./?cmd=edit&amp;page=FlipBoard&amp;refer=2013-12">FlipBoard</a></span><a class="anchor_super" id="mb284bf7" href="#mb284bf7" title="mb284bf7" style="user-select:none;">&dagger;</a></h2>
+<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h2 id="content_1_15">PCで見るFlipBoard<a class="anchor_super" id="mb284bf7" href="#mb284bf7" title="mb284bf7" style="user-select:none;">&dagger;</a></h2>
 <p>Chromeで見るといい感じにめくれる。（ホイール）</p>
 <ul class="list1 list-indent1"><li><a href="https://flipboard.com/section/-b5XQqd" rel="nofollow">テクノロジー</a></li></ul>
 <ul class="list1 list-indent1"><li><a href="https://flipboard.com/section/yahoo!-japan-bw41oQ" rel="nofollow">ヤフー</a></li></ul>
@@ -451,10 +451,10 @@ USB-Keyboardからのキー入力イベントをシリアルにprintするとこ
 
 <div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h2 id="content_1_18">素晴らしいハードウェア iPod nano と、どうしようもないソフトウェアiTunesの組み合わせは嫌だ。<a class="anchor_super" id="rc77465c" href="#rc77465c" title="rc77465c" style="user-select:none;">&dagger;</a></h2>
 <p>バランス悪すぎる。</p>
-<ul class="list1 list-indent1"><li>一応無料(?)っぽい、<span class="noexists"><a href="./?cmd=edit&amp;page=CopyTrans&amp;refer=2013-12">CopyTrans</a></span> Managerを入れてみた。</li>
+<ul class="list1 list-indent1"><li>一応無料(?)っぽい、CopyTrans Managerを入れてみた。</li>
 <li>なんとか我慢できるかも。</li></ul>
 <p>iTunesをWindows7に入れてみたけれど、インストール途中で失敗してうまく入らない。</p>
-<ul class="list1 list-indent1"><li>しかし、その状態でも<span class="noexists"><a href="./?cmd=edit&amp;page=CopyTrans&amp;refer=2013-12">CopyTrans</a></span> Managerを導入してみたら、一応iPod nanoと同期出来るようになった。（らっきー）</li>
+<ul class="list1 list-indent1"><li>しかし、その状態でもCopyTrans Managerを導入してみたら、一応iPod nanoと同期出来るようになった。（らっきー）</li>
 <li>他のフリーソフト系のiPod同期ソフトを使う場合も、iTunesをとりあえず入れとかないとドライバーとかの問題で動作しない、らしい。</li></ul>
 <p>変なの。</p>
 <p><br />
