@@ -4,7 +4,7 @@
 
 <head>
  <meta http-equiv="content-type" content="application/xhtml+xml; charset=UTF-8" />
- <title>2012-03 - PukiWiki</title>
+ <title>2024-07 - PukiWiki</title>
 
 <!---
  <link rel="stylesheet" media="screen and (max-width:768px)" href="../skin/180wiki-sp.css" />
@@ -126,7 +126,7 @@
 <ul class="recent_list">
  <li><a href="Newest.html" class="link_page_passage">Newest</a></li>
  <li><a href="20222D-08.html" class="link_page_passage">2022-08</a></li>
- <li><a href="20242D-07.html" class="link_page_passage">2024-07</a></li>
+ <li>2024-07</li>
 </ul>
 <strong>2024-06-21</strong>
 <ul class="recent_list">
@@ -170,161 +170,130 @@
 </div>
  <div id="mainColumnWrapper">
   <div id="main-column">
-   <div id="navigator"><ul><li class="selected" id="separate"><a href="">本文</a></li><li><a href="./?cmd=edit&amp;page=2012-03">編集</a></li><li><a href="./?cmd=diff&amp;page=2012-03">差分</a></li></ul></div>
+   <div id="navigator"><ul><li class="selected" id="separate"><a href="">本文</a></li><li><a href="./?cmd=edit&amp;page=2024-07">編集</a></li><li><a href="./?cmd=diff&amp;page=2024-07">差分</a></li></ul></div>
    <div id="content">
-    <h1 class="firstHeading">2012-03</h1><div id="contentSub"></div>
-    <p><a href="20122D-02.html" class="link_page_passage">2012-02</a>　<a href="RX62N.html" class="link_page_passage">RX62N</a>　<a href="SH2A.html" class="link_page_passage">SH2A</a>　<a href="Xen2D-hypervisor.html" class="link_page_passage">Xen-hypervisor</a></p>
-<hr class="full_hr" />
-<h2 id="content_1_0">もう３月。あれから１年・・・時間は止まったまま<a class="anchor_super" id="f0063f79" href="#f0063f79" title="f0063f79" style="user-select:none;">&dagger;</a></h2>
-<p><br />
-<br /></p>
-<p>先月の成果</p>
-<ul class="list1 list-indent1"><li>ubuntu11.10上で<a href="Xen2D-hypervisor.html" class="link_page_passage">Xen-hypervisor</a>を動かして、</li>
-<li>さらに実在しているVineLinux4.2をpvm(準仮想化)に変換して動かすことが出来た。
-<ul class="list2 list-indent1"><li>ここに至るまでには、ubuntu上でubuntu 32bit/64bit ,CentOS4.8 , FedoraCore6 までのpvmイメージを作って動かすことを行なった。Vineはpvm（完全仮想化）でも動かしてみた。</li>
-<li>Linuxの仮想化はもう当たり前だ。</li></ul></li></ul>
+    <h1 class="firstHeading">2024-07</h1><div id="contentSub"></div>
+    
+<p><a href="20222D-08.html" class="link_page_passage">2022-08</a>&lt;&lt;　&gt;&gt;<a href="Newest.html" title="Newest" class="link_page_passage">最新の日記</a></p>
+<p>　<a href="FM3.html" class="link_page_passage">FM3</a>　<a href="RX62N.html" class="link_page_passage">RX62N</a>　<a href="SH2A.html" class="link_page_passage">SH2A</a>　<a href="PIC32MX.html" class="link_page_passage">PIC32MX</a></p>
+<h3 id="content_1_0">最新の日記<a class="anchor_super" id="s4d25be3" href="#s4d25be3" title="s4d25be3" style="user-select:none;">&dagger;</a></h3>
+<div class="contents">
+<a id="contents_1"></a>
+<ul class="list2 list-indent1"><li><a href="#s4d25be3">最新の日記</a></li></ul>
+<ul class="list1 list-indent1"><li><a href="#r74b56b4">２０２４年７月</a>
+<ul class="list2 list-indent1"><li><a href="#n8340a81">SC/MP 強化月間</a>
+<ul class="list3 list-indent1"><li><a href="#c7968986">ここがだめだよ、SC/MP-II</a></li></ul></li></ul></li>
+<li><a href="#ba9b64e9">SC/MP-II CPUは、どこが変であるかを簡単にご説明</a></li>
+<li><a href="#u8d076e0">エミュレータは、なんですんなりと動かなかったの？</a></li>
+<li><a href="#l12ea788">このCPUのだめなところ</a></li>
+<li><a href="#a87497dd">追伸</a></li>
+<li><a href="#la3e0dd5">ここが変だよ SC/MP-III CPU</a></li>
+<li><a href="#wdc1e431">SC/MP-IIIのどこがだめ？</a></li>
+<li><a href="#i97c484f">おまけ</a></li>
+<li><a href="#c0d088d6">参考</a></li></ul>
+</div>
+
+
+<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h2 id="content_1_1">２０２４年７月<a class="anchor_super" id="r74b56b4" href="#r74b56b4" title="r74b56b4" style="user-select:none;">&dagger;</a></h2>
+
+<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h3 id="content_1_2">SC/MP 強化月間<a class="anchor_super" id="n8340a81" href="#n8340a81" title="n8340a81" style="user-select:none;">&dagger;</a></h3>
+<ul class="list1 list-indent1"><li>SC/MP-II と SC/MP-III のプログラムを実行できる環境をLinuxやWindows上に用意してみた。</li></ul>
+<ul class="list1 list-indent1"><li>GitHub リポジトリに公開したよ。
+<div class="ie5"><table class="style_table" cellspacing="1" border="0">
+<tr class="style_tr"><td class="style_td">SC/MP-II 機械語モニタ</td><td class="style_td"><a href="https://github.com/iruka-/SCMP2monitor" rel="nofollow">https://github.com/iruka-/SCMP2monitor</a></td></tr>
+
+<tr class="style_tr"><td class="style_td">SC/MP-III機械語モニタ</td><td class="style_td"><a href="https://github.com/iruka-/SCMP3monitor" rel="nofollow">https://github.com/iruka-/SCMP3monitor</a></td></tr>
+
+<tr class="style_tr"><td class="style_td">SC/MP-II  NIBL BASIC</td><td class="style_td"><a href="https://github.com/iruka-/SCMP2Emulator" rel="nofollow">https://github.com/iruka-/SCMP2Emulator</a></td></tr>
+
+<tr class="style_tr"><td class="style_td">SC/MP-III NIBL BASIC</td><td class="style_td"><a href="https://github.com/iruka-/SCMP3Emulator" rel="nofollow">https://github.com/iruka-/SCMP3Emulator</a></td></tr>
+
+<tr class="style_tr"><td class="style_td">SC/MP-II  浮動小数点BASIC</td><td class="style_td"><a href="https://github.com/iruka-/SCMP2_NIBLFP_2024BASIC" rel="nofollow">https://github.com/iruka-/SCMP2_NIBLFP_2024BASIC</a></td></tr>
+</table></div></li></ul>
+<ul class="list1 list-indent1"><li>最後のやつ(NIBLFP BASIC 2024)作った人、あたまおかしいやろ（最大限の賛辞）</li>
+<li>俺じゃあありません</li></ul>
 <p><br /></p>
-<ul class="list1 list-indent1"><li><a href="/ATMEL_AVR/cgi-bin/wifky/wifky.cgi?p=64bit%C8%C7utf8%C2%D0%B1%FEjed-ja" rel="nofollow">Linuxのテキストエディタjed-ja</a>を簡易utf-8対応にしてみたり。64bit-elfで。</li></ul>
-<p><br />
-<br />
-持ち越し案件</p>
-<ul class="list1 list-indent1"><li>USBオシロみたいな奴。</li>
-<li>SH2AのFPU使いこなし。</li>
-<li>MinGWクロスgccのビルド。</li>
-<li>STM32F4でMaple --- 秋月品切れ中。</li></ul>
-<p><br />
-<br />
-<br /></p>
-<hr class="full_hr" />
-
-<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h2 id="content_1_1">STM32F4Discovery<a class="anchor_super" id="b2e2884d" href="#b2e2884d" title="b2e2884d" style="user-select:none;">&dagger;</a></h2>
-<p>シンセアンプラグドさんがTGSTM32F4を作り始めていらっしゃるようで、</p>
-<ul class="list1 list-indent1"><li><a href="http://d.hatena.ne.jp/pcm1723/20120211/1328985956" rel="nofollow">http://d.hatena.ne.jp/pcm1723/20120211/1328985956</a></li>
-<li>秋月でSTM32F4ポチろうとしたら、品切れになっていた。（ァゥ）買いそびれてやんの。</li>
-<li>もしかしてあの基板はDACが載っているのでかなり音いいんじゃないかな。</li>
-<li>AAAなんで、また入荷を待つか。</li></ul>
-<p><br />
-<br />
-<br /></p>
-<hr class="full_hr" />
-
-<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h2 id="content_1_2">こいつは凄い：ubuntu installer<a class="anchor_super" id="x231358a" href="#x231358a" title="x231358a" style="user-select:none;">&dagger;</a></h2>
-<p>Install, Run Ubuntu on Android</p>
-<ul class="list1 list-indent1"><li><a href="http://geeknizer.com/install-run-ubuntu-on-android/" rel="nofollow">http://geeknizer.com/install-run-ubuntu-on-android/</a></li></ul>
-<ul class="list1 list-indent1"><li>まあ、本体メモリー512MBだとちょっときついだろうが。</li></ul>
-<p><br />
-<br />
-<br /></p>
-<hr class="full_hr" />
-
-<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h2 id="content_1_3">自分用メモ:USB-CDCデバイスの転送バイト数<a class="anchor_super" id="ra712b7f" href="#ra712b7f" title="ra712b7f" style="user-select:none;">&dagger;</a></h2>
-<p>Bulk EP IN/OUTのサイズは64だと仮定しての話。</p>
-<ul class="list1 list-indent1"><li>デバイスからホストに送信するバイト数が64以上の時は、64byte単位で送信することで、HOST側は連続して引き取りに来てくれるので転送が速くなる。</li>
-<li>ただし、最後に送信したバイト数が64のときだけ、<strong>後続データがないことを示すための0byteパケット</strong>を最後に送る必要がある。</li>
-<li>つまり、裏を返せば、転送バイト数が63byte以下のパケットを送ってしまうと、CDCデータがそこで途切れていると言うことをホストPCに知らせることになり、次のUSBフレームまでデータを取りに来ないような感じになる。</li></ul>
-<p><br /></p>
-<ul class="list1 list-indent1"><li>転送単位を64byteにした場合に転送がハングするのは、転送サイズの問題ではなくエンドポイントの制御がうまくいっていない場合が多い。
-<ul class="list2 list-indent1"><li>とりあえずハング回避したければ、常に63byte以下の転送になるように分割する。</li>
-<li>その場合はデータ引き取り頻度がおそらく1mSインターバル程度になって、転送速度も63kB/sec程度となる。</li></ul></li></ul>
-<p><br />
-なんでこんなことやってるかと言えば、</p>
-<ul class="list2 list-indent2"><li>USBオシロみたいな奴。</li></ul>
-<ul class="list1 list-indent1"><li>これの続きを製作中だから。</li></ul>
-<p><br />
-<br />
-<br /></p>
-<hr class="full_hr" />
-
-<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h2 id="content_1_4">秋月:ＳＴＭ３２Ｆ４−ＤＩＳＣＯＶＥＲＹ<a class="anchor_super" id="yea44f7f" href="#yea44f7f" title="yea44f7f" style="user-select:none;">&dagger;</a></h2>
-<p>在庫復活。ポチれっ!</p>
-<ul class="list1 list-indent1"><li><a href="http://akizukidenshi.com/catalog/g/gM-05313/" rel="nofollow">http://akizukidenshi.com/catalog/g/gM-05313/</a></li>
-<li>Flash 1MB , SRAM192kB , CPU 168MHz FPU入り
-<pre>Advanced connectivity
- USB 2.0 full-speed device/host/OTG controller with on-chip PHY 
- USB 2.0 high-speed/full-speed device/host/OTG controller with dedicated DMA, on-chip full-speed PHY and ULPI 
- 10/100 Ethernet MAC with dedicated DMA: supports IEEE 1588v2 hardware, MII/RMII </pre></li>
-<li>USB OTGは２系統あって、FSとHSらしい。PHYも両方付き。
-<pre>3×12-bit, 2.4 MSPS A/D converters: up to 24 channels and 7.2 MSPS in triple interleaved mode 
-2×12-bit D/A converters </pre></li>
-<li>ADは３系統、DAは2系統も内蔵されているらしい。てんこ盛りだな</li></ul>
-<ul class="list1 list-indent1"><li>ST-Linkが切り離せないのがアレだな。基板もでかいし。</li></ul>
-<p><br />
-<br />
-<br /></p>
-<hr class="full_hr" />
-
-<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h2 id="content_1_5">メモ：Poorman's ADK<a class="anchor_super" id="o52c4e4f" href="#o52c4e4f" title="o52c4e4f" style="user-select:none;">&dagger;</a></h2>
-<p>kako.comさん経由の情報</p>
-<ul class="list1 list-indent1"><li><a href="http://www.slideshare.net/magoroku15/poormans-adk-11350123" rel="nofollow">http://www.slideshare.net/magoroku15/poormans-adk-11350123</a></li>
-<li>要するにAndroid ADKというのは、Android用のデバッガadbが端末とUSB接続するプロトコルに間借りしているのだった。
-<pre>                        [Windows/Linux]
-Android端末 &lt;===USB===&lt;   adb デバッガ </pre></li></ul>
-<ul class="list1 list-indent1"><li>このUSB接続での余ったEndpointをADK用に開放してくれているらしい。
-<pre>                        [Arduino/PIC24F/ARM...]
-Android端末 &lt;===USB===&lt;  USBホストになれるマイコン </pre></li></ul>
-<ul class="list1 list-indent1"><li>なので、Arduinoの場合はUSB HOSTシールドが必須だ。</li>
-<li>ARMの場合も、USB OTGとかHOSTになれるデバイスでなくちゃだめだ。</li></ul>
-<ul class="list1 list-indent1"><li>この逆のパターン
-<pre>                        [Arduino/PIC24F/ARM...]
-Android端末 &gt;===USB===&gt;  USBデバイスのマイコン </pre></li>
-<li>もあるはずなのだが、その場合はAndroid端末がUSB HOSTになる条件が必須になるので、OSが3.xとか4.0でかつ、USB端子もdevice/host兼用のものでなくてはならない。</li></ul>
+<ul class="list1 list-indent1"><li>ちなみに、Linux上のエミュレータをベンチマークしてみると、大体200MIPS前後出ているようだ。</li>
+<li>リアルSC/MP CPUに換算すると2GHzとか4GHzになる。</li>
+<li>なので、もうFPGA要らない。CPUだけで十分早いし、余計なハードウェアこさえる必要すらない。</li></ul>
 <p><br /></p>
 
-<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h4 id="content_1_6">つまり、あれだ。<a class="anchor_super" id="n92eecd7" href="#n92eecd7" title="n92eecd7" style="user-select:none;">&dagger;</a></h4>
-<p>ADKで何かするプログラムを作りたいのなら、</p>
-<ul class="list1 list-indent1"><li>別にPIC24FJ64GB002とか、USB HOSTシールドとか、そういう高価な機材を買わなくても、</li>
-<li>普通にWindowsやLinux上でlibusb叩くだけでできるんじゃあ？</li>
-<li>動くのが分かってから、マイコン側を組み立てれば良い訳で。</li></ul>
-<p>まあ、どっちにせよ、AndroidのJava側と、WindowsもしくはARMのUSB HOST側の両方を書かないと試せないという時点で
-モチベーションだださがり確定な事案だな。（もちろんADKのサンプル丸写しでやるのだけれど）</p>
-<p><br />
-<br />
-<br /></p>
-<hr class="full_hr" />
-
-<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h2 id="content_1_7">秋月でフォトマル？<a class="anchor_super" id="xac885f5" href="#xac885f5" title="xac885f5" style="user-select:none;">&dagger;</a></h2>
-<ul class="list1 list-indent1"><li><a href="http://akizukidenshi.com/catalog/g/gI-05458/" rel="nofollow">http://akizukidenshi.com/catalog/g/gI-05458/</a></li></ul>
-<pre>用途
-・蛍光測定
-・バイオフローサイトメトリ
-・ＤＮＡバイオチップシーケンサ
-・環境分析
-・ＰＥＴ
-・高エネルギー物理実験</pre>
-<ul class="list1 list-indent1"><li>意味が分からない。LHCとかで実験する人が秋月で部品調達することはありえないので、最後の項はジョークにしてもおかしい。</li></ul>
-<ul class="list1 list-indent1"><li>CsIシンチレータ <a href="http://akizukidenshi.com/catalog/g/gP-05293/" rel="nofollow">http://akizukidenshi.com/catalog/g/gP-05293/</a> にしてもそうだが。</li>
-<li>いったい秋月のターゲット層はどこなんだ？</li></ul>
-<p><br />
-<br />
-<br /></p>
-<hr class="full_hr" />
-
-<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h2 id="content_1_8">Android OS研究<a class="anchor_super" id="kff5d612" href="#kff5d612" title="kff5d612" style="user-select:none;">&dagger;</a></h2>
-<p>Terminal Emulator (SHell)</p>
-<ul class="list1 list-indent1"><li><a href="http://d.hatena.ne.jp/rattcv/20111201" rel="nofollow">http://d.hatena.ne.jp/rattcv/20111201</a></li></ul>
-<p>ConnectBot (SSH Client)</p>
-<ul class="list1 list-indent1"><li><a href="http://code.google.com/p/connectbot/" rel="nofollow">http://code.google.com/p/connectbot/</a></li></ul>
-<p>Ubuntu installer</p>
-<ul class="list1 list-indent1"><li><a href="https://play.google.com/store/apps/details?id=com.zpwebsites.ubuntuinstall" rel="nofollow">https://play.google.com/store/apps/details?id=com.zpwebsites.ubuntuinstall</a></li></ul>
+<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h4 id="content_1_3">ここがだめだよ、SC/MP-II<a class="anchor_super" id="c7968986" href="#c7968986" title="c7968986" style="user-select:none;">&dagger;</a></h4>
+<p><span style="font-size:9px">Qiitaからのパクリですが</span></p>
 <p><br /></p>
-<ul class="list1 list-indent1">
-<li>上の２つを試してみたが、残念ながらどちらもキー入力が一切出来なかった。（お前はアンドロイド初心者か？）</li>
-<li>最後の１つを試したかったが、最初の奴を使ってROOT権限を取得したりとかしないといけないらしいので試せなかった。</li></ul>
-<p>だけれども、<strong>冷静になって考えてみたら、</strong>５万円くらいするARM機(Cortex-A9 DualCore 1.2GHz級)よりも
-Atom1.6GHzの格安ネットブックのほうが、実はＣＰＵパワーもＧＰＵパワーも上で、しかも上記３個のソフトを
-<strong>インストールする必要など最初からない</strong>のだ。</p>
-<ul class="list1 list-indent1"><li>普通にubuntu11.10を入れれば、３番目の作業は不要で、SSHなど付いてて当たり前、terminal emulatorもしかり。</li>
-<li>何よりBlueToothキーボードとかも不要。</li></ul>
-<ul class="list1 list-indent1"><li>強いて欠点を言うと、格安ネットブックは1kg強とARM機よりも重いことと、HDDが250Gくらい無駄に入っていることと、キーボードまでも付いていることと、有線ＬＡＮやUSBホストが標準で付いていることと、起動が遅いことと電池の持ちが悪いこととタッチスクリーンがないことだ。</li>
-<li>でも、ubuntuを普通に使いたいだけなのに、わざわざAndroid機を買って、ソフトウェアインストールの苦行を行なったり使いにくいソフトウェアキーボードを叩いたりするのは<strong>本末転倒的行為</strong>だということに今更ながら気づいた次第。
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<a href="20122D-02.html" title="2012-02" class="link_page_passage">＜前の月</a>｜<a href="20122D-04.html" title="2012-04" class="link_page_passage">次の月＞</a></li></ul>
+
+<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h2 id="content_1_4">SC/MP-II CPUは、どこが変であるかを簡単にご説明<a class="anchor_super" id="ba9b64e9" href="#ba9b64e9" title="ba9b64e9" style="user-select:none;">&dagger;</a></h2>
+<ul class="list1 list-indent1"><li>8bit CPUなのに、16bitポインタが4つもある。</li>
+<li>ところが P0 P1 P2 P3 （と勝手に命名）のポインタのうち、最初のやつ P0 は実はプログラムカウンタであること。</li>
+<li>これら４つは統一的に扱われている。（PC相対とPTR相対は命令コード内では同じ扱い）</li>
+<li>相対オフセット値は命令コードのオペランド(8bit)で指定するので、PTR[127]～PTR[-128]までのメモリーが演算対象になったり、ロード、ストア命令が使えたりする</li>
+<li>最近分かったこと：PC以外のP1～P3も、分岐命令の飛び先に使用できる(+-127)</li>
+<li>それ以外のアドレッシングモードがない。（即値 8bitは存在）</li>
+<li>:</li>
+<li>ところで、相対オフセット値が 0x80 (-128) だけ特別扱いで、その場合のみ PTR相対のオフセットは定数ではなく、Eレジスタ(8bit)で代用されるんだ。（知らんがなそんなこと）</li>
+<li>また、オートインデックスという不思議なアドレッシングモードを持っていて、相対オフセットでメモリーアクセスしたあとで、インデックスレジスタが実効アドレスに変化する、というやつがある。</li>
+<li>これは68000やPDP-11などにもみられる奴だけど、一つ注意があって</li>
+<li>相対値が負の時はフェッチされるデータはPTR＋相対オフセットのメモリーになるんだけど</li>
+<li>相対値が正の時はフェッチされるデータはPTR＋00 のメモリーになる。</li>
+<li>もちろん命令実行後は PTR は オフセット値が加減算される。</li>
+<li>使い方によってはスタックポインタ的に使えなくはない。</li>
+<li>:</li></ul>
+
+<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h2 id="content_1_5">エミュレータは、なんですんなりと動かなかったの？<a class="anchor_super" id="u8d076e0" href="#u8d076e0" title="u8d076e0" style="user-select:none;">&dagger;</a></h2>
+<ul class="list1 list-indent1"><li>上記のオートインデックスの実装が間違っていたこと</li>
+<li>相対オフセットが 0x80 のときに相対値をEレジスタにすり替える実装をしていなかったこと</li>
+<li>ななんと、ステータスレジスタの初期値が 0x20 (out B=1) でないと、NIBL BASICは動きません。（知らんがな）</li></ul>
+
+<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h2 id="content_1_6">このCPUのだめなところ<a class="anchor_super" id="l12ea788" href="#l12ea788" title="l12ea788" style="user-select:none;">&dagger;</a></h2>
+<ul class="list1 list-indent1"><li>上記の16bitポインタへのアクセス(LD,ST)が存在しない（！？？）</li>
+<li>Aレジスタ(8bit) と、ポインタの上位あるいは下位とをエクスチェンジ（交換）することだけが許されている。（XPAL P1, XPAH P2 など）</li>
+<li>8bit オフセットを超えるジャンプ命令が存在しない</li>
+<li>それどころか、一般的なCPUに存在するはずの、CALL/RET 命令が存在しない</li>
+<li>（代わりに、ミニコン時代の XPPCという、ポインタとPCを交換する命令だけが存在）</li>
+<li>遅い。とっても遅い。どれくらい遅いかというと、外部クロック1MHzで仮に動かした場合、典型的な即値8bit を Aレジスタに与える 2byte命令 (LDI #0xNN) の実行時間は72クロック(72マイクロ秒)・・・絶句します</li></ul>
+
+<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h2 id="content_1_7">追伸<a class="anchor_super" id="a87497dd" href="#a87497dd" title="a87497dd" style="user-select:none;">&dagger;</a></h2>
+<ul class="list1 list-indent1"><li>NIBL BASIC は、ロストテクノロジーで書かれたアセンブラなので、解読はおそらく無理です。（SC/MP-IIのアセンブラをすらすら読める人でも）</li></ul>
+<ul class="list1 list-indent1"><li>上記以外にも変なところはいっぱいあって、たとえば</li>
+<li>プログラムカウンタはフェッチ直前に＋１される。これにより、リセット直後の０番地は永遠に実行されない。</li>
+<li>XPPC命令でロングジャンプしたときも、飛び先の命令フェッチ直前に＋１される。なので、実際のエントリーアドレス－１をPTRに入れておく必要がある。</li>
+<li>引き算の代わりにコンプリメンタリーADD（引く数のビットを反転しただけで加算）で代用している（つまり２の補数ではなく１の補数）。なので、キャリーフラグの意味が普通のALUと逆になる。</li>
+<li>:</li></ul>
+<p>で、SC/MP-IIIでは、まともになったの？</p>
+<ul class="list1 list-indent1"><li>SC/MP-III用のNIBL BASICをエミュレータで動かせないか試行中です。→うごきました</li>
+<li>SC/MP-IIIは EレジスタとAレジスタを連結して16bitレジスタとして使えるようになりました。</li>
+<li>ポインタオフセットが0x80(-128)だったときに、オフセット値をEレジスタの内容に読み替える処理は、無くなりました。</li>
+<li>6800/6502系のゼロページアドレッシングに近い、FFxxページの256バイトを直接参照するダイレクトアドレッシングが出来るようになりました。</li>
+<li>ポインタ P1 がスタックポインタになり、16bit 絶対番地指定のJSR命令やJMP命令 が追加されました。</li>
+<li>乗除算用にTレジスタ(16bit)が追加され、16bitの乗算/除算命令がそれぞれ追加されています。</li></ul>
+
+<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h2 id="content_1_8">ここが変だよ SC/MP-III CPU<a class="anchor_super" id="la3e0dd5" href="#la3e0dd5" title="la3e0dd5" style="user-select:none;">&dagger;</a></h2>
+<ul class="list1 list-indent1"><li>ついでなので、SC/MP-III エミュレータとか、独自言語を入れてみて、だめだったことを追記します。</li></ul>
+<p>まず、独自言語Asmpp3 を公開しています。</p>
+<p>SC/MP-III CPU 用のマシン語モニタ：
+<a href="https://github.com/iruka-/SCMP3monitor" rel="nofollow">https://github.com/iruka-/SCMP3monitor</a></p>
+<p>SC/MP-II用も書きました。独自言語Asmpp2 を公開しています。</p>
+<p>SC/MP-II CPU 用のマシン語モニタ：
+<a href="https://github.com/iruka-/SCMP2monitor" rel="nofollow">https://github.com/iruka-/SCMP2monitor</a></p>
+
+<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h2 id="content_1_9">SC/MP-IIIのどこがだめ？<a class="anchor_super" id="wdc1e431" href="#wdc1e431" title="wdc1e431" style="user-select:none;">&dagger;</a></h2>
+<ul class="list1 list-indent1"><li>比較命令(cmp) がない。減算で代用。（できるか！A regが毎回壊れる。）</li>
+<li>大小比較の結果の取得や分岐が大変面倒。条件分岐命令が A regの内容でしか分岐できない。しかも条件分岐命令は BZ、BNZ、BP (Aregが正) の３個のみ。</li>
+<li>さらに 16bitレジスタ EA の値を大小比較しようとすると、もっと面倒なことに・・・</li></ul>
+<ul class="list1 list-indent1"><li>まあ、それ以外は、可もなく不可もなく、16bit同士の乗除算命令がある8bitレガシーCPUは珍しいんですけどね。・・・</li></ul>
+
+<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h2 id="content_1_10">おまけ<a class="anchor_super" id="i97c484f" href="#i97c484f" title="i97c484f" style="user-select:none;">&dagger;</a></h2>
+<ul class="list1 list-indent1"><li>2024年版、NIBLFP_2024 BASIC も、ついでに動かしてみました。
+<a href="https://github.com/iruka-/SCMP2_NIBLFP_2024BASIC" rel="nofollow">https://github.com/iruka-/SCMP2_NIBLFP_2024BASIC</a></li></ul>
+<ul class="list1 list-indent1"><li>最初、動かなかったんですが、まさか、分岐命令のPC相対オフセットが、PC以外でも使えるなんて・・・ （JZ 12(P3) など） 夢にも思わなかったわ。</li></ul>
+
+<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h2 id="content_1_11">参考<a class="anchor_super" id="c0d088d6" href="#c0d088d6" title="c0d088d6" style="user-select:none;">&dagger;</a></h2>
+<p>SC/MP使いの憂鬱
+<a href="https://electrelic.com/electrelic/node/1299" rel="nofollow">https://electrelic.com/electrelic/node/1299</a></p>
+<p><br /></p>
+<p>SC/MPおわり。</p>
+<hr class="full_hr" />
+<p><br /></p>
    </div>
   </div>
  </div>
@@ -339,7 +308,7 @@ Atom1.6GHzの格安ネットブックのほうが、実はＣＰＵパワーも�
    <a href="http://pukiwiki.sourceforge.jp/dev/"><img src="../image/b_pukiwiki.dev.png" alt="PukiWiki-dev" /></a>
   </div>
   <div id="f-list">
-   <ul><li id="lastmod">Last-modified: 2012-03-26 (月) 19:34:43<span class="page_passage" data-mtime="2012-03-26T19:34:43+09:00"></span></li><li>Site admin: <a href="http://pukiwiki.example.com/">anonymous</a></li>    <li>Powered by PukiWiki</li>
+   <ul><li id="lastmod">Last-modified: 2024-06-26 (水) 10:37:40<span class="page_passage" data-mtime="2024-06-26T10:37:40+09:00"></span></li><li>Site admin: <a href="http://pukiwiki.example.com/">anonymous</a></li>    <li>Powered by PukiWiki</li>
     <li><a href="http://www.luntf.com/">Monobook for PukiWiki</a></li>
    </ul>
   </div>
