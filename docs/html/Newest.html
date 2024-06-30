@@ -117,19 +117,22 @@
 <p>フリースペース</p>
 <ul class="list1 list-indent1"><li><a href="/ATMEL_AVR/cgi-bin/note/index.cgi" rel="nofollow">ゲストブック</a></li></ul>
 <hr class="full_hr" />
-<p><a href="EF-BC-B7-EF-BD-89-EF-BD-84-EF-BD-85-EF-BC-B4-EF-BD-85-EF-BD-98-EF-BD-94-.html" title="ＷｉｄｅＴｅｘｔ" class="link_page_passage">旧コンテンツ</a><br />
-<a href="EF-BC-B7-EF-BD-89-EF-BD-8E-EF-BC-B6-EF-BD-89-EF-BD-93-EF-BD-94-EF-BD-81-.html" class="link_page_passage">ＷｉｎＶｉｓｔａ</a><br />
+<p><a href="EF-BC-B7-EF-BD-89-EF-BD-84-EF-BD-85-EF-BC-B4-EF-BD-85-EF-BD-98-EF-BD-94-.html" title="ＷｉｄｅＴｅｘｔ" class="link_page_passage">旧コンテンツ</a><br /><br />
+<a href="EF-BC-B7-EF-BD-89-EF-BD-8E-EF-BC-B6-EF-BD-89-EF-BD-93-EF-BD-94-EF-BD-81-.html" class="link_page_passage">ＷｉｎＶｉｓｔａ</a><br /><br />
 <a href="E3-82-A4-E3-83-B3-E3-82-BF-E3-83-BC-E3-83-95-E3-82-A7-E3-83-BC-E3-82-B9-E8-80-83-.html" class="link_page_passage">インターフェース考</a></p>
 <hr class="full_hr" />
 <h5>最新の20件</h5>
-<div><strong>2024-06-29</strong>
+<div><strong>2024-06-30</strong>
 <ul class="recent_list">
  <li>Newest</li>
+</ul>
+<strong>2024-06-29</strong>
+<ul class="recent_list">
+ <li><a href="20242D-07.html" class="link_page_passage">2024-07</a></li>
 </ul>
 <strong>2024-06-26</strong>
 <ul class="recent_list">
  <li><a href="20222D-08.html" class="link_page_passage">2022-08</a></li>
- <li><a href="20242D-07.html" class="link_page_passage">2024-07</a></li>
 </ul>
 <strong>2024-06-21</strong>
 <ul class="recent_list">
@@ -179,9 +182,10 @@
     
 <p><a href="20242D-07.html" class="link_page_passage">2024-07</a>&lt;&lt;
 　<a href="FM3.html" class="link_page_passage">FM3</a>　<a href="RX62N.html" class="link_page_passage">RX62N</a>　<a href="SH2A.html" class="link_page_passage">SH2A</a>　<a href="PIC32MX.html" class="link_page_passage">PIC32MX</a></p>
+
 <h3 id="content_1_0">最新の日記<a class="anchor_super" id="s4d25be3" href="#s4d25be3" title="s4d25be3" style="user-select:none;">&dagger;</a></h3>
 
-<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h2 id="content_1_1">SC/MP はもう飽きたので・・・<a class="anchor_super" id="ic479845" href="#ic479845" title="ic479845" style="user-select:none;">&dagger;</a></h2>
+<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h2 id="content_1_1"><a href="20242D-07.html#r74b56b4" title="2024-07" class="link_page_passage">SC/MP</a> はもう飽きたので・・・<a class="anchor_super" id="ic479845" href="#ic479845" title="ic479845" style="user-select:none;">&dagger;</a></h2>
 <ul class="list1 list-indent1"><li>流行りのローカル人工知能(Ollama)をChatGPTインターフェース(LibreChat)で動かす動かし方、</li>
 <li>みたいな記事を書いたら需要はあるんだろうか。</li></ul>
 <p><br /></p>
@@ -198,7 +202,228 @@
 <ul class="list1 list-indent1"><li>ローカル人工知能(Ollama)をChatGPTインターフェース(LibreChat)で動かす動かし方</li>
 <li>記事を書こうとしているんだけど、再現インストールでnode.jsの入れ方が分かっていない俺ガイル。</li></ul>
 <p>なんで前はインストール出来たんだ・・・</p>
+<div class="contents">
+<a id="contents_1"></a>
+<ul class="list2 list-indent1"><li><a href="#s4d25be3">最新の日記</a></li></ul>
+<ul class="list1 list-indent1"><li><a href="#ic479845">SC/MP はもう飽きたので・・・</a></li>
+<li><a href="#deca03ff">title: 今流行のローカルLLM（人工知能）をWebブラウザーからチャット風に気軽に使いたい</a></li>
+<li><a href="#k99a5994">概要</a></li>
+<li><a href="#ef7685ca">前提条件</a></li>
+<li><a href="#l9bd67ee">導入手順</a>
+<ul class="list2 list-indent1"><li><a href="#k6da999d">(1) Ollama の導入</a></li>
+<li><a href="#oa8ccd9b">(2) Node.jsを導入</a></li>
+<li><a href="#vac54277">(3) MongoDBを導入</a></li>
+<li><a href="#q7ee5527">(4) LibreChatの導入</a></li>
+<li><a href="#xe614149">(5) LibreChatの設定</a></li></ul></li>
+<li><a href="#j21daaa8">人工知能 gemma2 の回答例</a></li>
+<li><a href="#r41051dc">参考</a></li></ul>
+</div>
+
 <p><br /></p>
+
+
+<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h2 id="content_1_2">title: 今流行のローカルLLM（人工知能）をWebブラウザーからチャット風に気軽に使いたい<a class="anchor_super" id="deca03ff" href="#deca03ff" title="deca03ff" style="user-select:none;">&dagger;</a></h2>
+<p>tags: Linux ollama librechat LLM</p>
+
+
+<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h2 id="content_1_3">概要<a class="anchor_super" id="k99a5994" href="#k99a5994" title="k99a5994" style="user-select:none;">&dagger;</a></h2>
+<ul class="list1 list-indent1"><li>ローカルLLM（GoogleのGemma2、MSのPhi3、Qwen、cohere Command-R、・・・等）はどんどん賢くなりつつありますが、自分のサーバー上で動かすなら電気代だけで済みますし、レート制限や毎月課金もありません。</li></ul>
+<ul class="list1 list-indent1"><li>おうちLinuxサーバー上にサクッとインストール出来る人工知能ライブラリ Ollama に、LibreChatという、外見ChatGPTそっくりさんのWeb UI を組み合わせて、ローカルLLMサーバーを作成する手順を解説していきます。</li></ul>
+
+<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h2 id="content_1_4">前提条件<a class="anchor_super" id="ef7685ca" href="#ef7685ca" title="ef7685ca" style="user-select:none;">&dagger;</a></h2>
+<ul class="list1 list-indent1"><li>Linuxは Ubuntu 22.04 LTS が動いていることを前提に話を進めます。</li></ul>
+<ul class="list1 list-indent1"><li>導入手順は、大きく分けて、Ollama のインストール（１行コマンドを打つだけでサクッと終わります）と、LibreChat のインストールの２段階があります。</li>
+<li>LibreChatのインストールの前準備として、
+<pre>1)Node.js を導入する
+2)MongoDB を導入する</pre></li>
+<li>が必要ですが、これも手順の中で説明します。</li></ul>
+
+<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h2 id="content_1_5">導入手順<a class="anchor_super" id="l9bd67ee" href="#l9bd67ee" title="l9bd67ee" style="user-select:none;">&dagger;</a></h2>
+
+<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h3 id="content_1_6">(1) Ollama の導入<a class="anchor_super" id="k6da999d" href="#k6da999d" title="k6da999d" style="user-select:none;">&dagger;</a></h3>
+<ul class="list1 list-indent1"><li>一番簡単なので、こいつから行きます。</li></ul>
+<div class="ie5"><table class="style_table" cellspacing="1" border="0">
+<tr class="style_tr"><td class="style_td"><a href="https://ollama.com/" rel="nofollow">https://ollama.com/</a></td></tr>
+</table></div>
+<ul class="list1 list-indent1"><li>書いてある通りにします。<br />
+```
+<pre>$ curl -fsSL https://ollama.com/install.sh | sh</pre>
+```</li></ul>
+<p>これだけです。</p>
+<ul class="list1 list-indent1"><li>インストール出来たら<br />
+```
+<pre>$ ollama run gemma2</pre>
+```</li></ul>
+<ul class="list1 list-indent1"><li>これだけで、gemma2 がコマンドラインで動きます。</li>
+<li>初回だけ、人工知能Gemma2: 9B のモデルデータのダウンロードが入ります。(5.5GB)</li>
+<li>二回目からは、すぐに走ります。</li></ul>
+<ul class="list1 list-indent1"><li>nVidiaのグラボ（と、nVidiaサイトから導入したCUDAのドライバー)がLinuxに導入済であれば、そのままグラボを認識してGPUで走ります。</li>
+<li>グラボ無しのLinuxの場合は、CPUのみで推論が実行されます。（やや遅いです）</li>
+<li>グラボは、メモリー容量があればあるほど良いです。自分は、安物RTX-3060 (12GB) を挿してます。</li></ul>
+
+<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h3 id="content_1_7">(2) Node.jsを導入<a class="anchor_super" id="oa8ccd9b" href="#oa8ccd9b" title="oa8ccd9b" style="user-select:none;">&dagger;</a></h3>
+<p>（nvmも同時に入ります）</p>
+<ul class="list1 list-indent1"><li>Node.js 本家に書いてある通りにします。</li>
+<li><a href="https://nodejs.org/en/download/package-manager" rel="nofollow">https://nodejs.org/en/download/package-manager</a></li>
+<li>とりあえず、最新版 (Ver 22.3.0 current)  On Linux With NVM でいきます。</li></ul>
+<p>```</p>
+<pre># installs nvm (Node Version Manager)
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
+# download and install Node.js (you may need to restart the terminal)
+nvm install 22
+# verifies the right Node.js version is in the environment
+node -v # should print `v22.3.0`
+# verifies the right NPM version is in the environment
+npm -v # should print `10.8.1`</pre>
+<p>```</p>
+<ul class="list1 list-indent1"><li>罠としては、<br />
+```
+<pre>curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash</pre>
+```<br />
+したあと、一回ログアウトして入りなおすか、bash にシェルを読ませてPATHを追加しないと、次の<br />
+```
+<pre>nvm install 22</pre>
+```<br />
+が動きません。</li></ul>
+<ul class="list1 list-indent1"><li>あと、node.jsの導入先dirは、
+<pre>$(HOME)/.nvm/versions/node/v22.3.0/bin/node</pre></li>
+<li>みたいな場所になるようです。</li></ul>
+
+<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h3 id="content_1_8">(3) MongoDBを導入<a class="anchor_super" id="vac54277" href="#vac54277" title="vac54277" style="user-select:none;">&dagger;</a></h3>
+<ul class="list1 list-indent1"><li>LibreChat公式 より<br />
+<a href="https://www.librechat.ai/docs/configuration/mongodb/mongodb_community" rel="nofollow">https://www.librechat.ai/docs/configuration/mongodb/mongodb_community</a></li></ul>
+<ul class="list1 list-indent1"><li>MongoDB Community を導入します（例） Ubuntu22.04の apt にリポジトリ、キーを追加して、 apt install です。</li></ul>
+<p>```</p>
+<pre>curl -fsSL https://www.mongodb.org/static/pgp/server-7.0.asc | \
+  sudo gpg -o /usr/share/keyrings/mongodb-server-7.0.gpg \
+  --dearmor
+
+echo &quot;deb [ arch=amd64,arm64 signed-by=/usr/share/keyrings/mongodb-server-7.0.gpg ] https://repo.mongodb.org/apt/ubuntu jammy/mongodb-org/7.0 multiverse&quot; | sudo tee /etc/apt/sources.list.d/mongodb-org-7.0.list
+
+apt update
+
+apt-get install -y mongodb-org </pre>
+<p>```</p>
+
+<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h3 id="content_1_9">(4) LibreChatの導入<a class="anchor_super" id="q7ee5527" href="#q7ee5527" title="q7ee5527" style="user-select:none;">&dagger;</a></h3>
+<p>（Dockerのほうは無視して、普通にLinuxにローカルインストールします）</p>
+<ul class="list1 list-indent1"><li>LibreChat 公式より、</li></ul>
+<div class="ie5"><table class="style_table" cellspacing="1" border="0">
+<tr class="style_tr"><td class="style_td"><a href="https://www.librechat.ai/docs/quick_start/local_setup" rel="nofollow">https://www.librechat.ai/docs/quick_start/local_setup</a></td></tr>
+</table></div>
+<ul class="list1 list-indent1"><li>具体的には、GitHubからLibreChatをまるっと取ってきます。</li></ul>
+<p>```</p>
+<pre>git clone https://github.com/danny-avila/LibreChat.git</pre>
+<p>```</p>
+<ul class="list1 list-indent1"><li>次に、cloneしたディレクトリに cd して、環境ファイル .env をテンプレートからコピーして作ります。</li></ul>
+<p>```</p>
+<pre>cd LibreChat
+
+cp .env.example .env
+
+### Important: Edit the newly created .env file to update the MONGO_URI
+### with your own MongoDB instance URI.
+
+# Install dependencies
+npm ci
+
+# Build the Frontend
+npm run frontend
+
+# Start LibreChat!
+npm run backend
+
+# Visit http://localhost:3080/</pre>
+<p>```</p>
+<ul class="list1 list-indent1"><li>MongoDB のURIとかはなにも弄らなくてOkだった気がします。気になるようでしたら、.envの中を確認してください</li>
+<li>あとは、nodejsの npm コマンドに全部任せて、依存を更新して、実行です。</li></ul>
+<ul class="list1 list-indent1"><li>このLinuxの <a href="http://localhost:3080/" rel="nofollow">http://localhost:3080/</a> で動いているはずです。</li></ul>
+<ul class="list1 list-indent1"><li>Linuxを再起動した場合は、
+<pre>npm run backend</pre></li>
+<li>これだけで起動します。</li></ul>
+
+<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h3 id="content_1_10">(5) LibreChatの設定<a class="anchor_super" id="xe614149" href="#xe614149" title="xe614149" style="user-select:none;">&dagger;</a></h3>
+<ul class="list1 list-indent1"><li>Ollamaは今年初めぐらいにAPIのエンドポイントがOpenAI互換になったので、LibreChatからOllamaが動いているマシンのURIを指定するだけで、連携できます。一応この説明文書では、同じLinuxで動いていることにしているので、localhostでいいのかな。</li>
+<li>別マシンのOllamaにアクセスする場合でもLibreChat側のyamlではURIを合わせるだけでいいですが、Ollama（推論）側では アクセスするIP、ポートを 127.0.0.1 ではなく、0.0.0.0 にして他のマシンからも接続できるようにしておきます。（編集ファイルは、 /etc/systemd/system/ollama.server ）</li></ul>
+<p>```</p>
+<pre>[Service]
+ExecStart=/usr/local/bin/ollama serve
+User=ollama
+Group=ollama
+Restart=always
+RestartSec=3
+Environment=&quot;PATH=略&quot;
+Environment=&quot;OLLAMA_HOST=0.0.0.0:11434&quot;
+Environment=&quot;OLLAMA_FLASH_ATTENTION=True&quot;</pre>
+<p>```</p>
+<ul class="list1 list-indent1"><li>&quot;OLLAMA_FLASH_ATTENTION=True&quot; は、Qwen2 がうまく動かなかったときのおまじないで、別に無くても問題ありません</li></ul>
+<ul class="list1 list-indent1"><li>自分の場合、librechat.yaml に、以下のような項目を追加して、自分のローカルLLMを足しました。</li></ul>
+<p>```</p>
+<pre>   - name: &quot;Ollama&quot;
+     apiKey: &quot;ollama&quot;
+     # use 'host.docker.internal' instead of localhost if running LibreChat in a docker container
+     #baseURL: &quot;http://localhost:11434/v1/chat/completions&quot;
+     baseURL: &quot;http://192.168.9.99:11434/v1/chat/completions&quot;
+     models:
+       default: [
+         &quot;llama2&quot;,
+         &quot;mistral&quot;,
+         &quot;codellama&quot;,
+         &quot;dolphin-mixtral&quot;,
+         &quot;mistral-openorca&quot;
+         ]
+       # fetching list of models is supported but the name field must start
+       # with ollama (case-insensitive), as it does in this example.
+       fetch: true
+     titleConvo: true
+     titleModel: &quot;current_model&quot;
+     summarize: false
+     summaryModel: &quot;current_model&quot;
+     forcePrompt: false
+     modelDisplayLabel: &quot;Ollama&quot;</pre>
+<p>```</p>
+
+<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h2 id="content_1_11">人工知能 gemma2 の回答例<a class="anchor_super" id="j21daaa8" href="#j21daaa8" title="j21daaa8" style="user-select:none;">&dagger;</a></h2>
+<p>あなた：</p>
+<p>銀河系から、マゼラン星雲へ旅をしています。<br />
+孤独の寂しさをまぎらわす方法を教えてください</p>
+<p>ollama ：</p>
+<p>銀河系からマゼラン星雲へ、なんて壮大な旅ですね！孤独な気持ち、よく分かります。宇宙の広がりの中で、自分だけの時間と空間を過ごすのは、時に寂しくなるものです。</p>
+<p>でも、大丈夫！孤独を乗り越える方法はたくさんありますよ。旅の途中で、あなたを励ましてくれる方法をいくつか提案させてください。</p>
+<p>1. 宇宙の美しさに浸る:<br />
+あなたは、銀河系からマゼラン星雲へ旅しているという、かけがえのない経験をしているのです。<br />
+宇宙の壮大なスケール、星々の光り輝き、そして未知の天体たちを目の当たりにする喜びを味わってください。</p>
+<p>日誌をつける: 毎日、見た景色、感じたこと、考えたことを書き留めてみましょう。あなたの旅の記録となり、後から振り返ると温かい気持ちになれるはずです。<br />
+星空観察: マゼラン星雲に近づくにつれて、銀河系の景色も変わってきます。今まで見たことのない星々や星座に出会えるかもしれません。星図を広げて、天体を探索してみるのもおすすめです。<br />
+宇宙音楽を聴く: 壮大な宇宙をイメージさせる音楽を聴きながら、旅の気分を高めましょう。宇宙の神秘的な雰囲気に浸り、心を落ち着かせましょう。<br />
+2. 創造性を活かす:<br />
+宇宙空間での自由な時間は、あなたの創造性を刺激するチャンスです。</p>
+<p>詩や短編小説を書く: 宇宙での体験や感じたことを、言葉で表現してみましょう。あなたの旅の物語は、きっと人々を感動させるでしょう。<br />
+宇宙旅行記を作る: 写真や動画をまとめ、あなたの壮大な旅を記録してみましょう。旅行記を通して、多くの人とあなたの体験を共有できるかもしれません。<br />
+宇宙アートを描く: 宇宙の美しさ、広がり、そして神秘感を、あなたの感性で表現してみましょう。宇宙のエネルギーをチャージし、あなた自身の創造性を開花させてください。<br />
+3. 未来への夢を描き続ける:</p>
+<p>マゼラン星雲へ行く目的、あなた自身の夢を忘れないようにしましょう。</p>
+<p>目標を明確にする: マゼラン星雲での探検、研究、そしてあなたの夢の実現に向けて、具体的な目標を設定しましょう。目標があることで、旅のモチベーションを高く保つことができます。<br />
+未来の自分を想像する: マゼラン星雲での探検を終えたあなた、そしてその先の未来を想像してみましょう。夢を実現するために、今できることを一つずつ進めていきましょう。<br />
+ポジティブな思考を持つ: 旅の途中で困難に直面しても、諦めないでください。困難は乗り越えることで、あなたを成長させ、より強い精神力を育みます。ポジティブな思考を保ち、未来への希望を捨てずに進みましょう。<br />
+あなたにとって、マゼラン星雲への旅が、かけがえのない体験となることを心より願っています。</p>
+
+<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h2 id="content_1_12">参考<a class="anchor_super" id="r41051dc" href="#r41051dc" title="r41051dc" style="user-select:none;">&dagger;</a></h2>
+<ul class="list1 list-indent1"><li>ollama と LibreChat を連携させる<br />
+<a href="https://blog.itod.dev/story/text-generation-local/" rel="nofollow">https://blog.itod.dev/story/text-generation-local/</a></li></ul>
+<ul class="list1 list-indent1"><li>ollama で使える人工知能モデルの一覧<br />
+<a href="https://github.com/ollama/ollama?tab=readme-ov-file#model-library" rel="nofollow">https://github.com/ollama/ollama?tab=readme-ov-file#model-library</a><br />
+<a href="https://ollama.com/library" rel="nofollow">https://ollama.com/library</a></li></ul>
+<p>HuggingFace みたいに、アカウント取得したり、モデル使用許諾を取ったりとかなしで、いきなりコマンドラインから、</p>
+<p>```</p>
+<pre>$ ollama run LLM名:サイズ</pre>
+<p>```</p>
+<p>みたいな感じで実行できます。</p>
+<p>雑多情報源</p>
+<p>なんJ 避難所2	<a href="https://mercury.bbspink.com/test/read.cgi/onatech/1714642045/" rel="nofollow">https://mercury.bbspink.com/test/read.cgi/onatech/1714642045/</a><br />
+なんJ 避難所3	<a href="https://mercury.bbspink.com/test/read.cgi/onatech/1717886234/" rel="nofollow">https://mercury.bbspink.com/test/read.cgi/onatech/1717886234/</a><br />
+うみゆきさん Twtter <a href="https://twilog.togetter.com/umiyuki_ai" rel="nofollow">https://twilog.togetter.com/umiyuki_ai</a><br />
+LLMの現在 いもす様	 <a href="https://speakerdeck.com/pfn/llmnoxian-zai" rel="nofollow">https://speakerdeck.com/pfn/llmnoxian-zai</a></p>
    </div>
   </div>
  </div>
@@ -213,7 +438,7 @@
    <a href="http://pukiwiki.sourceforge.jp/dev/"><img src="../image/b_pukiwiki.dev.png" alt="PukiWiki-dev" /></a>
   </div>
   <div id="f-list">
-   <ul><li id="lastmod">Last-modified: 2024-06-29 (土) 17:21:56<span class="page_passage" data-mtime="2024-06-29T17:21:56+09:00"></span></li><li>Site admin: <a href="http://pukiwiki.example.com/">anonymous</a></li>    <li>Powered by PukiWiki</li>
+   <ul><li id="lastmod">Last-modified: 2024-06-30 (日) 13:21:40<span class="page_passage" data-mtime="2024-06-30T13:21:40+09:00"></span></li><li>Site admin: <a href="http://pukiwiki.example.com/">anonymous</a></li>    <li>Powered by PukiWiki</li>
     <li><a href="http://www.luntf.com/">Monobook for PukiWiki</a></li>
    </ul>
   </div>
