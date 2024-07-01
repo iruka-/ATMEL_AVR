@@ -152,11 +152,13 @@ tfoot th.style_th {
 .style_table {
   padding:0;
   border:0;
-  margin:auto;
+  align:left;
   text-align:left;
   color:inherit;
   background-color:#ccd5dd;
 }
+/*  margin:auto; */
+
 .style_th {
   padding:5px;
   margin:1px;
